@@ -121,8 +121,8 @@ else
         </li>
         <li class="nav-item">
           <a class="nav-link " href="certificateapprove.php">
-              <i class="bi bi-award-fill"></i>
-              <span>Certificate Approval</span>
+              <i class="bi bi-file-check-fill"></i>
+              <span>Event timesheet approval</span>
           </a>
       </li>
 

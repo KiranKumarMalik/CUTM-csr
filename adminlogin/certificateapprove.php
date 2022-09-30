@@ -113,22 +113,22 @@ else
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
-<li class="nav-item">
-    <a class="nav-link " href="admin.php">
-        <i class="bi bi-grid"></i>
-        <span>Dashboard</span>
-    </a>
-</li>
-<li class="nav-item">
+    <li class="nav-item">
+            <a class="nav-link " href="admin.php">
+                <i class="bi bi-grid"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link " href="certificateapprove.php">
-              <i class="bi bi-award-fill"></i>
-              <span>Certificate Approval</span>
+              <i class="bi bi-file-check-fill"></i>
+              <span>Event timesheet approval</span>
           </a>
       </li>
 
       <li class="nav-item">
           <a class="nav-link " href="studentapproval.php">
-              <i class="bi bi-file-earmark-check"></i>
+              <i class="bi bi-person-badge-fill"></i>
               <span>Participants ID Approval</span>
           </a>
       </li> 

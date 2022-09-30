@@ -120,7 +120,7 @@ else
     <li class="nav-item">
       <a class="nav-link " href="teacherSessonWise.php">
         <i class="bi bi-calendar3"></i>
-        <span>Sesson Wise</span>
+        <span>Event timesheet approval</span>
       </a>
     </li>
         <li class="nav-item">

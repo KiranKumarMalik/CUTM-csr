@@ -113,30 +113,30 @@ else
 
         <ul class="sidebar-nav" id="sidebar-nav">
 
-            <li class="nav-item">
-                <a class="nav-link " href="teacher.php">
-                    <i class="bi bi-grid"></i>
-                    <span>Dashboard</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="teacherSessonWise.php">
-                    <i class="bi bi-calendar3"></i>
-                    <span>Sesson Wise</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="facultyprof.php">
-                    <i class="bi bi-person-fill"></i>
-                    <span>Profile</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="../includes/logout.php">
-                    <i class="bi bi-box-arrow-right"></i>
-                    <span>Log out</span>
-                </a>
-            </li>
+        <li class="nav-item">
+      <a class="nav-link " href="teacher.php">
+        <i class="bi bi-grid"></i>
+        <span>Dashboard</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " href="teacherSessonWise.php">
+        <i class="bi bi-calendar3"></i>
+        <span>Event timesheet approval</span>
+      </a>
+    </li>
+        <li class="nav-item">
+              <a class="nav-link " href="facultyprof.php">
+                  <i class="bi bi-person-fill"></i>
+                  <span>Profile</span>
+              </a>
+          </li>
+         <li class="nav-item">
+              <a class="nav-link " href="../includes/logout.php">
+                  <i class="bi bi-box-arrow-right"></i>
+                  <span>Log out</span>
+              </a>
+          </li>
 
 
 
@@ -234,7 +234,7 @@ else
                                             <td><?=$post['date']?></td>
                                             <td><?=$post['fromTime']?></td>
                                             <td><?=$post['endTime']?></td>
-                                            <td><?=$post['totalTime']?></td>
+                                            <td><?=(int)$post['totalTime']?></td>
                                             <td><?=$post['status']?></td>
                                             <td>
                                                 <a href="../includes/status.php?id=<?=$post['id']?>"

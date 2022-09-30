@@ -121,7 +121,7 @@ else
     <li class="nav-item">
       <a class="nav-link " href="teacherSessonWise.php">
         <i class="bi bi-calendar3"></i>
-        <span>Sesson Wise</span>
+        <span>Event timesheet approval</span>
       </a>
     </li>
         <li class="nav-item">
@@ -228,7 +228,7 @@ else
                         <div class="row mb-3">
                             <label for="inputText" class="col-sm-2 col-form-label">Update Your Password : </label>
                             <div class="col-sm-10">
-                                <input type="password" class="form-control" name="password">
+                                <input type="password" class="form-control" name="password" required>
                             </div>
                         </div>
                         <div class="row mb-3">
