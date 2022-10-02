@@ -178,11 +178,11 @@ else
             
             <h1 class="mb-3 fw-bold">Centurion University of Technology and Management</h1>
                 <img src="../images/cutmlogo.png" width="165" height="200" alt="Bootstrap" class="d-block mx-auto mb-3">
-                <p class="lead mb-4"><b>Student Name : </b> <?=$studentResultyr1['Name']?></p>
+                <p class="lead mb-4"><b>Student Name : </b> <?=$studentdata['name']?></p>
                 <p class="lead mb-4"><b>Student Regd. No :</b> <?=$uemail?></p>
-                <p class="lead mb-4"><b>School name :</b> School of Applied Science</p>
-                <p class="lead mb-4"><b>Batch:</b> </p>
-                <p class="lead mb-4"><b>Campus:</b>Bhubaneswar</p>
+                <p class="lead mb-4"><b>School name :</b> <?=$studentdata['schoolname']?></p>
+                <p class="lead mb-4"><b>Batch:</b> <?=$studentdata['admissionyear']?></p>
+                <p class="lead mb-4"><b>Campus:</b><?=$studentdata['campus']?></p>
                 <p class="lead mb-4">CSR Grade Sheet</p>
             
             </div>
@@ -276,7 +276,7 @@ else
       </tbody>
     </table>
     <br><br><br>
-    <center><button class="btn btn-success btn-lg float-right" type="click" onclick="TestD()">Print</button><center>
+    <center><button class="btn btn-success btn-lg float-right" type="click" onclick="TestD()">Print</button><center><br>
 
   </main><!-- End #main -->
     
@@ -360,6 +360,9 @@ else
             // window.print();
         }
     </script>
+
+
+
 
 </body>
 
