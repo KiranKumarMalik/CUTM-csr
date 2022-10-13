@@ -38,7 +38,7 @@
                         <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">CO-ORDINATORS</a>
                         <div class="dropdown-menu"><a class="dropdown-item" href="coordinators.php?campus=Balasore">Balasore</a>
                             <a class="dropdown-item" href="coordinators.php?campus=Bhubaneswar">Bhubaneswar</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Bolangir">Bolangir</a>
+                            <a class="dropdown-item" href="coordinators.php?campus=Balangir">Balangir</a>
                             <a class="dropdown-item" href="coordinators.php?campus=Paralakhemundi">Paralakhemundi</a>
                             <a class="dropdown-item" href="coordinators.php?campus=Rayagada">Rayagada</a></div>
                         </li>
@@ -74,7 +74,7 @@
                     </div>
                     <div class="col-12 col-sm-6 col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
                         <div class="member">
-                            <div class="member-img"><a href="yearwise.php?campus=Bolangir"><img class="img-fluid" src="assets/img/campusimg/balangir.jpg?h=6aa922960cedd9601f370b1ef9a1889b"></div>
+                            <div class="member-img"><a href="yearwise.php?campus=Balangir"><img class="img-fluid" src="assets/img/campusimg/balangir.jpg?h=6aa922960cedd9601f370b1ef9a1889b"></div>
                             <div class="member-info">
                                 <h5><strong>Balangir</strong></h5><span>Behind BSNL Office, IDCO Land, Rajib Nagar, Balangir, Odisha.</span></a></div>
                         </div>

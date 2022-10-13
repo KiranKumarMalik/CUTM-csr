@@ -218,9 +218,9 @@ else
                             </div>
                         </div>
                         <div class="row mb-3">
-                    <label for="inputTime" class="col-sm-2 col-form-label">Schedule Time</label>
+                    <label for="inputdate" class="col-sm-2 col-form-label">Schedule Date</label>
                     <div class="col-sm-10">
-                        <input type="time" class="form-control" name="starttime" required>
+                        <input type="date" class="form-control" name="date" required>
                     </div>
                 </div>
                         <div class="row mb-3">

@@ -1,4 +1,7 @@
 <?php
+require('./includes/function.php');
+require('./includes/database.php');
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -38,7 +41,7 @@
                         <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">CO-ORDINATORS</a>
                         <div class="dropdown-menu"><a class="dropdown-item" href="coordinators.php?campus=Balasore">Balasore</a>
                             <a class="dropdown-item" href="coordinators.php?campus=Bhubaneswar">Bhubaneswar</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Bolangir">Bolangir</a>
+                            <a class="dropdown-item" href="coordinators.php?campus=Balangir">Balangir</a>
                             <a class="dropdown-item" href="coordinators.php?campus=Paralakhemundi">Paralakhemundi</a>
                             <a class="dropdown-item" href="coordinators.php?campus=Rayagada">Rayagada</a></div>
                         </li>
@@ -60,7 +63,7 @@
                             <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
                                 <i class="fa fa-trophy fa-5x" style="color:red"></i>
                                 <h4 class="card-title" style="margin-top: 20px;"><strong>Balasore</strong></h4>
-                                <div><a href="prevachievements.php"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
+                                <div><a href="prevachievements.php?campus=Balasore"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
                             </div>
                         </div>
                     </div>
@@ -69,7 +72,7 @@
                             <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
                             <i class="fa fa-trophy fa-5x" style="color:red"></i>
                                 <h4 class="card-title" style="margin-top: 20px;"><strong>Bhubaneswar</strong></h4>
-                                <div><a href="prevachievements.php"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
+                                <div><a href="prevachievements.php?campus=Bhubaneswar"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
                             </div>
                         </div>
                     </div>
@@ -78,7 +81,7 @@
                             <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
                             <i class="fa fa-trophy fa-5x" style="color:red"></i>
                                 <h4 class="card-title" style="margin-top: 20px;"><strong>Balangir</strong></h4>
-                                <div><a href="prevachievements.php"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
+                                <div><a href="prevachievements.php?campus=Balangir"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
                             </div>
                         </div>
                     </div>
@@ -87,7 +90,7 @@
                             <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
                             <i class="fa fa-trophy fa-5x" style="color:red"></i>
                                 <h4 class="card-title" style="margin-top: 20px;"><strong>Paralakhemundi</strong></h4>
-                                <div><a href="prevachievements.php"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
+                                <div><a href="prevachievements.php?campus=Paralakhemundi"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
                             </div>
                         </div>
                     </div>
@@ -96,7 +99,7 @@
                             <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
                             <i class="fa fa-trophy fa-5x" style="color:red"></i>
                                 <h4 class="card-title" style="margin-top: 20px;"><strong>Rayagada</strong></h4>
-                                <div><a href="prevachievements.php"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
+                                <div><a href="prevachievements.php?campus=Rayagada"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
                             </div>
                         </div>
                     </div>

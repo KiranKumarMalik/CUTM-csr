@@ -1,4 +1,10 @@
-<php
+<?php
+require('./includes/function.php');
+require('./includes/database.php');
+$campus=$_GET['campus'];
+// $achievement=getpreachievements($db,$campus,$years);
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -38,7 +44,7 @@
                         <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">CO-ORDINATORS</a>
                         <div class="dropdown-menu"><a class="dropdown-item" href="coordinators.php?campus=Balasore">Balasore</a>
                             <a class="dropdown-item" href="coordinators.php?campus=Bhubaneswar">Bhubaneswar</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Bolangir">Bolangir</a>
+                            <a class="dropdown-item" href="coordinators.php?campus=Balangir">Balangir</a>
                             <a class="dropdown-item" href="coordinators.php?campus=Paralakhemundi">Paralakhemundi</a>
                             <a class="dropdown-item" href="coordinators.php?campus=Rayagada">Rayagada</a></div>
                         </li>
@@ -52,23 +58,45 @@
    
         <!-- Start: #Campus wise image gallery -->
         <!-- co-ordinators -->
-        <section id="pricing" class="pricing" style="margin-top: 20px;margin-bottom: 20px;">
-                    <div class="text-center">
-                    <h2 class="text-center section-title" data-aos="fade-up" style="padding-top: 145px;padding-bottom: 0px;"><strong>Previous Achievements</strong><br></h2>
-                    <hr data-aos="fade-up" style="width: 120px;border-bottom-style: none;padding-bottom: 30px;">
-                    </div>
-                    <div class="col-md-8 mx-auto text-left">
-                    <div class="card">
+        <section
+    id="pricing"
+    class="pricing"
+    style="margin-top: 20px;margin-bottom: 20px;">
+    <div class="text-center">
+        <h2
+            class="text-center section-title"
+            data-aos="fade-up"
+            style="padding-top: 145px;padding-bottom: 0px;">
+            <strong>Previous Achievements</strong>
+            <br></h2>
+            <hr
+                data-aos="fade-up"
+                style="width: 120px;border-bottom-style: none;padding-bottom: 30px;"></div>
+            <div class="col-md-8 mx-auto text-left">
+                <div class="card">
                     <div class="card-body">
-                    <form action="" method="post">
-                    <h3 class="lead" data-aos="fade-up" style="color: #002654;"><b>Academic Years</b></h3>
-                    <li data-aos="fade-up"><a href="coordinatorsdata.php"> 2019-20</a></li>
-                    <li data-aos="fade-up"><a href="coordinatorsdata.php"> 2020-21</a></li>
-                    <li data-aos="fade-up"><a href="coordinatorsdata.php"> 2021-22</a></li>
-                    <li data-aos="fade-up"><a href="coordinatorsdata.php"> 2022-23</a></li><br>
-                    </div>
-                    </div>
-    </section>
+                        <form action="" method="post">
+                            <h3 class="lead" data-aos="fade-up" style="color: #002654;">
+                                <b>Academic Years</b>
+                            </h3>
+                            <?php
+                                $Archivement=getAllArchivement($db,$campus);          
+                                foreach($Archivement as $Archivements){
+
+                            ?>
+
+                                <li data-aos="fade-up">
+                                    <a href="prevachievedata.php?campus=<?=$Archivements['campus']?>&year=<?=$Archivements['year']?>">
+                                        <?=$Archivements['year']?></a>
+                                </li>
+                            <?php
+                                }
+                            ?>
+
+
+                            <br></div>
+                        </div>
+                    </section>
     <!-- End: #co-ordinators -->
     
     

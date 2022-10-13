@@ -1,4 +1,11 @@
-<php
+<?php
+require('./includes/function.php');
+require('./includes/database.php');
+$campus=$_GET['campus'];
+$year=$_GET['year'];
+$achievement=getAllArchivementPdf($db,$campus,$year);
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -38,7 +45,7 @@
                         <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">CO-ORDINATORS</a>
                         <div class="dropdown-menu"><a class="dropdown-item" href="coordinators.php?campus=Balasore">Balasore</a>
                             <a class="dropdown-item" href="coordinators.php?campus=Bhubaneswar">Bhubaneswar</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Bolangir">Bolangir</a>
+                            <a class="dropdown-item" href="coordinators.php?campus=Balangir">Balangir</a>
                             <a class="dropdown-item" href="coordinators.php?campus=Paralakhemundi">Paralakhemundi</a>
                             <a class="dropdown-item" href="coordinators.php?campus=Rayagada">Rayagada</a></div>
                         </li>
@@ -63,7 +70,7 @@
                     <div class="card">
                     <div class="card-body">
                     <form action="" method="post">
-                    <iframe src="assets/pdf/cutm.pdf#toolbar=1" width="100%" height="600px"></iframe>
+                    <iframe src="assets/pdf/previous_achievements/<?=$achievement['documents']?>" width="100%" height="600px"></iframe>
                     </div>
                     </div>
                     </div>

@@ -40,7 +40,7 @@ require('./includes/database.php');
                         <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">CO-ORDINATORS</a>
                         <div class="dropdown-menu"><a class="dropdown-item" href="coordinators.php?campus=Balasore">Balasore</a>
                             <a class="dropdown-item" href="coordinators.php?campus=Bhubaneswar">Bhubaneswar</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Bolangir">Bolangir</a>
+                            <a class="dropdown-item" href="coordinators.php?campus=Balangir">Balangir</a>
                             <a class="dropdown-item" href="coordinators.php?campus=Paralakhemundi">Paralakhemundi</a>
                             <a class="dropdown-item" href="coordinators.php?campus=Rayagada">Rayagada</a></div>
                         </li>
@@ -210,10 +210,10 @@ require('./includes/database.php');
                         </div>
                         </a>
                 </div>
-                <a href="yearwise.php?campus=Bolangir">
+                <a href="yearwise.php?campus=Balangir">
                 <div class="col-12 col-lg-4 col-md-6 portfolio-item filter-web" data-aos="fade-up" data-aos-delay="300"><img class="img-fluid" src="assets/img/event_images/IMG_6868.jpg">
                     <div class="portfolio-info">
-                        <h4>Bolangir</h4>
+                        <h4>Balangir</h4>
                         <p>Event images</p>
                     </div>
                     </a>

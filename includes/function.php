@@ -251,7 +251,7 @@
         return $data;
     }
     function getgallery1($db,$campus){
-        $query="SELECT * FROM gallery1 WHERE campus='$campus'";
+        $query="SELECT * FROM gallery1 WHERE campus='$campus' GROUP BY years";
         $run=mysqli_query($db,$query);
         $data=array();
         while($d=mysqli_fetch_assoc($run)){
@@ -286,4 +286,37 @@
         return $data;
     }
 
+    function getcoordinators($db,$Coordinators,$campus){
+        $query="SELECT * FROM coordinators WHERE campus='$campus'";
+        $run=mysqli_query($db,$query);
+        $data=mysqli_fetch_assoc($run);
+        return $data;
+    }
+
+    function getpreachievements($db,$campus,$years){
+        $query="SELECT * FROM preachievements WHERE campus='$campus' AND years='$year'";
+        $run=mysqli_query($db,$query);
+        $data=mysqli_fetch_assoc($run);
+        return $data;
+    }
+
+    function getAllArchivement($db,$campus){
+
+        $query="SELECT * FROM preachievements WHERE campus='$campus'";
+        $run=mysqli_query($db,$query);
+        $data=array();
+        while($d=mysqli_fetch_assoc($run)){
+            $data[]=$d;
+        }
+        return $data;
+    }
+
+    function getAllArchivementPdf($db,$campus,$year){
+
+        $query="SELECT * FROM preachievements WHERE campus='$campus' AND year='$year'";
+        $run=mysqli_query($db,$query);
+        $data=mysqli_fetch_assoc($run);
+        return $data;
+    }
+    
 ?>
