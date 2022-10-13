@@ -240,5 +240,50 @@
         $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         return substr(str_shuffle($chars),0,8);
     }
-    
+
+    function getannouncement($db){
+        $query="SELECT * FROM announcement ";
+        $run=mysqli_query($db,$query);
+        $data=array();
+        while($d=mysqli_fetch_assoc($run)){
+            $data[]=$d;
+        }
+        return $data;
+    }
+    function getgallery1($db,$campus){
+        $query="SELECT * FROM gallery1 WHERE campus='$campus'";
+        $run=mysqli_query($db,$query);
+        $data=array();
+        while($d=mysqli_fetch_assoc($run)){
+            $data[]=$d;
+        }
+        return $data;
+    }
+
+    function getgalleryyear($db,$campus,$getYear){
+        $query="SELECT * FROM gallery1 WHERE campus='$campus' AND years='$getYear'";
+        $run=mysqli_query($db,$query);
+        $data=array();
+        while($d=mysqli_fetch_assoc($run)){
+            $data[]=$d;
+        }
+        return $data;
+    }
+    function getEventdataforImage($db,$eventid){
+        $query="SELECT * FROM gallery1 WHERE id1='$eventid'";
+        $run=mysqli_query($db,$query);
+        $data=mysqli_fetch_assoc($run);
+        return $data;
+    }
+
+    function getgalleryimage($db,$eventid){
+        $query="SELECT * FROM gallery2 WHERE connect_id	='$eventid'";
+        $run=mysqli_query($db,$query);
+        $data=array();
+        while($d=mysqli_fetch_assoc($run)){
+            $data[]=$d;
+        }
+        return $data;
+    }
+
 ?>
