@@ -241,15 +241,16 @@
         return substr(str_shuffle($chars),0,8);
     }
 
-    function getannouncement($db){
-        $query="SELECT * FROM announcement ";
-        $run=mysqli_query($db,$query);
-        $data=array();
-        while($d=mysqli_fetch_assoc($run)){
-            $data[]=$d;
-        }
-        return $data;
-    }
+    // function getannouncement($db){
+    //     $today=date("Y-m-d");
+    //     $query="SELECT * FROM announcement WHERE date_time='$today'";
+    //     $run=mysqli_query($db,$query);
+    //     $data=array();
+    //     while($d=mysqli_fetch_assoc($run)){
+    //         $data[]=$d;
+    //     }
+    //     return $data;
+    // }
     function getgallery1($db,$campus){
         $query="SELECT * FROM gallery1 WHERE campus='$campus' GROUP BY years";
         $run=mysqli_query($db,$query);
@@ -316,6 +317,18 @@
         $query="SELECT * FROM preachievements WHERE campus='$campus' AND year='$year'";
         $run=mysqli_query($db,$query);
         $data=mysqli_fetch_assoc($run);
+        return $data;
+    }
+
+    function getinsertannouncements($db){
+        $todayis=date("Y-m-d");
+
+        $query="SELECT * FROM announcement WHERE '$todayis' between date_time and end_date ORDER BY id DESC";
+        $run=mysqli_query($db,$query);
+        $data=array();
+        while($d=mysqli_fetch_assoc($run)){
+            $data[]=$d;
+        }
         return $data;
     }
     

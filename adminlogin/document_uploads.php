@@ -1,12 +1,14 @@
 <?php
 require('../includes/function.php');
 require('../includes/database.php');
+$uemail=$_SESSION['email'];
 $utype=$_SESSION['usertype'];
+
+
 
 
 if($_SESSION['email'] and $utype=="admin")
 {
-    $uemail=$_SESSION['email'];
     $adminData=getAllAdminDetails($db,$uemail);
 }
 else
@@ -14,30 +16,9 @@ else
   echo "working";
   header('location:../includes/logout.php');
 }
-
-if(isset($_POST['addannouncement'])){
-    $campus=mysqli_real_escape_string($db,$_POST['campus']);
-    $announcement=mysqli_real_escape_string($db,$_POST['announcement']);
-    $announcementdetails=mysqli_real_escape_string($db,$_POST['announcementdetails']);
-    $date=mysqli_real_escape_string($db,$_POST['date']);
-    
-    
-    
-        $query="INSERT INTO announcement (event_name,details,date_time,campus) VALUES('$announcement','$announcementdetails','$date','$campus')";
-        $run=mysqli_query($db,$query) or die(mysqli_error($db));
-        if ($run) {
-            ?>
-            <script>
-            alert("Inserted. ");
-            </script>
-            <?php
-        }
-        else {
-            echo "inserted error";
-        }
-    
-}
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +26,7 @@ if(isset($_POST['addannouncement'])){
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Add Announcement</title>
+    <title>Document Uploads</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -213,7 +194,7 @@ if(isset($_POST['addannouncement'])){
             <div class="container-xxl bd-gutter">
                 <div class="col-md-8 mx-auto text-center">
 
-                    <h1 class="mb-3 fw-bold">Announcement</h1>
+                    <h1 class="mb-3 fw-bold">Document Uploads</h1>
 
 
                 </div>
@@ -224,41 +205,50 @@ if(isset($_POST['addannouncement'])){
                 <section class="section dashboard">
 
 
-                    <form action="" method="post" enctype="multipart/form-data">
+                    <form action="../includes/createuser.php" method="post" enctype="multipart/form-data">
                     <div class="row mb-3">
-                            <label for="inputText" class="col-sm-2 col-form-label">Campus : </label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="campus" value="<?=$adminData['campus']?>" readonly>
-                            </div>
-                        </div>
-                    <div class="row mb-3">
-                            <label for="inputText" class="col-sm-2 col-form-label">Name of announcement:</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="announcement" >
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label for="inputText" class="col-sm-2 col-form-label">Announcement details:</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="announcementdetails" >
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                    <label for="inputdate" class="col-sm-2 col-form-label">Announcement Date</label>
+                    <label for="inputText" class="col-sm-2 col-form-label">Document type: </label>
                     <div class="col-sm-10">
-                        <input type="date" class="form-control" name="date" required>
+                        <select class="form-select" aria-label="Default select example" name="school">
+                        <option value="School of Engineering and Technology">Choose types of data</option>
+                            <option value="School of Engineering and Technology">Co-ordinators</option>
+                            <option value="School of Management">Achievements</option>
+                        </select>
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="inputdate" class="col-sm-2 col-form-label">Program Scheduled Date</label>
+                    <label for="inputText" class="col-sm-2 col-form-label">Co-Ordinators and achievements: </label>
                     <div class="col-sm-10">
-                        <input type="date" class="form-control" name="date" required>
+                        <select class="form-select" aria-label="Default select example" name="school">
+                        <option value="School of Engineering and Technology">Choose Co-Ordinators</option>
+                            <option value="School of Engineering and Technology">Club In-Charge</option>
+                            <option value="School of Management">Faculty Co-Ordinators</option>
+                            <option value="School of Management">Student Co-Ordinators</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label">Academic Years: </label>
+                    <div class="col-sm-10">
+                        <select class="form-select" aria-label="Default select example" name="school">
+                        <option value="School of Engineering and Technology">Choose academic years</option>
+                            <option value="School of Engineering and Technology">2019-20</option>
+                            <option value="School of Management">2020-21</option>
+                            <option value="School of Management">2021-22</option>
+                            <option value="School of Management">2022-23</option>
+                        </select>
                     </div>
                 </div>
                         <div class="row mb-3">
+                          <label for="inputNumber" class="col-sm-2 col-form-label">Update Profile Image</label>
+                            <div class="col-sm-10">
+                            <input class="form-control" type="file" id="formFile" name="imageupload" accept="image/*" required>
+                          </div>
+                        </div>
+                        <div class="row mb-3">
                             <label class="col-sm-2 col-form-label"></label>
                             <div class="col-sm-10">
-                                <button type="submit" class="btn btn-primary" name="addannouncement">Submit</button>
+                                <button type="submit" class="btn btn-primary" name="editadminprofile">Upload</button>
                             </div>
                         </div>
                     </form>

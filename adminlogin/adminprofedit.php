@@ -148,6 +148,27 @@ else
           </a>
       </li>
 
+      <li class="nav-item">
+              <a class="nav-link " href="addannouncement.php">
+                  <i class="bi bi-megaphone-fill"></i>
+                  <span>Announcements</span>
+              </a>
+          </li>
+
+      <li class="nav-item">
+              <a class="nav-link " href="gallery_uploads.php">
+                  <i class="bi bi-images"></i>
+                  <span>Gallery</span>
+              </a>
+          </li>
+
+          <li class="nav-item">
+              <a class="nav-link " href="document_uploads.php">
+                  <i class="bi bi-files"></i>
+                  <span>Documents</span>
+              </a>
+          </li>
+
          <li class="nav-item">
               <a class="nav-link " href="adminprof.php">
                   <i class="bi bi-person-fill"></i>

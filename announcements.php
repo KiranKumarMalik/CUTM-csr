@@ -70,7 +70,7 @@ require('./includes/database.php');
             style="width: 120px;border-bottom-style: none;padding-bottom: 30px;">
     </div>
 <?php
-    $announces=getannouncement($db);
+    $announces=getinsertannouncements($db);
     foreach($announces as $announce){
 ?>
 

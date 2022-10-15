@@ -26,7 +26,7 @@ else
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Data Uploads</title>
+    <title>Gallery Uploads</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -156,9 +156,16 @@ else
           </li>
 
       <li class="nav-item">
-              <a class="nav-link " href="uploads.php">
-                  <i class="bi bi-cloud-arrow-up-fill"></i>
-                  <span>Uploads</span>
+              <a class="nav-link " href="gallery_uploads.php">
+                  <i class="bi bi-images"></i>
+                  <span>Gallery</span>
+              </a>
+          </li>
+
+          <li class="nav-item">
+              <a class="nav-link " href="document_uploads.php">
+                  <i class="bi bi-files"></i>
+                  <span>Documents</span>
               </a>
           </li>
 
@@ -187,7 +194,7 @@ else
             <div class="container-xxl bd-gutter">
                 <div class="col-md-8 mx-auto text-center">
 
-                    <h1 class="mb-3 fw-bold">Data Uploads</h1>
+                    <h1 class="mb-3 fw-bold">Gallery Uploads</h1>
 
 
                 </div>
@@ -200,29 +207,31 @@ else
 
                     <form action="../includes/createuser.php" method="post" enctype="multipart/form-data">
                     <div class="row mb-3">
-                    <label for="inputText" class="col-sm-2 col-form-label">Types of data: </label>
+                            <label for="inputText" class="col-sm-2 col-form-label">Name of the Program:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="name" value="<?=$adminData['name']?>" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                        <label for="inputText" class="col-sm-2 col-form-label">Details:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="name" value="<?=$adminData['name']?>" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label">Academic Years: </label>
                     <div class="col-sm-10">
                         <select class="form-select" aria-label="Default select example" name="school">
-                        <option value="School of Engineering and Technology">Choose types of data</option>
-                            <option value="School of Engineering and Technology">Photos</option>
-                            <option value="School of Management">Documents</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="inputText" class="col-sm-2 col-form-label">Co-Ordinators and achievements: </label>
-                    <div class="col-sm-10">
-                        <select class="form-select" aria-label="Default select example" name="school">
-                        <option value="School of Engineering and Technology">Choose Co-Ordinators or achievements</option>
-                            <option value="School of Engineering and Technology">Club In-Charge</option>
-                            <option value="School of Management">Faculty Co-Ordinators</option>
-                            <option value="School of Management">Student Co-Ordinators</option>
-                            <option value="School of Management">Achievements</option>
+                        <option value="School of Engineering and Technology">Choose academic years</option>
+                            <option value="School of Engineering and Technology">2019-20</option>
+                            <option value="School of Management">2020-21</option>
+                            <option value="School of Management">2021-22</option>
+                            <option value="School of Management">2022-23</option>
                         </select>
                     </div>
                 </div>
                         <div class="row mb-3">
-                          <label for="inputNumber" class="col-sm-2 col-form-label">Update Profile Image</label>
+                          <label for="inputNumber" class="col-sm-2 col-form-label">Upload Image</label>
                             <div class="col-sm-10">
                             <input class="form-control" type="file" id="formFile" name="imageupload" accept="image/*" required>
                           </div>
