@@ -178,25 +178,30 @@ else
                         <div class="card-body">
                         <form action="" method="post">
                             <h5 class="card-title">Generate E-Certificate</h5>
-                            <div class="row">
+                            <div class="row mb-3">
+                            <label for="inputText" class="col-sm-2 col-form-label">Name:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="name" value="<?=$studentdata['name']?>" readonly>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputText" class="col-sm-2 col-form-label">Registration number:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="regd" value="<?=$studentdata['regd']?>" readonly>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputText" class="col-sm-2 col-form-label">Batch:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="regd" value="<?=$studentdata['admissionyear']?>" readonly>
+                            </div>
+                        </div>
                             
-                                <div class="col-md-8 bg-light text-right">
-                                    <label>Admission Year</label>
-                                    <select class="form-select" aria-label="Default select example" name="selectSession">
-                                    <?php
-                                      $year=getAllYear($db);
-                                      foreach($year as $ct){
-                                    ?>
-                                      <option value="<?=$ct['admissionyear']?>"><?=$ct['admissionyear']?></option>
-                                    <?php
-                                      }
-                                    ?>
-                                    </select>
-                                </div>
+                        <div class="row mb-3">
                                 <div class="col-md-4 bg-light text-right"><br>
-                                    <button type="submit" class="btn btn-success btn-lg float-right" name="addpost">Generate</button>
-                                </div>
-                             </div>
+                                    <center><button type="submit" class="btn btn-success btn-lg float-right" name="addpost">View Certificate</button></center>
+                                    </div>
+                                 </div>
                           </div>
                         </div>
   <!-- ======= Footer ======= -->

@@ -209,37 +209,42 @@ else
                     <div class="row mb-3">
                             <label for="inputText" class="col-sm-2 col-form-label">Name of the Program:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="name" value="<?=$adminData['name']?>" required>
+                                <input type="text" class="form-control" name="nameofprogram" value="name of program" required>
                             </div>
                         </div>
                         <div class="row mb-3">
                         <label for="inputText" class="col-sm-2 col-form-label">Details:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="name" value="<?=$adminData['name']?>" required>
+                                <input type="text" class="form-control" name="detailsofprogram" value="details of the program" required>
                             </div>
                         </div>
                         <div class="row mb-3">
                     <label for="inputText" class="col-sm-2 col-form-label">Academic Years: </label>
                     <div class="col-sm-10">
-                        <select class="form-select" aria-label="Default select example" name="school">
-                        <option value="School of Engineering and Technology">Choose academic years</option>
-                            <option value="School of Engineering and Technology">2019-20</option>
-                            <option value="School of Management">2020-21</option>
-                            <option value="School of Management">2021-22</option>
-                            <option value="School of Management">2022-23</option>
-                        </select>
+                        <select class="form-select" aria-label="Default select example" name="yearofprogram">
+                                <?php
+                                  $year=getAllYear($db);
+                                  $thisyear=date("Y");
+                                  foreach($year as $ct){
+                                ?>
+                                        <option value="<?=$ct['Year']?>"><?=$ct['Year']?></option>
+                                <?php
+                                }
+                            ?>
+                            </select>
                     </div>
                 </div>
                         <div class="row mb-3">
                           <label for="inputNumber" class="col-sm-2 col-form-label">Upload Image</label>
                             <div class="col-sm-10">
-                            <input class="form-control" type="file" id="formFile" name="imageupload" accept="image/*" required>
+                            <input class="form-control" type="file" id="formFile" name="imageupload[]" accept="image/*" multiple required>
                           </div>
                         </div>
+                        <input type="hidden" value="<?=$adminData['campus']?>" name="campus">
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label"></label>
                             <div class="col-sm-10">
-                                <button type="submit" class="btn btn-primary" name="editadminprofile">Upload</button>
+                                <button type="submit" class="btn btn-primary" name="uploadimagepublic">Upload</button>
                             </div>
                         </div>
                     </form>

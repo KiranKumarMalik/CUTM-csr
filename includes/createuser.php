@@ -187,4 +187,56 @@
 
 	
 
+
+
+
+	
+	if(isset($_POST['uploadimagepublic'])){
+		$nameofprogram=mysqli_real_escape_string($db,$_POST['nameofprogram']);
+        $detailsofprogram=mysqli_real_escape_string($db,$_POST['detailsofprogram']);
+		$yearofprogram=mysqli_real_escape_string($db,$_POST['yearofprogram']);
+		$campus=mysqli_real_escape_string($db,$_POST['campus']);
+
+
+		echo $nameofprogram."<br><br>";
+		echo $detailsofprogram."<br><br>";
+		echo $yearofprogram."<br><br>";
+		echo $campus."<br><br>";
+
+		$image_name=$_FILES['imageupload']['name'];
+        $image_tmp=$_FILES['imageupload']['tmp_name'];
+		echo $image_name[0]."<br><br>";
+
+
+		$query="INSERT INTO gallery1 (name,details,images,campus,years) VALUES('$nameofprogram','$detailsofprogram','$image_name[0]','$campus','$yearofprogram')";
+        $run=mysqli_query($db,$query) or die(mysqli_error($db));
+        if ($run) {
+			$galleryid1=mysqli_insert_id($db);
+            foreach($image_name as $index=>$img){ 
+				echo $img;
+				echo $image_tmp[$index];
+
+				if(move_uploaded_file($image_tmp[$index],"../assets/img/event_images/$img")){
+					$query="INSERT INTO gallery2 (connect_id,images) VALUES('$galleryid1','$img')";
+        			$run=mysqli_query($db,$query) or die(mysqli_error($db));
+					if ($run) {
+						header('location:./gallery_uploads.php');
+						// echo "inserted done";
+					}
+					else {
+						echo "inserted error";
+					}
+				}
+			}
+			
+        }
+        else {
+            echo "inserted error";
+        }
+		
+
+		
+
+		
+	}
 ?>
