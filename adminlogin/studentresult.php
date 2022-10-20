@@ -14,11 +14,14 @@ if($_SESSION['email'] and $utype=="student")
   $studentdata=getUserNmae($db,$uemail);
   $studentData=getAllStudentDetails($db,$uemail);
   $AddmissionYear=$studentData['admissionyear'];
+  echo $AddmissionYear;
   $AddmissionYear=getYearBySession($db,$AddmissionYear);
   echo $AddmissionYear;
+  echo $uemail;
   $posts=getAllPostAdmin($db);
 
   $studentResultyr1=getStudentResultyr1($db,$uemail,$AddmissionYear);
+  echo $studentResultyr1['Culture'];
   $studentResultyr2=getStudentResultyr2($db,$uemail,$AddmissionYear+1);
   $studentResultyr3=getStudentResultyr3($db,$uemail,$AddmissionYear+2);
   $studentResultyr4=getStudentResultyr4($db,$uemail,$AddmissionYear+3);
@@ -202,7 +205,7 @@ else
         </thead>
         <tbody>
             <tr>
-                <th>Culture(in hrs)</th>
+                <th>Culture(in hrs)</th> 
                 <td><?=$studentResultyr1['Culture']?></td>
                 <td><?=$studentResultyr2['Culture']?></td>
                 <td><?=$studentResultyr3['Culture']?></td>

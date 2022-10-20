@@ -114,11 +114,18 @@ else
     padding: 20px 0;
     background: #ccc;
   }
+  .backimage{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top:0;
+    left:0;
+  }
   .pm-certificate-container {
     position: relative;
     width: 1100px;
     height: 750px;
-    background-image: url("image/csrbg.jpg");
+    background-image: url("image/csr.jpg");
     background-position: center;
     background-size: 1100px 750px;
     padding: 30px;
@@ -234,16 +241,22 @@ else
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<body>
-  <div class="container pm-certificate-container">
+
+<div class="container pm-certificate-container">
+
+  
+
+    
+   
     <div class="outer-border"></div>
     <div class="inner-border"></div>
     
     <div class="pm-certificate-border col-xs-12">
+    
       <div class="row pm-certificate-header">
         <div class="pm-certificate-title cursive col-xs-12 text-center">
           <h2>Centurion University of Technology and Management</h2>
-          <img src="image/cutm.png" width="133" height="160">
+          <img src="image/logo.png" width="100" height="150">
         </div>
       
 
@@ -306,9 +319,10 @@ else
   </div>
   
   <br><br>
-  <center><button class="btn btn-success btn-lg float-right" type="click" onclick="finalCertificate()">Print Final Certificate</button><center>
+  
 
 </body>
+<center><button class="btn btn-success btn-lg float-right" type="click" onclick="finalCertificate()">Print Final Certificate</button><center>
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
 

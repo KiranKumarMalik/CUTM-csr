@@ -66,24 +66,19 @@ require('./includes/database.php');
     <section id="about-us" class="about-us" style="padding-bottom: 50px;">
         <div>
             <!-- Top Bar -->
-            <?php
-$announces=getinsertannouncements($db);
-foreach($announces as $announce){
-?>
+ 
         <div class="announcementBlock" style="display:inline-block; width:100%; height: 27px;">
       <div class="announcements" style="padding-top: 0px">
         <div class="announcements-label" style="padding-top: 5px; padding-bottom: 5px; background-color: #FC654C; text-align: right; width:12%;float: left; height: 38px;"><strong style="padding-right: 10px"><span class="show-large">Announcements:</span><span class="show-mobile"><i aria-hidden="true" class="fas fa-bullhorn"></i></span></strong></div>
         <div class="announcements-content " style="padding-top: 5px; padding-bottom: 5px; background-color: #ffc600; color: #07294d; width:88%; float: left; height: 38px;">
-         <marquee scrolldelay="80" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();" >
-       <a href="announcements.php" style="color: inherit;"> 
-        <div class='marquee-hsas-shortcode-88' style='width: 100%;overflow: hidden;'><b><?=$announce['campus']?>: <?=$announce['event_name']?> | <?=$announce['details']?></b></marquee></a> 
+        <marquee scrolldelay="80" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();" >
+        <a href="#" style="color: inherit;"></a>
+        <div class='marquee-hsas-shortcode-88' style='width: 100%;overflow: hidden;'><b>Kiran</marquee>
+          </div>
         </div>
-        </div>
-    </div>
-</div>
-<?php
-}
-?>    
+    </div>   
+</div> 
+  
 <!-- End Top Bar -->
         <h2 class="text-center section-title" data-aos="fade-up" style="padding-top: 30px;padding-bottom: 0px;"><strong>ABOUT US</strong></h2>
         </div>

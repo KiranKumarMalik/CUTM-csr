@@ -25,18 +25,47 @@ if(isset($_POST['addpost'])){
     echo $starttime;echo "<br>";
     echo $endtime;echo "<br>";
 
+
+    date_default_timezone_set('Asia/Kolkata');
+    $currentTime=date('h:i', time());
+
+
+
     if (strtotime($endtime)>strtotime($starttime)) {
         $totaltime=(strtotime($endtime)-strtotime($starttime))/3600;
         echo $totaltime;
         // this is used for time calculation 
 
-        $query="INSERT INTO csrtimesheet (NameOfStd,emailOfStd,yearOfPr,csrPr,schoolname,club,date,campus,fromTime,endTime,totalTime,status) VALUES('$uname','$uemail','$year','$program','$schoolname','$clubname','$date','$campus','$starttime','$endtime','$totaltime','$status')";
-        $run=mysqli_query($db,$query);
+        $todaydate = date("Y-m-d");
+        echo $todaydate;
 
-        echo $run;
+
+        if($date <= $todaydate){
+            // if($currentTime >= $endtime){
+                $query="INSERT INTO csrtimesheet (NameOfStd,emailOfStd,yearOfPr,csrPr,schoolname,club,date,campus,fromTime,endTime,totalTime,status) VALUES('$uname','$uemail','$year','$program','$schoolname','$clubname','$date','$campus','$starttime','$endtime','$totaltime','$status')";
+                $run=mysqli_query($db,$query);
+        
+                echo $run;
+            
+        
+                header('location:../adminlogin/student.php');
+            // }
+            
+            
+        }
+        else {
+            ?>
+                <script>
+                alert("Wrong date input ");
     
+                setTimeout(function () {    
+                    window.location.href = '../adminlogin/generatereport.php'; 
+                },0);
+                </script>
+            <?php
+        }
 
-        header('location:../adminlogin/student.php');
+        
     }
     else {
         ?>

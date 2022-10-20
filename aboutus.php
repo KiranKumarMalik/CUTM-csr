@@ -144,14 +144,14 @@
   <tr>
   <td><b>Credit</b></td>
   <td style="padding-left: 50px"><b>Grade</b></td>
+  <th rowspan="6" style="padding-left: 70px"><li> Credit refers to the no of hours the student spared.</li>
+    <li> For more than 1 year programme the credit will be calculated by taking the average of the credit points of each year.</li>
+    <li> The final CSaR Grade will be reflected in the final degree Grade Sheet & Certificate.</li>
+</th>
   </tr>
   <tr>
     <td >30-45</td>
     <td style="padding-left: 65px">C</td>
-    <th rowspan="6" style="padding-left: 70px"><li> Credit refers to the no of hours the student spared.</li>
-    <li> For more than 1 year programme the credit will be calculated by taking the average of the credit points of each year.</li>
-    <li> The final CSaR Grade will be reflected in the final degree Grade Sheet & Certificate.</li>
-</th>
   </tr>
   <tr>
     <td>46-60</td>
@@ -174,14 +174,14 @@
     </section>
     <!-- End: #about -->
     
-    <!-- Campus -->
+    <!-- notice -->
     <section id="pricing" class="pricing" style="margin-top: 20px;margin-bottom: 20px;">
         <div class="text-center">
-        <div class="zoom-in-zoom-out"><center><h1 class="lead" data-aos="fade-up" style="color: #FF0000;"><b>Centurion University will endeavour to support student ideas for CSaR activities. Each academic year is from 1st July to 30th June.</b></h1></center></div>
+        <div class="zoom-in-zoom-out"><center><h1 class="lead" data-aos="fade-up" style="color: #FF0000;"><b style="font-family: Georgia, Helvetica, sans-serif;">Centurion University will endeavour to support student ideas for CSaR activities. Each academic year is from 1st July to 30th June.</b></h1></center></div>
             </div>
         </div>
     </section>
-    <!-- End: Campus -->
+    <!-- End: notice -->
    
     
 <!-- Start: Footer Dark -->
