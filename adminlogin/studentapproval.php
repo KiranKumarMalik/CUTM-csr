@@ -162,9 +162,16 @@ else
           </li>
 
           <li class="nav-item">
-              <a class="nav-link " href="document_uploads.php">
-                  <i class="bi bi-files"></i>
-                  <span>Documents</span>
+              <a class="nav-link " href="coordinator_uploads.php">
+                  <i class="bi bi-people-fill"></i>
+                  <span>Co-ordinators</span>
+              </a>
+          </li>
+
+          <li class="nav-item">
+              <a class="nav-link " href="achievement_uploads.php">
+                  <i class="bi bi-trophy-fill"></i>
+                  <span>Achievements</span>
               </a>
           </li>
 
@@ -322,7 +329,7 @@ else
                                                                     </div>
                                                                     <div class="col-sm-9">
                                                                         <p class="text-muted mb-0">
-                                                                            <?=$post['admissionyear']?></p>
+                                                                            <?=$post['branch']?></p>
                                                                     </div>
                                                                 </div>
                                                                 <hr>

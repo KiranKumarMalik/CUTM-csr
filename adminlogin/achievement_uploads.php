@@ -163,9 +163,16 @@ else
           </li>
 
           <li class="nav-item">
-              <a class="nav-link " href="document_uploads.php">
-                  <i class="bi bi-files"></i>
-                  <span>Documents</span>
+              <a class="nav-link " href="coordinator_uploads.php">
+                  <i class="bi bi-people-fill"></i>
+                  <span>Co-ordinators</span>
+              </a>
+          </li>
+
+          <li class="nav-item">
+              <a class="nav-link " href="achievement_uploads.php">
+                  <i class="bi bi-trophy-fill"></i>
+                  <span>Achievements</span>
               </a>
           </li>
 
@@ -194,7 +201,7 @@ else
             <div class="container-xxl bd-gutter">
                 <div class="col-md-8 mx-auto text-center">
 
-                    <h1 class="mb-3 fw-bold">Document Uploads</h1>
+                    <h1 class="mb-3 fw-bold">Previous Achievements Uploads</h1>
 
 
                 </div>
@@ -207,38 +214,76 @@ else
 
                     <form action="../includes/createuser.php" method="post" enctype="multipart/form-data">
                     <div class="row mb-3">
-                    <label for="inputText" class="col-sm-2 col-form-label">Document type: </label>
-                    <div class="col-sm-10">
-                        <select class="form-select" aria-label="Default select example" name="school">
-                        <option value="School of Engineering and Technology">Choose types of data</option>
-                            <option value="School of Engineering and Technology">Co-ordinators</option>
-                            <option value="School of Management">Achievements</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="inputText" class="col-sm-2 col-form-label">Co-Ordinators and achievements: </label>
-                    <div class="col-sm-10">
-                        <select class="form-select" aria-label="Default select example" name="school">
-                        <option value="School of Engineering and Technology">Choose Co-Ordinators</option>
-                            <option value="School of Engineering and Technology">Club In-Charge</option>
-                            <option value="School of Management">Faculty Co-Ordinators</option>
-                            <option value="School of Management">Student Co-Ordinators</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="inputText" class="col-sm-2 col-form-label">Academic Years: </label>
-                    <div class="col-sm-10">
-                        <select class="form-select" aria-label="Default select example" name="school">
-                        <option value="School of Engineering and Technology">Choose academic years</option>
-                            <option value="School of Engineering and Technology">2019-20</option>
-                            <option value="School of Management">2020-21</option>
-                            <option value="School of Management">2021-22</option>
-                            <option value="School of Management">2022-23</option>
-                        </select>
-                    </div>
-                </div>
+                            <label for="inputText" class="col-sm-2 col-form-label">Name:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="name" value="" required>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="inputText" class="col-sm-2 col-form-label">Registration Number:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="regd" value="" required>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="inputText" class="col-sm-2 col-form-label">Branch:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="branch" value="" required>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="inputText" class="col-sm-2 col-form-label">Batch:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="batch" value="" required>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="inputText" class="col-sm-2 col-form-label">Mail id:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="mail" value="" required>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="inputText" class="col-sm-2 col-form-label">Facebook id:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="facebook" value="" required>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="inputText" class="col-sm-2 col-form-label">Instagram id:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="instagram" value="" required>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="inputText" class="col-sm-2 col-form-label">Github id:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="github" value="" required>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="inputText" class="col-sm-2 col-form-label">What's app number:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="whatsapp" value="" required>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="inputText" class="col-sm-2 col-form-label">Linked id:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="linkedin" value="" required>
+                            </div>
+                        </div>
+
+                    
                         <div class="row mb-3">
                           <label for="inputNumber" class="col-sm-2 col-form-label">Update Profile Image</label>
                             <div class="col-sm-10">

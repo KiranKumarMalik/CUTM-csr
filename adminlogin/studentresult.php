@@ -206,42 +206,42 @@ else
         <tbody>
             <tr>
                 <th>Culture(in hrs)</th> 
-                <td><?=$studentResultyr1['Culture']?></td>
-                <td><?=$studentResultyr2['Culture']?></td>
-                <td><?=$studentResultyr3['Culture']?></td>
-                <td><?=$studentResultyr4['Culture']?></td>
-                <td><?=$studentResultyr1['Culture'] + $studentResultyr2['Culture'] + $studentResultyr3['Culture'] + $studentResultyr4['Culture']?></td>
+                <td><?=(int)$studentResultyr1['Culture']?></td>
+                <td><?=(int)$studentResultyr2['Culture']?></td>
+                <td><?=(int)$studentResultyr3['Culture']?></td>
+                <td><?=(int)$studentResultyr4['Culture']?></td>
+                <td><?=(int)$studentResultyr1['Culture'] + (int)$studentResultyr2['Culture'] + (int)$studentResultyr3['Culture'] + (int)$studentResultyr4['Culture']?></td>
             </tr>
             <tr>
                 <th>Sports(in hrs)</th>
-                <td><?=$studentResultyr1['Sports']?></td>
-                <td><?=$studentResultyr2['Sports']?></td>
-                <td><?=$studentResultyr3['Sports']?></td>
-                <td><?=$studentResultyr4['Sports']?></td>
-                <td><?=$studentResultyr1['Sports'] + $studentResultyr2['Sports'] + $studentResultyr3['Sports'] + $studentResultyr4['Sports']?></td>
+                <td><?=(int)$studentResultyr1['Sports']?></td>
+                <td><?=(int)$studentResultyr2['Sports']?></td>
+                <td><?=(int)$studentResultyr3['Sports']?></td>
+                <td><?=(int)$studentResultyr4['Sports']?></td>
+                <td><?=(int)$studentResultyr1['Sports'] + (int)$studentResultyr2['Sports'] + (int)$studentResultyr3['Sports'] + (int)$studentResultyr4['Sports']?></td>
             </tr>
             <tr>
                 <th>Responsibility(in hrs)</th>
-                <td><?=$studentResultyr1['Responsibility']?></td>
-                <td><?=$studentResultyr2['Responsibility']?></td>
-                <td><?=$studentResultyr3['Responsibility']?></td>
-                <td><?=$studentResultyr4['Responsibility']?></td>
-                <td><?=$studentResultyr1['Responsibility'] + $studentResultyr2['Responsibility'] + $studentResultyr3['Responsibility'] + $studentResultyr4['Responsibility']?></td>
+                <td><?=(int)$studentResultyr1['Responsibility']?></td>
+                <td><?=(int)$studentResultyr2['Responsibility']?></td>
+                <td><?=(int)$studentResultyr3['Responsibility']?></td>
+                <td><?=(int)$studentResultyr4['Responsibility']?></td>
+                <td><?=(int)$studentResultyr1['Responsibility'] + (int)$studentResultyr2['Responsibility'] + (int)$studentResultyr3['Responsibility'] + (int)$studentResultyr4['Responsibility']?></td>
             </tr>
             <tr>
                 <th>Credit</th>
-                <td><?=$studentResultyr1['Culture'] + $studentResultyr1['Sports'] + $studentResultyr1['Responsibility']?></td>
-                <td><?=$studentResultyr2['Culture'] + $studentResultyr2['Sports'] + $studentResultyr2['Responsibility']?></td>
-                <td><?=$studentResultyr3['Culture'] + $studentResultyr3['Sports'] + $studentResultyr3['Responsibility']?></td>
-                <td><?=$studentResultyr4['Culture'] + $studentResultyr4['Sports'] + $studentResultyr4['Responsibility']?></td>
-                <td><?=$studentResultyr1['Culture'] + $studentResultyr1['Sports'] + $studentResultyr1['Responsibility']+ $studentResultyr2['Culture'] + $studentResultyr2['Sports'] + $studentResultyr2['Responsibility'] + $studentResultyr3['Culture'] + $studentResultyr3['Sports'] + $studentResultyr3['Responsibility'] + $studentResultyr4['Culture'] + $studentResultyr4['Sports'] + $studentResultyr4['Responsibility']?></td>
+                <td><?=(int)$studentResultyr1['Culture'] + (int)$studentResultyr1['Sports'] + (int)$studentResultyr1['Responsibility']?></td>
+                <td><?=(int)$studentResultyr2['Culture'] + (int)$studentResultyr2['Sports'] + (int)$studentResultyr2['Responsibility']?></td>
+                <td><?=(int)$studentResultyr3['Culture'] + (int)$studentResultyr3['Sports'] + (int)$studentResultyr3['Responsibility']?></td>
+                <td><?=(int)$studentResultyr4['Culture'] + (int)$studentResultyr4['Sports'] + (int)$studentResultyr4['Responsibility']?></td>
+                <td><?=(int)$studentResultyr1['Culture'] + (int)$studentResultyr1['Sports'] + (int)$studentResultyr1['Responsibility']+ (int)$studentResultyr2['Culture'] + (int)$studentResultyr2['Sports'] + (int)$studentResultyr2['Responsibility'] + (int)$studentResultyr3['Culture'] + (int)$studentResultyr3['Sports'] + (int)$studentResultyr3['Responsibility'] + (int)$studentResultyr4['Culture'] + (int)$studentResultyr4['Sports'] + (int)$studentResultyr4['Responsibility']?></td>
             </tr>
         </tbody>
     </table>
     <?php
     $score="";
-      $totalCradit=$studentResultyr1['Culture'] + $studentResultyr1['Sports'] + $studentResultyr1['Responsibility']+ $studentResultyr2['Culture'] + $studentResultyr2['Sports'] + $studentResultyr2['Responsibility'] + $studentResultyr3['Culture'] + $studentResultyr3['Sports'] + $studentResultyr3['Responsibility'] + $studentResultyr4['Culture'] + $studentResultyr4['Sports'] + $studentResultyr4['Responsibility'];
-      $avrageCradit=$totalCradit/4;
+    $totalCradit=$studentResultyr1['Culture'] + $studentResultyr1['Sports'] + $studentResultyr1['Responsibility']+ $studentResultyr2['Culture'] + $studentResultyr2['Sports'] + $studentResultyr2['Responsibility'] + $studentResultyr3['Culture'] + $studentResultyr3['Sports'] + $studentResultyr3['Responsibility'] + $studentResultyr4['Culture'] + $studentResultyr4['Sports'] + $studentResultyr4['Responsibility'];
+    $avrageCradit=$totalCradit/4;
       if ($avrageCradit >=91 ) {
         $score="O";
       }

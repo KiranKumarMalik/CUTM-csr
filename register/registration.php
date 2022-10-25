@@ -14,6 +14,45 @@ require('../includes/function.php');
     }
 	else {
 		$studentData=getStudentDataByRegd($db,$regd);
+        $addyear=$studentData['admissionyear'];
+
+        if($studentData['admissiontype'] == "LE"){
+            $actualAddYear=$addyear-1;
+            
+        }
+        else{
+            $actualAddYear=$addyear;
+        }
+
+        if($studentData['program'] == "B.Tech"){
+            $batch=$actualAddYear."-".$actualAddYear+4;
+        }
+        else if($studentData['program'] == "B.Pharm"){
+            $batch=$actualAddYear."-".$actualAddYear+4;
+        }
+        else if($studentData['program'] == "M.Sc"){
+            $batch=$actualAddYear."-".$actualAddYear+2;
+        }
+        else if($studentData['program'] == "B.Sc"){
+            $batch=$actualAddYear."-".$actualAddYear+3;
+        }
+        else if($studentData['program'] == "BBA"){
+            $batch=$actualAddYear."-".$actualAddYear+3;
+        }
+        else if($studentData['program'] == "MBA"){
+            $batch=$actualAddYear."-".$actualAddYear+2;
+        }
+        else if($studentData['program'] == "BCA"){
+            $batch=$actualAddYear."-".$actualAddYear+3;
+        }
+        else if($studentData['program'] == "ITI"){
+            $batch=$actualAddYear."-".$actualAddYear+2;
+        }
+        else if($studentData['program'] == "Diploma"){
+            $batch=$actualAddYear."-".$actualAddYear+3;
+        }
+        // echo $actualAddYear."<br>";
+        // echo $batch;
 	}
 
 ?>
@@ -116,7 +155,7 @@ require('../includes/function.php');
                     <input type="text" class="form-control " name="branch" style="margin-bottom: 20px;" value="<?=$studentData['branch']?>" readonly>
 
                     <label>Admission Year</label>
-                    <input type="text" class="form-control " name="addyr" style="margin-bottom: 20px;" value="<?=$studentData['admissionyear']?>" readonly>
+                    <input type="text" class="form-control " name="addyr" style="margin-bottom: 20px;" value="<?=$actualAddYear?>" readonly>
 
 					<label>DOB <span class="color-red">*</span></label>
                     <input type="text" class="form-control " name="dob" style="margin-bottom: 20px;" value="<?=$studentData['dob']?>" readonly>
@@ -135,6 +174,11 @@ require('../includes/function.php');
 
                     <label>Email Address <span class="color-red">*</span></label>
                     <input type="text" class="form-control " name="email" style="margin-bottom: 20px;" value="<?=$studentData['email']?>" readonly>
+
+
+                    <label>Batch <span class="color-red">*</span></label>
+                    <input type="text" class="form-control " name="batch" style="margin-bottom: 20px;" value="<?=$batch?>" readonly>
+
 
                     <label>Hobby </label>
                     <input type="text" class="form-control " name="hobby" style="margin-bottom: 20px;" required>

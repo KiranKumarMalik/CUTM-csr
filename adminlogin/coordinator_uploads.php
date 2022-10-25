@@ -26,7 +26,7 @@ else
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Edit Profile</title>
+    <title>Document Uploads</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -201,63 +201,130 @@ else
             <div class="container-xxl bd-gutter">
                 <div class="col-md-8 mx-auto text-center">
 
-                    <h1 class="mb-3 fw-bold">Admin Profile Update</h1>
-
-
+                    <h1 class="mb-3 fw-bold">Coordinators Data Uploads</h1>
                 </div>
             </div>
         </div>
 
-        <img src="../images/profileimg/<?=$adminData['profileimg'] ?>" alt="KIRAN Icon" width="170" height="170" ALIGN="right" HSPACE="30" VSPACE="30"
-            style=border-radius:50%; />
+        
                 <section class="section dashboard">
 
 
                     <form action="../includes/createuser.php" method="post" enctype="multipart/form-data">
+                    <div class="col-lg">
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label">Type of Coordinator</label>
+                        <div class="col-sm-10">
+                            <select class="form-select" aria-label="Default select example" name="getcodType" id="getcodType" onChange="getcodTypefun()">
+                                <option value="">Loading</option>
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="row mb-3">
+                            <label for="inputText" class="col-sm-2 col-form-label">Name:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="name" value="" required>
+                            </div>
+                        </div>
 
                         <div class="row mb-3">
-                            <label for="inputText" class="col-sm-2 col-form-label">Name : </label>
+                            <label for="inputText" class="col-sm-2 col-form-label">Mail id:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="name" value="<?=$adminData['name']?>" readonly>
+                                <input type="text" class="form-control" name="regd" value="" required>
                             </div>
                         </div>
 
+                        <div class="col-lg">
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label">School</label>
+                        <div class="col-sm-10">
+                            <select class="form-select" aria-label="Default select example" name="clubname" id="club">
+                                <option value="">Please Select Program</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label">Program</label>
+                        <div class="col-sm-10">
+                            <select class="form-select" aria-label="Default select example" name="clubname" id="club">
+                                <option value="">Please Select Program</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label">club</label>
+                        <div class="col-sm-10">
+                            <select class="form-select" aria-label="Default select example" name="clubname" id="club">
+                                <option value="">Please Select Program</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label">Branch</label>
+                        <div class="col-sm-10">
+                            <select class="form-select" aria-label="Default select example" name="clubname" id="club">
+                                <option value="">Please Select Program</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
 
                         <div class="row mb-3">
-                            <label for="inputText" class="col-sm-2 col-form-label">Designation : </label>
+                            <label for="inputText" class="col-sm-2 col-form-label">Facebook id:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="name" value="<?=$adminData['designation']?>" readonly>
+                                <input type="text" class="form-control" name="facebook" value="" required>
                             </div>
                         </div>
+
                         <div class="row mb-3">
-                            <label for="inputText" class="col-sm-2 col-form-label">Campus : </label>
+                            <label for="inputText" class="col-sm-2 col-form-label">Instagram id:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="name" value="<?=$adminData['campus']?>" readonly>
+                                <input type="text" class="form-control" name="instagram" value="" required>
                             </div>
                         </div>
-                        
+
                         <div class="row mb-3">
-                            <label for="inputText" class="col-sm-2 col-form-label">Mobile No.:</label>
+                            <label for="inputText" class="col-sm-2 col-form-label">Github id:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="mob" value="<?=$adminData['mobile']?>" required>
+                                <input type="text" class="form-control" name="github" value="" required>
                             </div>
                         </div>
+
                         <div class="row mb-3">
-                            <label for="inputText" class="col-sm-2 col-form-label">Mail:</label>
+                            <label for="inputText" class="col-sm-2 col-form-label">What's app number:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="email" value="<?=$adminData['email']?>" readonly>
+                                <input type="text" class="form-control" name="whatsapp" value="" required>
                             </div>
                         </div>
+
+                        <div class="row mb-3">
+                            <label for="inputText" class="col-sm-2 col-form-label">Linked id:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="linkedin" value="" required>
+                            </div>
+                        </div>
+
+                    
                         <div class="row mb-3">
                           <label for="inputNumber" class="col-sm-2 col-form-label">Update Profile Image</label>
                             <div class="col-sm-10">
-                            <input class="form-control" type="file" id="formFile" name="imageupload" accept="image/*" required>
+                            <input class="form-control" type="file" id="formFile" name="profile_img" accept="image/*" required>
                           </div>
                         </div>
+                        <input type="hidden" value="<?=$adminData['campus']?>" name="campus">
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label"></label>
                             <div class="col-sm-10">
-                                <button type="submit" class="btn btn-primary" name="editadminprofile">Submit</button>
+                                <button type="submit" class="btn btn-primary" name="uploadcoordinator">Submit</button>
                             </div>
                         </div>
                     </form>
@@ -280,39 +347,34 @@ else
             class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
-    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/chart.js/chart.min.js"></script>
-    <script src="assets/vendor/echarts/echarts.min.js"></script>
     <script src="assets/vendor/quill/quill.min.js"></script>
     <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
-    <script src="assets/vendor/tinymce/tinymce.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
 
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
 
     <script>
-    function printDiv() {
-        var divContents = document.getElementById("main").innerHTML;
-        // var a = window.open('', '', 'height=500, width=500');
-        // a.document.write('<html>');
-        // a.document.write('<body > <h1>Div contents are <br>');
-        // a.document.write(divContents);
-        // a.document.write('</body></html>');
-        // a.document.close();
-        // a.print();
-        window.print();
-    }
+   
+        function getcodTypefun() {
+            document.getElementById('getcodType').disabled =true
+            axios.get("./api/cordinatortype.php").then((response)=>{
+                console.log(response);
+                let options='<option value="">Select one option</option>';
+                for(let each of response.data.data){
+                    options+=`<option value="${each}">${each}</option>`;
+                }
+                document.getElementById('getcodType').innerHTML=options;
+                document.getElementById('getcodType').disabled =false;
+            })
+        }
     </script>
 
 </body>

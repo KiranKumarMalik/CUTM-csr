@@ -11,6 +11,7 @@
 		$school=mysqli_real_escape_string($db,$_POST['school']);
 		$program=mysqli_real_escape_string($db,$_POST['program']);
 		$branch=mysqli_real_escape_string($db,$_POST['branch']);
+		$batch=mysqli_real_escape_string($db,$_POST['batch']);
 		$addyr=mysqli_real_escape_string($db,$_POST['addyr']);
 		$sex=mysqli_real_escape_string($db,$_POST['sex']);
 		$religion=mysqli_real_escape_string($db,$_POST['religion']);
@@ -37,6 +38,7 @@
 		echo $school."<br><br>";
 		echo $program."<br><br>";
 		echo $branch."<br><br>";
+		echo $batch."<br><br>";
 		echo $addyr."<br><br>";
 		echo $sex."<br><br>";
 		echo $religion."<br><br>";
@@ -53,7 +55,7 @@
         print "</pre>";
 
         if(move_uploaded_file($image_tmp,"../images/profileimg/$image_name")){
-            $query="INSERT INTO student (name,email,regd,schoolname,program,branch,campus,admissionyear,sex,religion,dob,hobby,present_address,permanent_address,mobile,profileimage,status) VALUES('$name','$email','$regdno','$school','$program','$branch','$campus','$addyr','$sex','$religion','$dob','$hobby','$presentadd','$premantadd','$phone','$image_name','$status')";
+            $query="INSERT INTO student (name,email,regd,schoolname,program,branch,batch,campus,admissionyear,sex,religion,dob,hobby,present_address,permanent_address,mobile,profileimage,status) VALUES('$name','$email','$regdno','$school','$program','$branch','$batch','$campus','$addyr','$sex','$religion','$dob','$hobby','$presentadd','$premantadd','$phone','$image_name','$status')";
             $run=mysqli_query($db,$query) or die(mysqli_error($db));
             if ($run) {
                 header('location:../login/login.php');
@@ -227,6 +229,52 @@
 						echo "inserted error";
 					}
 				}
+			}
+			
+        }
+        else {
+            echo "inserted error";
+        }
+		
+
+		
+
+		
+	}
+
+	if(isset($_POST['uploadcoordinator'])){
+		$name=mysqli_real_escape_string($db,$_POST['name']);
+        $registrationnumber=mysqli_real_escape_string($db,$_POST['regd']);
+		$branch=mysqli_real_escape_string($db,$_POST['branch']);
+		$mailid=mysqli_real_escape_string($db,$_POST['mailid']);
+		$facebook=mysqli_real_escape_string($db,$_POST['facebook']);
+		$instagram=mysqli_real_escape_string($db,$_POST['instagram']);
+		$github=mysqli_real_escape_string($db,$_POST['github']);
+		$whatsapp=mysqli_real_escape_string($db,$_POST['whatsapp']);
+		$linkedin=mysqli_real_escape_string($db,$_POST['linkedin']);
+		$campus=mysqli_real_escape_string($db,$_POST['campus']);
+
+
+		echo $name."<br><br>";
+		echo $registrationnumber."<br><br>";
+		echo $branch."<br><br>";
+		echo $mailid."<br><br>";
+		echo $facebook."<br><br>";
+		echo $instagram."<br><br>";
+		echo $github."<br><br>";
+		echo $whatsapp."<br><br>";
+		echo $linkedin."<br><br>";
+		echo $campus."<br><br>";
+
+		$image_name=$_FILES['imageupload']['name'];
+        $image_tmp=$_FILES['imageupload']['tmp_name'];
+		echo $image_name[0]."<br><br>";
+
+
+		$query="INSERT INTO gallery1 (name,regd,branch,campus,profile_img,mail,facebook,github,instagram,whatsapp,linkedin) VALUES('$name','$registrationnumber','$branch',$campus,'$image_name[0]','$mailid','$facebook','$instagram','$github','$whatsapp','$linkedin')";
+        $run=mysqli_query($db,$query) or die(mysqli_error($db));
+        if ($run) {
+			
 			}
 			
         }

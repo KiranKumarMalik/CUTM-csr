@@ -69,166 +69,31 @@ require('./includes/database.php');
             data-aos="fade-up"
             style="width: 120px;border-bottom-style: none;padding-bottom: 30px;">
     </div>
-
+<?php
+    $announces=getinsertannouncements($db);
+    foreach($announces as $announce){
+?>
 
     <div class="col-md-8 mx-auto text-center">
         <div class="card">
             <div class="card-body">
+                <form action="" method="post">
                     <h3 class="lead" data-aos="fade-up" style="color: #002654;">
-                        <b>Bhubaneswar</b>
+                        <b><?=$announce['campus']?></b>
                     </h3>
-                <?php
-                $findbbsr=getinsertannouncementsforBBSR($db);
-                foreach($findbbsr as $bbsrcamp)
-                {
-                    ?>
-
-                    <a href="announcement details.php"><h6 style="text-align:left"><?=$bbsrcamp['event_name']?></h6></a>
-                    <p data-aos="fade-up"><li style="text-align:left"><?=$bbsrcamp['details']?></li></p><br>
-                    <a href="announcement details.php"><p data-aos="fade-up" style="text-align:right">Read more <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
-                    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
-                    </svg></p></a>
-
-                    <?php
-            }
-                    ?>
-
+                    <h6><?=$announce['event_name']?></h6>
+                    <div class="card">
+                    <div class="card-body">
+                    <form action="" method="post">
+                    <iframe src="./assets/pdf/<?=$pdf?>" width="100%" height="600px"></iframe>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div><br>
-
-        <div class="col-md-8 mx-auto text-center">
-        <div class="card">
-            <div class="card-body">
-                    <h3 class="lead" data-aos="fade-up" style="color: #002654;">
-                        <b>Balasore</b>
-                    </h3>
-                <?php
-                $findbls=getinsertannouncementsforBLS($db);
-                foreach($findbls as $blscamp)
-                {
-                    
-                    ?>
-
-                    <a href="announcement details.php"><h6 style="text-align:left"><?=$blscamp['event_name']?></h6></a>
-                    <p data-aos="fade-up"><li style="text-align:left"><?=$blscamp['details']?></li></p><br>
-                    <a href="announcement details.php"><p data-aos="fade-up" style="text-align:right">Read more <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
-                    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
-                    </svg></p></a>
-
-                    <?php
-            }
-                    ?>
-
-                </div>
-            </div>
-        </div><br>
-
-        <div class="col-md-8 mx-auto text-center">
-        <div class="card">
-            <div class="card-body">
-                    <h3 class="lead" data-aos="fade-up" style="color: #002654;">
-                        <b>Balangir</b>
-                    </h3>
-                <?php
-                $findblr=getinsertannouncementsforBLR($db);
-                foreach($findblr as $blrcamp)
-                {
-                    ?>
-
-                    <a href="announcement details.php"><h6 style="text-align:left"><?=$blrcamp['event_name']?></h6></a>
-                    <p data-aos="fade-up"><li style="text-align:left"><?=$blrcamp['details']?></li></p><br>
-                    <a href="announcement details.php"><p data-aos="fade-up" style="text-align:right">Read more <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
-                    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
-                    </svg></p></a>
-
-                    <?php
-            }
-                    ?>
-
-                </div>
-            </div>
-        </div><br>
-
-        <div class="col-md-8 mx-auto text-center">
-        <div class="card">
-            <div class="card-body">
-                    <h3 class="lead" data-aos="fade-up" style="color: #002654;">
-                        <b>Paralakhemundi</b>
-                    </h3>
-                <?php
-                $findpkd=getinsertannouncementsforPKD($db);
-                foreach($findpkd as $pkdcamp)
-                {
-                    ?>
-
-                    <a href="announcement details.php"><h6 style="text-align:left"><?=$pkdcamp['event_name']?></h6></a>
-                    <p data-aos="fade-up"><li style="text-align:left"><?=$pkdcamp['details']?></li></p><br>
-                    <a href="announcement details.php"><p data-aos="fade-up" style="text-align:right">Read more <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
-                    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
-                    </svg></p></a>
-
-                    <?php
-            }
-                    ?>
-
-                </div>
-            </div>
-        </div><br>
-
-        <div class="col-md-8 mx-auto text-center">
-        <div class="card">
-            <div class="card-body">
-                    <h3 class="lead" data-aos="fade-up" style="color: #002654;">
-                        <b>Rayagada</b>
-                    </h3>
-                <?php
-                $findryd=getinsertannouncementsforRYD($db);
-                foreach($findryd as $rydcamp)
-                {
-                    ?>
-
-                    <a href="announcement details.php"><h6 style="text-align:left"><?=$rydcamp['event_name']?></h6></a>
-                    <p data-aos="fade-up"><li style="text-align:left"><?=$rydcamp['details']?></li></p><br>
-                    <a href="announcement details.php"><p data-aos="fade-up" style="text-align:right">Read more <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
-                    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
-                    </svg></p></a>
-
-                    <?php
-            }
-                    ?>
-
-                </div>
-            </div>
-        </div><br>
-
-        
-        <div class="col-md-8 mx-auto text-center">
-        <div class="card">
-            <div class="card-body">
-                    <h3 class="lead" data-aos="fade-up" style="color: #002654;">
-                        <b>Chatrapur</b>
-                    </h3>
-                <?php
-                $findctr=getinsertannouncementsforCTR($db);
-                foreach($findctr as $ctrcamp)
-                {
-                    ?>
-
-                    <a href="announcement details.php"><h6 style="text-align:left"><?=$ctrcamp['event_name']?></h6></a>
-                    <p data-aos="fade-up"><li style="text-align:left"><?=$ctrcamp['details']?></li></p><br>
-                    <a href="announcement details.php"><p data-aos="fade-up" style="text-align:right">Read more <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
-                    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
-                    </svg></p></a>
-
-                    <?php
-            }
-                    ?>
-
-                </div>
-            </div>
-        </div><br>
-
+<?php
+}
+?>
     </section>
                     <!-- End: announcement -->
     

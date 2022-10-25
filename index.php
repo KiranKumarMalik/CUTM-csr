@@ -104,7 +104,7 @@ require('./includes/database.php');
         <div class="text-center">
             <h2 class="text-center section-title" data-aos="fade-up" style="padding-top: 50px;padding-bottom: 0px;"><strong>CLUBS</strong></h2>
             <hr data-aos="fade-up" style="width: 120px;border-bottom-style: none;padding-bottom: 30px;">
-            <p data-aos="fade-up" style="margin-bottom: 25px;">Magnam dolores commodi suscipit eius consequatur ex aliquid</p>
+            <p data-aos="fade-up" style="margin-bottom: 25px;">Total Hours spent by three clubs in all 6 Campuses</p>
         </div>
         <div class="container">
             <div class="row">
@@ -112,21 +112,21 @@ require('./includes/database.php');
                     <div class="float-left services-icon" data-aos="fade-up"><i class="fas fa-atom fa-spin" style="font-size: 25px;"></i></div>
                     <div>
                         <h4 data-aos="fade-up" class="services-title"><strong>Culture</strong><br></h4>
-                        <p data-aos="fade-up" class="services-p">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                        <h2 data-aos="fade-up" class="services-p">450 Hrs</h2>
                     </div>
                 </div>
                 <div class="col-sm-12 col-lg-4 col-md-6 icon-box" style="margin-top: 20px;margin-bottom: 20px;">
                     <div class="float-left services-icon" data-aos="fade-up"><i class="fas fa-basketball-ball fa-spin" style="font-size: 25px;"></i></div>
                     <div>
                         <h4 data-aos="fade-up" class="services-title"><strong>Sports</strong><br></h4>
-                        <p data-aos="fade-up" class="services-p">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+                        <h2 data-aos="fade-up" class="services-p">450 Hrs</h2>
                     </div>
                 </div>
                 <div class="col-sm-12 col-lg-4 col-md-6 icon-box" style="margin-top: 20px;margin-bottom: 20px;">
                     <div class="float-left services-icon" data-aos="fade-up"><i class="fas fa-hands-helping" style="font-size: 25px;"></i></div>
                     <div>
                         <h4 data-aos="fade-up" class="services-title"><strong>Responsibility</strong><br></h4>
-                        <p data-aos="fade-up" class="services-p">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                        <h2 data-aos="fade-up" class="services-p">450 Hrs</h2>
                     </div>
                 </div>
                 
@@ -139,7 +139,7 @@ require('./includes/database.php');
         <div class="text-center">
             <h2 class="text-center section-title" data-aos="fade-up" style="padding-top: 30px;padding-bottom: 0px;"><strong>CSaR TEAM</strong></h2>
             <hr data-aos="fade-up" style="width: 120px;border-bottom-style: none;padding-bottom: 30px;">
-            <p data-aos="fade-up" style="margin-bottom: 30px;">Magnam dolores commodi suscipit eius consequatur ex aliquid</p>
+            <p data-aos="fade-up" style="margin-bottom: 30px;">Get up, Dress up, Show up and Never give up</p>
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
@@ -228,6 +228,22 @@ require('./includes/database.php');
                     </div>
                     </a>
                 </div>
+                <a href="yearwise.php?campus=Rayagada">
+                <div class="col-12 col-lg-4 col-md-6 portfolio-item filter-app" data-aos="fade-up" data-aos-delay="400"><img class="img-fluid" src="assets/img/event_images/IMG_7514.jpg">
+                    <div class="portfolio-info">
+                        <h4>Rayagada</h4>
+                        <p>Event images</p>
+                    </div>
+                    </a>
+                </div>
+                <a href="yearwise.php?campus=Chatrapur">
+                <div class="col-12 col-lg-4 col-md-6 portfolio-item filter-app" data-aos="fade-up" data-aos-delay="400"><img class="img-fluid" src="assets/img/event_images/IMG_7514.jpg">
+                    <div class="portfolio-info">
+                        <h4>Chatrapur</h4>
+                        <p>Event images</p>
+                    </div>
+                    </a>
+                </div>
             </div>
             <a class="btn btn-info about-us-btn" role="button" data-aos="fade-up" href="imagegallery.php" style="width: 150px;">More images</a>
         </div>
@@ -289,6 +305,17 @@ require('./includes/database.php');
                             <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
                                 <i class="fa fa-map-marker fa-5x" style="color:tomato"></i>
                                 <h4 class="card-title" style="margin-top: 20px;"><strong>Rayagada</strong></h4>
+                                <ul class="list-group">
+                                    <p class="text-center" data-aos="fade-up">IDCO Industrial Area, Pitamahal, Rayagada, Odisha.</p>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="400" style="margin-top: 15px;margin-bottom: 15px;">
+                        <div class="card shadow" style="width: 277.5;">
+                            <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
+                                <i class="fa fa-map-marker fa-5x" style="color:tomato"></i>
+                                <h4 class="card-title" style="margin-top: 20px;"><strong>Chatrapur</strong></h4>
                                 <ul class="list-group">
                                     <p class="text-center" data-aos="fade-up">IDCO Industrial Area, Pitamahal, Rayagada, Odisha.</p>
                                 </ul>

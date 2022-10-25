@@ -20,10 +20,11 @@ if(isset($_POST['addannouncement'])){
     $announcement=mysqli_real_escape_string($db,$_POST['announcement']);
     $announcementdetails=mysqli_real_escape_string($db,$_POST['announcementdetails']);
     $date=mysqli_real_escape_string($db,$_POST['date']);
+    $edate=mysqli_real_escape_string($db,$_POST['enddate']);
     
     
     
-        $query="INSERT INTO announcement (event_name,details,date_time,campus) VALUES('$announcement','$announcementdetails','$date','$campus')";
+        $query="INSERT INTO announcement (event_name,details,date_time,end_date,campus) VALUES('$announcement','$announcementdetails','$date','$edate','$campus')";
         $run=mysqli_query($db,$query) or die(mysqli_error($db));
         if ($run) {
             ?>
@@ -182,9 +183,16 @@ if(isset($_POST['addannouncement'])){
           </li>
 
           <li class="nav-item">
-              <a class="nav-link " href="document_uploads.php">
-                  <i class="bi bi-files"></i>
-                  <span>Documents</span>
+              <a class="nav-link " href="coordinator_uploads.php">
+                  <i class="bi bi-people-fill"></i>
+                  <span>Co-ordinators</span>
+              </a>
+          </li>
+
+          <li class="nav-item">
+              <a class="nav-link " href="achievement_uploads.php">
+                  <i class="bi bi-trophy-fill"></i>
+                  <span>Achievements</span>
               </a>
           </li>
 
@@ -237,22 +245,31 @@ if(isset($_POST['addannouncement'])){
                                 <input type="text" class="form-control" name="announcement" >
                             </div>
                         </div>
-                        <div class="row mb-3">
-                            <label for="inputText" class="col-sm-2 col-form-label">Announcement details:</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="announcementdetails" >
+                        
+
+                        <div class="card">
+                            <div class="card-body">
+                            <h5 class="card-title">Announcement details:</h5>
+
+                            <!-- TinyMCE Editor -->
+                            <textarea class="tinymce-editor" name="announcementdetails" required>
+                            
+                            </textarea><!-- End TinyMCE Editor -->
+
                             </div>
                         </div>
+
+
                         <div class="row mb-3">
-                    <label for="inputdate" class="col-sm-2 col-form-label">Announcement Date</label>
+                    <label for="inputdate" class="col-sm-2 col-form-label">Announcement start Date</label>
                     <div class="col-sm-10">
                         <input type="date" class="form-control" name="date" required>
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="inputdate" class="col-sm-2 col-form-label">Program Scheduled Date</label>
+                    <label for="inputdate" class="col-sm-2 col-form-label">End Date</label>
                     <div class="col-sm-10">
-                        <input type="date" class="form-control" name="date" required>
+                        <input type="date" class="form-control" name="enddate" required>
                     </div>
                 </div>
                         <div class="row mb-3">

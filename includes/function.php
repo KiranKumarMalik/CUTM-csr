@@ -331,5 +331,88 @@
         }
         return $data;
     }
+
+    function getinsertannouncementsforBBSR($db){
+        $todayis=date("Y-m-d");
+
+        $query="SELECT * FROM announcement WHERE campus='Bhubaneswar' AND '$todayis' between date_time and end_date ORDER BY id DESC";
+        $run=mysqli_query($db,$query);
+        $data=array();
+        while($d=mysqli_fetch_assoc($run)){
+            $data[]=$d;
+        }
+        return $data;
+    }
+
+    function getinsertannouncementsforBLS($db){
+        $todayis=date("Y-m-d");
+
+        $query="SELECT * FROM announcement WHERE campus='Balasore' AND '$todayis'  between date_time and end_date ORDER BY id DESC";
+        $run=mysqli_query($db,$query);
+        $data=array();
+        while($d=mysqli_fetch_assoc($run)){
+            $data[]=$d;
+        }
+        return $data;
+    }
+
+    function getinsertannouncementsforBLR($db){
+        $todayis=date("Y-m-d");
+
+        $query="SELECT * FROM announcement WHERE campus='Balangir' AND '$todayis' between date_time and end_date ORDER BY id DESC";
+        $run=mysqli_query($db,$query);
+        $data=array();
+        while($d=mysqli_fetch_assoc($run)){
+            $data[]=$d;
+        }
+        return $data;
+    }
     
+    function getinsertannouncementsforPKD($db){
+        $todayis=date("Y-m-d");
+
+        $query="SELECT * FROM announcement WHERE campus='Paralakhemundi' AND '$todayis' between date_time and end_date ORDER BY id DESC";
+        $run=mysqli_query($db,$query);
+        $data=array();
+        while($d=mysqli_fetch_assoc($run)){
+            $data[]=$d;
+        }
+        return $data;
+    }
+
+    function getinsertannouncementsforRYD($db){
+        $todayis=date("Y-m-d");
+
+        $query="SELECT * FROM announcement WHERE campus='Rayagada' AND '$todayis' between date_time and end_date ORDER BY id DESC";
+        $run=mysqli_query($db,$query);
+        $data=array();
+        while($d=mysqli_fetch_assoc($run)){
+            $data[]=$d;
+        }
+        return $data;
+    }
+
+    function getinsertannouncementsforCTR($db){
+        $todayis=date("Y-m-d");
+
+        $query="SELECT * FROM announcement WHERE campus='Chatrapur' AND '$todayis' between date_time and end_date ORDER BY id DESC";
+        $run=mysqli_query($db,$query);
+        $data=array();
+        while($d=mysqli_fetch_assoc($run)){
+            $data[]=$d;
+        }
+        return $data;
+    }
+    
+
+    function getAllCodrinator($db,$campus,$cordinatorType){
+
+        $query="SELECT * FROM coordinators WHERE campus='$campus' AND type='$cordinatorType'";
+        $run=mysqli_query($db,$query);
+        $data=array();
+        while($d=mysqli_fetch_assoc($run)){
+            $data[]=$d;
+        }
+        return $data;
+    }
 ?>

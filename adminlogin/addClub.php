@@ -182,9 +182,16 @@ if(isset($_POST['addClub'])){
           </li>
 
           <li class="nav-item">
-              <a class="nav-link " href="document_uploads.php">
-                  <i class="bi bi-files"></i>
-                  <span>Documents</span>
+              <a class="nav-link " href="coordinator_uploads.php">
+                  <i class="bi bi-people-fill"></i>
+                  <span>Co-ordinators</span>
+              </a>
+          </li>
+
+          <li class="nav-item">
+              <a class="nav-link " href="achievement_uploads.php">
+                  <i class="bi bi-trophy-fill"></i>
+                  <span>Achievements</span>
               </a>
           </li>
 
