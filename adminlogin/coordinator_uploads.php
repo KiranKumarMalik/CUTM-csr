@@ -241,7 +241,7 @@ else
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">School</label>
                         <div class="col-sm-10">
-                            <select class="form-select" aria-label="Default select example" name="clubname" id="club">
+                            <select class="form-select" aria-label="Default select example" name="getSchool" id="getSchool" onChange="getschoolTypefun()">
                                 <option value="">Please Select Program</option>
                             </select>
                         </div>
@@ -375,6 +375,23 @@ else
                 document.getElementById('getcodType').disabled =false;
             })
         }
+
+        function getschoolTypefun() {
+            let selection = document.getElementById('getcodType').value;
+            if (!selection) return;
+            document.getElementById('getSchool').disabled = true
+            document.getElementById('getSchool').innerHTML = '<option value="">Loading</option>';
+            axios.get("./api/school.php?school=" + selection).then((response) => {
+                console.log(response);
+                let options = '';
+                for (let each of response.data.data) {
+                    options += `<option value="${each}">${each}</option>`;
+                }
+                document.getElementById('getSchool').innerHTML = options;
+                document.getElementById('getSchool').disabled = false;
+            })
+        }
+        getcodTypefun();
     </script>
 
 </body>
