@@ -244,9 +244,8 @@
 
 	if(isset($_POST['uploadcoordinator'])){
 		$name=mysqli_real_escape_string($db,$_POST['name']);
-        $registrationnumber=mysqli_real_escape_string($db,$_POST['regd']);
 		$branch=mysqli_real_escape_string($db,$_POST['branch']);
-		$mailid=mysqli_real_escape_string($db,$_POST['mailid']);
+		$mailid=mysqli_real_escape_string($db,$_POST['mail']);
 		$facebook=mysqli_real_escape_string($db,$_POST['facebook']);
 		$instagram=mysqli_real_escape_string($db,$_POST['instagram']);
 		$github=mysqli_real_escape_string($db,$_POST['github']);
@@ -254,9 +253,11 @@
 		$linkedin=mysqli_real_escape_string($db,$_POST['linkedin']);
 		$campus=mysqli_real_escape_string($db,$_POST['campus']);
 
+		$image_name=$_FILES['imageupload']['name'];
+        $image_tmp=$_FILES['imageupload']['tmp_name'];
+
 
 		echo $name."<br><br>";
-		echo $registrationnumber."<br><br>";
 		echo $branch."<br><br>";
 		echo $mailid."<br><br>";
 		echo $facebook."<br><br>";
@@ -265,22 +266,20 @@
 		echo $whatsapp."<br><br>";
 		echo $linkedin."<br><br>";
 		echo $campus."<br><br>";
-
-		$image_name=$_FILES['imageupload']['name'];
-        $image_tmp=$_FILES['imageupload']['tmp_name'];
-		echo $image_name[0]."<br><br>";
+		echo $image_name;
 
 
-		$query="INSERT INTO gallery1 (name,regd,branch,campus,profile_img,mail,facebook,github,instagram,whatsapp,linkedin) VALUES('$name','$registrationnumber','$branch',$campus,'$image_name[0]','$mailid','$facebook','$instagram','$github','$whatsapp','$linkedin')";
-        $run=mysqli_query($db,$query) or die(mysqli_error($db));
-        if ($run) {
+
+		// $query="INSERT INTO gallery1 (name,regd,branch,campus,profile_img,mail,facebook,github,instagram,whatsapp,linkedin) VALUES('$name','$registrationnumber','$branch',$campus,'$image_name[0]','$mailid','$facebook','$instagram','$github','$whatsapp','$linkedin')";
+        // $run=mysqli_query($db,$query) or die(mysqli_error($db));
+        // if ($run) {
 			
-			}
+		// 	}
 			
-        }
-        else {
-            echo "inserted error";
-        }
+        // }
+        // else {
+        //     echo "inserted error";
+        // }
 		
 
 		

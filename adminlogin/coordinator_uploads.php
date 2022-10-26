@@ -14,9 +14,11 @@ if($_SESSION['email'] and $utype=="admin")
 else
 {
   echo "working";
-  header('location:../includes/logout.php');
+  header('location:../includes/logout.php'); 
 }
 ?>
+
+
 
 
 <!DOCTYPE html>
@@ -215,7 +217,7 @@ else
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Type of Coordinator</label>
                         <div class="col-sm-10">
-                            <select class="form-select" aria-label="Default select example" name="getcodType" id="getcodType" onChange="getcodTypefun()">
+                            <select class="form-select" aria-label="Default select example" name="getcodType" id="getcodType" onChange="getschoolTypefun()">
                                 <option value="">Loading</option>
 
                             </select>
@@ -233,7 +235,7 @@ else
                         <div class="row mb-3">
                             <label for="inputText" class="col-sm-2 col-form-label">Mail id:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="regd" value="" required>
+                                <input type="text" class="form-control" name="regd" value="" required required>
                             </div>
                         </div>
 
@@ -241,7 +243,7 @@ else
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">School</label>
                         <div class="col-sm-10">
-                            <select class="form-select" aria-label="Default select example" name="getSchool" id="getSchool" onChange="getschoolTypefun()">
+                            <select class="form-select" aria-label="Default select example" name="getSchool" id="getSchool">
                                 <option value="">Please Select Program</option>
                             </select>
                         </div>
@@ -251,7 +253,7 @@ else
                 <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Program</label>
                         <div class="col-sm-10">
-                            <select class="form-select" aria-label="Default select example" name="clubname" id="club">
+                            <select class="form-select" aria-label="Default select example" name="program" id="program" onChange="getClub()">
                                 <option value="">Please Select Program</option>
                             </select>
                         </div>
@@ -268,15 +270,7 @@ else
                     </div>
                 </div>
 
-                <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">Branch</label>
-                        <div class="col-sm-10">
-                            <select class="form-select" aria-label="Default select example" name="clubname" id="club">
-                                <option value="">Please Select Program</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
+                
 
                         <div class="row mb-3">
                             <label for="inputText" class="col-sm-2 col-form-label">Facebook id:</label>
@@ -341,8 +335,7 @@ else
     <div class="credits">
       Designed by <a href="https://cutm.ac.in/">Centurion University of Technology and Management</a>
     </div>
-  </footer><!-- End Footer -->
-
+  </footer>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
 
@@ -359,7 +352,7 @@ else
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
+    
 
     <script>
    
@@ -379,6 +372,12 @@ else
         function getschoolTypefun() {
             let selection = document.getElementById('getcodType').value;
             if (!selection) return;
+            console.log(selection);
+            if(selection == "StudentInCharge"){
+                document.getElementById('program').disabled = true;
+                document.getElementById('club').disabled = true;
+            }
+            
             document.getElementById('getSchool').disabled = true
             document.getElementById('getSchool').innerHTML = '<option value="">Loading</option>';
             axios.get("./api/school.php?school=" + selection).then((response) => {
@@ -392,6 +391,38 @@ else
             })
         }
         getcodTypefun();
+
+
+
+        function getPr() {
+            document.getElementById('program').disabled = true
+            axios.get("./api/pr.php").then((response) => {
+                console.log(response);
+                let options = '<option value="">Select one option</option>';
+                for (let each of response.data.data) {
+                    options += `<option value="${each}">${each}</option>`;
+                }
+                document.getElementById('program').innerHTML = options;
+                document.getElementById('program').disabled = false;
+            })
+        }
+
+        function getClub() {
+            let selection = document.getElementById('program').value;
+            if (!selection) return;
+            document.getElementById('club').disabled = true
+            document.getElementById('club').innerHTML = '<option value="">Loading</option>';
+            axios.get("./api/club.php?scrPr=" + selection).then((response) => {
+                console.log(response);
+                let options = '';
+                for (let each of response.data.data) {
+                    options += `<option value="${each}">${each}</option>`;
+                }
+                document.getElementById('club').innerHTML = options;
+                document.getElementById('club').disabled = false;
+            })
+        }
+        getPr();
     </script>
 
 </body>
