@@ -49,7 +49,7 @@ if($cordinatorType=="ClubInCharges"){
         <div class="img"><img src="./images/co-ordinators profile image/<?=$getAllCordinatordatas['profile_img'] ?>" alt="<?=$getAllCordinatordatas?>"></div>
         <div class="cardContent">
           <h3><?=$getAllCordinatordatas['name']?><br><span><?=$getAllCordinatordatas['mail']?></span></h3>
-          <p><?=$getAllCordinatordatas['branch']?></p>
+          <p><?=$getAllCordinatordatas['schoolbranch']?></p>
         </div>
       </div>
       <ul class="sci">

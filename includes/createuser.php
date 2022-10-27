@@ -243,9 +243,13 @@
 	}
 
 	if(isset($_POST['uploadcoordinator'])){
+		$type=mysqli_real_escape_string($db,$_POST['getcodType']);
 		$name=mysqli_real_escape_string($db,$_POST['name']);
-		$branch=mysqli_real_escape_string($db,$_POST['branch']);
-		$mailid=mysqli_real_escape_string($db,$_POST['mail']);
+		$schoolbranch=mysqli_real_escape_string($db,$_POST['getSchool']);
+		$program=mysqli_real_escape_string($db,$_POST['program']);
+		$clubname=mysqli_real_escape_string($db,$_POST['clubname']);
+		
+		$mailid=mysqli_real_escape_string($db,$_POST['mailid']);
 		$facebook=mysqli_real_escape_string($db,$_POST['facebook']);
 		$instagram=mysqli_real_escape_string($db,$_POST['instagram']);
 		$github=mysqli_real_escape_string($db,$_POST['github']);
@@ -253,12 +257,17 @@
 		$linkedin=mysqli_real_escape_string($db,$_POST['linkedin']);
 		$campus=mysqli_real_escape_string($db,$_POST['campus']);
 
-		$image_name=$_FILES['imageupload']['name'];
-        $image_tmp=$_FILES['imageupload']['tmp_name'];
+		$image_name=$_FILES['profile_img']['name'];
+        $image_tmp=$_FILES['profile_img']['tmp_name'];
 
 
+
+		echo $type."<br><br>";
 		echo $name."<br><br>";
-		echo $branch."<br><br>";
+		
+		echo $schoolbranch."<br><br>";
+		echo $program."<br><br>";
+		echo $clubname."<br><br>";
 		echo $mailid."<br><br>";
 		echo $facebook."<br><br>";
 		echo $instagram."<br><br>";
@@ -270,16 +279,20 @@
 
 
 
-		// $query="INSERT INTO gallery1 (name,regd,branch,campus,profile_img,mail,facebook,github,instagram,whatsapp,linkedin) VALUES('$name','$registrationnumber','$branch',$campus,'$image_name[0]','$mailid','$facebook','$instagram','$github','$whatsapp','$linkedin')";
-        // $run=mysqli_query($db,$query) or die(mysqli_error($db));
-        // if ($run) {
-			
-		// 	}
-			
-        // }
-        // else {
-        //     echo "inserted error";
-        // }
+		if(move_uploaded_file($image_tmp,"../card/images/co-ordinators profile image/$image_name")){
+            $query="INSERT INTO coordinators (name,mail,type,profile_img,facebook,instagram,github,whatsapp,linkedin,schoolbranch,program,club,campus) VALUES('$name','$mailid','$type','$image_name','$facebook','$instagram','$github','$whatsapp','$linkedin','$schoolbranch','$program','$clubname','$campus')";
+            $run=mysqli_query($db,$query) or die(mysqli_error($db));
+            if ($run) {
+                header('location:../adminlogin/coordinator_uploads.php');
+				echo "inserted done";
+            }
+            else {
+                echo "inserted error";
+            }
+        }
+        else {
+            echo "File Size High";
+        }
 		
 
 		

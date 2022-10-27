@@ -235,7 +235,7 @@ else
                         <div class="row mb-3">
                             <label for="inputText" class="col-sm-2 col-form-label">Mail id:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="regd" value="" required required>
+                                <input type="text" class="form-control" name="mailid" value="" required required>
                             </div>
                         </div>
 
@@ -318,6 +318,7 @@ else
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label"></label>
                             <div class="col-sm-10">
+                            <input type="hidden" class="form-control" name="campus" value="<?=$adminData['campus']?>" required required>
                                 <button type="submit" class="btn btn-primary" name="uploadcoordinator">Submit</button>
                             </div>
                         </div>
@@ -371,8 +372,8 @@ else
 
         function getschoolTypefun() {
             let selection = document.getElementById('getcodType').value;
-            if (!selection) return;
             console.log(selection);
+            if (!selection) return;
             if(selection == "StudentInCharge"){
                 document.getElementById('program').disabled = true;
                 document.getElementById('club').disabled = true;

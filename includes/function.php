@@ -301,16 +301,7 @@
         return $data;
     }
 
-    function getAllArchivement($db,$campus){
-
-        $query="SELECT * FROM preachievements WHERE campus='$campus'";
-        $run=mysqli_query($db,$query);
-        $data=array();
-        while($d=mysqli_fetch_assoc($run)){
-            $data[]=$d;
-        }
-        return $data;
-    }
+    
 
     function getAllArchivementPdf($db,$campus,$year){
 
@@ -408,6 +399,18 @@
     function getAllCodrinator($db,$campus,$cordinatorType){
 
         $query="SELECT * FROM coordinators WHERE campus='$campus' AND type='$cordinatorType'";
+        $run=mysqli_query($db,$query);
+        $data=array();
+        while($d=mysqli_fetch_assoc($run)){
+            $data[]=$d;
+        }
+        return $data;
+    }
+
+
+    function getAllArchivement($db,$campus){
+
+        $query="SELECT * FROM archivement WHERE campus='$campus'";
         $run=mysqli_query($db,$query);
         $data=array();
         while($d=mysqli_fetch_assoc($run)){

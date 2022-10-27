@@ -177,6 +177,7 @@ else
                     <th scope="col">Total</th>
                     <th scope="col">Status</th>
                     <th scope="col">Action</th>
+                    <th scope="col">Reject</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -203,6 +204,13 @@ else
                           <a href="../includes/status.php?id=<?=$post['id']?>" class="btn btn-danger">
                             Aprove <i class="bi bi-exclamation"></i>
                           </a>
+                          
+                        </td>
+                        <td>
+                          <a href="../includes/reject.php?id=<?=$post['id']?>" class="btn btn-danger">
+                            Reject <i class="bi bi-exclamation"></i>
+                          </a>
+                          
                         </td>
                       </tr>
                     <?php

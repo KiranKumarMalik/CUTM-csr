@@ -63,7 +63,7 @@ require('./includes/database.php');
                             <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
                                 <i class="fa fa-trophy fa-5x" style="color:red"></i>
                                 <h4 class="card-title" style="margin-top: 20px;"><strong>Balasore</strong></h4>
-                                <div><a href="prevachievements.php?campus=Balasore"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
+                                <div><a href="./card/achievements.php?campus=Balasore"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
                             </div>
                         </div>
                     </div>
@@ -72,7 +72,7 @@ require('./includes/database.php');
                             <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
                             <i class="fa fa-trophy fa-5x" style="color:red"></i>
                                 <h4 class="card-title" style="margin-top: 20px;"><strong>Bhubaneswar</strong></h4>
-                                <div><a href="prevachievements.php?campus=Bhubaneswar"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
+                                <div><a href="./card/achievements.php?campus=Bhubaneswar"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
                             </div>
                         </div>
                     </div>
@@ -81,7 +81,7 @@ require('./includes/database.php');
                             <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
                             <i class="fa fa-trophy fa-5x" style="color:red"></i>
                                 <h4 class="card-title" style="margin-top: 20px;"><strong>Balangir</strong></h4>
-                                <div><a href="prevachievements.php?campus=Balangir"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
+                                <div><a href="./card/achievements.php?campus=Balangir"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
                             </div>
                         </div>
                     </div>
@@ -90,7 +90,7 @@ require('./includes/database.php');
                             <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
                             <i class="fa fa-trophy fa-5x" style="color:red"></i>
                                 <h4 class="card-title" style="margin-top: 20px;"><strong>Paralakhemundi</strong></h4>
-                                <div><a href="prevachievements.php?campus=Paralakhemundi"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
+                                <div><a href="./card/achievements.php?campus=Paralakhemundi"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
                             </div>
                         </div>
                     </div>
@@ -99,7 +99,7 @@ require('./includes/database.php');
                             <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
                             <i class="fa fa-trophy fa-5x" style="color:red"></i>
                                 <h4 class="card-title" style="margin-top: 20px;"><strong>Rayagada</strong></h4>
-                                <div><a href="prevachievements.php?campus=Rayagada"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
+                                <div><a href="./card/achievements.php?campus=Rayagada"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
                             </div>
                         </div>
                     </div>

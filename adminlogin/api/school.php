@@ -6,7 +6,7 @@ require('../../includes/database.php');
         $OUTPUT=(object) array('status' => false, 'data' => 'school is Required');
     }
     else{
-        $query="SELECT * FROM coordinatorstypeschool where  ='{$_GET["school"]}'";
+        $query="SELECT * FROM coordinatorstypeschool where type='{$_GET["school"]}'";
         $run=mysqli_query($db,$query);
         $data=array();
         while($d=mysqli_fetch_assoc($run)){
