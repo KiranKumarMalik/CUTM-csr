@@ -150,7 +150,7 @@ else
            <li class="nav-item">
                 <a class="nav-link " href="studentresult.php">
                     <i class="bi bi-file-text"></i>
-                    <span>CSR Result</span>
+                    <span>CSaR Report</span>
                 </a>
             </li>
 
@@ -227,7 +227,7 @@ else
 
                 <div class="col-lg">
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">Select CSR program</label>
+                        <label class="col-sm-2 col-form-label">Select CSaR program</label>
                         <div class="col-sm-10">
                             <select class="form-select" aria-label="Default select example" name="program" id="program" onChange="getClub()">
                               <option value="">Loading</option>
@@ -239,7 +239,7 @@ else
 
                 <div class="col-lg">
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">Select CSR Club</label>
+                        <label class="col-sm-2 col-form-label">Select CSaR Club</label>
                         <div class="col-sm-10">
                             <select class="form-select" aria-label="Default select example" name="clubname" id="club">
                             <option value="">Please Select Program</option>
@@ -310,7 +310,7 @@ else
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>CSR | CUTM</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>CSaR | CUTM</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
       Designed by <a href="https://cutm.ac.in/">Centurion University of Technology and Management</a>

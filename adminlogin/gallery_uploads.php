@@ -216,13 +216,13 @@ else
                     <div class="row mb-3">
                             <label for="inputText" class="col-sm-2 col-form-label">Name of the Program:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="nameofprogram" value="name of program" required>
+                                <input type="text" class="form-control" name="nameofprogram" value="" required>
                             </div>
                         </div>
                         <div class="row mb-3">
                         <label for="inputText" class="col-sm-2 col-form-label">Details:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="detailsofprogram" value="details of the program" required>
+                                <input type="text" class="form-control" name="detailsofprogram" value="" required>
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -263,7 +263,7 @@ else
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>CSR | CUTM</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>CSaR | CUTM</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
       Designed by <a href="https://cutm.ac.in/">Centurion University of Technology and Management</a>

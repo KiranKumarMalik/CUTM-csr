@@ -33,6 +33,8 @@
         return $data;
     }
 
+
+
     function getAllPostTeacher($db,$campus,$Clubget){
         $query="SELECT * FROM csrtimesheet WHERE campus='$campus' AND club='$Clubget' ORDER BY id DESC";
         $run=mysqli_query($db,$query);
@@ -410,7 +412,7 @@
 
     function getAllArchivement($db,$campus){
 
-        $query="SELECT * FROM archivement WHERE campus='$campus'";
+        $query="SELECT * FROM preachievements WHERE campus='$campus'";
         $run=mysqli_query($db,$query);
         $data=array();
         while($d=mysqli_fetch_assoc($run)){
@@ -418,4 +420,12 @@
         }
         return $data;
     }
+
+    function getAllPostbyId($db,$id){
+        $query="SELECT * FROM csrtimesheet WHERE id='$id'";
+        $run=mysqli_query($db,$query);
+        $data=mysqli_fetch_assoc($run);
+        return $data;
+    }
+
 ?>

@@ -26,7 +26,7 @@ else
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Document Uploads</title>
+    <title>Previous Achievement Uploads</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -62,7 +62,7 @@ else
         <div class="d-flex align-items-center justify-content-between">
             <a href="student.php" class="logo d-flex align-items-center">
                 <img src="../images/cutm.png" alt="">
-                <span class="d-none d-lg-block"> | CSR CUTM</span>
+                <span class="d-none d-lg-block"> | CSaR CUTM</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div><!-- End Logo -->
@@ -235,65 +235,31 @@ else
                         </div>
 
                         <div class="row mb-3">
-                            <label for="inputText" class="col-sm-2 col-form-label">Batch:</label>
+                            <label for="inputText" class="col-sm-2 col-form-label">Achievement details:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="batch" value="" required>
+                                <input type="text" class="form-control" name="achievementdetails" value="" required>
                             </div>
                         </div>
 
                         <div class="row mb-3">
-                            <label for="inputText" class="col-sm-2 col-form-label">Mail id:</label>
+                            <label for="inputText" class="col-sm-2 col-form-label">Academic Year:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="mail" value="" required>
+                                <input type="text" class="form-control" name="academicyear" value="" required>
                             </div>
                         </div>
-
-                        <div class="row mb-3">
-                            <label for="inputText" class="col-sm-2 col-form-label">Facebook id:</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="facebook" value="" required>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="inputText" class="col-sm-2 col-form-label">Instagram id:</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="instagram" value="" required>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="inputText" class="col-sm-2 col-form-label">Github id:</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="github" value="" required>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="inputText" class="col-sm-2 col-form-label">What's app number:</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="whatsapp" value="" required>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="inputText" class="col-sm-2 col-form-label">Linked id:</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="linkedin" value="" required>
-                            </div>
-                        </div>
-
                     
                         <div class="row mb-3">
                           <label for="inputNumber" class="col-sm-2 col-form-label">Update Profile Image</label>
                             <div class="col-sm-10">
-                            <input class="form-control" type="file" id="formFile" name="imageupload" accept="image/*" required>
+                            <input class="form-control" type="file" id="formFile" name="profile_img" accept="image/*" required>
                           </div>
                         </div>
+                        <input type="hidden" value="<?=$adminData['campus']?>" name="campus">
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label"></label>
                             <div class="col-sm-10">
-                                <button type="submit" class="btn btn-primary" name="editadminprofile">Upload</button>
+                            <input type="hidden" class="form-control" name="campus" value="<?=$adminData['campus']?>" required required>
+                                <button type="submit" class="btn btn-primary" name="uploadpreachievements">Submit</button>
                             </div>
                         </div>
                     </form>
@@ -305,7 +271,7 @@ else
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>CSR | CUTM</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>CSaR | CUTM</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
       Designed by <a href="https://cutm.ac.in/">Centurion University of Technology and Management</a>

@@ -292,11 +292,44 @@
         }
         else {
             echo "File Size High";
+        }	
+	}
+
+
+	if(isset($_POST['uploadpreachievements'])){
+		$name=mysqli_real_escape_string($db,$_POST['name']);
+		$regd=mysqli_real_escape_string($db,$_POST['regd']);
+		$academicyear=mysqli_real_escape_string($db,$_POST['academicyear']);
+		$achievementdetails=mysqli_real_escape_string($db,$_POST['achievementdetails']);
+		$batch=mysqli_real_escape_string($db,$_POST['batch']);
+		$campus=mysqli_real_escape_string($db,$_POST['campus']);
+
+		$image_name=$_FILES['profile_img']['name'];
+        $image_tmp=$_FILES['profile_img']['tmp_name'];
+
+
+		echo $name."<br><br>";
+		echo $regd."<br><br>";
+		echo $branch."<br><br>";
+		echo $achievementdetails."<br><br>";
+		echo $campus."<br><br>";
+		echo $image_name;
+
+
+
+		if(move_uploaded_file($image_tmp,"../card/images/Previous achievements/$image_name")){
+            $query="INSERT INTO preachievements (name,regd,branch,achievementdetails,academicyear,campus,profile_img) VALUES('$name','$regd','$branch','$achievementdetails','$academicyear','$campus','$image_name')";
+            $run=mysqli_query($db,$query) or die(mysqli_error($db));
+            if ($run) {
+                header('location:../adminlogin/achievement_uploads.php');
+				echo "inserted done";
+            }
+            else {
+                echo "inserted error";
+            }
         }
-		
-
-		
-
-		
+        else {
+            echo "File Size High";
+        }	
 	}
 ?>

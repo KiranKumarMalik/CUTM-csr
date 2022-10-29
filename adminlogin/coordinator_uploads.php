@@ -64,7 +64,7 @@ else
         <div class="d-flex align-items-center justify-content-between">
             <a href="student.php" class="logo d-flex align-items-center">
                 <img src="../images/cutm.png" alt="">
-                <span class="d-none d-lg-block"> | CSR CUTM</span>
+                <span class="d-none d-lg-block"> | CSaR CUTM</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div><!-- End Logo -->
@@ -218,8 +218,7 @@ else
                         <label class="col-sm-2 col-form-label">Type of Coordinator</label>
                         <div class="col-sm-10">
                             <select class="form-select" aria-label="Default select example" name="getcodType" id="getcodType" onChange="getschoolTypefun()">
-                                <option value="">Loading</option>
-
+                                <option value="">Loading...</option>
                             </select>
                         </div>
                     </div>
@@ -241,7 +240,7 @@ else
 
                         <div class="col-lg">
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">School</label>
+                        <label class="col-sm-2 col-form-label">School/Branch</label>
                         <div class="col-sm-10">
                             <select class="form-select" aria-label="Default select example" name="getSchool" id="getSchool">
                                 <option value="">Please Select Program</option>
@@ -331,7 +330,7 @@ else
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>CSR | CUTM</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>CSaR | CUTM</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
       Designed by <a href="https://cutm.ac.in/">Centurion University of Technology and Management</a>
@@ -374,7 +373,7 @@ else
             let selection = document.getElementById('getcodType').value;
             console.log(selection);
             if (!selection) return;
-            if(selection == "StudentInCharge"){
+            if(selection == "StudentInCharges"){
                 document.getElementById('program').disabled = true;
                 document.getElementById('club').disabled = true;
             }

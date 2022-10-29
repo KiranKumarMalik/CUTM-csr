@@ -9,7 +9,7 @@ $campus=$_GET['campus'];
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Coordinator details</title>
+  <title>Achievement details</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
@@ -21,7 +21,7 @@ $campus=$_GET['campus'];
 <body>
   <section>
 </center><span><h1><?=$campus?> Campus</h1></span></center>
-<div><a href="../coordinators.php"><p style="text-align:left"><i class="fa fa-arrow-left" aria-hidden="true"></i></p></a></div>
+<div><a href="../campusachievements.php"><p style="text-align:left"><i class="fa fa-arrow-left" aria-hidden="true"></i></p></a></div>
 <div class="u-center-text u-margin-top-huge">
       </div>
   <div class="container" style="background-image: url('images/cutmbg.jpg');">
@@ -38,12 +38,12 @@ $campus=$_GET['campus'];
 
     <div class="card">
       <div class="content">
-        <div class="img"><img src="./images/co-ordinators profile image/<?=$getAllArchivements['image']?>" alt=""></div>
+        <div class="img"><img src="./images/Previous achievements/<?=$getAllArchivements['profile_img']?>" alt=""></div>
         <div class="cardContent">
           <h3><?=$getAllArchivements['name']?><br><span></span></h3>
-          <p><?=$getAllArchivements['school']?></p>
-          <p><?=$getAllArchivements['details']?> </p>
-          <p><?=$getAllArchivements['year']?>  </p>
+          <p><?=$getAllArchivements['branch']?></p>
+          <p><?=$getAllArchivements['achievementdetails']?> </p>
+          <p><?=$getAllArchivements['academicyear']?>  </p>
         </div>
       </div>
     </div>

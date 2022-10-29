@@ -66,7 +66,7 @@ else
         <div class="d-flex align-items-center justify-content-between">
             <a href="student.php" class="logo d-flex align-items-center">
                 <img src="../images/cutm.png" alt="">
-                <span class="d-none d-lg-block"> | CSR CUTM</span>
+                <span class="d-none d-lg-block"> | CSaR CUTM</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div><!-- End Logo -->
@@ -135,7 +135,7 @@ else
            <li class="nav-item">
                 <a class="nav-link " href="studentresult.php">
                     <i class="bi bi-file-text"></i>
-                    <span>CSR Result</span>
+                    <span>CSaR Report</span>
                 </a>
             </li>
 
@@ -298,7 +298,7 @@ else
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>CSR | CUTM</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>CSaR | CUTM</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
       Designed by <a href="https://cutm.ac.in/">Centurion University of Technology and Management</a>
