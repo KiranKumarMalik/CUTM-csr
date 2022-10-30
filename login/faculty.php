@@ -10,7 +10,7 @@
           $_SESSION['isUserLoggedIn']=true;
           $_SESSION['email']=$email;
           $_SESSION['usertype']="teacher";
-          header('location:../adminlogin/teacher.php');
+          header('location:../adminlogin/teacherdashboard.php');
       }
       else{
           echo"<script>alert('Incorrect email or password !');</script>";

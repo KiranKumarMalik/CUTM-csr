@@ -259,6 +259,12 @@ if(isset($_POST['addannouncement'])){
                             </div>
                         </div>
 
+                        <div class="row mb-3">
+                          <label for="inputNumber" class="col-sm-2 col-form-label">Attachment</label>
+                            <div class="col-sm-10">
+                            <input class="form-control" type="file" id="formFile" name="imageupload" accept="image/*" required>
+                          </div>
+                        </div>
 
                         <div class="row mb-3">
                     <label for="inputdate" class="col-sm-2 col-form-label">Announcement start Date</label>

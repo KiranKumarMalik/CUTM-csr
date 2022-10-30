@@ -428,4 +428,18 @@
         return $data;
     }
 
+    function getAllRegisterStudent($db,$campus){
+        $query="SELECT * FROM student WHERE campus='$campus'";
+        $data=mysqli_query($db, $query);
+        $total=mysqli_num_rows($data);
+        return $total;
+    }
+    function getAllAcadamicYearStatus($db,$campus,$program,$month){
+        
+        $query="SELECT SUM(totalTime) as totalTime FROM csrtimesheet WHERE MONTH(date)=$month AND campus='$campus' AND csrPr='$program'";
+        $run=mysqli_query($db,$query);
+        $data=mysqli_fetch_assoc($run);
+        return $data['totalTime'];
+    }
+
 ?>

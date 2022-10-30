@@ -33,6 +33,26 @@ else
   header('location:../includes/logout.php');
 }
 ?>
+<?php
+$blsdata=getAllRegisterStudent($db,'Balasore');
+$bbsrdata=getAllRegisterStudent($db,'Bhubaneswar');
+$blrdata=getAllRegisterStudent($db,'Balangir');
+$pkddata=getAllRegisterStudent($db,'Paralakhemundi');
+$ryddata=getAllRegisterStudent($db,'Rayagada');
+$chtdata=getAllRegisterStudent($db,'Chhatrapur');
+
+for ($month = 1; $month <= 12; $month++) {
+  $campuswiseculture[$month]=getAllAcadamicYearStatus($db,$adminData['campus'],'Culture',$month);
+}
+
+for ($month = 1; $month <= 12; $month++) {
+  $campuswisesports[$month]=getAllAcadamicYearStatus($db,$adminData['campus'],'Sports',$month);
+}
+for ($month = 1; $month <= 12; $month++) {
+  $campuswiseresponsibility[$month]=getAllAcadamicYearStatus($db,$adminData['campus'],'Responsibility',$month);
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -221,6 +241,212 @@ else
                 </ol>
             </nav>
         </div><!-- End Page Title -->
+
+        <section class="section">
+      <div class="row">
+
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Participant Status in all Campus</h5>
+
+              <!-- Line Chart -->
+              <canvas id="lineChart" style="max-height: 400px;"></canvas>
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  new Chart(document.querySelector('#lineChart'), {
+                    type: 'line',
+                    data: {
+                      labels: ['Balasore', 'Bhubaneswar', 'Balangir', 'Paralakhemundi', 'Rayagada', 'Chhatrapur'],
+                      datasets: [{
+                        label: 'Line Chart',
+                        data: [<?=$blsdata?>, <?=$bbsrdata?>, <?=$blrdata?>, <?=$pkddata?>, <?=$ryddata?>, <?=$chtdata?>],
+                        fill: false,
+                        borderColor: 'rgb(255, 0, 0)',
+                        tension: 0.1
+                      }]
+                    },
+                    options: {
+                      scales: {
+                        y: {
+                          beginAtZero: true
+                        }
+                      }
+                    }
+                  });
+                });
+              </script>
+              <!-- End Line CHart -->
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Academic Year</h5>
+
+              <!-- Column Chart -->
+              <div id="columnChart"></div>
+
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  new ApexCharts(document.querySelector("#columnChart"), {
+                    series: [{
+                      name: 'Culture',
+                      data: [<?=(int)$campuswiseculture[1]?>, <?=(int)$campuswiseculture[2]?>, <?=(int)$campuswiseculture[3]?>, <?=(int)$campuswiseculture[4]?>, <?=(int)$campuswiseculture[5]?>, <?=(int)$campuswiseculture[6]?>, <?=(int)$campuswiseculture[7]?>, <?=(int)$campuswiseculture[8]?>, <?=(int)$campuswiseculture[9]?>, <?=(int)$campuswiseculture[10]?>, <?=(int)$campuswiseculture[11]?>, <?=(int)$campuswiseculture[12]?>]
+                    }, {
+                      name: 'Sports',
+                      data: [<?=(int)$campuswisesports[1]?>, <?=(int)$campuswisesports[2]?>, <?=(int)$campuswisesports[3]?>, <?=(int)$campuswisesports[4]?>, <?=(int)$campuswisesports[5]?>, <?=(int)$campuswisesports[6]?>, <?=(int)$campuswisesports[7]?>, <?=(int)$campuswisesports[8]?>, <?=(int)$campuswisesports[9]?>, <?=(int)$campuswisesports[10]?>, <?=(int)$campuswisesports[11]?>, <?=(int)$campuswisesports[12]?>]
+                    }, {
+                      name: 'Responsibility',
+                      data: [<?=(int)$campuswiseresponsibility[1]?>, <?=(int)$campuswiseresponsibility[2]?>, <?=(int)$campuswiseresponsibility[3]?>, <?=(int)$campuswiseresponsibility[4]?>, <?=(int)$campuswiseresponsibility[5]?>, <?=(int)$campuswiseresponsibility[6]?>, <?=(int)$campuswiseresponsibility[7]?>, <?=(int)$campuswiseresponsibility[8]?>, <?=(int)$campuswiseresponsibility[9]?>, <?=(int)$campuswiseresponsibility[10]?>, <?=(int)$campuswiseresponsibility[11]?>, <?=(int)$campuswiseresponsibility[12]?>]
+                    }],
+                    chart: {
+                      type: 'bar',
+                      height: 350
+                    },
+                    plotOptions: {
+                      bar: {
+                        horizontal: false,
+                        columnWidth: '55%',
+                        endingShape: 'rounded'
+                      },
+                    },
+                    dataLabels: {
+                      enabled: false
+                    },
+                    stroke: {
+                      show: true,
+                      width: 2,
+                      colors: ['standard']
+                    },
+                    xaxis: {
+                      categories: ['Jan','Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',],
+                    },
+                    yaxis: {
+                      title: {
+                        text: 'Hours (Hrs)'
+                      }
+                    },
+                    fill: {
+                      opacity: 1
+                    },
+                    tooltip: {
+                      y: {
+                        formatter: function(val) {
+                          return "$ " + val + " Hours"
+                        }
+                      }
+                    }
+                  }).render();
+                });
+              </script>
+              <!-- End Column Chart -->
+
+            </div>
+          </div>
+        </div>
+
+       
+
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Program</h5>
+
+              <!-- Pie Chart -->
+              <div id="pieChart"></div>
+
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  new ApexCharts(document.querySelector("#pieChart"), {
+                    series: [44, 55, 13],
+                    chart: {
+                      height: 350,
+                      type: 'pie',
+                      toolbar: {
+                        show: true
+                      }
+                    },
+                    labels: ['Cultutre', 'Sports', 'Responsibility']
+                  }).render();
+                });
+              </script>
+              <!-- End Pie Chart -->
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Club Status</h5>
+
+              <!-- Bar Chart -->
+              <canvas id="barChart" style="max-height: 400px;"></canvas>
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  new Chart(document.querySelector('#barChart'), {
+                    type: 'bar',
+                    data: {
+                      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                      datasets: [{
+                        label: 'Bar Chart',
+                        data: [65, 59, 80, 81, 56, 55, 40],
+                        backgroundColor: [
+                          'rgba(255, 99, 132, 0.2)',
+                          'rgba(255, 159, 64, 0.2)',
+                          'rgba(255, 205, 86, 0.2)',
+                          'rgba(75, 192, 192, 0.2)',
+                          'rgba(54, 162, 235, 0.2)',
+                          'rgba(153, 102, 255, 0.2)',
+                          'rgba(201, 203, 207, 0.2)'
+                        ],
+                        borderColor: [
+                          'rgb(255, 99, 132)',
+                          'rgb(255, 159, 64)',
+                          'rgb(255, 205, 86)',
+                          'rgb(75, 192, 192)',
+                          'rgb(54, 162, 235)',
+                          'rgb(153, 102, 255)',
+                          'rgb(201, 203, 207)'
+                        ],
+                        borderWidth: 1
+                      }]
+                    },
+                    options: {
+                      scales: {
+                        y: {
+                          beginAtZero: true
+                        }
+                      }
+                    }
+                  });
+                });
+              </script>
+              <!-- End Bar CHart -->
+
+            </div>
+          </div>
+        </div>
+
+
+        
+
+     
+
+       
+
+        
+
+       
+
+      </div>
+    </section>
 
         <section class="section">
             <div class="row">

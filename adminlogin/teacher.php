@@ -111,14 +111,14 @@ else
 
   <ul class="sidebar-nav" id="sidebar-nav">
 
-<li class="nav-item">
-      <a class="nav-link " href="teacher.php">
+  <li class="nav-item">
+      <a class="nav-link " href="teacherdashboard.php">
         <i class="bi bi-grid"></i>
         <span>Dashboard</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link " href="teacherSessonWise.php">
+      <a class="nav-link " href="teacher.php">
         <i class="bi bi-calendar3"></i>
         <span>Event timesheet approval</span>
       </a>
