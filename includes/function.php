@@ -434,12 +434,47 @@
         $total=mysqli_num_rows($data);
         return $total;
     }
+
     function getAllAcadamicYearStatus($db,$campus,$program,$month){
         
         $query="SELECT SUM(totalTime) as totalTime FROM csrtimesheet WHERE MONTH(date)=$month AND campus='$campus' AND csrPr='$program'";
         $run=mysqli_query($db,$query);
         $data=mysqli_fetch_assoc($run);
         return $data['totalTime'];
+    }
+
+    function getAllRegisterStudentProgramwise($db,$campus,$program){
+        $query="SELECT * FROM csrtimesheet WHERE campus='$campus' AND csrPr='$program' GROUP BY emailOfStd;";
+        $data=mysqli_query($db, $query);
+        $total=mysqli_num_rows($data);
+        return $total;
+    }
+    function getAllRegisterStudentSchoolAndclubwiseByTeacher($db,$campus,$club,$school){
+        $query="SELECT * FROM csrtimesheet WHERE campus='$campus' AND club='$club' AND schoolname='$school' GROUP BY emailOfStd;";
+        $data=mysqli_query($db, $query);
+        $total=mysqli_num_rows($data);
+        return $total;
+    }
+
+    function getAllStudentdataprogramwiseGrappg($db,$stdEmail,$program){
+        $query="SELECT SUM(totalTime) as totalTime, club FROM csrtimesheet WHERE emailOfStd='$stdEmail' AND csrPr='$program' GROUP BY club;";
+        $run=mysqli_query($db,$query);
+        $data=array();
+        while($d=mysqli_fetch_assoc($run)){
+            $data[]=$d;
+        }
+        return $data;
+    }
+
+    function getAllStudentdaywisegraph($db,$stdEmail){
+        $today=date("Y-m-d");
+        $query="SELECT SUM(totalTime) as totalTime, date FROM csrtimesheet WHERE emailOfStd='$stdEmail' GROUP BY date ORDER BY id DESC";
+        $run=mysqli_query($db,$query);
+        $data=array();
+        while($d=mysqli_fetch_assoc($run)){
+            $data[]=$d;
+        }
+        return $data;
     }
 
 ?>

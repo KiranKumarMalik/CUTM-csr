@@ -52,6 +52,11 @@ for ($month = 1; $month <= 12; $month++) {
   $campuswiseresponsibility[$month]=getAllAcadamicYearStatus($db,$adminData['campus'],'Responsibility',$month);
 }
 
+
+$totalCulture=getAllRegisterStudentProgramwise($db,$adminData['campus'],'Culture');
+$totalSports=getAllRegisterStudentProgramwise($db,$adminData['campus'],'Sports');
+$totalResponsibility=getAllRegisterStudentProgramwise($db,$adminData['campus'],'Responsibility');
+echo $totalCulture;
 ?>
 
 <!DOCTYPE html>
@@ -259,7 +264,7 @@ for ($month = 1; $month <= 12; $month++) {
                     data: {
                       labels: ['Balasore', 'Bhubaneswar', 'Balangir', 'Paralakhemundi', 'Rayagada', 'Chhatrapur'],
                       datasets: [{
-                        label: 'Line Chart',
+                        label: 'Number of Students',
                         data: [<?=$blsdata?>, <?=$bbsrdata?>, <?=$blrdata?>, <?=$pkddata?>, <?=$ryddata?>, <?=$chtdata?>],
                         fill: false,
                         borderColor: 'rgb(255, 0, 0)',
@@ -336,7 +341,7 @@ for ($month = 1; $month <= 12; $month++) {
                     tooltip: {
                       y: {
                         formatter: function(val) {
-                          return "$ " + val + " Hours"
+                          return val + " Hours"
                         }
                       }
                     }
@@ -362,7 +367,7 @@ for ($month = 1; $month <= 12; $month++) {
               <script>
                 document.addEventListener("DOMContentLoaded", () => {
                   new ApexCharts(document.querySelector("#pieChart"), {
-                    series: [44, 55, 13],
+                    series: [<?=$totalCulture?>, <?=$totalSports?>, <?=$totalResponsibility?>],
                     chart: {
                       height: 350,
                       type: 'pie',

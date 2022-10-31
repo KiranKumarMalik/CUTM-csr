@@ -16,6 +16,19 @@ else
 {
   header('location:../includes/logout.php');
 }
+
+$getengdata=getAllRegisterStudentSchoolAndclubwiseByTeacher($db,$teacherData['campus'],$teacherData['Clubget'],'School of Engineering and Technology');
+$getswamidata=getAllRegisterStudentSchoolAndclubwiseByTeacher($db,$teacherData['campus'],$teacherData['Clubget'],'M.S. Swaminathan School of Agriculture');
+$getfishdata=getAllRegisterStudentSchoolAndclubwiseByTeacher($db,$teacherData['campus'],$teacherData['Clubget'],'School of Fisheries');
+$getappliedsciencedata=getAllRegisterStudentSchoolAndclubwiseByTeacher($db,$teacherData['campus'],$teacherData['Clubget'],'School of Applied Sciences');
+$getagriculturedata=getAllRegisterStudentSchoolAndclubwiseByTeacher($db,$teacherData['campus'],$teacherData['Clubget'],'School of Agriculture and Bio-Engineering');
+$getmediadata=getAllRegisterStudentSchoolAndclubwiseByTeacher($db,$teacherData['campus'],$teacherData['Clubget'],'School of Media and Communication');
+$getmanagementdata=getAllRegisterStudentSchoolAndclubwiseByTeacher($db,$teacherData['campus'],$teacherData['Clubget'],'School of Management');
+$getparamedicsdata=getAllRegisterStudentSchoolAndclubwiseByTeacher($db,$teacherData['campus'],$teacherData['Clubget'],'School Of Paramedics & Allied Health Science');
+$getpharmacydata=getAllRegisterStudentSchoolAndclubwiseByTeacher($db,$teacherData['campus'],$teacherData['Clubget'],'School Of Pharmacy');
+$getforensicdata=getAllRegisterStudentSchoolAndclubwiseByTeacher($db,$teacherData['campus'],$teacherData['Clubget'],'School of Forensic Sciences');
+$getvocationaledudata=getAllRegisterStudentSchoolAndclubwiseByTeacher($db,$teacherData['campus'],$teacherData['Clubget'],'School Of Vocational Education and Training');
+$getvocationaltrainingdata=getAllRegisterStudentSchoolAndclubwiseByTeacher($db,$teacherData['campus'],$teacherData['Clubget'],'School of Vocational Training');
 ?>
 
 <!DOCTYPE html>
@@ -167,7 +180,7 @@ else
               <script>
                 document.addEventListener("DOMContentLoaded", () => {
                   new ApexCharts(document.querySelector("#pieChart"), {
-                    series: [44, 55, 13, 21, 48, 20, 12, 17, 26, 16, 28, 30],
+                    series: [<?=$getengdata?>, <?=$getswamidata?>, <?=$getfishdata?>, <?=$getappliedsciencedata?>, <?=$getagriculturedata?>, <?=$getmediadata?>, <?=$getmanagementdata?>, <?=$getparamedicsdata?>, <?=$getpharmacydata?>, <?=$getforensicdata?>, <?=$getvocationaledudata?>, <?=$getvocationaltrainingdata?>],
                     chart: {
                       height: 350,
                       type: 'pie',
