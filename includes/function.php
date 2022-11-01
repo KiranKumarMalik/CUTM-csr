@@ -477,4 +477,16 @@
         return $data;
     }
 
+    function getAllTeacherdaywisegraph($db,$club){
+        $today=date("Y-m-d");
+        $query="SELECT SUM(totalTime) as totalTime, date FROM csrtimesheet WHERE club='$club' GROUP BY date ORDER BY id DESC;";
+        $run=mysqli_query($db,$query);
+        $data=array();
+        while($d=mysqli_fetch_assoc($run)){
+            $data[]=$d;
+        }
+        return $data;
+    }
+
+
 ?>

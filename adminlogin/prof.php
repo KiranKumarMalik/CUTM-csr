@@ -248,8 +248,8 @@ else
                   </div>
 
                   <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Country</div>
-                    <div class="col-lg-9 col-md-8"><?=$studentdata['country']?></div>
+                    <div class="col-lg-3 col-md-4 label">Session</div>
+                    <div class="col-lg-9 col-md-8"><?=$studentdata['admissionyear']?></div>
                   </div>
 
                   <div class="row">
@@ -342,9 +342,9 @@ else
                     </div>
 
                     <div class="row mb-3">
-                      <label for="Country" class="col-md-4 col-lg-3 col-form-label">Country</label>
+                      <label for="Country" class="col-md-4 col-lg-3 col-form-label">Session</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="country" type="text" class="form-control" id="Country" value="<?=$studentdata['country']?>" readonly>
+                        <input name="country" type="text" class="form-control" id="Country" value="<?=$studentdata['admissionyeargi']?>" readonly>
                       </div>
                     </div>
 
