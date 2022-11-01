@@ -37,8 +37,9 @@ $allclubis="";
 $allclubisCountDat="";
 
 
-$getallClub=$_GET['program'];
-if($getallClub){
+
+if(isset($_GET['program'])){
+  $getallClub=$_GET['program'];
   $dataForGraph=getAllStudentdataprogramwiseGrappg($db,$studentdata['email'],$getallClub);
   foreach($dataForGraph as $alldatagraphs){
     $allclubis=$allclubis."'".$alldatagraphs['club']."',";
