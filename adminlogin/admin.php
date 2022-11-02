@@ -57,6 +57,40 @@ $totalCulture=getAllRegisterStudentProgramwise($db,$adminData['campus'],'Culture
 $totalSports=getAllRegisterStudentProgramwise($db,$adminData['campus'],'Sports');
 $totalResponsibility=getAllRegisterStudentProgramwise($db,$adminData['campus'],'Responsibility');
 echo $totalCulture;
+
+
+
+
+
+
+
+
+$allclubis="";
+$allclubisCountDat="";
+echo $adminData['campus'];
+
+if(isset($_GET['program'])){
+  $getallClub=$_GET['program'];
+  $dataForGraph=getAllStudentdataprogramwiseByAdmin($db,$adminData['campus'],$getallClub);
+  foreach($dataForGraph as $alldatagraphs){
+    $allclubis=$allclubis."'".$alldatagraphs['club']."',";
+    $allclubisCountDat=$allclubisCountDat."'".$alldatagraphs['totalTime']."',";
+  }
+}
+else{
+  $dataForGraph=getAllStudentdataprogramwiseByAdmin($db,$adminData['campus'],'Culture');
+  foreach($dataForGraph as $alldatagraphs){
+    $allclubis=$allclubis."'".$alldatagraphs['club']."',";
+    $allclubisCountDat=$allclubisCountDat."'".$alldatagraphs['totalTime']."',";
+  }
+}
+
+
+echo $allclubis;
+echo $allclubisCountDat;
+echo $getallClub;
+
+
 ?>
 
 <!DOCTYPE html>
@@ -390,6 +424,17 @@ echo $totalCulture;
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Club Status</h5>
+              <h6> 
+                <a href="admin.php?program=Culture" class="btn btn-dark">
+                  Culture
+                </a>
+                <a href="admin.php?program=Sports" class="btn btn-dark">
+                  Sports
+                </a>
+                <a href="admin.php?program=Responsibility" class="btn btn-dark">
+                  Responsibility
+                </a>
+              </h6>
 
               <!-- Bar Chart -->
               <canvas id="barChart" style="max-height: 400px;"></canvas>
@@ -398,10 +443,10 @@ echo $totalCulture;
                   new Chart(document.querySelector('#barChart'), {
                     type: 'bar',
                     data: {
-                      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                      labels: [<?=$allclubis?>],
                       datasets: [{
                         label: 'Bar Chart',
-                        data: [65, 59, 80, 81, 56, 55, 40],
+                        data: [<?=$allclubisCountDat?>],
                         backgroundColor: [
                           'rgba(255, 99, 132, 0.2)',
                           'rgba(255, 159, 64, 0.2)',

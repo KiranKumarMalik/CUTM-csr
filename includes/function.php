@@ -488,5 +488,14 @@
         return $data;
     }
 
+    function getAllStudentdataprogramwiseByAdmin($db,$campus,$program){
+        $query="SELECT SUM(totalTime) as totalTime, club FROM csrtimesheet WHERE campus='$campus' AND csrPr='$program' GROUP BY club;";
+        $run=mysqli_query($db,$query);
+        $data=array();
+        while($d=mysqli_fetch_assoc($run)){
+            $data[]=$d;
+        }
+        return $data;
+    }
 
 ?>

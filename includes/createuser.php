@@ -70,14 +70,18 @@
 	
 	if(isset($_POST['editprofile'])){
 		$name=mysqli_real_escape_string($db,$_POST['name']);
+		$regd=mysqli_real_escape_string($db,$_POST['regdno']);
         $email=mysqli_real_escape_string($db,$_POST['email']);
+		$campus=mysqli_real_escape_string($db,$_POST['campus']);
+		$school=mysqli_real_escape_string($db,$_POST['school']);
+		$program=mysqli_real_escape_string($db,$_POST['program']);
+		$session=mysqli_real_escape_string($db,$_POST['addyr']);
 		$sex=mysqli_real_escape_string($db,$_POST['sex']);
 		$religion=mysqli_real_escape_string($db,$_POST['religion']);
 		$hobby=mysqli_real_escape_string($db,$_POST['hobby']);
 		$presentadd=mysqli_real_escape_string($db,$_POST['presentadd']);
 		$premantadd=mysqli_real_escape_string($db,$_POST['permanent']);
 		$phone=mysqli_real_escape_string($db,$_POST['mob']);
-		$password=mysqli_real_escape_string($db,$_POST['password']);
 
 		$image_name=$_FILES['imageupload']['name'];
         $image_tmp=$_FILES['imageupload']['tmp_name'];
@@ -85,7 +89,12 @@
 
 
 		echo $name."<br><br>";
+		echo $regd."<br><br>";
 		echo $email."<br><br>";
+		echo $campus."<br><br>";
+		echo $school."<br><br>";
+		echo $program."<br><br>";
+		echo $session."<br><br>";
 		echo $sex."<br><br>";
 		echo $religion."<br><br>";
 		echo $hobby."<br><br>";
@@ -96,7 +105,33 @@
         echo $image_tmp."<br><br>";
 
 		if(move_uploaded_file($image_tmp,"../images/profileimg/$image_name")){
-            $query="UPDATE  student SET name='$name', sex='$sex', religion='$religion', hobby='$hobby', present_address='$presentadd', permanent_address='$premantadd', mobile='$phone', profileimage='$image_name', password='$password'  WHERE email='$email'";
+            $query="UPDATE  student SET name='$name', regd='$regd', campus='$campus', schoolname='$school', program='$program', admissionyear='$session', sex='$sex', religion='$religion', hobby='$hobby', present_address='$presentadd', permanent_address='$premantadd', mobile='$phone', profileimage='$image_name' WHERE email='$email'";
+            $run=mysqli_query($db,$query) or die(mysqli_error($db));
+            if ($run) {
+                header('location:../adminlogin/prof.php');
+				echo "inserted done";
+            }
+            else {
+                echo "inserted error";
+            }
+        }
+        else {
+            echo "File Size High";
+        }
+	}
+
+	
+	if(isset($_POST['updatestudentpasswordinprofile'])){
+		$newpassword=mysqli_real_escape_string($db,$_POST['newpassword']);
+		$reenterpassword=mysqli_real_escape_string($db,$_POST['reenterpassword']);
+
+
+		echo $newpassword."<br><br>";
+		echo $reenterpassword."<br><br>";
+		
+
+		if(move_uploaded_file($image_tmp,"../images/profileimg/$image_name")){
+            $query="UPDATE  student SET name='$name', regd='$regd', campus='$campus', schoolname='$school', program='$program', admissionyear='$session', sex='$sex', religion='$religion', hobby='$hobby', present_address='$presentadd', permanent_address='$premantadd', mobile='$phone', profileimage='$image_name' WHERE email='$email'";
             $run=mysqli_query($db,$query) or die(mysqli_error($db));
             if ($run) {
                 header('location:../adminlogin/prof.php');

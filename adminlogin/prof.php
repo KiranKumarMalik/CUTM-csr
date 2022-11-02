@@ -182,7 +182,7 @@ else
           <div class="card">
             <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
 
-            <img src="../images/profileimg/<?=$studentdata['profileimage']?>" alt="<?=$adminData ?>" width="170" height="130"ALIGN="right"HSPACE="30"VSPACE="30"style=border-radius:50%;/>
+            <img src="../images/profileimg/<?=$post_images['profileimage'] ?>" alt="<?=$post_images ?>" width="170" height="130"ALIGN="right"HSPACE="30"VSPACE="30"style=border-radius:50%;/>
               <h2><?=$studentdata['name']?></h2>
               <h3>Student</h3>
             </div>
@@ -263,8 +263,13 @@ else
                   </div>
 
                   <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Address</div>
+                    <div class="col-lg-3 col-md-4 label">Present Address</div>
                     <div class="col-lg-9 col-md-8"><?=$studentdata['present_address']?></div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-3 col-md-4 label">Present Address</div>
+                    <div class="col-lg-9 col-md-8"><?=$studentdata['permanent_address']?></div>
                   </div>
 
                   <div class="row">
@@ -287,7 +292,7 @@ else
                 <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
                   <!-- Profile Edit Form -->
-                  <form>
+                  <form action="../includes/createuser.php" method="post" enctype="multipart/form-data">
                     <div class="row mb-3">
                       <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
                       <div class="col-md-8 col-lg-9">
@@ -302,84 +307,105 @@ else
                     <div class="row mb-3">
                       <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full Name</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="fullName" type="text" class="form-control" id="fullName" value="<?=$studentdata['name']?>" readonly>
+                        <input name="name" type="text" class="form-control" id="fullName" value="<?=$post_images['name']?>" readonly>
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="company" class="col-md-4 col-lg-3 col-form-label">Registration number</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="company" type="text" class="form-control" id="company" value="<?=$studentdata['regd']?>" readonly>
+                        <input name="regdno" type="text" class="form-control" id="company" value="<?=$post_images['regd']?>" readonly>
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="Job" class="col-md-4 col-lg-3 col-form-label">Campus</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="job" type="text" class="form-control" id="Job" value="<?=$studentdata['campus']?>" readonly>
+                        <input name="campus" type="text" class="form-control" id="Job" value="<?=$post_images['campus']?>" readonly>
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="Job" class="col-md-4 col-lg-3 col-form-label">School Name</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="job" type="text" class="form-control" id="Job" value="<?=$studentdata['schoolname']?>" readonly>
+                        <input name="school" type="text" class="form-control" id="Job" value="<?=$post_images['schoolname']?>" readonly>
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="Job" class="col-md-4 col-lg-3 col-form-label">Program</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="job" type="text" class="form-control" id="Job" value="<?=$studentdata['program']?>" readonly>
+                        <input name="program" type="text" class="form-control" id="Job" value="<?=$post_images['program']?>" readonly>
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="Job" class="col-md-4 col-lg-3 col-form-label">Branch</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="job" type="text" class="form-control" id="Job" value="<?=$studentdata['branch']?>" readonly>
+                        <input name="branch" type="text" class="form-control" id="Job" value="<?=$post_images['branch']?>" readonly>
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="Country" class="col-md-4 col-lg-3 col-form-label">Session</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="country" type="text" class="form-control" id="Country" value="<?=$studentdata['admissionyeargi']?>" readonly>
+                        <input name="addyr" type="text" class="form-control" id="Country" value="<?=$post_images['admissionyear']?>" readonly>
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="Country" class="col-md-4 col-lg-3 col-form-label">Religion</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="country" type="text" class="form-control" id="Country" value="<?=$studentdata['religion']?>" readonly>
+                        <input name="religion" type="text" class="form-control" id="Country" value="<?=$post_images['religion']?>" readonly>
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="Country" class="col-md-4 col-lg-3 col-form-label">Date of Birth</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="country" type="text" class="form-control" id="Country" value="<?=$studentdata['dob']?>" readonly>
+                        <input name="dob" type="text" class="form-control" id="Country" value="<?=$post_images['dob']?>" readonly>
                       </div>
                     </div>
 
                     <div class="row mb-3">
-                      <label for="Address" class="col-md-4 col-lg-3 col-form-label">Address</label>
+                      <label for="Country" class="col-md-4 col-lg-3 col-form-label">Sex</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="address" type="text" class="form-control" id="Address" value="<?=$studentdata['present_address']?>">
+                        <input name="sex" type="text" class="form-control" id="Country" value="<?=$post_images['sex']?>" readonly>
+                      </div>
+                    </div>
+
+                    <div class="row mb-3">
+                      <label for="Country" class="col-md-4 col-lg-3 col-form-label">Hobby</label>
+                      <div class="col-md-8 col-lg-9">
+                        <input name="hobby" type="text" class="form-control" id="Country" value="<?=$post_images['hobby']?>" readonly>
+                      </div>
+                    </div>
+
+                    <div class="row mb-3">
+                      <label for="Address" class="col-md-4 col-lg-3 col-form-label">Present Address</label>
+                      <div class="col-md-8 col-lg-9">
+                        <input name="presentadd" type="text" class="form-control" id="Address" value="<?=$post_images['present_address']?>">
+                      </div>`
+                    </div>
+
+                    <div class="row mb-3">
+                      <label for="Address" class="col-md-4 col-lg-3 col-form-label">Permanent address</label>
+                      <div class="col-md-8 col-lg-9">
+                        <input name="permanent" type="text" class="form-control" id="Address" value="<?=$post_images['present_address']?>">
                       </div>`
                     </div>
 
                     <div class="row mb-3">
                       <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Phone</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="phone" type="text" class="form-control" id="Phone" value="<?=$studentdata['mobile']?>">
+                        <input name="mob" type="text" class="form-control" id="Phone" value="<?=$post_images['mobile']?>">
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="email" type="email" class="form-control" id="Email" value="<?=$studentdata['email']?>" readonly>
+                        <input name="email" type="email" class="form-control" id="Email" value="<?=$post_images['email']?>" readonly>
                       </div>
                     </div>
 
@@ -399,7 +425,7 @@ else
                     <div class="row mb-3">
                       <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">New Password</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="newpassword" type="password" class="form-control" id="newPassword" value="">
+                        <input name="password" type="password" class="form-control" id="newPassword" value="">
                       </div>
                     </div>
 
@@ -411,7 +437,7 @@ else
                     </div>
 
                     <div class="text-center">
-                      <button type="submit" class="btn btn-primary" name="editprofile">Change Password</button>
+                      <button type="submit" class="btn btn-primary" name="updatestudentpasswordinprofile">Change Password</button>
                     </div>
                   </form><!-- End Change Password Form -->
 
