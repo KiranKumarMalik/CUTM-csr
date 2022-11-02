@@ -161,10 +161,12 @@ else
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Post</h5>
+              <form action="../includes/multipleselect.php" method="POST">
               <!-- Table with stripped rows -->
               <table class="table datatable">
                 <thead>
                   <tr>
+                    <th>Select</th>
                     <th>Sl</th>
                     <th scope="col">Name</th>
                     <th scope="col">Email</th>
@@ -182,13 +184,14 @@ else
                 </thead>
                 <tbody>
                   <?php
-                  echo $teacherData['campus'];
-                  echo $teacherData['Clubget'];
+                  // echo $teacherData['campus'];
+                  // echo $teacherData['Clubget'];
                     $posts=getAllPostTeacher($db,$teacherData['campus'],$teacherData['Clubget']);
                     $count=1;
                     foreach($posts as $post){
                     ?>
                       <tr>
+                      <th scope="row"><input type="checkbox" name="allId[]" value="<?=$post['id']?>"></th>
                         <th scope="row"><?=$count?></th>
                         <td><?=$post['NameOfStd']?></td>
                         <td><?=$post['emailOfStd']?></td>
@@ -222,6 +225,8 @@ else
                   
                 </tbody>
               </table>
+              <button type="submit" class="btn btn-success" name="submitall">Approve All</button>
+              </form>
               <!-- End Table with stripped rows -->
 
             </div>
