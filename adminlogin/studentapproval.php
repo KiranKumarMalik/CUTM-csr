@@ -214,6 +214,7 @@ else
                         <div class="card-body">
                             <h5 class="card-title">Requests</h5>
                             <!-- Table with stripped rows -->
+                            <form action="../includes/multipleselectadmin.php" method="POST">
                             <table class="table datatable">
                                 <thead>
                                     <tr>
@@ -245,6 +246,8 @@ else
                                         
                                     ?>
                                     <tr>
+                                    <input type="hidden" name="allName[]" value="<?=$post['name']?>">
+                                    <input type="hidden" name="allEmail[]" value="<?=$post['email']?>">
                                         <th scope="row"><?=$count?></th>
                                         <td><?=$post['name']?></td>
                                         <td><?=$post['email']?></td>
@@ -390,7 +393,9 @@ else
 
 
                                 </tbody>
+                                
                             </table>
+                            </from>
                             <!-- End Table with stripped rows -->
 
                         </div>

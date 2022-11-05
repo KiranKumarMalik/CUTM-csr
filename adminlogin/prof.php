@@ -19,6 +19,55 @@ else
   echo "working";
   header('location:../includes/logout.php');
 }
+if(isset($_POST['passwordbtn'])){
+  $oldpassword=mysqli_real_escape_string($db,$_POST['oldpassword']);
+  $newpassword=mysqli_real_escape_string($db,$_POST['newpassword']);
+  $renewpassword=mysqli_real_escape_string($db,$_POST['renewpassword']);
+
+  echo "oldpassword";
+  echo "newpassword";
+  echo "renewpassword";
+
+  if($studentdata['password'] == $oldpassword){
+    if($newpassword == $renewpassword){
+      $studentemail=$studentdata['email'];
+      $query="UPDATE student SET password='$newpassword' WHERE email='$studentemail'";
+      $run=mysqli_query($db,$query) or die(mysqli_error($db));
+      if ($run) {
+        ?>
+        <script>
+          alert("password Changed ");
+        </script>
+      <?php
+      }
+      else {
+        ?>
+        <script>
+          alert("Password Update error ");
+        </script>
+      <?php
+       }
+
+    }
+    else{
+      ?>
+        <script>
+          alert("password and confirm password not match ");
+        </script>
+      <?php
+    }
+
+  }
+  else{
+    ?>
+    <script>
+      alert("Old password not match ");
+    </script>
+  <?php
+  }
+
+ 
+}
 ?>
 
 
@@ -296,10 +345,9 @@ else
                     <div class="row mb-3">
                       <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
                       <div class="col-md-8 col-lg-9">
-                        <img src="assets/img/profile-img.jpg" alt="Profile">
+                        <img src="../images/profileimg/<?=$post_images['profileimage'] ?>">
                         <div class="pt-2">
-                          <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-upload"></i></a>
-                          <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
+                        <input class="form-control" type="file" id="formFile" name="imageupload" accept="image/*" required>
                         </div>
                       </div>
                     </div>
@@ -307,105 +355,105 @@ else
                     <div class="row mb-3">
                       <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full Name</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="name" type="text" class="form-control" id="fullName" value="<?=$post_images['name']?>" readonly>
+                        <input name="name" type="text" class="form-control" id="fullName" value="<?=$studentdata['name']?>" readonly>
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="company" class="col-md-4 col-lg-3 col-form-label">Registration number</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="regdno" type="text" class="form-control" id="company" value="<?=$post_images['regd']?>" readonly>
+                        <input name="regdno" type="text" class="form-control" id="company" value="<?=$studentdata['regd']?>" readonly>
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="Job" class="col-md-4 col-lg-3 col-form-label">Campus</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="campus" type="text" class="form-control" id="Job" value="<?=$post_images['campus']?>" readonly>
+                        <input name="campus" type="text" class="form-control" id="campus" value="<?=$studentdata['campus']?>" readonly>
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="Job" class="col-md-4 col-lg-3 col-form-label">School Name</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="school" type="text" class="form-control" id="Job" value="<?=$post_images['schoolname']?>" readonly>
+                        <input name="school" type="text" class="form-control" id="schoolname" value="<?=$studentdata['schoolname']?>" readonly>
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="Job" class="col-md-4 col-lg-3 col-form-label">Program</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="program" type="text" class="form-control" id="Job" value="<?=$post_images['program']?>" readonly>
+                        <input name="program" type="text" class="form-control" id="program" value="<?=$studentdata['program']?>" readonly>
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="Job" class="col-md-4 col-lg-3 col-form-label">Branch</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="branch" type="text" class="form-control" id="Job" value="<?=$post_images['branch']?>" readonly>
+                        <input name="branch" type="text" class="form-control" id="branch" value="<?=$studentdata['branch']?>" readonly>
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="Country" class="col-md-4 col-lg-3 col-form-label">Session</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="addyr" type="text" class="form-control" id="Country" value="<?=$post_images['admissionyear']?>" readonly>
+                        <input name="addyr" type="text" class="form-control" id="year" value="<?=$studentdata['admissionyear']?>" readonly>
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="Country" class="col-md-4 col-lg-3 col-form-label">Religion</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="religion" type="text" class="form-control" id="Country" value="<?=$post_images['religion']?>" readonly>
+                        <input name="religion" type="text" class="form-control" id="religion" value="<?=$studentdata['religion']?>" readonly>
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="Country" class="col-md-4 col-lg-3 col-form-label">Date of Birth</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="dob" type="text" class="form-control" id="Country" value="<?=$post_images['dob']?>" readonly>
+                        <input name="dob" type="text" class="form-control" id="date" value="<?=$studentdata['dob']?>" readonly>
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="Country" class="col-md-4 col-lg-3 col-form-label">Sex</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="sex" type="text" class="form-control" id="Country" value="<?=$post_images['sex']?>" readonly>
+                        <input name="sex" type="text" class="form-control" id="sex" value="<?=$studentdata['sex']?>" readonly>
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="Country" class="col-md-4 col-lg-3 col-form-label">Hobby</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="hobby" type="text" class="form-control" id="Country" value="<?=$post_images['hobby']?>" readonly>
+                        <input name="hobby" type="text" class="form-control" id="hobby" value="<?=$studentdata['hobby']?>" readonly>
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="Address" class="col-md-4 col-lg-3 col-form-label">Present Address</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="presentadd" type="text" class="form-control" id="Address" value="<?=$post_images['present_address']?>">
+                        <input name="presentadd" type="text" class="form-control" id="Address" value="<?=$studentdata['present_address']?>">
                       </div>`
                     </div>
 
                     <div class="row mb-3">
                       <label for="Address" class="col-md-4 col-lg-3 col-form-label">Permanent address</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="permanent" type="text" class="form-control" id="Address" value="<?=$post_images['present_address']?>">
+                        <input name="permanent" type="text" class="form-control" id="Address" value="<?=$studentdata['present_address']?>">
                       </div>`
                     </div>
 
                     <div class="row mb-3">
                       <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Phone</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="mob" type="text" class="form-control" id="Phone" value="<?=$post_images['mobile']?>">
+                        <input name="mob" type="text" class="form-control" id="Phone" value="<?=$studentdata['mobile']?>">
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="email" type="email" class="form-control" id="Email" value="<?=$post_images['email']?>" readonly>
+                        <input name="email" type="email" class="form-control" id="Email" value="<?=$studentdata['email']?>" readonly>
                       </div>
                     </div>
 
@@ -420,12 +468,19 @@ else
 
                 <div class="tab-pane fade pt-3" id="profile-change-password">
                   <!-- Change Password Form -->
-                  <form>
+                  <form action="" method="post">
+
+                  <div class="row mb-3">
+                      <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">Old Password</label>
+                      <div class="col-md-8 col-lg-9">
+                        <input name="oldpassword" type="password" class="form-control" id="oldPassword" value="">
+                      </div>
+                    </div>
 
                     <div class="row mb-3">
                       <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">New Password</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="password" type="password" class="form-control" id="newPassword" value="">
+                        <input name="newpassword" type="password" class="form-control" id="newPassword" value="">
                       </div>
                     </div>
 
@@ -437,7 +492,7 @@ else
                     </div>
 
                     <div class="text-center">
-                      <button type="submit" class="btn btn-primary" name="updatestudentpasswordinprofile">Change Password</button>
+                      <button type="submit" name="passwordbtn" class="btn btn-primary" name="editprofile">Change Password</button>
                     </div>
                   </form><!-- End Change Password Form -->
 

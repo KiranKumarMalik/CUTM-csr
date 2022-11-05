@@ -19,6 +19,54 @@ else
 {
   header('location:../includes/logout.php');
 }
+
+if(isset($_POST['passwordbtn'])){
+  $oldpassword=mysqli_real_escape_string($db,$_POST['oldpassword']);
+  $newpassword=mysqli_real_escape_string($db,$_POST['newpassword']);
+  $renewpassword=mysqli_real_escape_string($db,$_POST['renewpassword']);
+
+
+
+  if($adminData['password'] == $oldpassword){
+    if($newpassword == $renewpassword){
+      $adminemail=$adminData['email'];
+      $query="UPDATE admin SET password='$newpassword' WHERE email='$adminemail'";
+      $run=mysqli_query($db,$query) or die(mysqli_error($db));
+      if ($run) {
+        ?>
+        <script>
+          alert("password Changed ");
+        </script>
+      <?php
+      }
+      else {
+        ?>
+        <script>
+          alert("Password Update error ");
+        </script>
+      <?php
+       }
+
+    }
+    else{
+      ?>
+        <script>
+          alert("password and confirm password not match ");
+        </script>
+      <?php
+    }
+
+  }
+  else{
+    ?>
+    <script>
+      alert("Old password not match ");
+    </script>
+  <?php
+  }
+
+ 
+}
 ?>
 
 
@@ -219,13 +267,7 @@ else
             <img src="../images/profileimg/<?=$adminData['profileimg']?>" alt="<?=$adminData ?>" width="170" height="130"ALIGN="right"HSPACE="30"VSPACE="30"style=border-radius:50%;/>
               <h2><?=$adminData['name']?></h2>
               <h3><?=$adminData['designation']?></h3>
-              <div class="social-links mt-2">
-              <a href="https://api.whatsapp.com/send/?phone=91<?=$adminData['whatsapp']?>&text&app_absent=Hi" class="whatsapp"><i class="bi bi-whatsapp"></i></a> 
-                <a href="<?=$adminData['twitter']?>" class="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="<?=$adminData['facebook']?>" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="<?=$adminData['instagram']?>" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="<?=$adminData['linkedin']?>" class="linkedin"><i class="bi bi-linkedin"></i></a>
-              </div>
+              <h3>Admin</h3>
             </div>
           </div>
 
@@ -304,14 +346,14 @@ else
                 <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
                   <!-- Profile Edit Form -->
-                  <form>
+                  <form action="../includes/createuser.php" method="post" enctype="multipart/form-data">
                     <div class="row mb-3">
                       <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
                       <div class="col-md-8 col-lg-9">
-                        <img src="assets/img/profile-img.jpg" alt="Profile">
+                        <img src="../images/profileimg/<?=$adminData['profileimg']?>">
                         <div class="pt-2">
-                          <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-upload"></i></a>
-                          <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
+                          
+                          <input class="form-control" type="file" id="formFile" name="imageupload" accept="image/*">
                         </div>
                       </div>
                     </div>
@@ -333,7 +375,7 @@ else
                     <div class="row mb-3">
                       <label for="company" class="col-md-4 col-lg-3 col-form-label">Designation</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="company" type="text" class="form-control" id="company" value="<?=$adminData['designation']?>">
+                        <input name="desc" type="text" class="form-control" id="company" value="<?=$adminData['designation']?>">
                       </div>
                     </div>
 
@@ -354,7 +396,7 @@ else
                     <div class="row mb-3">
                       <label for="Address" class="col-md-4 col-lg-3 col-form-label">Address</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="address" type="text" class="form-control" id="Address" value="<?=$adminData['address']?>">
+                        <input name="address" type="text" class="form-control" id="Address" value="<?=$adminData['address']?>" readonly>
                       </div>
                     </div>
 
@@ -368,42 +410,7 @@ else
                     <div class="row mb-3">
                       <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="email" type="email" class="form-control" id="Email" value="<?=$adminData['email']?>">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Linkedin" class="col-md-4 col-lg-3 col-form-label">What's app</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="whatsapp" type="text" class="form-control" id="Whatsapp" value="">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Twitter" class="col-md-4 col-lg-3 col-form-label">Twitter Profile</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="twitter" type="text" class="form-control" id="Twitter" value="">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Facebook" class="col-md-4 col-lg-3 col-form-label">Facebook Profile</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="facebook" type="text" class="form-control" id="Facebook" value="">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Instagram" class="col-md-4 col-lg-3 col-form-label">Instagram Profile</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="instagram" type="text" class="form-control" id="Instagram" value="">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Linkedin" class="col-md-4 col-lg-3 col-form-label">Linkedin Profile</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="linkedin" type="text" class="form-control" id="Linkedin" value="">
+                        <input name="email" type="email" class="form-control" id="Email" value="<?=$adminData['email']?>" readonly>
                       </div>
                     </div>
 
@@ -417,7 +424,14 @@ else
 
                 <div class="tab-pane fade pt-3" id="profile-change-password">
                   <!-- Change Password Form -->
-                  <form>
+                  <form action="" method="post">
+
+                  <div class="row mb-3">
+                      <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">Old Password</label>
+                      <div class="col-md-8 col-lg-9">
+                        <input name="oldpassword" type="password" class="form-control" id="newPassword" value="">
+                      </div>
+                    </div>
 
                     <div class="row mb-3">
                       <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">New Password</label>
@@ -434,7 +448,7 @@ else
                     </div>
 
                     <div class="text-center">
-                      <button type="submit" class="btn btn-primary" name="editadminprofile">Change Password</button>
+                      <button type="submit" name="passwordbtn" class="btn btn-primary" name="editadminprofile">Change Password</button>
                     </div>
                   </form><!-- End Change Password Form -->
 

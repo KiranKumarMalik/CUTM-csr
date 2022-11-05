@@ -274,7 +274,7 @@ echo $mydatestrdata;
                                     <h5 class="card-title">Sports</h5>
 
                                     <div class="d-flex align-items-center">
-                                      <a href="./student.php?program=Culture">
+                                      <a href="./student.php?program=Sports">
                                         <div
                                             class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                                             <i class="bi bi-trophy-fill"></i>
