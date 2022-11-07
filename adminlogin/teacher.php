@@ -188,7 +188,44 @@ else
                   // echo $teacherData['Clubget'];
                     $posts=getAllPostTeacher($db,$teacherData['campus'],$teacherData['Clubget']);
                     $count=1;
+                    date_default_timezone_set('Asia/Kolkata');
+                    $today=date("Y-m-d");
+                    // $today=date("2022-11-09");
+                    echo $today;
                     foreach($posts as $post){
+                      $posttime=date('Y-m-d',strtotime($post['postTime']));
+                      $posttimeNextDay=date('Y-m-d',strtotime('+1 day', strtotime($post['postTime'])));
+                      
+                      // $posttime="2022-11-08";
+                      // $posttimeNextDay="2022-11-09";
+                      
+                      // echo $posttime;
+                      // echo $posttimeNextDay;
+
+                      $postReject='<a href="../includes/reject.php?id='.$post['id'].'" class="btn btn-danger">
+                                    Reject
+                                  </a>';
+                      $postAccept='<a href="../includes/status.php?id='.$post['id'].'" class="btn btn-success">
+                                    Approve
+                                  </a>';
+
+                      if($today>=$posttime && $today<=$posttimeNextDay){
+                        if($post['status']=="Rejected"){
+                          $postAccept='<a href="../includes/status.php?id='.$post['id'].'" class="btn btn-success">
+                                    Approve
+                                  </a>';
+                          $postReject='<a class="btn btn-secondary">Reject</a>';
+
+                        }elseif($post['status']=="Approved"){
+                          $postReject='<a href="../includes/reject.php?id='.$post['id'].'" class="btn btn-danger">
+                                    Reject
+                                  </a>';
+                          $postAccept='<a class="btn btn-secondary">Approve</a>';
+                        }
+                      }else{
+                        $postReject='<a class="btn btn-secondary">Reject</a>';
+                        $postAccept='<a class="btn btn-secondary">Approve</a>';
+                      }
                     ?>
                       <tr>
                       <th scope="row"><input type="checkbox" name="allId[]" value="<?=$post['id']?>"></th>
@@ -203,18 +240,8 @@ else
                         <td><?=$post['endTime']?></td>
                         <td><?=(int)$post['totalTime']?></td>
                         <td><?=$post['status']?></td>
-                        <td>
-                          <a href="../includes/status.php?id=<?=$post['id']?>" class="btn btn-success">
-                            Aprove
-                          </a>
-                          
-                        </td>
-                        <td>
-                          <a href="../includes/reject.php?id=<?=$post['id']?>" class="btn btn-danger">
-                            Reject
-                          </a>
-                          
-                        </td>
+                        <td><?=$postAccept?></td>
+                        <td><?=$postReject?></td>
                       </tr>
                     <?php
                     $count++;
@@ -231,6 +258,7 @@ else
 
             </div>
           </div>
+                
 
         </div>
       </div>
