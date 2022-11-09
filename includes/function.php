@@ -498,4 +498,23 @@
         return $data;
     }
 
+
+    function getTotalTime($db,$csrPr){
+        $query="SELECT SUM(totalTime) as totalTime FROM csrtimesheet WHERE csrPr='$csrPr'";
+        $run=mysqli_query($db,$query);
+        $data=mysqli_fetch_assoc($run);
+        return $data['totalTime'];
+    }
+
+    function getAnnouncements($db){
+        $todayis=date("Y-m-d");
+
+        $query="SELECT * FROM announcement WHERE '$todayis' between date_time and end_date ORDER BY id DESC";
+        $run=mysqli_query($db,$query);
+        $data=array();
+        while($d=mysqli_fetch_assoc($run)){
+            $data[]=$d;
+        }
+        return $data;    
+    }
 ?>

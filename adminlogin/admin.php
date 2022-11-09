@@ -86,9 +86,9 @@ else{
 }
 
 
-echo $allclubis;
-echo $allclubisCountDat;
-echo $getallClub;
+// echo $allclubis;
+// echo $allclubisCountDat;
+// echo $getallClub;
 
 
 ?>

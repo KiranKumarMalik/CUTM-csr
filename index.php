@@ -1,6 +1,18 @@
 <?php
 require('./includes/function.php');
 require('./includes/database.php');
+
+
+$Culturetime=getTotalTime($db,'Culture');
+$Sportstime=getTotalTime($db,'Sports');
+$Responsibilitytime=getTotalTime($db,'Responsibility');
+
+$getallAnnousementStringIs="";
+$getallAnnousement=getAnnouncements($db);
+foreach($getallAnnousement as $getallAnnousements){
+    $getallAnnousementStringIs=$getallAnnousementStringIs." || ".$getallAnnousements['event_name']." || ";
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -42,7 +54,8 @@ require('./includes/database.php');
                             <a class="dropdown-item" href="coordinators.php?campus=Bhubaneswar">Bhubaneswar</a>
                             <a class="dropdown-item" href="coordinators.php?campus=Balangir">Balangir</a>
                             <a class="dropdown-item" href="coordinators.php?campus=Paralakhemundi">Paralakhemundi</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Rayagada">Rayagada</a></div>
+                            <a class="dropdown-item" href="coordinators.php?campus=Rayagada">Rayagada</a>
+                            <a class="dropdown-item" href="coordinators.php?campus=Chhatrapur">Chhatrapur</a></div>
                         </li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="campusachievements.php">PREVIOUS ACHIEVEMENTS</a></li>
                     </ul>
@@ -67,17 +80,19 @@ require('./includes/database.php');
         <div>
             <!-- Top Bar -->
  
-        <div class="announcementBlock" style="display:inline-block; width:100%; height: 27px;">
-      <div class="announcements" style="padding-top: 0px">
-        <div class="announcements-label" style="padding-top: 5px; padding-bottom: 5px; background-color: #FC654C; text-align: right; width:12%;float: left; height: 38px;"><strong style="padding-right: 10px"><span class="show-large">Announcements:</span><span class="show-mobile"><i aria-hidden="true" class="fas fa-bullhorn"></i></span></strong></div>
-        <div class="announcements-content " style="padding-top: 5px; padding-bottom: 5px; background-color: #ffc600; color: #07294d; width:88%; float: left; height: 38px;">
-        <marquee scrolldelay="80" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();" >
-        <a href="#" style="color: inherit;"></a>
-        <div class='marquee-hsas-shortcode-88' style='width: 100%;overflow: hidden;'><b>Kiran</marquee>
-          </div>
-        </div>
-    </div>   
-</div> 
+            <div class="announcementBlock" style="display:inline-block; width:100%; height: 27px;">
+                <div class="announcements" style="padding-top: 0px">
+                    <div class="announcements-label" style="padding-top: 5px; padding-bottom: 5px; background-color: #FC654C; text-align: right; width:12%;float: left; height: 38px;"><strong style="padding-right: 10px"><span class="show-large">Announcements:</span><span class="show-mobile"><i aria-hidden="true" class="fas fa-bullhorn"></i></span></strong></div>
+                        <div class="announcements-content " style="padding-top: 5px; padding-bottom: 5px; background-color: #ffc600; color: #07294d; width:88%; float: left; height: 38px;">
+
+                        <marquee scrolldelay="80" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();" >
+                            <div class='marquee-hsas-shortcode-88' style='width: 100%;overflow: hidden;'><a href="./announcements.php" style="color: inherit;"><b><?=$getallAnnousementStringIs?></b></a>
+                        </marquee>
+                        
+                    </div>
+                </div>
+            </div>   
+        </div> 
   
 <!-- End Top Bar -->
         <h2 class="text-center section-title" data-aos="fade-up" style="padding-top: 30px;padding-bottom: 0px;"><strong>ABOUT US</strong></h2>
@@ -112,21 +127,21 @@ require('./includes/database.php');
                     <div class="float-left services-icon" data-aos="fade-up"><i class="fas fa-atom fa-spin" style="font-size: 25px;"></i></div>
                     <div>
                         <h4 data-aos="fade-up" class="services-title"><strong>Culture</strong><br></h4>
-                        <h2 data-aos="fade-up" class="services-p">450 Hrs</h2>
+                        <h2 data-aos="fade-up" class="services-p"><?=(int)$Culturetime?> Hrs</h2>
                     </div>
                 </div>
                 <div class="col-sm-12 col-lg-4 col-md-6 icon-box" style="margin-top: 20px;margin-bottom: 20px;">
                     <div class="float-left services-icon" data-aos="fade-up"><i class="fas fa-basketball-ball fa-spin" style="font-size: 25px;"></i></div>
                     <div>
                         <h4 data-aos="fade-up" class="services-title"><strong>Sports</strong><br></h4>
-                        <h2 data-aos="fade-up" class="services-p">450 Hrs</h2>
+                        <h2 data-aos="fade-up" class="services-p"><?=(int)$Sportstime?> Hrs</h2>
                     </div>
                 </div>
                 <div class="col-sm-12 col-lg-4 col-md-6 icon-box" style="margin-top: 20px;margin-bottom: 20px;">
                     <div class="float-left services-icon" data-aos="fade-up"><i class="fas fa-hands-helping" style="font-size: 25px;"></i></div>
                     <div>
                         <h4 data-aos="fade-up" class="services-title"><strong>Responsibility</strong><br></h4>
-                        <h2 data-aos="fade-up" class="services-p">450 Hrs</h2>
+                        <h2 data-aos="fade-up" class="services-p"><?=(int)$Responsibilitytime?> Hrs</h2>
                     </div>
                 </div>
                 
@@ -137,7 +152,7 @@ require('./includes/database.php');
     <!-- Start: #CSaR team -->
     <section id="team" class="team" style="margin-top: 20px;margin-bottom: 20px;">
         <div class="text-center">
-            <h2 class="text-center section-title" data-aos="fade-up" style="padding-top: 30px;padding-bottom: 0px;"><strong>CSaR TEAM</strong></h2>
+            <h2 class="text-center section-title" data-aos="fade-up" style="padding-top: 30px;padding-bottom: 0px;"><strong>Head of the CSaR</strong></h2>
             <hr data-aos="fade-up" style="width: 120px;border-bottom-style: none;padding-bottom: 30px;">
             <p data-aos="fade-up" style="margin-bottom: 30px;">Get up, Dress up, Show up and Never give up</p>
             <div class="container">
@@ -197,7 +212,7 @@ require('./includes/database.php');
         <div class="container">
             <div class="row portfolio-container">
             <a href="yearwise.php?campus=Balasore">
-                <div class="col-12 col-lg-4 col-md-6 portfolio-item filter-app" data-aos="fade-up" data-aos-delay="100"><img class="img-fluid" src="assets/img/event_images/DSC_0008.jpg">
+                <div class="col-12 col-lg-4 col-md-6 portfolio-item filter-app" data-aos="fade-up" data-aos-delay="100"><img class="img-fluid" src="assets/img/event_images/MRC_2314.jpg">
                     <div class="portfolio-info">
                         <h4>Balasore</h4>
                         <p>Event images</p>
@@ -205,7 +220,7 @@ require('./includes/database.php');
             </a>
                 </div>
                 <a href="yearwise.php?campus=Bhubaneswar">
-                <div class="col-12 col-lg-4 col-md-6 portfolio-item filter-card" data-aos="fade-up" data-aos-delay="200"><img class="img-fluid" src="assets/img/event_images/DSC_5507.jpg">
+                <div class="col-12 col-lg-4 col-md-6 portfolio-item filter-card" data-aos="fade-up" data-aos-delay="200"><img class="img-fluid" src="assets/img/event_images/DSC_0008.jpg">
                     <div class="portfolio-info">
                         <h4>Bhubaneswar</h4>
                         <p>Event images</p>
@@ -221,7 +236,7 @@ require('./includes/database.php');
                     </a>
                 </div>
                 <a href="yearwise.php?campus=Paralakhemundi">
-                <div class="col-12 col-lg-4 col-md-6 portfolio-item filter-app" data-aos="fade-up" data-aos-delay="400"><img class="img-fluid" src="assets/img/event_images/IMG_7514.jpg">
+                <div class="col-12 col-lg-4 col-md-6 portfolio-item filter-app" data-aos="fade-up" data-aos-delay="400"><img class="img-fluid" src="assets/img/event_images/IMG_20220117_131641.jpg">
                     <div class="portfolio-info">
                         <h4>Paralakhemundi</h4>
                         <p>Event images</p>
@@ -237,7 +252,7 @@ require('./includes/database.php');
                     </a>
                 </div>
                 <a href="yearwise.php?campus=Chatrapur">
-                <div class="col-12 col-lg-4 col-md-6 portfolio-item filter-app" data-aos="fade-up" data-aos-delay="400"><img class="img-fluid" src="assets/img/event_images/IMG_7514.jpg">
+                <div class="col-12 col-lg-4 col-md-6 portfolio-item filter-app" data-aos="fade-up" data-aos-delay="400"><img class="img-fluid" src="assets/img/event_images/MRC_5418.jpg">
                     <div class="portfolio-info">
                         <h4>Chatrapur</h4>
                         <p>Event images</p>

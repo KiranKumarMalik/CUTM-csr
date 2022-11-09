@@ -19,12 +19,13 @@ if(isset($_POST['addannouncement'])){
     $campus=mysqli_real_escape_string($db,$_POST['campus']);
     $announcement=mysqli_real_escape_string($db,$_POST['announcement']);
     $announcementdetails=mysqli_real_escape_string($db,$_POST['announcementdetails']);
+    $attachments=mysqli_real_escape_string($db,$_POST['attachments']);
     $date=mysqli_real_escape_string($db,$_POST['date']);
     $edate=mysqli_real_escape_string($db,$_POST['enddate']);
     
     
     
-        $query="INSERT INTO announcement (event_name,details,date_time,end_date,campus) VALUES('$announcement','$announcementdetails','$date','$edate','$campus')";
+        $query="INSERT INTO announcement (event_name,details,attachments,date_time,end_date,campus) VALUES('$announcement','$announcementdetails','$attachments','$date','$edate','$campus')";
         $run=mysqli_query($db,$query) or die(mysqli_error($db));
         if ($run) {
             ?>
@@ -262,7 +263,7 @@ if(isset($_POST['addannouncement'])){
                         <div class="row mb-3">
                           <label for="inputNumber" class="col-sm-2 col-form-label">Attachment</label>
                             <div class="col-sm-10">
-                            <input class="form-control" type="file" id="formFile" name="imageupload" accept="image/*" required>
+                            <input class="form-control" type="file" id="formFile" name="attachments" accept="pdf/*" required>
                           </div>
                         </div>
 

@@ -43,7 +43,8 @@ require('./includes/database.php');
                             <a class="dropdown-item" href="coordinators.php?campus=Bhubaneswar">Bhubaneswar</a>
                             <a class="dropdown-item" href="coordinators.php?campus=Balangir">Balangir</a>
                             <a class="dropdown-item" href="coordinators.php?campus=Paralakhemundi">Paralakhemundi</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Rayagada">Rayagada</a></div>
+                            <a class="dropdown-item" href="coordinators.php?campus=Rayagada">Rayagada</a>
+                            <a class="dropdown-item" href="coordinators.php?campus=Chhatrapur">Chhatrapur</a></div>
                         </li>
                         <li class="nav-item"><a class="nav-link active scrollto" href="campusachievements.php">PREVIOUS ACHIEVEMENTS</a></li>
                     </ul>
@@ -100,6 +101,15 @@ require('./includes/database.php');
                             <i class="fa fa-trophy fa-5x" style="color:red"></i>
                                 <h4 class="card-title" style="margin-top: 20px;"><strong>Rayagada</strong></h4>
                                 <div><a href="./card/achievements.php?campus=Rayagada"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300" style="margin-top: 15px;margin-bottom: 15px;">
+                        <div class="card shadow" style="width: 277.5;">
+                            <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
+                            <i class="fa fa-trophy fa-5x" style="color:red"></i>
+                                <h4 class="card-title" style="margin-top: 20px;"><strong>Chhatrapur</strong></h4>
+                                <div><a href="./card/achievements.php?campus=Chhatrapur"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
                             </div>
                         </div>
                     </div>

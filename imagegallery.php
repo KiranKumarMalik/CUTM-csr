@@ -40,7 +40,8 @@
                             <a class="dropdown-item" href="coordinators.php?campus=Bhubaneswar">Bhubaneswar</a>
                             <a class="dropdown-item" href="coordinators.php?campus=Balangir">Balangir</a>
                             <a class="dropdown-item" href="coordinators.php?campus=Paralakhemundi">Paralakhemundi</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Rayagada">Rayagada</a></div>
+                            <a class="dropdown-item" href="coordinators.php?campus=Rayagada">Rayagada</a>
+                            <a class="dropdown-item" href="coordinators.php?campus=Chhatrapur">Chhatrapur</a></div>
                         </li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="campusachievements.php">PREVIOUS ACHIEVEMENTS</a></li>
                     </ul>
@@ -55,7 +56,7 @@
         <div class="text-center">
         <h2 class="text-center section-title" data-aos="fade-up" style="padding-top: 100px;padding-bottom: 0px;"><strong>Image of all campuses</strong></h2>
             <hr data-aos="fade-up" style="width: 120px;border-bottom-style: none;padding-bottom: 30px;">
-            <p data-aos="fade-up" style="margin-bottom: 30px;">Magnam dolores commodi suscipit eius consequatur ex aliquid</p>
+            <p data-aos="fade-up" style="margin-bottom: 30px;">Collection and Memories in Centurion University of Technology and Management</p>
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
@@ -91,6 +92,13 @@
                             <div class="member-img"><a href="yearwise.php?campus=Rayagada"><img class="img-fluid" src="assets/img/campusimg/rayagada.jpg?h=e6327a565d06c34455a63fad12fbff94"></div>
                             <div class="member-info">
                                 <h5><strong>Rayagada</strong></h5><span>IDCO Industrial Area, Pitamahal, Rayagada, Odisha.</span></a></div>
+                        </div>
+                </div>
+                <div class="col-sm-6 col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+                        <div class="member">
+                            <div class="member-img"><a href="yearwise.php?campus=Chhatrapur"><img class="img-fluid" src="assets/img/campusimg/Chhatrapur.jpg?h=e6327a565d06c34455a63fad12fbff94"></div>
+                            <div class="member-info">
+                                <h5><strong>Chhatrapur</strong></h5><span>IDCO Industrial Area, Pitamahal, Rayagada, Odisha.</span></a></div>
                         </div>
                 </div>
             </div>
