@@ -298,7 +298,7 @@ else
           <div class="row">
             <div class="pm-certificate-footer">
                 <div class="col-xs-4 pm-certified col-xs-4 text-center">
-                  <span class="pm-credits-text block sans"></span>
+                  <span class="pm-credits-text block sans"><img src="image/dean.jpg" width="170" height="100"></span>
                   <span class="pm-empty-space block underline"></span>
                   <span class="bold block">Dean, Students'Welfare</span>
                 </div>
@@ -306,7 +306,7 @@ else
                   <!-- LEAVE EMPTY -->
                 </div>
                 <div class="col-xs-4 pm-certified col-xs-4 text-center">
-                  <span class="pm-credits-text block sans"></span>
+                  <span class="pm-credits-text block sans"><img src="image/director.jpg" width="170" height="100"></span>
                   <span class="pm-empty-space block underline"></span>
                   <span class="bold block">Director</span>
                 </div>

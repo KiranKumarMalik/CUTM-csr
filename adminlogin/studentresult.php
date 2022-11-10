@@ -25,26 +25,26 @@ if($_SESSION['email'] and $utype=="student")
   $studentResultyr3=getStudentResultyr3($db,$uemail,$AddmissionYear+2);
   $studentResultyr4=getStudentResultyr4($db,$uemail,$AddmissionYear+3);
 
-  // if (empty($studentResultyr1)) {
-  //   $studentResultyr1[Culture]=0;
-  //   $studentResultyr1[Sports]=0;
-  //   $studentResultyr1[Responsibility]=0;
-  // }
-  // if (empty($studentResultyr2)) {
-  //   $studentResultyr2[Culture]=0;
-  //   $studentResultyr2[Sports]=0;
-  //   $studentResultyr2[Responsibility]=0;
-  // }
-  // if (empty($studentResultyr3)) {
-  //   $studentResultyr3[Culture]=0;
-  //   $studentResultyr3[Sports]=0;
-  //   $studentResultyr3[Responsibility]=0;
-  // }
-  // if (empty($studentResultyr4)) {
-  //   $studentResultyr4[Culture]=0;
-  //   $studentResultyr4[Sports]=0;
-  //   $studentResultyr4[Responsibility]=0;
-  // }
+  if (empty($studentResultyr1)) {
+    $studentResultyr1[Culture]=0;
+    $studentResultyr1[Sports]=0;
+    $studentResultyr1[Responsibility]=0;
+  }
+  if (empty($studentResultyr2)) {
+    $studentResultyr2[Culture]=0;
+    $studentResultyr2[Sports]=0;
+    $studentResultyr2[Responsibility]=0;
+  }
+  if (empty($studentResultyr3)) {
+    $studentResultyr3[Culture]=0;
+    $studentResultyr3[Sports]=0;
+    $studentResultyr3[Responsibility]=0;
+  }
+  if (empty($studentResultyr4)) {
+    $studentResultyr4[Culture]=0;
+    $studentResultyr4[Sports]=0;
+    $studentResultyr4[Responsibility]=0;
+  }
   
 }
 else
