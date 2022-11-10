@@ -6,6 +6,7 @@ $Coordinators=$_GET['coordinator'];
 $cordinator=getcoordinators($db,$Coordinators,$campus);
 
 $pdf=$cordinator['pdf'];
+// echo $pdf;
 
 ?>
 <!DOCTYPE html>
@@ -72,7 +73,7 @@ $pdf=$cordinator['pdf'];
                     <div class="card">
                     <div class="card-body">
                     <form action="" method="post">
-                    <iframe src="./assets/pdf/<?=$pdf?>" width="100%" height="600px"></iframe>
+                    <iframe src="./assets//pdf/cordinator/<?=$pdf?>" width="100%" height="600px"></iframe>
                     </div>
                     </div>
                     </div>

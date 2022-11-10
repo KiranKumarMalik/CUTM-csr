@@ -2,6 +2,9 @@
 require('./includes/function.php');
 require('./includes/database.php');
 
+$id=$_GET['id'];
+// echo $id;
+$detailsannouncement=homeAnnouncement($db,$id);
 
 ?>
 <!DOCTYPE html>
@@ -70,31 +73,23 @@ require('./includes/database.php');
             data-aos="fade-up"
             style="width: 120px;border-bottom-style: none;padding-bottom: 30px;">
     </div>
-<?php
-    $announces=getinsertannouncements($db);
-    foreach($announces as $announce){
-?>
-
     <div class="col-md-8 mx-auto text-center">
         <div class="card">
             <div class="card-body">
                 <form action="" method="post">
                     <h3 class="lead" data-aos="fade-up" style="color: #002654;">
-                        <b><?=$announce['campus']?></b>
+                        <b><?=$detailsannouncement['event_name']?></b>
                     </h3>
-                    <h6><?=$announce['event_name']?></h6>
+                    <?=$detailsannouncement['details']?>
                     <div class="card">
                     <div class="card-body">
                     <form action="" method="post">
-                    <iframe src="./assets/pdf/<?=$pdf?>" width="100%" height="600px"></iframe>
+                    <iframe src="./assets//pdf/announcement/<?=$detailsannouncement['attachments']?>" width="100%" height="600px"></iframe>
                     </div>
                     </div>
                 </div>
             </div>
         </div><br>
-<?php
-}
-?>
     </section>
                     <!-- End: announcement -->
     
