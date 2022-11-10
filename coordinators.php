@@ -65,9 +65,9 @@ $campus=$_GET['campus'];
                     <div class="card">
                     <div class="card-body">
                     <form action="" method="post">
-                    <li data-aos="fade-up"><a href="card/coordinators.php?coordinator=ClubInCharges&campus=<?=$campus?>"> Club In-Charges</a></li>
-                    <li data-aos="fade-up"><a href="card/coordinators.php?coordinator=FacultyInCharges&campus=<?=$campus?>"> Faculty Co-Ordinators</a></li>
-                    <li data-aos="fade-up"><a href="card/coordinators.php?coordinator=StudentInCharges&campus=<?=$campus?>"> Student Co-Ordinators</a></li><br>
+                    <li data-aos="fade-up"><a href="coordinatorsdata.php?coordinator=ClubInCharges&campus=<?=$campus?>"> Club In-Charges</a></li>
+                    <li data-aos="fade-up"><a href="coordinatorsdata.php?coordinator=FacultyInCharges&campus=<?=$campus?>"> Faculty Co-Ordinators</a></li>
+                    <li data-aos="fade-up"><a href="coordinatorsdata.php?coordinator=StudentInCharges&campus=<?=$campus?>"> Student Co-Ordinators</a></li><br>
                     </div>
                     </div>
     </section>

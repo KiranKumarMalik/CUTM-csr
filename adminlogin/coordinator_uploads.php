@@ -86,7 +86,8 @@ else
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
-                        <a href="adminprof.php"><img src="../images/profileimg/<?=$adminData['profileimg']?>" height="70px" style=border-radius:50%;></a>
+                            <a href="adminprof.php"><img src="../images/profileimg/<?=$adminData['profileimg']?>"
+                                    height="70px" style=border-radius:50%;></a>
                             <h6><?=$uemail?></h6>
                             <span>Admin</span>
                         </li>
@@ -114,82 +115,82 @@ else
     <!-- ======= Sidebar ======= -->
     <aside id="sidebar" class="sidebar">
 
-    <ul class="sidebar-nav" id="sidebar-nav">
+        <ul class="sidebar-nav" id="sidebar-nav">
 
-    <li class="nav-item">
-            <a class="nav-link " href="admin.php">
-                <i class="bi bi-grid"></i>
-                <span>Dashboard</span>
-            </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="certificateapprove.php">
-              <i class="bi bi-file-check-fill"></i>
-              <span>Event timesheet approval</span>
-          </a>
-      </li>
+            <li class="nav-item">
+                <a class="nav-link " href="admin.php">
+                    <i class="bi bi-grid"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="certificateapprove.php">
+                    <i class="bi bi-file-check-fill"></i>
+                    <span>Event timesheet approval</span>
+                </a>
+            </li>
 
-      <li class="nav-item">
-          <a class="nav-link " href="studentapproval.php">
-              <i class="bi bi-person-badge-fill"></i>
-              <span>Participants ID Approval</span>
-          </a>
-      </li> 
+            <li class="nav-item">
+                <a class="nav-link " href="studentapproval.php">
+                    <i class="bi bi-person-badge-fill"></i>
+                    <span>Participants ID Approval</span>
+                </a>
+            </li>
 
-    <li class="nav-item">
-          <a class="nav-link " href="addfaculty.php">
-              <i class="bi bi-journal-text"></i>
-              <span>Add Faculty In-charge</span>
-          </a>
-      </li>
+            <li class="nav-item">
+                <a class="nav-link " href="addfaculty.php">
+                    <i class="bi bi-journal-text"></i>
+                    <span>Add Faculty In-charge</span>
+                </a>
+            </li>
 
-      <li class="nav-item">
-          <a class="nav-link " href="addclub.php">
-              <i class="bi bi-file-earmark-plus"></i>
-              <span>Add New Club</span>
-          </a>
-      </li>
+            <li class="nav-item">
+                <a class="nav-link " href="addclub.php">
+                    <i class="bi bi-file-earmark-plus"></i>
+                    <span>Add New Club</span>
+                </a>
+            </li>
 
-      <li class="nav-item">
-              <a class="nav-link " href="addannouncement.php">
-                  <i class="bi bi-megaphone-fill"></i>
-                  <span>Announcements</span>
-              </a>
-          </li>
+            <li class="nav-item">
+                <a class="nav-link " href="addannouncement.php">
+                    <i class="bi bi-megaphone-fill"></i>
+                    <span>Announcements</span>
+                </a>
+            </li>
 
-      <li class="nav-item">
-              <a class="nav-link " href="gallery_uploads.php">
-                  <i class="bi bi-images"></i>
-                  <span>Gallery</span>
-              </a>
-          </li>
+            <li class="nav-item">
+                <a class="nav-link " href="gallery_uploads.php">
+                    <i class="bi bi-images"></i>
+                    <span>Gallery</span>
+                </a>
+            </li>
 
-          <li class="nav-item">
-              <a class="nav-link " href="coordinator_uploads.php">
-                  <i class="bi bi-people-fill"></i>
-                  <span>Co-ordinators</span>
-              </a>
-          </li>
+            <li class="nav-item">
+                <a class="nav-link " href="coordinator_uploads.php">
+                    <i class="bi bi-people-fill"></i>
+                    <span>Co-ordinators</span>
+                </a>
+            </li>
 
-          <li class="nav-item">
-              <a class="nav-link " href="achievement_uploads.php">
-                  <i class="bi bi-trophy-fill"></i>
-                  <span>Achievements</span>
-              </a>
-          </li>
+            <li class="nav-item">
+                <a class="nav-link " href="achievement_uploads.php">
+                    <i class="bi bi-trophy-fill"></i>
+                    <span>Achievements</span>
+                </a>
+            </li>
 
-         <li class="nav-item">
-              <a class="nav-link " href="adminprof.php">
-                  <i class="bi bi-person-fill"></i>
-                  <span>Profile</span>
-              </a>
-          </li>
-         <li class="nav-item">
-              <a class="nav-link " href="../includes/logout.php">
-                  <i class="bi bi-box-arrow-right"></i>
-                  <span>Log out</span>
-              </a>
-          </li>
+            <li class="nav-item">
+                <a class="nav-link " href="adminprof.php">
+                    <i class="bi bi-person-fill"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="../includes/logout.php">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>Log out</span>
+                </a>
+            </li>
 
 
 
@@ -208,51 +209,51 @@ else
             </div>
         </div>
 
-        
-                <section class="section dashboard">
+
+        <section class="section dashboard">
 
 
-                    <form action="../includes/createuser.php" method="post" enctype="multipart/form-data">
-                    <div class="col-lg">
+            <form action="../includes/createuser.php" method="post" enctype="multipart/form-data">
+                <div class="col-lg">
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Type of Coordinator</label>
                         <div class="col-sm-10">
-                            <select class="form-select" aria-label="Default select example" name="getcodType" id="getcodType" onChange="getschoolTypefun()">
+                            <select class="form-select" aria-label="Default select example" name="getcodType"
+                                id="getcodType" onChange="getschoolTypefun()">
                                 <option value="">Loading...</option>
                             </select>
                         </div>
                     </div>
                 </div>
 
-                        <div class="row mb-3">
-                          <label for="inputNumber" class="col-sm-2 col-form-label">Update Profile Image</label>
-                            <div class="col-sm-10">
-                            <input class="form-control" type="file" id="formFile" name="profile_img" accept="image/*" required>
-                          </div>
-                        </div>
-                        <input type="hidden" value="<?=$adminData['campus']?>" name="campus">
-                        <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label"></label>
-                            <div class="col-sm-10">
-                            <input type="hidden" class="form-control" name="campus" value="<?=$adminData['campus']?>" required required>
-                                <button type="submit" class="btn btn-primary" name="uploadcoordinator">Submit</button>
-                            </div>
-                        </div>
-                    </form>
+                <div class="row mb-3">
+                    <label for="inputNumber" class="col-sm-2 col-form-label">Update Documents</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" type="file" id="formFile" name="cordinatorpdf" accept="application/pdf,application/vnd.ms-excel" required>
+                    </div>
+                </div>
+                <input type="hidden" value="<?=$adminData['campus']?>" name="campus">
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary" name="uploadcoordinator">Submit</button>
+                    </div>
+                </div>
+            </form>
 
-                </section>
+        </section>
     </main><!-- End #main -->
 
 
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
-    <div class="copyright">
-      &copy; Copyright <strong><span>CSaR | CUTM</span></strong>. All Rights Reserved
-    </div>
-    <div class="credits">
-      Designed by <a href="https://cutm.ac.in/">Centurion University of Technology and Management</a>
-    </div>
-  </footer>
+        <div class="copyright">
+            &copy; Copyright <strong><span>CSaR | CUTM</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+            Designed by <a href="https://cutm.ac.in/">Centurion University of Technology and Management</a>
+        </div>
+    </footer>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
 
@@ -262,84 +263,38 @@ else
     <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
 
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+        integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
     <script>
-   
-        function getcodTypefun() {
-            document.getElementById('getcodType').disabled =true
-            axios.get("./api/cordinatortype.php").then((response)=>{
-                console.log(response);
-                let options='<option value="">Select one option</option>';
-                for(let each of response.data.data){
-                    options+=`<option value="${each}">${each}</option>`;
-                }
-                document.getElementById('getcodType').innerHTML=options;
-                document.getElementById('getcodType').disabled =false;
-            })
-        }
-
-        function getschoolTypefun() {
-            let selection = document.getElementById('getcodType').value;
-            console.log(selection);
-            if (!selection) return;
-            if(selection == "StudentInCharges"){
-                document.getElementById('program').disabled = true;
-                document.getElementById('club').disabled = true;
+    function getcodTypefun() {
+        document.getElementById('getcodType').disabled = true
+        axios.get("./api/cordinatortype.php").then((response) => {
+            console.log(response);
+            let options = '<option value="">Select one option</option>';
+            for (let each of response.data.data) {
+                options += `<option value="${each}">${each}</option>`;
             }
-            
-            document.getElementById('getSchool').disabled = true
-            document.getElementById('getSchool').innerHTML = '<option value="">Loading</option>';
-            axios.get("./api/school.php?school=" + selection).then((response) => {
-                console.log(response);
-                let options = '';
-                for (let each of response.data.data) {
-                    options += `<option value="${each}">${each}</option>`;
-                }
-                document.getElementById('getSchool').innerHTML = options;
-                document.getElementById('getSchool').disabled = false;
-            })
-        }
-        getcodTypefun();
+            document.getElementById('getcodType').innerHTML = options;
+            document.getElementById('getcodType').disabled = false;
+        })
+    }
 
-
-
-        function getPr() {
-            document.getElementById('program').disabled = true
-            axios.get("./api/pr.php").then((response) => {
-                console.log(response);
-                let options = '<option value="">Select one option</option>';
-                for (let each of response.data.data) {
-                    options += `<option value="${each}">${each}</option>`;
-                }
-                document.getElementById('program').innerHTML = options;
-                document.getElementById('program').disabled = false;
-            })
-        }
-
-        function getClub() {
-            let selection = document.getElementById('program').value;
-            if (!selection) return;
-            document.getElementById('club').disabled = true
-            document.getElementById('club').innerHTML = '<option value="">Loading</option>';
-            axios.get("./api/club.php?scrPr=" + selection).then((response) => {
-                console.log(response);
-                let options = '';
-                for (let each of response.data.data) {
-                    options += `<option value="${each}">${each}</option>`;
-                }
-                document.getElementById('club').innerHTML = options;
-                document.getElementById('club').disabled = false;
-            })
-        }
-        getPr();
+    getcodTypefun();
     </script>
 
 </body>

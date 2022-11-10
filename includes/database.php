@@ -1,9 +1,9 @@
 <?php
     session_start();
     // kiran laptop
-     $db =mysqli_connect('localhost:3307','root','','csr');
+    //  $db =mysqli_connect('localhost:3307','root','','csr');
     // chinmaya laptop
-    // $db =mysqli_connect('localhost','root','','csr');
+    $db =mysqli_connect('localhost','root','','csr');
     // RDS Server 
     // $db =mysqli_connect('cutmcsr.c9q5btro7uh6.ap-south-1.rds.amazonaws.com','admin','kiran12345','cutm_csr');
 ?>
