@@ -14,17 +14,38 @@ if($_SESSION['email'] and $utype=="student")
   $studentdata=getUserNmae($db,$uemail);
   $studentData=getAllStudentDetails($db,$uemail);
   $AddmissionYear=$studentData['admissionyear'];
-  echo $AddmissionYear;
+  // echo $AddmissionYear;
   $AddmissionYear=getYearBySession($db,$AddmissionYear);
-  echo $AddmissionYear;
-  echo $uemail;
+  // echo $AddmissionYear;
+  // echo $uemail;
   $posts=getAllPostAdmin($db);
 
   $studentResultyr1=getStudentResultyr1($db,$uemail,$AddmissionYear);
-  echo $studentResultyr1['Culture'];
   $studentResultyr2=getStudentResultyr2($db,$uemail,$AddmissionYear+1);
   $studentResultyr3=getStudentResultyr3($db,$uemail,$AddmissionYear+2);
   $studentResultyr4=getStudentResultyr4($db,$uemail,$AddmissionYear+3);
+
+  // if (empty($studentResultyr1)) {
+  //   $studentResultyr1[Culture]=0;
+  //   $studentResultyr1[Sports]=0;
+  //   $studentResultyr1[Responsibility]=0;
+  // }
+  // if (empty($studentResultyr2)) {
+  //   $studentResultyr2[Culture]=0;
+  //   $studentResultyr2[Sports]=0;
+  //   $studentResultyr2[Responsibility]=0;
+  // }
+  // if (empty($studentResultyr3)) {
+  //   $studentResultyr3[Culture]=0;
+  //   $studentResultyr3[Sports]=0;
+  //   $studentResultyr3[Responsibility]=0;
+  // }
+  // if (empty($studentResultyr4)) {
+  //   $studentResultyr4[Culture]=0;
+  //   $studentResultyr4[Sports]=0;
+  //   $studentResultyr4[Responsibility]=0;
+  // }
+  
 }
 else
 {
@@ -240,7 +261,8 @@ else
     </table>
     <?php
     $score="";
-    $totalCradit=$studentResultyr1['Culture'] + $studentResultyr1['Sports'] + $studentResultyr1['Responsibility']+ $studentResultyr2['Culture'] + $studentResultyr2['Sports'] + $studentResultyr2['Responsibility'] + $studentResultyr3['Culture'] + $studentResultyr3['Sports'] + $studentResultyr3['Responsibility'] + $studentResultyr4['Culture'] + $studentResultyr4['Sports'] + $studentResultyr4['Responsibility'];
+    $totalCradit=(int)$studentResultyr1['Culture'] + (int)$studentResultyr1['Sports'] + (int)$studentResultyr1['Responsibility']+ (int)$studentResultyr2['Culture'] + (int)$studentResultyr2['Sports'] + (int)$studentResultyr2['Responsibility'] + (int)$studentResultyr3['Culture'] + (int)$studentResultyr3['Sports'] + (int)$studentResultyr3['Responsibility'] + (int)$studentResultyr4['Culture'] + (int)$studentResultyr4['Sports'] + (int)$studentResultyr4['Responsibility'];
+    echo $totalCradit;
     $avrageCradit=$totalCradit/4;
       if ($avrageCradit >=91 ) {
         $score="O";
