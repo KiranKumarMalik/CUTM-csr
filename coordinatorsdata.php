@@ -7,6 +7,7 @@ $cordinator=getcoordinators($db,$Coordinators,$campus);
 
 $pdf=$cordinator['pdf'];
 // echo $pdf;
+// echo $Coordinators;
 
 ?>
 <!DOCTYPE html>
@@ -60,7 +61,7 @@ $pdf=$cordinator['pdf'];
     </header>
       
    
-        <!-- Start: #Campus wise image gallery -->
+        <!-- Start: #Coordinators data -->
         <!-- co-ordinators -->
         <section id="pricing" class="pricing" style="margin-top: 20px;margin-bottom: 20px;">
                     <div class="text-center">
@@ -78,7 +79,7 @@ $pdf=$cordinator['pdf'];
                     </div>
                     </div>
     </section>
-    <!-- End: #co-ordinators -->
+    <!-- End: #co-ordinators data -->
     
     
     <!-- Start: Footer Dark -->

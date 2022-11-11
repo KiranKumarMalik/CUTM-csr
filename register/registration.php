@@ -156,7 +156,7 @@ require('../includes/function.php');
 
                     <label>Admission Year</label>
                     <input type="text" class="form-control " name="addyr" style="margin-bottom: 20px;" value="<?=$actualAddYear?>" readonly>
-
+                    
 					<label>DOB <span class="color-red">*</span></label>
                     <input type="text" class="form-control " name="dob" style="margin-bottom: 20px;" value="<?=$studentData['dob']?>" readonly>
 

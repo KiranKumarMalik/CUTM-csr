@@ -290,7 +290,7 @@
     }
 
     function getcoordinators($db,$Coordinators,$campus){
-        $query="SELECT * FROM coordinators WHERE campus='$campus'";
+        $query="SELECT * FROM coordinators WHERE campus='$campus' AND type='$Coordinators'";
         $run=mysqli_query($db,$query);
         $data=mysqli_fetch_assoc($run);
         return $data;

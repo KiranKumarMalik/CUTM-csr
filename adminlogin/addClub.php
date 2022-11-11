@@ -233,7 +233,7 @@ if(isset($_POST['addClub'])){
                     <label>Program</label>
                     <select class="form-select" aria-label="Default select example" name="program" >
                         <option value="Culture">Culture</option>  
-                        <option value="sports">sports</option>  
+                        <option value="Sports">Sports</option>  
                         <option value="Responsibility">Responsibility</option>  
                     </select>
                 </div>

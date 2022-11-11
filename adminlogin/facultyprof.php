@@ -33,7 +33,7 @@ if(isset($_POST['passwordbtn'])){
   if($teacherData['password'] == $oldpassword){
     if($newpassword == $renewpassword){
       $teacheremail=$teacherData['email'];
-      $query="UPDATE student SET password='$newpassword' WHERE email='$teacheremail'";
+      $query="UPDATE teacher SET password='$newpassword' WHERE email='$teacheremail'";
       $run=mysqli_query($db,$query) or die(mysqli_error($db));
       if ($run) {
         ?>
@@ -388,12 +388,12 @@ if(isset($_POST['passwordbtn'])){
 
                 <div class="tab-pane fade pt-3" id="profile-change-password">
                   <!-- Change Password Form -->
-                  <form>
+                  <form action="" method="post">
 
                   <div class="row mb-3">
                       <label for="OldPassword" class="col-md-4 col-lg-3 col-form-label">Old Password</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="oldpassword" type="password" class="form-control" id="newPassword" value="">
+                        <input name="oldpassword" type="password" class="form-control" id="oldPassword" value="">
                       </div>
                     </div>
 
@@ -412,7 +412,7 @@ if(isset($_POST['passwordbtn'])){
                     </div>
 
                     <div class="text-center">
-                      <button type="submit" class="btn btn-primary" name="editteacherprofile">Change Password</button>
+                      <button type="submit" class="btn btn-primary" name="passwordbtn">Change Password</button>
                     </div>
                   </form><!-- End Change Password Form -->
 
