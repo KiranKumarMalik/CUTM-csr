@@ -332,7 +332,7 @@ foreach($getallAnnousement as $getallAnnousements){
                                 <i class="fa fa-map-marker fa-5x" style="color:tomato"></i>
                                 <h4 class="card-title" style="margin-top: 20px;"><strong>Chatrapur</strong></h4>
                                 <ul class="list-group">
-                                    <p class="text-center" data-aos="fade-up">IDCO Industrial Area, Pitamahal, Rayagada, Odisha.</p>
+                                    <p class="text-center" data-aos="fade-up">Chhatrapur, Ganjam, Odisha.</p>
                                 </ul>
                             </div>
                         </div>

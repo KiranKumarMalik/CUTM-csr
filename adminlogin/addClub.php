@@ -142,7 +142,7 @@ if(isset($_POST['addClub'])){
         <li class="nav-item">
           <a class="nav-link " href="certificateapprove.php">
               <i class="bi bi-file-check-fill"></i>
-              <span>Event timesheet approval</span>
+              <span>Certificate approval</span>
           </a>
       </li>
 
@@ -244,7 +244,7 @@ if(isset($_POST['addClub'])){
                     </div>
                 </div>
                 <div class="col-md-4 bg-light text-right"><br>
-                    <button type="submit" class="btn btn-primary btn-lg float-right" name="addClub">Submit</button>
+                    <button type="submit" class="btn btn-primary btn-lg float-right" name="addClub">Insert</button>
                 </div>
             
             </div>
