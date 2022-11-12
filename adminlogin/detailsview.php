@@ -290,8 +290,26 @@ if(isset($_POST['approved'])){
               <form method="post" action="../includes/insertcertificate.php">
                 <input type="hidden" name="userNameFromAdmin" value="<?=$post['NameOfStd']?>">
                 <input type="hidden" name="userEmailFromAdmin" value="<?=$email?>">
+                <!-- Modal -->
+                <div class="modal fade" id="confirmapproval" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Do You Sure to Approve</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-footer">
+                          <button class="btn btn-success" type="submit" name="approved">Yes</button>
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
                 <button class="btn btn-primary btn-lg float-right" type="Submit" name="backtoadmin">Back To Admin</button>
-                <button class="btn btn-success btn-lg float-right" type="submit" name="approved" <?=$buttondisable?>><?=$alreadyapprove?></button>
+                <button type="button" class="btn btn-success btn-lg float-right" data-toggle="modal" data-target="#confirmapproval" <?=$buttondisable?>><?=$alreadyapprove?></button>
               </form>
             </div>
           </div>

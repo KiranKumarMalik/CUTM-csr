@@ -379,8 +379,25 @@ if(isset($_POST['passwordbtn'])){
 
 
                     <div class="text-center">
-                      <button type="submit" class="btn btn-primary" name="editteacherprofile">Save Changes</button>
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updateProfile">Save Changes</button>
                     </div>
+                    <!-- Modal -->
+              <div class="modal fade" id="updateProfile" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Do You Want to Update</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="submit" class="btn btn-success" name="editteacherprofile">Yes</button>
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
                   </form><!-- End Profile Edit Form -->
 
                 </div>
@@ -393,29 +410,46 @@ if(isset($_POST['passwordbtn'])){
                   <div class="row mb-3">
                       <label for="OldPassword" class="col-md-4 col-lg-3 col-form-label">Old Password</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="oldpassword" type="password" class="form-control" id="oldPassword" value="">
+                        <input name="oldpassword" type="password" class="form-control" id="oldPassword" value="" required>
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">New Password</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="newpassword" type="password" class="form-control" id="newPassword" value="">
+                        <input name="newpassword" type="password" class="form-control" id="newPassword" value="" required>
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="renewPassword" class="col-md-4 col-lg-3 col-form-label">Re-enter New Password</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="renewpassword" type="password" class="form-control" id="renewPassword" value="">
+                        <input name="renewpassword" type="password" class="form-control" id="renewPassword" value="" required>
                       </div>
                     </div>
 
-                    <div class="text-center">
-                      <button type="submit" class="btn btn-primary" name="passwordbtn">Change Password</button>
+                    
+                    <!-- Modal -->
+              <div class="modal fade" id="changePassword" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Do You Want to Upadate</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="submit" class="btn btn-success" name="passwordbtn">Yes</button>
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                        </div>
+                        </div>
                     </div>
+                </div>
                   </form><!-- End Change Password Form -->
-
+                  <div class="text-center">
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#changePassword">Change Password</button>
+                    </div>
                 </div>
 
               </div><!-- End Bordered Tabs -->
@@ -450,6 +484,9 @@ if(isset($_POST['passwordbtn'])){
   <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
   <script src="assets/vendor/tinymce/tinymce.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>

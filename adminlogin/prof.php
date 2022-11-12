@@ -347,7 +347,7 @@ if(isset($_POST['passwordbtn'])){
                       <div class="col-md-8 col-lg-9">
                         <img src="../images/profileimg/<?=$post_images['profileimage'] ?>">
                         <div class="pt-2">
-                        <input class="form-control" type="file" id="formFile" name="imageupload" accept="image/*" required>
+                        <input class="form-control" type="file" id="formFile" name="imageupload" accept="image/*" >
                         </div>
                       </div>
                     </div>
@@ -457,12 +457,29 @@ if(isset($_POST['passwordbtn'])){
                       </div>
                     </div>
 
+                    <!-- Modal -->
+                    <div class="modal fade" id="Profilechange" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered" role="document">
+                              <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLongTitle">Do You Sure to Update</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                  </button>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="submit" class="btn btn-success" name="editprofile">Yes</button>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                              </div>
+                              </div>
+                          </div>
+                      </div>
 
-                    <div class="text-center">
-                      <button type="submit" class="btn btn-primary" name="editprofile">Save Changes</button>
-                    </div>
+                    
                   </form><!-- End Profile Edit Form -->
-
+                  <div class="text-center">
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Profilechange">Save Changes</button>
+                    </div>
                 </div>
 
 
@@ -473,28 +490,46 @@ if(isset($_POST['passwordbtn'])){
                   <div class="row mb-3">
                       <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">Old Password</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="oldpassword" type="password" class="form-control" id="oldPassword" value="">
+                        <input name="oldpassword" type="password" class="form-control" id="oldPassword" value="" required>
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">New Password</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="newpassword" type="password" class="form-control" id="newPassword" value="">
+                        <input name="newpassword" type="password" class="form-control" id="newPassword" value="" required>
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="renewPassword" class="col-md-4 col-lg-3 col-form-label">Re-enter New Password</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="renewpassword" type="password" class="form-control" id="renewPassword" value="">
+                        <input name="renewpassword" type="password" class="form-control" id="renewPassword" value="" required>
                       </div>
                     </div>
 
-                    <div class="text-center">
-                      <button type="submit" name="passwordbtn" class="btn btn-primary" name="editprofile">Change Password</button>
+                    
+                    <!-- Modal -->
+              <div class="modal fade" id="changestudentPassword" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Do You Sure to Update</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="submit" class="btn btn-success" name="passwordbtn">Yes</button>
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                        </div>
+                        </div>
                     </div>
+                </div>
                   </form><!-- End Change Password Form -->
+                  <div class="text-center">
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#changestudentPassword">Change Password</button>
+                    </div>
 
                 </div>
 

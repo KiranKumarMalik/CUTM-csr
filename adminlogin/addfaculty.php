@@ -411,8 +411,25 @@ if(isset($_POST['addTeacher'])){
                 </div>
                 <div class="row mb-3">
                     <label class="col-sm-2 col-form-label"></label>
+                    <!-- Modal -->
+                <div class="modal fade" id="confirmaddFaculty" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Do You Sure to Update</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-footer">
+                          <button class="btn btn-success" type="submit" name="addTeacher">Yes</button>
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
                     <div class="col-sm-10">
-                        <button type="submit" class="btn btn-primary" name="addTeacher">Submit</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#confirmaddFaculty">Submit</button>
                     </div>
                 </div>
             </form>

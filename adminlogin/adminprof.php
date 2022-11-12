@@ -414,10 +414,28 @@ if(isset($_POST['passwordbtn'])){
                       </div>
                     </div>
 
-                    <div class="text-center">
-                      <button type="submit" class="btn btn-primary" name="editadminprofile">Save Changes</button>
+                    
+                    <!-- Modal -->
+              <div class="modal fade" id="updateadminProfile" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Do You Sure to Update</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="submit" class="btn btn-success" name="editadminprofile">Yes</button>
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                        </div>
+                        </div>
                     </div>
+                </div>
                   </form><!-- End Profile Edit Form -->
+                  <div class="text-center">
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updateadminProfile">Save Changes</button>
+                    </div>
 
                 </div>
 
@@ -447,11 +465,28 @@ if(isset($_POST['passwordbtn'])){
                       </div>
                     </div>
 
-                    <div class="text-center">
-                      <button type="submit" name="passwordbtn" class="btn btn-primary" >Change Password</button>
+                    
+                    <!-- Modal -->
+              <div class="modal fade" id="changeadminPassword" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Do You Sure to Update</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="submit" class="btn btn-success" name="passwordbtn">Yes</button>
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                        </div>
+                        </div>
                     </div>
+                </div>
                   </form><!-- End Change Password Form -->
-
+                  <div class="text-center">
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#changeadminPassword">Change Password</button>
+                    </div>
                 </div>
 
               </div><!-- End Bordered Tabs -->
@@ -486,6 +521,9 @@ if(isset($_POST['passwordbtn'])){
   <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
   <script src="assets/vendor/tinymce/tinymce.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
