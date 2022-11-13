@@ -212,7 +212,7 @@ foreach($getallAnnousement as $getallAnnousements){
         <div class="container">
             <div class="row portfolio-container">
             <a href="yearwise.php?campus=Balasore">
-                <div class="col-12 col-lg-4 col-md-6 portfolio-item filter-app" data-aos="fade-up" data-aos-delay="100"><img class="img-fluid" src="assets/img/event_images/MRC_2314.jpg">
+                <div class="col-12 col-lg-4 col-md-6 portfolio-item filter-app" data-aos="fade-up" data-aos-delay="100"><img class="img-fluid" src="https://csarimg.s3.ap-south-1.amazonaws.com/assets/img/event_images/MRC_2314.JPG">
                     <div class="portfolio-info">
                         <h4>Balasore</h4>
                         <p>Event images</p>
@@ -220,7 +220,7 @@ foreach($getallAnnousement as $getallAnnousements){
             </a>
                 </div>
                 <a href="yearwise.php?campus=Bhubaneswar">
-                <div class="col-12 col-lg-4 col-md-6 portfolio-item filter-card" data-aos="fade-up" data-aos-delay="200"><img class="img-fluid" src="assets/img/event_images/DSC_0008.jpg">
+                <div class="col-12 col-lg-4 col-md-6 portfolio-item filter-card" data-aos="fade-up" data-aos-delay="200"><img class="img-fluid" src="https://csarimg.s3.ap-south-1.amazonaws.com/assets/img/event_images/DSC_0008.JPG">
                     <div class="portfolio-info">
                         <h4>Bhubaneswar</h4>
                         <p>Event images</p>
@@ -228,7 +228,7 @@ foreach($getallAnnousement as $getallAnnousements){
                         </a>
                 </div>
                 <a href="yearwise.php?campus=Balangir">
-                <div class="col-12 col-lg-4 col-md-6 portfolio-item filter-web" data-aos="fade-up" data-aos-delay="300"><img class="img-fluid" src="assets/img/event_images/IMG_6868.jpg">
+                <div class="col-12 col-lg-4 col-md-6 portfolio-item filter-web" data-aos="fade-up" data-aos-delay="300"><img class="img-fluid" src="https://csarimg.s3.ap-south-1.amazonaws.com/assets/img/event_images/IMG_6868.JPG">
                     <div class="portfolio-info">
                         <h4>Balangir</h4>
                         <p>Event images</p>

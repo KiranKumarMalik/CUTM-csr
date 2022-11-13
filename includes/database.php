@@ -5,5 +5,5 @@
     // chinmaya laptop
     // $db =mysqli_connect('localhost','root','','csr');
     // RDS Server 
-    // $db =mysqli_connect('cutmcsr.c9q5btro7uh6.ap-south-1.rds.amazonaws.com','admin','kiran12345','cutm_csr');
+    // $db =mysqli_connect('csar.cy08yy6jluho.ap-south-1.rds.amazonaws.com','admin','12345678','csr');
 ?>

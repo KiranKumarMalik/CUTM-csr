@@ -60,13 +60,11 @@
                 <div class="col-sm-12 col-md-6 col-lg-6">
                     <div data-aos="fade-up" class="hvr-trim"><img class="img-fluid about-us-img" src="assets/img/about.jpg?h=4c35120507f5734af2f27b49432ace18"></div>
                 </div>
-                <div class="col">
-                    <div>
+                <div class="col">      
                         <h1 data-aos="fade-up" style="color: #002654;"><strong>CSaR Program Details</strong></h1>
                         <p class="lead" data-aos="fade-up" style="color: #9bc4e2;">Besides the clubs given below, students are welcomed to send their ideas on new clubs to <a href="mailto: csr.cit@cutm.ac.in">csr.cit@cutm.ac.in</a>(CIT), <a href="mailto: csr.pkd@cutm.ac.in">csr.pkd@cutm.ac.in</a> (JITM & CSREM) or submit the same to the professor In-Charge, CSR/Dean, Student Affairs.</p>
                         <p data-aos="fade-up">It is part of our curriculum that all students of Centurion University of Technology and Management will now be required to participate in the Culture, Sports, and Responsibility (CSaR) program during their studies at CUTM w.e.f. 2011-12 academic year.</p>
                         <p data-aos="fade-up">The program gives students an opportunity to learn from the experience of doing real tasks beyond the classroom, related to <b>Culture (Student life/creative pursuits), Sports (activities for Physical Fitness) and Responsibility (activities for the benifit of the community or the environment)</b></p>
-                        </div>
                 </div>
             </div>
             <p data-aos="fade-up">Each student is required to complete a total of <b>30 hours</b> of <b>CSaR</b> activities each academic year*. This should include <b>10 hours of Culture, 10 hours of Sports and 10 hours of Responsibility.</b> After completing of an activity, the faculty supervisor must sign this record booklet. <b>Only students who have completed the required hours (each activity will be minimum of 1 hour and maximum of 8 hours) of CSaR, are eligible to pass that academic year.</b></p>
@@ -170,19 +168,29 @@
     <td>Above 90</td>
     <td style="padding-left: 65px">O</td>
   </tr>
-</table>
+</table><br><br>
+        <h1 class="lead" data-aos="fade-up" style="color: #FF0000;">
+            <b style="font-family: Georgia, Helvetica, sans-serif;">
+                Centurion University will endeavour to support student ideas for CSaR
+                activities. Each academic year is from 1st July to 30th June.
+            </b>
+        </h1>
         </div>
+        
     </section>
-    <!-- End: #about -->
-    
-    <!-- notice -->
-    <section id="pricing" class="pricing" style="margin-top: 20px;margin-bottom: 20px;">
+
+
+    <!-- <section id="pricing" class="pricing" style="margin-top: 20px;margin-bottom: 20px;">
         <div class="text-center">
-        <div class="zoom-in-zoom-out"><center><h1 class="lead" data-aos="fade-up" style="color: #FF0000;"><b style="font-family: Georgia, Helvetica, sans-serif;">Centurion University will endeavour to support student ideas for CSaR activities. Each academic year is from 1st July to 30th June.</b></h1></center></div>
+            <div class="zoom-in-zoom-out">
+                    <h1 class="lead" data-aos="fade-up" style="color: #FF0000;">
+                    <b style="font-family: Georgia, Helvetica, sans-serif;">
+                    Centurion University will endeavour to support student ideas for CSaR activities. Each academic year is from 1st July to 30th June.
+                    </b>
+                    </h1>
             </div>
         </div>
-    </section>
-    <!-- End: notice -->
+    </section> -->
    
     
 <!-- Start: Footer Dark -->
