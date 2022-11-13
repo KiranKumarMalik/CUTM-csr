@@ -11,7 +11,6 @@
 		$school=mysqli_real_escape_string($db,$_POST['school']);
 		$program=mysqli_real_escape_string($db,$_POST['program']);
 		$branch=mysqli_real_escape_string($db,$_POST['branch']);
-		$batch=mysqli_real_escape_string($db,$_POST['batch']);
 		$addyr=mysqli_real_escape_string($db,$_POST['addyr']);
 		$sex=mysqli_real_escape_string($db,$_POST['sex']);
 		$religion=mysqli_real_escape_string($db,$_POST['religion']);
@@ -38,7 +37,6 @@
 		echo $school."<br><br>";
 		echo $program."<br><br>";
 		echo $branch."<br><br>";
-		echo $batch."<br><br>";
 		echo $addyr."<br><br>";
 		echo $sex."<br><br>";
 		echo $religion."<br><br>";
@@ -55,7 +53,7 @@
         print "</pre>";
 
         if(move_uploaded_file($image_tmp,"../images/profileimg/$image_name")){
-            $query="INSERT INTO student (name,email,regd,schoolname,program,branch,batch,campus,admissionyear,sex,religion,dob,hobby,present_address,permanent_address,mobile,profileimage,status) VALUES('$name','$email','$regdno','$school','$program','$branch','$batch','$campus','$addyr','$sex','$religion','$dob','$hobby','$presentadd','$premantadd','$phone','$image_name','$status')";
+            $query="INSERT INTO student (name,email,regd,schoolname,program,branch,admissionyear,campus,sex,religion,dob,hobby,present_address,permanent_address,mobile,profileimage,status) VALUES('$name','$email','$regdno','$school','$program','$branch','$addyr','$campus','$sex','$religion','$dob','$hobby','$presentadd','$premantadd','$phone','$image_name','$status')";
             $run=mysqli_query($db,$query) or die(mysqli_error($db));
             if ($run) {
                 header('location:../login/login.php');

@@ -176,10 +176,6 @@ require('../includes/function.php');
                     <input type="text" class="form-control " name="email" style="margin-bottom: 20px;" value="<?=$studentData['email']?>" readonly>
 
 
-                    <label>Batch <span class="color-red">*</span></label>
-                    <input type="text" class="form-control " name="batch" style="margin-bottom: 20px;" value="<?=$batch?>" readonly>
-
-
                     <label>Hobby </label>
                     <input type="text" class="form-control " name="hobby" style="margin-bottom: 20px;" required>
 
