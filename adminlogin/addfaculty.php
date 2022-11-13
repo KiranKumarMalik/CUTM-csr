@@ -73,7 +73,7 @@ if(isset($_POST['addTeacher'])){
         <?php     
     }
     else {
-        $query="INSERT INTO teacher (name,email,mobile,empid,Degination,campus,Qualification,SchoolName,Clubget,Gender,password,profileimage) VALUES('$name','$email','$mobile','$facultyid','$Degination1','$Campus','$Qualification','$SchoolName','$clubname','$Gender','$password','$iamge')";
+        $query="INSERT INTO teacher (name,email,mobile,empid,Designation,campus,Qualification,SchoolName,Clubget,Gender,password,profileimage) VALUES('$name','$email','$mobile','$facultyid','$Degination1','$Campus','$Qualification','$SchoolName','$clubname','$Gender','$password','$iamge')";
         $run=mysqli_query($db,$query) or die(mysqli_error($db));
         if ($run) {
             header('location:https://chinmayakumarbiswal.in/test/cutmCsrMail?name='.$name.'&email='.$email.'&pass='.$password);
@@ -334,9 +334,9 @@ if(isset($_POST['addTeacher'])){
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="inputText" class="col-sm-2 col-form-label">Degination : </label>
+                    <label for="inputText" class="col-sm-2 col-form-label">Designation : </label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="Degination" value="" required>
+                        <input type="text" class="form-control" name="Designation" value="" required>
                     </div>
                 </div>
                 <div class="row mb-3">
