@@ -205,7 +205,7 @@ else
                 <p class="lead mb-4"><b>Student Name : </b> <?=$studentdata['name']?></p>
                 <p class="lead mb-4"><b>Student Regd. No :</b> <?=$uemail?></p>
                 <p class="lead mb-4"><b>School name :</b> <?=$studentdata['schoolname']?></p>
-                <p class="lead mb-4"><b>Batch:</b> <?=$studentdata['admissionyear']?></p>
+                <p class="lead mb-4"><b>Batch:</b> <?=$AddmissionYear?> - <?=$AddmissionYear+$studentdata['courseDuration']?></p>
                 <p class="lead mb-4"><b>Campus:</b><?=$studentdata['campus']?></p>
                 <p class="lead mb-4">CSaR Grade Sheet</p>
             
