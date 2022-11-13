@@ -61,44 +61,44 @@
                 <div class="row">
                     <div class="col-sm-6 col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                         <div class="member">
-                            <div class="member-img"><a href="yearwise.php?campus=Balasore"><img class="img-fluid" src="assets/img/campusimg/balasore.jpg?h=63ff35667fd20fc8d734752b7311ed81"></div>
+                            <div class="member-img"><a href="yearwise.php?campus=Balasore"><img class="img-fluid" src="https://csarimg.s3.ap-south-1.amazonaws.com/assets/img/campusimg/balasore.jpg"></div>
                             <div class="member-info">
                                 <h5><strong>Balasore</strong></h5><span>Paikasta, Gopalpur, Balasore, Pin-756044</span></a></div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
                         <div class="member">
-                            <div class="member-img"><a href="yearwise.php?campus=Bhubaneswar"><img class="img-fluid" src="assets/img/campusimg/bhubaneswar.jpg?h=5d89eb647c2023c1188505e36fe3a8a7"></div>
+                            <div class="member-img"><a href="yearwise.php?campus=Bhubaneswar"><img class="img-fluid" src="https://csarimg.s3.ap-south-1.amazonaws.com/assets/img/campusimg/bhubaneswar.JPG"></div>
                             <div class="member-info">
                                 <h5><strong>Bhubaneswar</strong></h5><span>Ramchandrapur, Jatni, Bhubaneswar Dist, Khurda Odisha.</span></a></div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
                         <div class="member">
-                            <div class="member-img"><a href="yearwise.php?campus=Balangir"><img class="img-fluid" src="assets/img/campusimg/balangir.jpg?h=6aa922960cedd9601f370b1ef9a1889b"></div>
+                            <div class="member-img"><a href="yearwise.php?campus=Balangir"><img class="img-fluid" src="https://csarimg.s3.ap-south-1.amazonaws.com/assets/img/campusimg/balangir.jpg"></div>
                             <div class="member-info">
                                 <h5><strong>Balangir</strong></h5><span>Behind BSNL Office, IDCO Land, Rajib Nagar, Balangir, Odisha.</span></a></div>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
                         <div class="member">
-                            <div class="member-img"><a href="yearwise.php?campus=Paralakhemundi"><img class="img-fluid" src="assets/img/campusimg/paralakhemundi.jpg?h=e6327a565d06c34455a63fad12fbff94"></div>
+                            <div class="member-img"><a href="yearwise.php?campus=Paralakhemundi"><img class="img-fluid" src="https://csarimg.s3.ap-south-1.amazonaws.com/assets/img/campusimg/paralakhemundi.jpg"></div>
                             <div class="member-info">
                                 <h5><strong>Paralakhemundi</strong></h5><span>Village Alluri Nagar, R Sitapur, Via- Uppalada, Paralakhemundi.</span></a></div>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
                         <div class="member">
-                            <div class="member-img"><a href="yearwise.php?campus=Rayagada"><img class="img-fluid" src="assets/img/campusimg/rayagada.jpg?h=e6327a565d06c34455a63fad12fbff94"></div>
+                            <div class="member-img"><a href="yearwise.php?campus=Rayagada"><img class="img-fluid" src="https://csarimg.s3.ap-south-1.amazonaws.com/assets/img/campusimg/rayagada.JPG"></div>
                             <div class="member-info">
                                 <h5><strong>Rayagada</strong></h5><span>IDCO Industrial Area, Pitamahal, Rayagada, Odisha.</span></a></div>
                         </div>
                 </div>
                 <div class="col-sm-6 col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
                         <div class="member">
-                            <div class="member-img"><a href="yearwise.php?campus=Chhatrapur"><img class="img-fluid" src="assets/img/campusimg/Chhatrapur.jpg?h=e6327a565d06c34455a63fad12fbff94"></div>
+                            <div class="member-img"><a href="yearwise.php?campus=Chhatrapur"><img class="img-fluid" src="https://csarimg.s3.ap-south-1.amazonaws.com/assets/img/campusimg/chhatrapur.JPG"></div>
                             <div class="member-info">
-                                <h5><strong>Chhatrapur</strong></h5><span>IDCO Industrial Area, Pitamahal, Rayagada, Odisha.</span></a></div>
+                                <h5><strong>Chhatrapur</strong></h5><span>Chhatrapur, Ganjam, Odisha.</span></a></div>
                         </div>
                 </div>
             </div>

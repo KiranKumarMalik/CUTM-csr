@@ -236,7 +236,7 @@ foreach($getallAnnousement as $getallAnnousements){
                     </a>
                 </div>
                 <a href="yearwise.php?campus=Paralakhemundi">
-                <div class="col-12 col-lg-4 col-md-6 portfolio-item filter-app" data-aos="fade-up" data-aos-delay="400"><img class="img-fluid" src="assets/img/event_images/IMG_20220117_131641.jpg">
+                <div class="col-12 col-lg-4 col-md-6 portfolio-item filter-app" data-aos="fade-up" data-aos-delay="400"><img class="img-fluid" src="https://csarimg.s3.ap-south-1.amazonaws.com/assets/img/event_images/IMG_20220117_131641.jpg">
                     <div class="portfolio-info">
                         <h4>Paralakhemundi</h4>
                         <p>Event images</p>
@@ -244,7 +244,7 @@ foreach($getallAnnousement as $getallAnnousements){
                     </a>
                 </div>
                 <a href="yearwise.php?campus=Rayagada">
-                <div class="col-12 col-lg-4 col-md-6 portfolio-item filter-app" data-aos="fade-up" data-aos-delay="400"><img class="img-fluid" src="assets/img/event_images/IMG_7514.jpg">
+                <div class="col-12 col-lg-4 col-md-6 portfolio-item filter-app" data-aos="fade-up" data-aos-delay="400"><img class="img-fluid" src="https://csarimg.s3.ap-south-1.amazonaws.com/assets/img/event_images/IMG_7514.JPG">
                     <div class="portfolio-info">
                         <h4>Rayagada</h4>
                         <p>Event images</p>
@@ -252,7 +252,7 @@ foreach($getallAnnousement as $getallAnnousements){
                     </a>
                 </div>
                 <a href="yearwise.php?campus=Chatrapur">
-                <div class="col-12 col-lg-4 col-md-6 portfolio-item filter-app" data-aos="fade-up" data-aos-delay="400"><img class="img-fluid" src="assets/img/event_images/MRC_5418.jpg">
+                <div class="col-12 col-lg-4 col-md-6 portfolio-item filter-app" data-aos="fade-up" data-aos-delay="400"><img class="img-fluid" src="https://csarimg.s3.ap-south-1.amazonaws.com/assets/img/event_images/MRC_5418.JPG">
                     <div class="portfolio-info">
                         <h4>Chatrapur</h4>
                         <p>Event images</p>
@@ -386,40 +386,6 @@ foreach($getallAnnousement as $getallAnnousements){
                         <p style="color: #cccccc;">+91-99370-93949, +91-93370-93949, +91-94374-93949</p>
                     </div>
                 </div>
-            </div>
-            <div class="modern-form__form-container" style="padding-top: 40px;">
-                <form data-bss-recipient="4c4c512131ddbe75b2cf0f351ecabf2b">
-                    <div class="form-row">
-                        <div class="col col-contact" data-aos="fade-up" data-aos-delay="450">
-                            <div class="form-group modern-form__form-group--padding-r"><input class="form-control input input-tr" type="text" placeholder="First Name" required="" name="First Name">
-                                <div class="line-box">
-                                    <div class="line"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col col-contact" data-aos="fade-up" data-aos-delay="500">
-                            <div class="form-group modern-form__form-group--padding-l"><input class="form-control input input-tr" type="text" placeholder="Email" required="" name="Email" title="Invalid email address" pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$">
-                                <div class="line-box">
-                                    <div class="line"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col" data-aos="fade-up" data-aos-delay="550">
-                            <form data-bss-recipient="4c4c512131ddbe75b2cf0f351ecabf2b">
-                                <div class="form-group modern-form__form-group--padding-t"><textarea class="form-control input modern-form__form-control--textarea" data-aos="fade-up" placeholder="Message" name="Message" required="" minlength="1" maxlength="1000"></textarea>
-                                    <div class="line-box">
-                                        <div class="line"></div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col text-center" data-aos="fade-up"><button class="btn btn-primary submit-now" type="submit" style="width: 150px;">Send Message</button></div>
-                    </div>
-                </form>
             </div>
         </div>
     </section>
