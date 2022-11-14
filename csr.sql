@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 10, 2022 at 08:53 PM
--- Server version: 10.4.6-MariaDB
--- PHP Version: 7.3.9
+-- Host: 127.0.0.1:3307
+-- Generation Time: Nov 13, 2022 at 02:44 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -53,7 +52,8 @@ INSERT INTO `admin` (`id`, `name`, `email`, `mobile`, `sex`, `campus`, `empid`, 
 (3, 'Mrs. Prativa Satapathy', 'prativa.satpathy@cutm.ac.in', '7008158545', 'Female', 'Bolangir', 'CUTM478', 'Assistant Professor', '', 'India', '', 'prativa', 'femaleuser.jpg'),
 (4, 'Chandra Sekhar Patro', 'chandrasekhar.patro@cutm.ac.in', '8331887509', 'Male', 'Rayagada', 'CUTM356', 'Professor', '', 'India', '', 'chandra', 'maleuser.jpg'),
 (5, 'Chandan Kumar Das', 'chandankumar.das@gramtarang.org.in', '7873679676', 'Male', 'Balasore', 'CUTM259', 'Professor', '', 'India', '', 'chandan', 'maleuser.jpg'),
-(6, 'Mrs.Binapani Barik', 'binapani.barik@cutm.ac.in', '7504915935', 'Male', 'Paralakhemundi', 'CUTM476', 'Professor', '', 'India', '', 'binapani', 'maleuser.jpg');
+(6, 'Mrs.Binapani Barik', 'binapani.barik@cutm.ac.in', '7504915935', 'Male', 'Paralakhemundi', 'CUTM476', 'Professor', '', 'India', '', 'binapani', 'maleuser.jpg'),
+(7, 'Rati Ranjan Mishra', 'ratiranjan.mishra@cutm.ac.in', '8249196464', 'Male', 'Chhatrapur', 'EMP875', 'CSaR Co-ordinator', '', 'India', 'Chhatrapur, Ganjam, Odisha', 'rati', 'maleuser.jpg');
 
 -- --------------------------------------------------------
 
@@ -123,7 +123,9 @@ CREATE TABLE `coordinators` (
 --
 
 INSERT INTO `coordinators` (`id`, `type`, `campus`, `pdf`) VALUES
-(2, 'ClubInCharges', 'Bhubaneswar', 'Chinmaya kumar biswal CV AWS.pdf');
+(6, 'ClubInCharges', 'Bhubaneswar', 'club coordinator.pdf'),
+(7, 'FacultyInCharges', 'Bhubaneswar', 'Faculty Coordinators.pdf'),
+(8, 'StudentInCharges', 'Bhubaneswar', 'Student coordinator.pdf');
 
 -- --------------------------------------------------------
 
@@ -270,8 +272,7 @@ CREATE TABLE `csrpr` (
 INSERT INTO `csrpr` (`id`, `csrPr`, `club`) VALUES
 (1, 'Culture', 'Music Club'),
 (2, 'Culture', 'Dance Club'),
-(3, 'Sports', 'PC Game Club'),
-(4, 'Sports', 'Health Club'),
+(3, 'Sports', 'Swimming Club'),
 (5, 'Responsibility', 'Youth Red Cross'),
 (6, 'Responsibility', 'Science Club'),
 (12, 'Culture', 'Dramatic Club'),
@@ -281,16 +282,41 @@ INSERT INTO `csrpr` (`id`, `csrPr`, `club`) VALUES
 (16, 'Culture', 'Literary Club'),
 (17, 'Culture', 'Designer Club'),
 (18, 'Culture', 'Handicraft Club'),
-(20, 'Sports', 'Sports Club'),
 (21, 'Sports', 'Adventure Club'),
 (22, 'Sports', 'Yoga & Meditation Society'),
-(23, 'Sports', 'NCC Club'),
 (24, 'Sports', 'Bharat Scout & Guide Club'),
-(25, 'Sports', 'SEDA Club'),
+(25, 'Sports', 'GYM & Fitness Club'),
 (26, 'Responsibility', 'NSS Club'),
 (27, 'Responsibility', 'Robotics Club'),
-(28, 'Responsibility', 'Innovateur Club'),
-(29, 'Responsibility', 'P & P Club');
+(28, 'Responsibility', 'Innovators & Enterpreneurs Club'),
+(29, 'Responsibility', 'P & P Club'),
+(30, 'Culture', 'Language Club'),
+(31, 'Culture', 'Waste to Wealth Innovation Club'),
+(32, 'Culture', 'Creativity Club'),
+(33, 'Culture', 'Fashion Club'),
+(34, 'Culture', 'CHEF Club'),
+(35, 'Responsibility', 'Health Club'),
+(36, 'Responsibility', 'Patho Club'),
+(37, 'Responsibility', 'Opto Club'),
+(38, 'Responsibility', 'Green Club'),
+(39, 'Responsibility', 'Aeromodelling Club'),
+(40, 'Responsibility', 'Video Gaming Club'),
+(41, 'Responsibility', 'Girl\'s NCC Club'),
+(42, 'Responsibility', 'Developers Club'),
+(43, 'Responsibility', 'Practice Club'),
+(44, 'Responsibility', 'Internet of Things Club'),
+(45, 'Responsibility', 'Animal Club'),
+(46, 'Sports', 'Kabaddi'),
+(47, 'Sports', 'Basketball'),
+(48, 'Sports', 'KHO-KHO'),
+(49, 'Sports', 'Volleyball'),
+(50, 'Sports', 'Futsal'),
+(51, 'Sports', 'Athletics'),
+(52, 'Sports', 'Throwball'),
+(53, 'Sports', 'Tennis'),
+(54, 'Sports', 'Badminton'),
+(55, 'Sports', 'T.T, Chess & Carrom'),
+(56, 'Sports', 'Cricket');
 
 -- --------------------------------------------------------
 
@@ -324,28 +350,11 @@ INSERT INTO `csrtimesheet` (`id`, `NameOfStd`, `emailOfStd`, `yearOfPr`, `csrPr`
 (29, 'Kiran Kumar Malik', '200301120128@cutm.ac.in', '2022-2023', 'Culture', 'School of Engineering and Technology', 'Dance Club', '2022-09-24', 'Bhubaneswar', '11:37', '14:38', '3.0166666666667', 'Approved', '2022-11-07 17:29:47'),
 (30, 'Kiran Kumar Malik', '200301120128@cutm.ac.in', '2022-2023', 'Culture', 'School of Engineering and Technology', 'Dance Club', '2022-10-28', 'Bhubaneswar', '14:15', '15:16', '1.0166666666667', 'Approved', '2022-11-07 17:29:47'),
 (31, 'Kiran Kumar Malik', '200301120128@cutm.ac.in', '2022-2023', 'Culture', 'School of Engineering and Technology', 'Dramatic Club', '2022-10-28', 'Bhubaneswar', '11:18', '13:19', '2.0166666666667', 'Rejected', '2022-11-07 17:29:47'),
-(32, 'Snehasmruti Nanda', '200301120127@cutm.ac.in', '2022-2023', 'Sports', 'School of Applied Sciences', 'Adventure Club', '2022-10-28', 'Bhubaneswar', '11:18', '13:19', '2.0166666666667', 'Approved', '2022-11-07 17:29:47'),
-(33, 'Rajtanaya Swain', '200301120147@cutm.ac.in', '2022-2023', 'Responsibility', 'School of Engineering and Technology', 'Youth Red Cross', '2022-10-28', 'Bhubaneswar', '11:18', '13:19', '2.0166666666667', 'Approved', '2022-11-07 17:29:47'),
-(34, 'Pratik Ranjan Dash', '200301120131@cutm.ac.in', '2022-2023', 'Responsibility', 'School of Applied Sciences', 'NSS Club', '2022-10-28', 'Bhubaneswar', '11:18', '13:19', '2.0166666666667', 'Approved', '2022-11-07 17:29:47'),
-(35, 'Kiran Kumar Malik', '200301120128@cutm.ac.in', '2022-2023', 'Sports', 'School of Engineering and Technology', 'Adventure Club', '2022-10-29', 'Bhubaneswar', '11:18', '13:19', '2.0166666666667', 'Approved', '2022-11-07 17:29:47'),
-(36, 'Snehasmruti Nanda', '200301120127@cutm.ac.in', '2022-2023', 'Culture', 'School of Applied Sciences', 'Dance Club', '2022-10-29', 'Bhubaneswar', '11:18', '13:19', '2.0166666666667', 'Approved', '2022-11-07 17:29:47'),
 (37, 'Kiran Kumar Malik', '200301120128@cutm.ac.in', '2022-2023', 'Responsibility', 'School of Engineering and Technology', 'Youth Red Cross', '2022-10-30', 'Bhubaneswar', '11:18', '13:19', '2.0166666666667', 'Approved', '2022-11-07 17:29:47'),
-(38, 'Bibek Behera', '200301120146@cutm.ac.in', '2022-2023', 'Culture', 'School of Applied Sciences', 'Dance Club', '2022-10-29', 'Bhubaneswar', '11:18', '13:19', '2.0166666666667', 'Approved', '2022-11-07 17:29:47'),
-(39, 'Bibek Behera', '200301120146@cutm.ac.in', '2022-2023', 'Responsibility', 'School of Applied Sciences', 'Youth Red Cross', '2022-10-30', 'Bhubaneswar', '11:18', '13:19', '2.0166666666667', 'Approved', '2022-11-07 17:29:47'),
-(40, 'Rajtanaya Swain', '200301120147@cutm.ac.in', '2022-2023', 'Sports', 'School of Engineering and Technology', 'Adventure Club', '2022-10-28', 'Bhubaneswar', '11:18', '13:19', '2.0166666666667', 'Approved', '2022-11-07 17:29:47'),
-(41, 'Pratik Ranjan Dash', '200301120132@cutm.ac.in', '2022-2023', 'Culture', 'School of Applied Sciences', 'Dance Club', '2022-10-28', 'Bhubaneswar', '11:18', '13:19', '2.0166666666667', 'Approved', '2022-11-07 17:29:47'),
-(42, 'Sagar Kumar Ojha', '200301120123@cutm.ac.in', '2022-2023', 'Culture', 'School of Fisheries', 'Dance Club', '2022-10-28', 'Bhubaneswar', '11:18', '14:19', '3.0166666666667', 'Approved', '2022-11-07 17:29:47'),
-(43, 'Chandan Kumar Sahu', '200301120188@cutm.ac.in', '2022-2023', 'Responsibility', 'School of Media and Communication', 'Youth Red Cross', '2022-10-30', 'Bhubaneswar', '10:18', '14:19', '4.0166666666667', 'Approved', '2022-11-07 17:29:47'),
-(44, 'Sai Soumyaranjan Pati', '200301120142@cutm.ac.in', '2022-2023', 'Culture', 'M.S. Swaminathan School of Agriculture', 'Dance Club', '2022-10-28', 'Bhubaneswar', '11:18', '14:19', '3.0166666666667', 'Approved', '2022-11-07 17:29:47'),
-(45, 'Baisakhi rani Das', '200301120131@cutm.ac.in', '2022-2023', 'Sports', 'School of Agriculture and Bio-Engineering', 'Adventure Club', '2022-10-30', 'Bhubaneswar', '11:18', '14:19', '3.0166666666667', 'Approved', '2022-11-07 17:29:47'),
-(46, 'Shaikh Habibur Reheman', '200301120126@cutm.ac.in', '2022-2023', 'Culture', 'School Of Paramedics & Allied Health Science', 'Designer Club', '2022-10-30', 'Bhubaneswar', '11:18', '14:19', '3.0166666666667', 'Approved', '2022-11-07 17:29:47'),
-(47, 'Anshuman Jena', '200301120130@cutm.ac.in', '2022-2023', 'Sports', 'School Of Pharmacy', 'Yoga & Meditation Society', '2022-10-31', 'Bhubaneswar', '11:18', '14:19', '3.0166666666667', 'Approved', '2022-11-07 17:29:47'),
-(48, 'Animesh Mohanty', '200301120136@cutm.ac.in', '2022-2023', 'Responsibility', 'School of Forensic Sciences', 'Innovateur Club', '2022-10-31', 'Bhubaneswar', '11:18', '14:19', '3.0166666666667', 'Approved', '2022-11-07 17:29:47'),
-(49, 'Badri Prasad Dash', '200301120137@cutm.ac.in', '2022-2023', 'Sports', 'School Of Vocational Education and Training', 'NCC Club', '2022-10-31', 'Bhubaneswar', '11:18', '14:19', '3.0166666666667', 'Approved', '2022-11-07 17:29:47'),
-(50, 'Abhishek Parida', '200301120149@cutm.ac.in', '2022-2023', 'Responsibility', 'School of Applied Sciences', 'Robotics Club', '2022-09-25', 'Bhubaneswar', '11:18', '15:19', '4.0166666666667', 'Approved', '2022-11-07 17:29:47'),
-(51, 'Kiran Kumar Malik', '200301120128@cutm.ac.in', '2022-2023', 'Culture', 'School of Engineering and Technology', 'Dance Club', '2022-11-03', 'Bhubaneswar', '10:43', '14:43', '4', 'Rejected', '2022-11-07 17:29:47'),
+(51, 'Kiran Kumar Malik', '200301120128@cutm.ac.in', '2022-2023', 'Culture', 'School of Engineering and Technology', 'Dance Club', '2022-11-03', 'Bhubaneswar', '10:43', '14:43', '4', 'Approved', '2022-11-07 17:29:47'),
 (52, 'Kiran Kumar Malik', '200301120128@cutm.ac.in', '2022-2023', 'Culture', 'School of Engineering and Technology', 'Dance Club', '2022-11-07', 'Bhubaneswar', '14:01', '16:01', '2', 'Approved', '2022-11-07 17:31:42'),
-(53, 'Kiran Kumar Malik', '200301120128@cutm.ac.in', '2022-2023', 'Culture', 'School of Engineering and Technology', 'Dance Club', '2022-11-08', 'Bhubaneswar', '13:04', '14:04', '1', 'Approved', '2022-11-05 18:34:39');
+(53, 'Kiran Kumar Malik', '200301120128@cutm.ac.in', '2022-2023', 'Culture', 'School of Engineering and Technology', 'Dance Club', '2022-11-08', 'Bhubaneswar', '13:04', '14:04', '1', 'Approved', '2022-11-05 18:34:39'),
+(54, 'Kiran Kumar Malik', '200301120128@cutm.ac.in', '2022-2023', 'Culture', 'School of Engineering and Technology', 'Dance Club', '2022-11-11', 'Bhubaneswar', '10:44', '13:44', '3', 'Rejected', '2022-11-11 09:14:32');
 
 -- --------------------------------------------------------
 
@@ -432,12 +441,7 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`id`, `name`, `email`, `regd`, `schoolname`, `program`, `branch`, `campus`, `admissionyear`, `courseDuration`, `sex`, `religion`, `dob`, `hobby`, `present_address`, `permanent_address`, `password`, `mobile`, `profileimage`, `status`) VALUES
-(15, 'Kiran Kumar Malik', '200301120128@cutm.ac.in', '200301120128', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '2020-2021', '4', 'Male', 'Hindu', '19/08/2002', 'To play Cricket', 'Paikasahi, Dhamara, Bhadrak, Odisha-756171					', 'Paikasahi, Dhamara, Bhadrak, Odisha-756171					', 'kiran', '7848051078', 'kiran.jpg', 'Approved'),
-(16, 'Snehasmruti Nanda', '200301120127@cutm.ac.in', '200301120127', 'School of Applied Science', 'B.Sc', 'Information Technology', 'Balasore', '2020-2021', '', 'Female', 'Hindu', '15/05/2002', 'Badminton', 'demo1', 'demo1', 'sneha', '9658888642', 'user.jpg', 'Approved'),
-(17, 'Rajtanaya Swain', '200301120147@cutm.ac.in', '200301120147', 'School of Management', 'BBA', 'Business', 'Balangir', '2020-2021', '', 'Female', 'Hindu', '16/02/2002', 'Swimming', 'demo2', 'demo2', 'raj', '7848051078', 'user.jpg', 'Approved'),
-(18, 'Bibek Behera', '200301120146@cutm.ac.in', '200301120146', 'School of Engineering and Technology', 'B-Tech', 'Computer Science and Engineering', 'Bhubaneswar', '2020-2021', '', 'Male', 'Hindu', '25/07/2002', 'Cricket', 'demo3', 'demo3', 'bibek', '7848051078', 'user.jpg', 'Approved'),
-(19, 'Abhishek Parida', '200301120149@cutm.ac.in', '200301120149', 'School of Applied Sciences', 'B.Sc', 'Forensic Science', 'Balasore', '2020-2021', '', 'Male', 'Hindu', '14/05/2002', 'Cricket', 'demo4', 'demo4', 'abhishek', '7848051078', 'user.jpg', 'Approved'),
-(20, 'Adarsh Kumar Barik', '200301120050@cutm.ac.in', '200301120050', 'School Of Pharmacy', 'BBA', 'Marketing', 'Paralakhemundi', '2020-2021', '', 'Male', 'Hindu', '19/05/2002', 'Badminton', 'demo5', 'demo5', 'adarsh', '7848051078', 'user.jpg', 'Approved');
+(15, 'Kiran Kumar Malik', '200301120128@cutm.ac.in', '200301120128', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '2020-2021', '4', 'Male', 'Hindu', '19/08/2002', 'To play Cricket', 'Paikasahi, Dhamara, Bhadrak, Odisha-756171					', 'Paikasahi, Dhamara, Bhadrak, Odisha-756171					', 'kiranmalik', '7848051078', 'kiran.jpg', 'Approved');
 
 -- --------------------------------------------------------
 
@@ -467,36 +471,202 @@ CREATE TABLE `studregd` (
 --
 
 INSERT INTO `studregd` (`id`, `name`, `email`, `regd`, `schoolname`, `program`, `branch`, `campus`, `admissiontype`, `admissionyear`, `sex`, `religion`, `dob`, `blood_group`) VALUES
-(1, 'Kiran Kumar Malik', '200301120128@cutm.ac.in', '200301120128', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '19/08/2002', 'O+'),
-(2, 'Snehasmruti Nanda', '200301120127@cutm.ac.in', '200301120127', 'School of Applied Science', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2021', 'Female', 'Hindu', '29/3/2002', 'A+'),
-(3, 'Shaikh Habibur Reheman', '200301120126@cutm.ac.in', '200301120126', 'School of Media and Communication', 'B.Tech', 'Camera', 'Bhubaneswar', '', '2020', 'Male', 'Muslim', '01/11/2003', 'O+'),
-(4, 'Bibek Behera', '200301120146@cutm.ac.in', '200301120146', 'School of Management', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2022', 'Male', 'Hindu', '15/05/2001', 'B+'),
-(5, 'Parinita Tripathy', '190604100003@cutm.ac.in', '190604100003', 'School of Applied Sciences', 'BSc', 'Chemistry', 'Bolangir', '', '2020', 'Female', 'Hindu', '12/08/2002', 'A-'),
-(6, 'Ajit Meher', '212517100003@cutm.ac.in', '212517100003', 'School of Pharmacy', 'Pharmacy', 'D.Pharm ', 'Bolangir', '', '2021', 'Male', 'Hindu', '12/08/2002', 'B+'),
-(7, 'Jyotirmayee Sahu', '212517100024@cutm.ac.in', '212517100024', 'School of Pharmacy', 'Pharmacy', 'D.Pharm ', 'Bolangir', '', '2021', 'Female', 'Hindu', '15/05/2000', 'B-'),
-(8, 'Asif Khan', '212516100013@cutm.ac.in', '212516100013', 'School of Pharmacy', 'Pharmacy', 'B.Pharm', 'Bolangir', '', '2021', 'Male', 'Muslim', '19/03/2001', 'AB+'),
-(9, 'Nikita Choudhury', '202616100004@cutm.ac.in', '202616100004', 'School of Pharmacy', 'Pharmacy', 'B. Pharm', 'Rayagada', '', '2020', 'Female', 'Hindu', '21/09/2002', 'B-'),
-(10, 'Subham Nayak', '202616100034@cutm.ac.in', '202616100034', 'School of Pharmacy', 'Pharmacy', 'B. Pharm', 'Rayagada', '', '2020', 'Male', 'Hindu', '12/07/2001', 'A-'),
-(11, 'Iswari Senapati', '212617100058@cutm.ac.in', '212617100058', 'School of Pharmacy', 'Pharmacy', 'D. Pharm', 'Rayagada', '', '2021', 'Female', 'Hindu', '14/08/2002', 'O+'),
-(12, 'Nagarjuna Nayak', '211705350033@cutm.ac.in', '211705350033', 'School of Applied Science', 'M.Sc', 'Chemistry ', 'Balasore', '', '2021', 'Male', 'Hindu', '14/06/2002', 'B+'),
-(13, 'Biswajit Kumar Majhi', '200704100011@cutm.ac.in', '200704100011', 'School Of Paramedics & Allied Health Science', 'B.Sc', 'Chemistry', 'Balasore', '', '2020', 'Male', 'Hindu', '21/04/2002', 'B+'),
-(14, 'Adarsh Raj swain', '201516100031@cutm.ac.in', '201516100031', 'School of Pharmacy', 'Pharmacy', 'B.Pharm', 'Balasore', '', '2020', 'Male', 'Hindu', '16/06/2001', 'A-'),
-(15, 'Biswopati samal', '200301120178@cutm.ac.in', '200301120178', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '18/8/2002', 'B+'),
-(16, 'Biswajeet Rout', '200301120189@cutm.ac.in', '200301120189', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '17/02/2000', 'O+'),
-(17, 'Fatimun Nisha', '200301121205@cutm.ac.in', '200301121205', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2021', 'Female', 'Muslim', '15/08/2001', 'O+'),
-(18, 'Deepan Behera', '200301120166@cutm.ac.in', '200301120166', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '10/06/2002', 'O+'),
-(19, 'Swati kirtimayee Behera', '200301120134@cutm.ac.in', '200301120134', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Female', 'Hindu', '27/01/2003', 'B+'),
-(20, 'Priya Banerjee', '200301121206@cutm.ac.in', '200301121206', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2021', 'Female', 'Hindu', '14/05/2001', 'O+'),
-(21, 'Goutam maharana', '200301120163@cutm.ac.in', '200301120163', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '11/03/2002', 'B+'),
-(22, 'P Sudip Kumar Prusty', '200301120183@cutm.ac.in', '200301120183', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '19/05/2002', 'O+'),
-(23, 'Sai somya ranjan pati', '200301120142@cutm.ac.in', '200301120142', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '30/03/2003', 'B+'),
-(24, 'Pratik Ranjan Dash', '200301120132@cutm.ac.in', '200301120132', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '03/03/2001', 'O+'),
-(25, 'Rashmi ranjan acharya', '200301120177@cutm.ac.in', '200301120177', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '31/03/2003', 'A-'),
-(26, 'Abhishek Parida', '200301120149@cutm.ac.in', '200301120149', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '10/06/2001', 'AB-'),
-(27, 'Rajtanaya Swain', '200301120147@cutm.ac.in', '200301120147', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Female', 'Hindu', '7/02/2003', 'B+'),
-(30, 'Lalatendu bidyadhar samal ', '200301120148@cutm.ac.in', '200301120148', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '29/05/2003', 'AB+'),
-(31, 'Sagar Kumar Ojha ', '200301120123@cutm.ac.in', '200301120123', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '10/04/2002', 'B+'),
-(32, 'Animesh Mohanty', '200301120136@cutm.ac.in', '200301120136', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubanewsar', '', '2020', 'Male', 'Hindu', '27/04/2002', 'O+');
+(33, 'ADITYA NARAYAN PATHAK', '200101120005@cutm.ac.in', '200101120005', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '29/08/2002', 'O+'),
+(34, 'BADRINARAYAN PANDA', '200101120011@cutm.ac.in', '200101120011', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '10/05/2002', 'B+'),
+(35, 'ANIKET MOHANTY', '200301120001@cutm.ac.in', '200301120001', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '11/05/2001', 'A+'),
+(36, 'AVINASH KUMAR', '200301120002@cutm.ac.in', '200301120002', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '21/08/2000', 'A+'),
+(37, 'PULLAM BHATLA LAXMI SINDHU\r\n', '200301120003@cutm.ac.in\r\n', '200301120003\r\n', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Female', 'Hindu', '12/05/2001', 'B+'),
+(38, 'SATVINDER SINGH\r\n', '200301120004@cutm.ac.in', '200301120004', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '03/06/1999', 'B+'),
+(39, 'ANKITA ROY', '200301120005@cutm.ac.in', '200301120005', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Female', 'Hindu', '02/02/2002', 'O+'),
+(40, 'PRANAB KUMAR AGASTI\r\n', '200301120006@cutm.ac.in', '200301120006', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '23/04/2000', 'B-'),
+(41, 'KAUSHIK MOHAPATRA\r\n', '200301120007@cutm.ac.in', '200301120007', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '20/08/2001', 'A+'),
+(42, 'AKANKSHA KUMARI', '200301120002@cutm.ac.in', '200301120002', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Female', 'Hindu', '03.08.2002', 'B+'),
+(43, 'SWAGAT KAR\r\n', '200301120009@cutm.ac.in', '200301120009', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '12/03/2001', 'A+'),
+(44, 'SOURAV MOHANTY', '200301120010@cutm.ac.in', '200301120010', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '23/07/2002', 'O+'),
+(45, 'KAIBALYA KAR', '200301120011@cutm.ac.in', '200301120011', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '22/02/2002', 'A+'),
+(46, 'OM PRAKASH MOHANTY\r\n', '200301120012a2cutm.ac.in', '200301120012\r\n', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '23/05/2001', 'A+'),
+(47, 'ANSHIT PATTNAIK', '200301120013@cutm.ac.in', '200301120013', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '18/01/2001', 'A+'),
+(49, 'MILAN JANA', '200301120014@cutm.ac.in', '200301120014', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '17/08/2002', 'O+'),
+(50, 'NAYABRATA SWAIN', '200301120015@cutm.ac.in', '200301120015\r\n', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '14/09/2001', 'A+'),
+(51, 'ASUTOSH SATPATHY', '200301120016@cutm.ac.in', '200301120016\r\n', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '03/06/2002', 'B+'),
+(52, 'ANSHUMAN BARIK\r\n', '200301120017@cutm.ac.in', '200301120017', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '24/08/2000', 'A+'),
+(53, 'PIYUSH KUMAR\r\n', '200301120018@cutm.ac.in', '200301120018', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '18/08/2001', 'B+'),
+(54, 'BHABANI SANKAR MAHARANA', '200301120019@cutm.ac.in', '200301120019', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '25/03/2001', 'O+'),
+(55, 'ADITYA RAJ', '200301120020@cutm.ac.in', '200301120020', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '13/01/2001', 'A+'),
+(56, 'PAYAL PANDA\r\n', '200301120021@cutm.ac.in', '200301120021', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Female', 'Hindu', '01/08/2001', 'B+'),
+(57, 'SHIBAM ACHARYA\r\n', '200301120022@cutm.ac.in', '200301120022', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '21/03/2001', 'O+'),
+(58, 'ABHIJIT BEHERA', '200301120023@cutm.ac.in', '200301120023', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '03/03/2002', 'AB+'),
+(59, 'SUBHRAJIT SENAPATI', '200301120024@cutm.ac.in', '200301120024', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '26/09/2000', 'A+'),
+(60, 'ABHISHEK RAJ', '200301120025@cutm.ac.in', '200301120025', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '17/11/2001', 'B+'),
+(61, 'RITIK MISHRA', '200301120026@cutm.ac.in', '200301120026', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '21/08/2001', 'B+'),
+(62, 'ANKIT KUMAR SAHU', '200301120027@cutm.ac.in', '200301120027', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '03.06.1999', 'B+'),
+(63, 'GYAN PRAKASH TIWARI', '200301120028@cutm.ac.in', '200301120028', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '11/11/2001', 'B+'),
+(64, 'AMIT KUMAR NAIK', '200301120030@cutm.ac.in', '200301120030', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '14/02/2001', 'O+'),
+(65, 'ANAND SINGH', '200301120031@cutm.ac.in', '200301120031', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '26/12/2001', 'O+'),
+(66, 'JYOTI PRAKASH MALLICK', '200301120032@cutm.ac.in', '200301120032', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Female', 'Hindu', '24/06/2001', 'A+'),
+(67, 'DEEPAK MALLIK', '200301120033@cutm.ac.in', '200301120033', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '26/10/2003', 'O+'),
+(68, 'LIPSA LENKA', '200301120034@cutm.ac.in', '200301120034', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Female', 'Hindu', '16/06/2002', 'B+'),
+(69, 'SATYAJIT PATI', '200301120035@cutm.ac.in', '200301120035', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '14/11/2001', 'O+'),
+(70, 'SIDHARTH BEHERA', '200301120036@cutm.ac.in', '200301120036', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '24/12/2002', 'B+'),
+(71, 'SIDHARTH BEHERA', '200301120036@cutm.ac.in', '200301120036\r\n', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '12/10/2001', 'B+'),
+(72, 'ARADHANA SAHU', '200301120037@cutm.ac.in', '200301120037', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '13/06/2002', 'B+'),
+(73, 'ANIMESH SINGH', '200301120038@cutm.ac.in', '200301120038', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '14/02/2002', 'O+'),
+(74, 'MOHAMMED AQEEB RAZA', '200301120039@cutm.ac.in', '200301120039', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Muslim', '11/12/2003', 'B+'),
+(75, 'OMKAR NARAYAN BHAL', '200301120040@cutm.ac.in', '200301120040', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '13/10/2000', 'O+'),
+(76, 'ASIT GHOSH', '200301120041@cutm.ac.in', '200301120041', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '26/11/2001', 'B+'),
+(77, 'DIBYALARA NAYAK', '200301120042@cutm.ac.in', '200301120042', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Female', 'Hindu', '28/04/2001', 'AB+'),
+(78, 'SMRUTI SAMRUDDHA', '200301120043@cutm.ac.in', '200301120043', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Female', 'Hindu', '13/06/2003', 'B+'),
+(79, 'SWASTI SOURAV DAS', '200301120044@cutm.ac.in', '200301120044', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '22/02/2002', 'O+'),
+(80, 'CHANDRA SEKHAR SETHI', '200301120045@cutm.ac.in', '200301120045', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '11/01/2003', 'O+'),
+(81, 'SK RIZWANUL HAQUE', '200301120046@cutm.ac.in', '200301120046', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Muslim', '15/04/2003', 'B+'),
+(82, 'PRITAM SUNDARAY', '200301120047@cutm.ac.in', '200301120047', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '14/04/2001', 'B+'),
+(83, 'ASHISH KUMAR SAHOO', '200301120048@cutm.ac.in', '200301120048', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '23/03/2003', 'A-'),
+(84, 'ABHIRAM PANDEY', '200301120049@cutm.ac.in', '200301120049', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '22/02/2000', 'AB-'),
+(85, 'ADARSH KUMAR BARIK', '200301120050@cutm.ac.in', '200301120050', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '03/02/2001', 'B-'),
+(86, 'PRITIDWEEP ROUT', '200301120051@cutm.ac.in', '200301120051', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '18/08/2001', 'B+'),
+(87, 'ROHIT GHORAI', '200301120052@cutm.ac.in', '200301120052', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '13/03/2003', 'AB-'),
+(88, 'SUMIT KUMAR NAYAK', '200301120054@cutm.ac.in', '200301120054', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '14/04/2003', 'O+'),
+(89, 'VISHAL MANDAL', '200301120055@cutm.ac.in', '200301120055', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '29/09/2001', 'B-'),
+(90, 'SIDDHARTH PRASAD NEWAR', '200301120056@cutm.ac.in', '200301120056', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '20/02/2002', 'B-'),
+(91, 'SHASWAT PRADHAN', '200301120057@cutm.ac.in', '200301120057', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '11/06/2001', 'B+'),
+(92, 'ABHISHEK MAHANTA', '200301120058@cutm.ac.in', '200301120058', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '03/06/2001', 'B+'),
+(93, 'PRATYUSH PAL', '200301120059@cutm.ac.in', '200301120059', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '26/03/2001', 'O+'),
+(94, 'SANDEEP KUMAR SAHU', '200301120060@cutm.ac.in', '200301120060', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '23/03/2001', 'O+'),
+(95, 'SITU KUMARI GOPE', '200301120060@cutm.ac.in', '200301120060', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '03/02/2001', 'B-'),
+(96, 'SWETAPRAVA PATASANI', '200301120062@cutm.ac.in', '200301120062', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '12/05/2000', 'O-'),
+(97, 'PRANALI PRATIHARY', '200301120063@cutm.ac.in', '200301120063', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '06/06/2001', 'B+'),
+(98, 'ANSIT SOUMYARANJAN HATI', '200301120064@cutm.ac.in', '200301120064', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '05/04/2003', 'AB-'),
+(99, 'SANGRAM BHUYAN', '200301120065@cutm.ac.in', '200301120065', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Make', 'Hindu', '20/02/2001', 'O-'),
+(100, 'ANWESH PANDA', '200301120066@cutm.ac.in', '200301120066', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '12/05/2003', 'B-'),
+(101, 'SOUMYA RANJAN MOHANTY', '200301120067@cutm.ac.in', '200301120067', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '12/03/2003', 'A+'),
+(102, 'SWETAPADMA BARAL', '200301120068@cutm.ac.in', '200301120068', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Female', 'Hindu', '11/05/2001', 'B+'),
+(103, 'ROHAN BISWAL', '200301120069@cutm.ac.in', '200301120069', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '03.06.1999', 'B+'),
+(104, 'KIRTTIRAJ SAHOO', '200301120070@cutm.ac.in', '200301120070', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '20/01/2003', 'O-'),
+(105, 'SIDHANTA SWAIN', '200301120071@cutm.ac.in', '200301120071', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '23/02/2003', 'A+'),
+(106, 'JAGADISH PRASAD BISWAL', '200301120072@cutm.ac.in', '200301120072', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '12/11/2001', 'B+'),
+(107, 'PRATIK MOHAPATRA', '200301120073@cutm.ac.in', '200301120073', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '14/02/2002', 'O+'),
+(108, 'PRUTHWIRAJ MOHANTY', '200301120074@cutm.ac.in', '200301120074', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '26/02/2001', 'B-'),
+(109, 'BISWAJIT SAMANTARAY', '200301120075@cutm.ac.in', '200301120075', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '23/03/2001', 'AB+'),
+(110, 'LIKE MOHANTY', '200301120076@cutm.ac.in', '200301120076', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Female', 'Hindu', '23/02/2001', 'A+'),
+(111, 'DEBASHREE ROUT', '200301120077@cutm.ac.in', '200301120077', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Female', 'Hindu', '14/02/2003', 'A+'),
+(112, 'ASHISH JENA', '200301120078@cutm.ac.in', '200301120078', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '12/05/2003', 'B+'),
+(113, 'A SRIYA', '200301120079@cutm.ac.in', '200301120079', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '23/11/2001', 'A+'),
+(114, 'JAGANNATH DANSANA', '200301120080@cutm.ac.in', '200301120080', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '14/05/2000', 'A-ve'),
+(115, 'BISWAJIT SAHOO', '200301120081@cutm.ac.in', '200301120081', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '27/03/2002', 'B+ve'),
+(116, 'SIBASISH PADHY', '200301120082@cutm.ac.in', '200301120082', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '04/06/1999', 'B+ve'),
+(117, 'NAWED AHMED KHAN', '200301120083@cutm.ac.in', '200301120083\r\n', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Muslim', '24/07/2001', 'A-ve'),
+(118, 'MONALISHA SWAIN', '200301120084@cutm.ac.in', '200301120084\r\n', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '17/2/2001', 'O+ve'),
+(119, 'RASID KHAN\r\n', '200301120085@cutm.ac.in', '200301120085\r\n', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Muslim', '13/8/2001', 'B-ve'),
+(120, 'SAURABH KUMAR', '200301120086@cutm.ac.in', '200301120086', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '02/12/2000', 'A+ve'),
+(121, 'SAMBIT SAGAR SAMANTARAY', '200301120087@cutm.ac.in', '20030112007', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '15/03/2001', 'B+ve'),
+(122, 'ASHISH PRADHAN', '200301120088@cutm.ac.in', '200301120088', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '22/04/2000', 'O-ve'),
+(123, 'BADAL KUMAR BEHERA', '200301120089@cutm.ac.in', '200301120089', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '02/07/2001', 'B+ve'),
+(124, 'GURSHARAN SINGH BANSAL', '200301120090@cutm.ac.in', '200301120090', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '05/12/2001', 'A+ve'),
+(125, 'HIMANSHU SEKHAR PUHAN', '200301120091@cutm.ac.in', '200301120091', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '16/10/2000', 'O-ve'),
+(126, 'ABHISEK DAS', '200301120092@cutm.ac.in', '200301120092', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '05/11/1999', 'B+ve'),
+(127, 'NISHANTA KUMAR BISWAL', '200301120093@cutm.ac.in', '200301120093', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '23/04/2000', 'B-ve'),
+(128, 'SHIBAPRASAD MALLIK', '200301120094@cutm.ac.in', '200301120094', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '30/05/2001', 'A-ve'),
+(129, 'MANAS SAHOO', '200301120095@cutm.ac.in', '200301120095', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '19/12/2000', 'B+ve'),
+(130, 'NEHARANI SAMAL', '200301120096@cutm.ac.in', '200301120096', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '20/11/2001', 'B-ve'),
+(131, 'MD FAIZAN', '200301120097@cutm.ac.in', '200301120097', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Muslim', '26/12/1999', 'A-ve'),
+(132, 'JYOTIR ADITYA BARIK', '200301120098@cutm.ac.in', '200301120098', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '10/05/2002', 'A+'),
+(133, 'SUZAIN KHAN', '200301120099@cutm.ac.in', '200301120099', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Muslim', '03.03.1999', 'O+ve'),
+(134, 'BISWAJIT MAHAL', '200301120100@cutm.ac.in', '200301120100', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '13/09/2000', 'A-ve'),
+(135, 'BISWAJIT MAHAL', '200301120100@cutm.ac.in', '200301120100', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '18/03/2001', 'B+ve'),
+(136, 'SOUMYA RANJAN SAHOO', '200301120102@cutm.ac.in', '200301120102', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '24/12/2000', 'A-ve'),
+(137, 'AJAY KUMAR GUPTA', '200301120103@cutm.ac.in', '200301120103', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '29/10/1999', 'A-ve'),
+(138, 'SUBHASIS PRADHAN', '200301120104@cutm.ac.in', '200301120104', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '07/05/2000', 'B+ve'),
+(139, 'SANDEEP PARIDA', '200301120105@cutm.ac.in', '200301120105', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '09/08/1999', 'O+ve'),
+(140, 'MANORANJAN SAHU', '200301120106@cutm.ac.in', '200301120106', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '16/12/2001', 'O-ve'),
+(141, 'BARSHARANI DAS', '200301120108@cutm.ac.in', '200301120108', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '27/02/2000', 'B-ve'),
+(142, 'GIRIJA SHANKAR BHUTIA', '200301120107@cutm.ac.in', '200301120108', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '24/11/2001', 'B-ve'),
+(143, 'DIBYARANJAN SINGH SAMANTA', '200301120109@cutm.ac.in', '200301120109', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '29/04/1999', 'B+ve'),
+(144, 'SABIT KUMAR PRADHAN', '200301120110@cutm.ac.in', '200301120110', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '30/05/2002', 'B+ve'),
+(145, 'MUKESH KUMAR SENAPATI', '200301120111@cutm.ac.in', '200301120111', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '10/02/2000', 'A-ve'),
+(146, 'ADITYA RAJ.', '200301120112@cutm.ac.in', '200301120112', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '20/11/1999', 'O+ve'),
+(147, 'SUDHANSU ROUT', '200301120113@cutm.ac.in', '200301120113', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '02/10/2001', 'O-ve'),
+(148, 'BRAHMANANDA SETHI', '200301120114@cutm.ac.in', '200301120114', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '09/06/2000', 'O-ve'),
+(149, 'ARJYAN JENA', '200301120115@cutm.ac.in', '200301120115', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '18/08/1999', 'O+ve'),
+(150, 'SK SIRAJUL ISLAM', '200301120116@cutm.ac.in', '200301120116', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Muslim', '25/02/2002', 'A+ve'),
+(151, 'ASHISH KUMAR SAHOO', '200301120117@cutm.ac.in', '200301120117', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '20/12/2001', 'B-ve'),
+(152, 'PRITAM NAYAK', '200301120118@cutm.ac.in', '200301120118', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '11/05/2001', 'B+'),
+(153, 'BIBHUTI BHUSAN PANDA', '200301120119@cutm.ac.in', '200301120119', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '12/07/2001', 'B+ve'),
+(154, 'ALOK KUMAR SAHU', '200301120120@cutm.ac.in', '200301120120', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '28/06/2000', 'B+ve'),
+(155, 'GOURI SANKAR RATH', '200301120121@cutm.ac.in', '200301120121', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '20/02/1999', 'A+ve'),
+(156, 'M MOHNISH KUMAR', '200301120122@cutm.ac.in', '200301120122', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '19/04/2000', 'A-ve'),
+(157, 'SAGAR KUMAR OJHA', '200301120123@cutm.ac.in', '200301120123', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '04/12/2001', 'B+ve'),
+(158, 'GURUKRISHNA DAS', '200301120125@cutm.ac.in', '200301120125', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '25/12/2002', 'B-ve'),
+(159, 'SHAIKH HABIBUR REHAMAN', '200301120126@cutm.ac.in', '200301120126', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Muslim', '23/02/1999', 'A-ve'),
+(160, 'SNEHASMRUTI NANDA', '200301120127@cutm.ac.in', '200301120127', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '16/05/2000', 'O-ve'),
+(161, 'KIRAN KUMAR MALIK', '200301120128@cutm.ac.in', '200301120128', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '19/08/2002', 'B+ve'),
+(162, 'DEBABRATA DAS', '200301120129@cutm.ac.in', '200301120129', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '30/04/2001', 'A+ve'),
+(163, 'ANSHUMAN JENA', '200301120130@cutm.ac.in', '200301120130', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '20/03/2000', 'A-ve'),
+(164, 'BAISAKHI RANI DAS', '200301120131@cutm.ac.in', '200301120131', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Female', 'Hindu', '23/01/2002', 'B-ve'),
+(165, 'PRATIK RANJAN DASH', '200301120132@cutm.ac.in', '200301120132', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '19/08/2000', 'B+ve'),
+(166, 'OM PRAKASH BEHERA', '200301120133@cutm.ac.in', '200301120133', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '29/06/2001', 'B-ve'),
+(167, 'SWATI KIRTIMAYEE BEHERA', '200301120134@cutm.ac.in', '200301120134', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '23/10/2002', 'O+ve'),
+(168, 'ANIMESH MOHANTY', '200301120136@cutm.ac.in', '200301120136', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '14/03/2001', 'B+ve'),
+(169, 'BADRI PRASAD DASH', '200301120137@cutm.ac.in', '200301120137', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '28/09/1999', 'O+ve'),
+(170, 'SWORAJYA RANJAN SWAIN', '200301120139@cutm.ac.in', '200301120139', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '03/07/2001', 'A-ve'),
+(171, 'ALOK BEHERA', '200301120140@cutm.ac.in', '200301120140', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '16/12/2002', 'O+ve'),
+(172, 'SUDHANSU MOHARANA', '200301120141Acutm.ac.in', '200301120141', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '14/02/2002', 'B+'),
+(173, 'SAI SOMYA RANJAN PATI', '200301120142@cutm.ac.in', '200301120142', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '03.06.1999', 'B+'),
+(174, 'ADITYA KUMAR DAS', '200301120144@cutm.ac.in', '200301120144', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '13/05/2000', 'A-ve'),
+(175, 'ANSUMAN PARAMGURU', '200301120145@cutm.ac.in', '200301120145', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '01/11/2002', 'O-ve'),
+(176, 'BIBEK BEHERA', '200301120146@cutm.ac.in', '200301120146', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '27/12/1999', 'A+ve'),
+(177, 'RAJTANAYA SWAIN', '200301120147@cutm.ac.in', '200301120147', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Female', 'Hindu', '13/05/2002', 'B+ve'),
+(178, 'LALATENDU BIDYADHAR SAMAL', '200301120148@cutm.ac.in', '200301120148', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '23/09/2001', 'B-ve'),
+(179, 'ABHISHEK PARIDA', '200301120149@cutm.ac.in', '200301120149', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '11/10/2000', 'A-ve'),
+(180, 'CHIRANJEEB GARNAYAK', '200301120150@cutm.ac.in', '200301120150', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '07/08/1999', 'O+ve'),
+(181, 'PRANAB PRABHANJAN SAHOO', '200301120151@cutm.ac.in', '200301120151', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '27/07/2001', 'A-ve'),
+(182, 'NRUSINGHANATH MISHRA', '200301120152@cutm.ac.in', '200301120152', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '07/11/2002', 'O-ve'),
+(183, 'MOHIT RAJ', '2003011201532cutm.ac.in', '200301120153', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '04/06/2001', 'B+ve'),
+(184, 'SYED SAHNAWAZ HUSSAIN', '200301120154@cutm.ac.in', '200301120154', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Muslim', '29/04/1999', 'O-ve'),
+(185, 'BISHAL BISWAS.', '200301120162@cutm.ac.in', '200301120162', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '16/05/2002', 'B+ve'),
+(186, 'GOUTAM MAHARANA', '200301120163@cutm.ac.in', '200301120163', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '22/05/2001', 'O-ve'),
+(187, 'RAJESH KUMAR SWAIN', '200301120164@cutm.ac.in', '200301120164', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '13/12/1999', 'A+ve'),
+(188, 'DEEPAK KUMAR SAHU', '200301120165@Cutm.ac.in', '200301120165', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '18/12/2001', 'B+ve'),
+(189, 'DEEPAN BEHERA', '200301120166@Cutm.ac.in', '200301120166', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '30/04/2000', 'O+ve'),
+(190, 'SANDEEP KUMAR PRADHAN', '200301120167@cutm.ac.in', '200301120167', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '21/08/2000', 'O+ve'),
+(191, 'ANKIT KUMAR KANHAR', '200301120168cutm.ac.in', '200301120168', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '14/08/2002', 'O+ve'),
+(192, 'ASHUTOSH BISWAL', '200301120169@cutm.ac.in', '200301120169', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '05/12/2001', 'B-ve'),
+(193, 'SAMIKSHYA PATRA.', '200301120170@cutm.ac.in', '200301120170', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '19/11/1999', 'A+ve'),
+(194, 'ADITYA KUMAR ROUT', '200301120172@cutm.ac.in', '200301120172', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '28/06/2001', 'B-ve'),
+(195, 'HAROLD KUMAR NAIK', '200301120173@cutm.ac.in', '200301120173', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '23/07/2000', 'O-ve'),
+(196, 'SWASTIK ABHIJIT PATRA', '200301120174@cutm.ac.in', '200301120174', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '30/02/2001', 'A+ve'),
+(197, 'SOUMYA RANJAN NAYAK', '200301120175@cutm.ac.in', '200301120175', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '01/01/2001', 'B+ve'),
+(198, 'SOUMYA RANJAN NAYAK', '200301120175@cutm.ac.in', '200301120175', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '19/04/2002', 'A+ve'),
+(199, 'MAYANK GOPAL', '200301120176@cutm.ac.in', '200301120176', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '01/06/2001', 'B-ve'),
+(200, 'RASHMI RANJAN ACHARYA', '200301120177@cutm.ac.in', '200301120177', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '21/12/2001', 'O+ve'),
+(201, 'BISWOPATI SAMAL', '200301120178@cutm.ac.in', '200301120178', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '28/09/1999', 'O-ve'),
+(202, 'SHIVAM MANI MISHRA', '200301120179@cutm.ac.in', '200301120179', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '22/08/2001', 'A-ve'),
+(203, 'DEBIDUTTA ACHARYA', '200301120180@cutm.ac.in', '200301120180', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '20/12/2002', 'B+ve'),
+(204, 'NITYANANDA MANDAL', '200301120181@cutm.ac.in', '200301120181', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '13/03/2001', 'B-ve'),
+(205, 'KEDARNATH SETHI', '200301120182@cutm.ac.in', '200301120182', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '05/12/2000', 'O+ve'),
+(206, 'P SUDIP KUMAR PRUSTY', '200301120183@cutm.ac.in', '200301120183', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '07/08/2000', 'B+ve'),
+(207, 'JYOTI PRAVA BISWAL', '200301120184@cutm.ac.in', '200301120184', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Female', 'Hindu', '18/07/1999', 'A-ve'),
+(208, 'CHANDAN KUMAR MALLIK', '200301120185@cutm.ac.in', '200301120185', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '12/01/2002', 'O-ve'),
+(209, 'SANJU MARANDI', '200301120186@cutm.ac.in', '200301120186', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '29/01/2000', 'B+ve'),
+(210, 'CHANDAN KUMAR SAHU', '200301120188@cutm.ac.in', '200301120188', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '14/05/2000', 'A+ve'),
+(216, 'BISWAJEET ROUT', '200301120189@cutm.ac.in', '200301120189', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '17/09/2000', 'B+ve'),
+(217, 'SANDHYARANI BHOI', '200301120190@cutm.ac.in', '200301120190', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Female', 'Hindu', '13/08/1999', 'O+ve'),
+(218, 'GAUTAM KUMAR', '200301120192@cutm.ac.in', '200301120192', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '18/08/2000', 'B-ve'),
+(219, 'SHREYA PRIYADARSHINI DAS', '200301120193@cutm.ac.in', '200301120193', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Female', 'Hindu', '27/09/2001', 'O-ve'),
+(220, 'PRIYANSHU DASH', '200301121194@cutm.ac.in', '200301121194', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '11/11/2001', 'B+ve'),
+(221, 'RAHUL GOCHHI', '200301121195@cutm.ac.in', '200301121195', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '20/11/2002', 'O-ve'),
+(222, 'AYUSH KUMAR SAMRAT', '200301121196@cutm.ac.in', '200301121196', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '17/06/2000', 'O+ve'),
+(223, 'AKASH RANJAN SWAIN', '200301121197@cutm.ac.in', '200301121197', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '19/04/2001', 'A+ve'),
+(224, 'CHANDRAKANTA SAHOO', '200301121198@cutm.ac.in', '200301121198', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '25/12/2001', 'O+ve'),
+(225, 'SUVENDU PARIDA', '200301121199@cutm.ac.in', '200301121199', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '18/07/2000', 'B+ve'),
+(226, 'ROHIT KUMAR SAHOO', '200301121200@cutm.ac.in', '200301121200', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'hindu', '24/07/2001', 'A-ve'),
+(227, 'SAMEER DEHURY', '2003011212012cutm.ac.in', '200301121201', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '05/03/2001', 'A-ve'),
+(228, 'RUDRA NARAYAN ACHARYA', '200301121202@cutm.ac.in', '200301121202', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '02/08/2000', 'B+ve'),
+(229, 'BHAGABAT SHAKTI SWORUP MAHAPATRA', '200301121203@cutm.ac.in', '200301121203', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '19/04/2001', 'O-ve'),
+(230, 'G VAMSI SAI', '200301121204@cutm.ac.in', '200301121204', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '11/05/2001', 'A+'),
+(231, 'FATIMUN NISHA', '200301121205@cutm.ac.in', '200301121205', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Female', 'Muslim', '03/06/2002', 'B+'),
+(232, 'PRIYA BANERJEE', '200301121206@cutm.ac.in', '200301121206', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Female', 'Hindu', '15/03/2001', 'B+'),
+(233, 'ALAPAN BANERJEE', '200301260001@cutm.ac.in', '200301260001', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '14/09/2003', 'O+'),
+(234, 'CHINNMAY PRASAD RAY', '200301260002@cutm.ac.in', '200301260002', 'School of Engineering and Technology', 'B.Tech', 'Computer Science and Engineering', 'Bhubaneswar', '', '2020', 'Male', 'Hindu', '22/02/2002', 'B-');
 
 -- --------------------------------------------------------
 
@@ -525,8 +695,7 @@ CREATE TABLE `teacher` (
 --
 
 INSERT INTO `teacher` (`id`, `name`, `email`, `mobile`, `empid`, `Designation`, `campus`, `Qualification`, `SchoolName`, `Clubget`, `Gender`, `password`, `profileimage`) VALUES
-(1, 'Rajkumar Mohanta', 'rajkumar.mohanta@cutm.ac.in', '7008789363', 'emp13', 'Ass Prof', 'Bhubaneswar', 'M. Tech', 'School of Engineering and Technology', 'Dance Club', 'Male', 'iglwdDuG', '1561624449.jpg'),
-(17, 'Suvendu Kumar Nayak', '200301120149@cutm.ac.in', '9348905343', 'EMP78', 'Assistant Professor', 'Bhubaneswar', 'Phd', 'School of Engineering and Technology', 'Music Club', 'Male', 'vLYl9rF5', 'maleuser.jpg');
+(1, 'Rajkumar Mohanta', 'rajkumar.mohanta@cutm.ac.in', '7008789363', 'emp13', 'Ass Prof', 'Bhubaneswar', 'M. Tech', 'School of Engineering and Technology', 'Dance Club', 'Male', 'raj', '1561624449.jpg');
 
 -- --------------------------------------------------------
 
@@ -648,7 +817,7 @@ ALTER TABLE `year`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `announcement`
@@ -666,7 +835,7 @@ ALTER TABLE `certificatelog`
 -- AUTO_INCREMENT for table `coordinators`
 --
 ALTER TABLE `coordinators`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `coordinatorstypeschool`
@@ -678,13 +847,13 @@ ALTER TABLE `coordinatorstypeschool`
 -- AUTO_INCREMENT for table `csrpr`
 --
 ALTER TABLE `csrpr`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT for table `csrtimesheet`
 --
 ALTER TABLE `csrtimesheet`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT for table `gallery1`
@@ -714,13 +883,13 @@ ALTER TABLE `student`
 -- AUTO_INCREMENT for table `studregd`
 --
 ALTER TABLE `studregd`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=235;
 
 --
 -- AUTO_INCREMENT for table `teacher`
 --
 ALTER TABLE `teacher`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `year`

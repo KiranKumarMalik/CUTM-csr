@@ -189,69 +189,69 @@ else{
     <ul class="sidebar-nav" id="sidebar-nav">
 
     <li class="nav-item">
-            <a class="nav-link " href="admin.php">
+            <a class="nav-link " href="./admin.php">
                 <i class="bi bi-grid"></i>
                 <span>Dashboard</span>
             </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="certificateapprove.php">
+          <a class="nav-link " href="./certificateapprove.php">
               <i class="bi bi-file-check-fill"></i>
               <span>Certificate approval</span>
           </a>
       </li>
 
       <li class="nav-item">
-          <a class="nav-link " href="studentapproval.php">
+          <a class="nav-link " href="./studentapproval.php">
               <i class="bi bi-person-badge-fill"></i>
               <span>Participants ID Approval</span>
           </a>
       </li> 
 
     <li class="nav-item">
-          <a class="nav-link " href="addfaculty.php">
+          <a class="nav-link " href="./addfaculty.php">
               <i class="bi bi-journal-text"></i>
               <span>Add Faculty In-charge</span>
           </a>
       </li>
 
       <li class="nav-item">
-          <a class="nav-link " href="addclub.php">
+          <a class="nav-link " href="./addClub.php">
               <i class="bi bi-file-earmark-plus"></i>
               <span>Add New Club</span>
           </a>
       </li>
 
       <li class="nav-item">
-              <a class="nav-link " href="addannouncement.php">
+              <a class="nav-link " href="./addannouncement.php">
                   <i class="bi bi-megaphone-fill"></i>
                   <span>Announcements</span>
               </a>
           </li>
 
       <li class="nav-item">
-              <a class="nav-link " href="gallery_uploads.php">
+              <a class="nav-link " href="./gallery_uploads.php">
                   <i class="bi bi-images"></i>
                   <span>Gallery</span>
               </a>
           </li>
 
           <li class="nav-item">
-              <a class="nav-link " href="coordinator_uploads.php">
+              <a class="nav-link " href="./coordinator_uploads.php">
                   <i class="bi bi-people-fill"></i>
                   <span>Co-ordinators</span>
               </a>
           </li>
 
           <li class="nav-item">
-              <a class="nav-link " href="achievement_uploads.php">
+              <a class="nav-link " href="./achievement_uploads.php">
                   <i class="bi bi-trophy-fill"></i>
                   <span>Achievements</span>
               </a>
           </li>
 
          <li class="nav-item">
-              <a class="nav-link " href="adminprof.php">
+              <a class="nav-link " href="./adminprof.php">
                   <i class="bi bi-person-fill"></i>
                   <span>Profile</span>
               </a>
