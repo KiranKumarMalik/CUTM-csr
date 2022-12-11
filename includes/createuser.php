@@ -14,6 +14,7 @@
 		$addyr=mysqli_real_escape_string($db,$_POST['addyr']);
 		$sex=mysqli_real_escape_string($db,$_POST['sex']);
 		$religion=mysqli_real_escape_string($db,$_POST['religion']);
+		$courseDuration=mysqli_real_escape_string($db,$_POST['courseDuration']);
 		$dob=mysqli_real_escape_string($db,$_POST['dob']);
 		$hobby=mysqli_real_escape_string($db,$_POST['hobby']);
 		$presentadd=mysqli_real_escape_string($db,$_POST['presentadd']);
@@ -53,7 +54,7 @@
         print "</pre>";
 
         if(move_uploaded_file($image_tmp,"../images/profileimg/$image_name")){
-            $query="INSERT INTO student (name,email,regd,schoolname,program,branch,admissionyear,campus,sex,religion,dob,hobby,present_address,permanent_address,mobile,profileimage,status) VALUES('$name','$email','$regdno','$school','$program','$branch','$addyr','$campus','$sex','$religion','$dob','$hobby','$presentadd','$premantadd','$phone','$image_name','$status')";
+            $query="INSERT INTO student (name,email,regd,schoolname,program,branch,admissionyear,campus,courseDuration,sex,religion,dob,hobby,present_address,permanent_address,mobile,profileimage,status) VALUES('$name','$email','$regdno','$school','$program','$branch','$addyr','$campus','$courseDuration','$sex','$religion','$dob','$hobby','$presentadd','$premantadd','$phone','$image_name','$status')";
             $run=mysqli_query($db,$query) or die(mysqli_error($db));
             if ($run) {
                 header('location:../login/login.php');
@@ -269,7 +270,7 @@
 					$query="INSERT INTO gallery2 (connect_id,images) VALUES('$galleryid1','$img')";
         			$run=mysqli_query($db,$query) or die(mysqli_error($db));
 					if ($run) {
-						header('location:./gallery_uploads.php');
+						header('location:../adminlogin/gallery_uploads.php');
 						// echo "inserted done";
 					}
 					else {

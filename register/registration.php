@@ -51,6 +51,9 @@ require('../includes/function.php');
         else if($studentData['program'] == "Diploma"){
             $batch=$actualAddYear."-".$actualAddYear+3;
         }
+        else if($studentData['program'] == "MCA"){
+            $batch=$actualAddYear."-".$actualAddYear+1;
+        }
         // echo $actualAddYear."<br>";
         // echo $batch;
 	}
@@ -135,7 +138,7 @@ require('../includes/function.php');
         <div class="row">
             <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
                 <form method="post" action="../includes/createuser.php" class="reg-page" enctype="multipart/form-data">
-
+                <input type="hidden" class="form-control " name="courseDuration" style="margin-bottom: 20px;" value="<?=$studentData['courseDuration']?>" readonly>
                     <label>Name</label>
                     <input type="text" class="form-control " name="name" style="margin-bottom: 20px;" value="<?=$studentData['name']?>" readonly>
 

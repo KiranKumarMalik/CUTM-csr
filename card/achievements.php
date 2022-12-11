@@ -24,7 +24,7 @@ $campus=$_GET['campus'];
 <div><a href="../campusachievements.php"><p style="text-align:left"><i class="fa fa-arrow-left" aria-hidden="true"></i></p></a></div>
 <div class="u-center-text u-margin-top-huge">
       </div>
-  <div class="container" style="background-image: url('images/achievementbg.jpg');">
+  <div class="container" style="background-image: url('images/achievement.jpg');">
 
     
 

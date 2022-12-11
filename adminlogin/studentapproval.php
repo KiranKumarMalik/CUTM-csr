@@ -328,11 +328,11 @@ else
                                                                 <hr>
                                                                 <div class="row">
                                                                     <div class="col-sm-3">
-                                                                        <p class="mb-0">Batch </p>
+                                                                        <p class="mb-0">Admission Year </p>
                                                                     </div>
                                                                     <div class="col-sm-9">
                                                                         <p class="text-muted mb-0">
-                                                                            <?=$post['branch']?></p>
+                                                                            <?=$post['admissionyear']?></p>
                                                                     </div>
                                                                 </div>
                                                                 <hr>

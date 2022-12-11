@@ -1,7 +1,7 @@
 <?php
     session_start();
     // kiran laptop
-     $db =mysqli_connect('localhost:3307','root','','csr');
+     $db =mysqli_connect('localhost','root','','csr');
     // chinmaya laptop
     // $db =mysqli_connect('localhost','root','','csr');
     // RDS Server 

@@ -10,7 +10,8 @@ if($_SESSION['email'] and $utype=="admin")
     $adminData=getAllAdminDetails($db,$uemail);
     $getimage=getAllAdminDetails($db,$uemail);
     // this code for insert auto year and session
-    $thisYear=2019;
+    // $thisYear=2019;
+    $thisYear=date("Y");
     $query="SELECT * FROM year WHERE admissionyear='$thisYear'";
     $runQuery=mysqli_query($db,$query);
     if(mysqli_num_rows($runQuery)){

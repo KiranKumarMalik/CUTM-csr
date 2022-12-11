@@ -80,7 +80,7 @@ $getImage=getgalleryyear($db,$campus,$getYear);
 foreach($getImage as $getImages){
 ?>
 
-                <a href="campuswiseimg.php?year=<?=$getImages['years']?>&campus=<?=$campus?>&eventid=<?=$getImages['id1']?>">
+                <a href="campuswiseimg.php?year=<?=$getImages['years']?>&campus=<?=$campus?>&eventid=<?=$getImages['id']?>">
                     <div class="col-12 col-lg-4 col-md-6 portfolio-item filter-app" data-aos="fade-up" data-aos-delay="100">
                         <img class="img-fluid" src="./assets/img/event_images/<?=$getImages['images']?>">
                         <div class="portfolio-info">

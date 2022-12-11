@@ -18,6 +18,7 @@ if($_SESSION['email'] and $utype=="student")
   $AddmissionYear=getYearBySession($db,$AddmissionYear);
   // echo $AddmissionYear;
   // echo $uemail;
+  
   $posts=getAllPostAdmin($db);
 
   $studentResultyr1=getStudentResultyr1($db,$uemail,$AddmissionYear);
@@ -45,6 +46,8 @@ if($_SESSION['email'] and $utype=="student")
   //   $studentResultyr4[Sports]=0;
   //   $studentResultyr4[Responsibility]=0;
   // }
+
+
   
 }
 else
@@ -205,7 +208,7 @@ else
                 <p class="lead mb-4"><b>Student Name : </b> <?=$studentdata['name']?></p>
                 <p class="lead mb-4"><b>Student Regd. No :</b> <?=$uemail?></p>
                 <p class="lead mb-4"><b>School name :</b> <?=$studentdata['schoolname']?></p>
-                <p class="lead mb-4"><b>Batch:</b> <?=$AddmissionYear?> - <?=$AddmissionYear+$studentdata['courseDuration']?></p>
+                <p class="lead mb-4"><b>Batch:</b> <?=(int)$AddmissionYear?> - <?=(int)$AddmissionYear+(int)$studentdata['courseDuration']?></p>
                 <p class="lead mb-4"><b>Campus:</b><?=$studentdata['campus']?></p>
                 <p class="lead mb-4">CSaR Grade Sheet</p>
             
