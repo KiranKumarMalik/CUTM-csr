@@ -525,4 +525,30 @@
         $data=mysqli_fetch_assoc($run);
         return $data;
     }
+
+    // for super admin 
+    function getAllAcadamicYearStatusBySuperAdmin($db,$program,$month){
+        
+        $query="SELECT SUM(totalTime) as totalTime FROM csrtimesheet WHERE MONTH(date)=$month AND csrPr='$program'";
+        $run=mysqli_query($db,$query);
+        $data=mysqli_fetch_assoc($run);
+        return $data['totalTime'];
+    }
+
+    function getAllRegisterStudentProgramwiseBySuperAdmin($db,$program){
+        $query="SELECT * FROM csrtimesheet WHERE csrPr='$program' GROUP BY emailOfStd;";
+        $data=mysqli_query($db, $query);
+        $total=mysqli_num_rows($data);
+        return $total;
+    }
+
+    function getAllStudentdataprogramwiseBySuperAdmin($db,$program){
+        $query="SELECT SUM(totalTime) as totalTime, club FROM csrtimesheet WHERE csrPr='$program' GROUP BY club;";
+        $run=mysqli_query($db,$query);
+        $data=array();
+        while($d=mysqli_fetch_assoc($run)){
+            $data[]=$d;
+        }
+        return $data;
+    }
 ?>

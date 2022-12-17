@@ -12,7 +12,12 @@
           $_SESSION['isUserLoggedIn']=true;
           $_SESSION['email']=$email;
           $_SESSION['usertype']="admin";
-          header('location:../adminlogin/admin.php');
+          if ($email == "nrusinha@cutm.ac.in") {
+            header('location:../adminlogin/superdashboard.php');
+          }else {
+            header('location:../adminlogin/admin.php');
+          }
+          
       }
       else{
           echo"<script>alert('Incorrect email or password !');</script>";
