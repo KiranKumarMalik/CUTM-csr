@@ -1,6 +1,76 @@
-
 <?php
+require('../includes/function.php');
+require('../includes/database.php');
+$uemail=$_SESSION['email'];
+$utype=$_SESSION['usertype'];
+
+
+if($_SESSION['email'] and $utype=="admin")
+{
+    $adminData=getAllAdminDetails($db,$uemail);
+    $getimage=getAllAdminDetails($db,$uemail);
+}
+else
+{
+  header('location:../includes/logout.php');
+}
+
+$blsdata=getAllRegisterStudent($db,'Balasore');
+$bbsrdata=getAllRegisterStudent($db,'Bhubaneswar');
+$blrdata=getAllRegisterStudent($db,'Balangir');
+$pkddata=getAllRegisterStudent($db,'Paralakhemundi');
+$ryddata=getAllRegisterStudent($db,'Rayagada');
+$chtdata=getAllRegisterStudent($db,'Chhatrapur');
+
+for ($month = 1; $month <= 12; $month++) {
+  $campuswiseculture[$month]=getAllAcadamicYearStatusBySuperAdmin($db,'Culture',$month);
+}
+
+for ($month = 1; $month <= 12; $month++) {
+  $campuswisesports[$month]=getAllAcadamicYearStatusBySuperAdmin($db,'Sports',$month);
+}
+for ($month = 1; $month <= 12; $month++) {
+  $campuswiseresponsibility[$month]=getAllAcadamicYearStatusBySuperAdmin($db,'Responsibility',$month);
+}
+
+
+$totalCulture=getAllRegisterStudentProgramwiseBySuperAdmin($db,'Culture');
+$totalSports=getAllRegisterStudentProgramwiseBySuperAdmin($db,'Sports');
+$totalResponsibility=getAllRegisterStudentProgramwiseBySuperAdmin($db,'Responsibility');
+echo $totalCulture;
+
+
+
+
+
+$allclubis="";
+$allclubisCountDat="";
+echo $adminData['campus'];
+
+if(isset($_GET['program'])){
+  $getallClub=$_GET['program'];
+  $dataForGraph=getAllStudentdataprogramwiseBySuperAdmin($db,$getallClub);
+  foreach($dataForGraph as $alldatagraphs){
+    $allclubis=$allclubis."'".$alldatagraphs['club']."',";
+    $allclubisCountDat=$allclubisCountDat."'".$alldatagraphs['totalTime']."',";
+  }
+}
+else{
+  $dataForGraph=getAllStudentdataprogramwiseBySuperAdmin($db,'Culture');
+  foreach($dataForGraph as $alldatagraphs){
+    $allclubis=$allclubis."'".$alldatagraphs['club']."',";
+    $allclubisCountDat=$allclubisCountDat."'".$alldatagraphs['totalTime']."',";
+  }
+}
+
+
+// echo $allclubis;
+// echo $allclubisCountDat;
+// echo $getallClub;
+
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -324,13 +394,13 @@
             <div class="card-body">
               <h5 class="card-title">Club Status</h5>
               <h6> 
-                <a href="admin.php?program=Culture" class="btn btn-dark">
+                <a href="superdashboard.php?program=Culture" class="btn btn-dark">
                   Culture
                 </a>
-                <a href="admin.php?program=Sports" class="btn btn-dark">
+                <a href="superdashboard.php?program=Sports" class="btn btn-dark">
                   Sports
                 </a>
-                <a href="admin.php?program=Responsibility" class="btn btn-dark">
+                <a href="superdashboard.php?program=Responsibility" class="btn btn-dark">
                   Responsibility
                 </a>
               </h6>
@@ -397,231 +467,7 @@
       </div>
     </section>
 
-        <section class="section">
-            <div class="row">
-                <div class="col-lg-12">
-                <form action="" method="post">
-            <div class="row">
-            <form action="" method="post">
-            <div class="row">
-
-                <div class="col-md-4 bg-light text-right">
-                    <label>Select School</label>
-                    <select class="form-select" aria-label="Default select example" name="school">
-                    <option value="School of Engineering and Technology">Select school</option>
-                    <option value="School of Engineering and Technology">School of Engineering and Technology</option>
-                      <option value="School of Management">School of Management</option>
-                      <option value="M.S. Swaminathan School of Agriculture">M.S. Swaminathan School of Agriculture</option>
-                      <option value="School of Media and Communication">School of Media and Communication</option>
-                      <option value="School Of Paramedics & Allied Health Science">School Of Paramedics & Allied Health Science</option>
-                      <option value="School of Applied Science">School of Applied Sciences</option>
-                      <option value="School of Forensic Science">School of Forensic Sciences</option>
-                      <option value="School Of Pharmacy">School Of Pharmacy</option>
-                      <option value="School of Agriculture and Bio-Engineering">School of Agriculture and Bio-Engineering</option>
-                      <option value="School of Fisheries">School of Fisheries</option>
-                      <option value="School Of Vocational Education and Training">School Of Vocational Education and Training</option>
-                      <option value="School of Maritime Studies">School of Maritime Studies</option>
-                    </select>
-                </div>
-                
-                <div class="col-md-3 bg-light text-right">
-                    <label>Select Program</label>
-                    <select class="form-select" aria-label="Default select example" name="program" id="program"
-                                onChange="getClub()">
-                        <option value="">Loading</option>
-
-                    </select>
-                </div>
-                <div class="col-md-3 bg-light text-right">
-                    <label>Select Club</label>
-                        <select class="form-select" aria-label="Default select example" name="clubname" id="club">
-                            <option value="">Please Select Program</option>
-                        </select>
-                </div>
-                
-                
-                <div class="col-md-2 bg-light text-right"><br>
-                    <button type="submit" class="btn btn-primary btn-lg float-right" name="getCertificateDetails">Submit</button>
-                </div>
-            
-            </div>
-          </form>
-            
-            <div class="row">
-                <div class="col-md-8 bg-light text-right">
-                    
-                </div>
-               </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Post</h5>
-                            <!-- Table with stripped rows -->
-                            <table class="table datatable">
-                                <thead>
-                                    <tr>
-                                        <th>Sl</th>
-                                        <th scope="col">Name</th>
-                                        <th scope="col">Email</th>
-                                        <th scope="col">Total Hour Worked</th>
-                                        <th scope="col">Grade</th>
-                                        <th scope="col">Details View</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                    $campus=$adminData['campus'];
-                    if(isset($_POST['getCertificateDetails'])){
-                        $school=mysqli_real_escape_string($db,$_POST['school']);
-                        $program=mysqli_real_escape_string($db,$_POST['program']);
-                        $clubname=mysqli_real_escape_string($db,$_POST['clubname']);
-                    
-                        
-                        $posts=getAllPostAdminBySchoolClub($db,$school,$campus,$program,$clubname);
-
-                    }
-                    else {
-                    $posts=getAllPostAdminByCampus($db,$campus);
-                    }
-                    $count=1;
-                    foreach($posts as $post){
-                      if ($post['totalTime'] >= 90) {
-                        $gradeIs="O";
-                      }
-                      elseif ($post['totalTime'] >= 76) {
-                        $gradeIs="E";
-                      }
-                      elseif ($post['totalTime'] >= 61) {
-                        $gradeIs="A";
-                      }
-                      elseif ($post['totalTime'] >= 46) {
-                        $gradeIs="B";
-                      }
-                      elseif ($post['totalTime'] >= 30) {
-                        $gradeIs="C";
-                      }
-                      elseif ($post['totalTime'] >= 0) {
-                        $gradeIs="C";
-                      }
-                      else{
-                        $gradeIs="C";
-                      }
-
-                      $studentData=getAllStudentDetails($db,$post['emailOfStd']);
-                    ?>
-                                    <tr>
-                                        <th scope="row"><?=$count?></th>
-                                        <td><?=$post['NameOfStd']?></td>
-                                        <td><?=$post['emailOfStd']?></td>
-                                        <td><?=(int)$post['totalTime']?></td>
-                                        <td><?=$gradeIs?></td>
-                                        <td>
-                                            <a href="#" class="btn btn-dark" target="_blank" data-toggle="modal"
-                                                data-target=".<?=$post['id']?>">
-                                                Details
-                                            </a>
-                                        </td>
-                                    </tr>
-
-                                    <div class="modal fade <?=$post['id']?>" tabindex="-1" role="dialog"
-                                        aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg">
-                                            <div class="modal-content">
-
-                                                <br>
-
-                                                <div class="row">
-                                                    <div class="col-lg-4">
-                                                        <div class="card mb-4">
-                                                            <div class="card-body text-center">
-                                                                <img src="../images/profileimg/<?=$studentData['profileimage'] ?>"
-                                                                    alt="avatar" class="rounded-circle img-fluid"
-                                                                    style="width: 150px;">
-                                                                <h5 class="my-3"><?=$post['NameOfStd']?></h5>
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-8">
-                                                        <div class="card mb-4">
-                                                            <div class="card-body">
-                                                                <div class="row">
-                                                                    <div class="col-sm-3">
-                                                                        <p class="mb-0">Full Name</p>
-                                                                    </div>
-                                                                    <div class="col-sm-9">
-                                                                        <p class="text-muted mb-0">
-                                                                            <?=$studentData['name']?></p>
-                                                                    </div>
-                                                                </div>
-                                                                <hr>
-                                                                <div class="row">
-                                                                    <div class="col-sm-3">
-                                                                        <p class="mb-0">Email</p>
-                                                                    </div>
-                                                                    <div class="col-sm-9">
-                                                                        <p class="text-muted mb-0">
-                                                                            <?=$studentData['email']?></p>
-                                                                    </div>
-                                                                </div>
-                                                                <hr>
-                                                                <div class="row">
-                                                                    <div class="col-sm-3">
-                                                                        <p class="mb-0">Regd No</p>
-                                                                    </div>
-                                                                    <div class="col-sm-9">
-                                                                        <p class="text-muted mb-0">
-                                                                            <?=$studentData['regd']?></p>
-                                                                    </div>
-                                                                </div>
-                                                                <hr>
-                                                                <div class="row">
-                                                                    <div class="col-sm-3">
-                                                                        <p class="mb-0">Mobile</p>
-                                                                    </div>
-                                                                    <div class="col-sm-9">
-                                                                        <p class="text-muted mb-0">
-                                                                            <?=$studentData['mobile']?></p>
-                                                                    </div>
-                                                                </div>
-                                                                <hr>
-                                                            </div>
-
-                                                        </div>
-
-
-                                                        <div class="modal-footer">
-
-                                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-
-
-
-                                    <?php
-                    $count++;
-                  }
-                  ?>
-
-
-
-                                </tbody>
-                            </table>
-                            <!-- End Table with stripped rows -->
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
+       
 
     </main><!-- End #main -->
 

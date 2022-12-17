@@ -61,11 +61,6 @@ echo $totalCulture;
 
 
 
-
-
-
-
-
 $allclubis="";
 $allclubisCountDat="";
 echo $adminData['campus'];
