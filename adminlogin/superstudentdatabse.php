@@ -1,43 +1,5 @@
 <?php
-require('../includes/function.php');
-require('../includes/database.php');
-$uemail=$_SESSION['email'];
-$utype=$_SESSION['usertype'];
-if($_SESSION['email'] and $utype=="admin")
-{
-  $adminData=getAllAdminDetails($db,$uemail);
-  ?>
-<!-- <script>
-      alert("welcome ");
-    </script> -->
-<?php
-}
-else
-{
-  header('location:../includes/logout.php');
-}
-
-
-if(isset($_POST['addClub'])){
-    $program=mysqli_real_escape_string($db,$_POST['program']);
-    $club=mysqli_real_escape_string($db,$_POST['club']);
-
-    $query="INSERT INTO csrpr (csrPr,club) VALUES('$program','$club')";
-    $run=mysqli_query($db,$query) or die(mysqli_error($db));
-    if ($run) {
-        header('location:addClub.php');
-    }
-    else {
-        ?>
-        <script>
-            alert("Sorry dueto some issue your data not update ! ");
-            </script>
-        <?php
-    }
-
-  }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -105,7 +67,7 @@ if(isset($_POST['addClub'])){
                         <li class="dropdown-header">
                         <a href="adminprof.php"><img src="../images/profileimg/<?=$adminData['profileimg']?>" height="70px" style=border-radius:50%;></a>
                             <h6><?=$uemail?></h6>
-                            <span>Admin</span>
+                            <span>Super Admin</span>
                         </li>
                         <li>
                             <hr class="dropdown-divider">
@@ -131,9 +93,9 @@ if(isset($_POST['addClub'])){
     <!-- ======= Sidebar ======= -->
     <aside id="sidebar" class="sidebar">
 
-        <ul class="sidebar-nav" id="sidebar-nav">
+    <ul class="sidebar-nav" id="sidebar-nav">
 
-        <li class="nav-item">
+    <li class="nav-item">
             <a class="nav-link " href="./admin.php">
                 <i class="bi bi-grid"></i>
                 <span>Dashboard</span>
@@ -142,37 +104,28 @@ if(isset($_POST['addClub'])){
         <li class="nav-item">
           <a class="nav-link " href="./certificateapprove.php">
               <i class="bi bi-file-check-fill"></i>
-              <span>Certificate approval</span>
+              <span>Student Database</span>
           </a>
       </li>
-
       <li class="nav-item">
-          <a class="nav-link " href="./studentapproval.php">
+          <a class="nav-link " href="./superstudentactivity.php">
+              <i class="bi bi-file-check-fill"></i>
+              <span>Student Activity Data</span>
+          </a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link " href="./superadminfacultydata.php">
               <i class="bi bi-person-badge-fill"></i>
-              <span>Participants ID Approval</span>
+              <span>Admin & Faculty Database</span>
           </a>
       </li> 
 
     <li class="nav-item">
           <a class="nav-link " href="./addfaculty.php">
               <i class="bi bi-journal-text"></i>
-              <span>Add Faculty In-charge</span>
+              <span>Data Manipulate</span>
           </a>
       </li>
-
-      <li class="nav-item">
-          <a class="nav-link " href="./addClub.php">
-              <i class="bi bi-file-earmark-plus"></i>
-              <span>Add New Club</span>
-          </a>
-      </li>
-
-      <li class="nav-item">
-              <a class="nav-link " href="./addannouncement.php">
-                  <i class="bi bi-megaphone-fill"></i>
-                  <span>Announcements</span>
-              </a>
-          </li>
 
       <li class="nav-item">
               <a class="nav-link " href="./gallery_uploads.php">
@@ -217,18 +170,58 @@ if(isset($_POST['addClub'])){
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Add new club</h1>
+            <h1>Student Database</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="admin.php">Home</a></li>
-                    <li class="breadcrumb-item active">Add new club</li>
+                    <li class="breadcrumb-item active">Student Database</li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
 
         <section class="section">
+      <div class="row">
+
+        
+
+            </div>
+          </div>
+        </div>
+        <section class="section">
           <form action="" method="post">
             <div class="row">
+            <div class="col-md-4 bg-light text-right">
+                    <label>Campus</label>
+                    <select class="form-select" aria-label="Default select example" name="campus" >
+                        <option value="Culture">Culture</option>  
+                        <option value="Sports">Sports</option>  
+                        <option value="Responsibility">Responsibility</option>  
+                    </select>
+                </div>
+                <div class="col-md-4 bg-light text-right">
+                    <label>Academic Years</label>
+                    <select class="form-select" aria-label="Default select example" name="academicyears" >
+                        <option value="Culture">Culture</option>  
+                        <option value="Sports">Sports</option>  
+                        <option value="Responsibility">Responsibility</option>  
+                    </select>
+                </div>
+                <div class="col-md-4 bg-light text-right">
+                    <label>School</label>
+                    <select class="form-select" aria-label="Default select example" name="program" >
+                        <option value="Culture">Culture</option>  
+                        <option value="Sports">Sports</option>  
+                        <option value="Responsibility">Responsibility</option>  
+                    </select>
+                </div>
+                <div class="col-md-4 bg-light text-right">
+                    <label>Branch</label>
+                    <select class="form-select" aria-label="Default select example" name="program" >
+                        <option value="Culture">Culture</option>  
+                        <option value="Sports">Sports</option>  
+                        <option value="Responsibility">Responsibility</option>  
+                    </select>
+                </div>
                 <div class="col-md-4 bg-light text-right">
                     <label>Program</label>
                     <select class="form-select" aria-label="Default select example" name="program" >
@@ -237,14 +230,9 @@ if(isset($_POST['addClub'])){
                         <option value="Responsibility">Responsibility</option>  
                     </select>
                 </div>
-                <div class="col-md-4 bg-light text-right">
-                    <label>Club</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" name="club" value="" required>
-                    </div>
-                </div>
-                <!-- Modal -->
-                <div class="modal fade" id="confirmaddClub" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                
+        <!-- Modal -->
+        <div class="modal fade" id="confirmaddClub" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                         <div class="modal-header">
@@ -266,61 +254,70 @@ if(isset($_POST['addClub'])){
             
             </div>
           </form>
+<div class="col-lg-12">
 
-                <div class="col-lg-12">
-
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Post</h5>
-                            <!-- Table with stripped rows -->
-                            <table class="table datatable">
-                                <thead>
-                                    <tr>
-                                        <th>Sl</th>
-                                        <th scope="col">Program </th>
-                                        <th scope="col">Club </th>
-                                        
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                        $posts=getAllProgramAdmin($db);
-                                        $count=1;
-                                        foreach($posts as $post){
-                                            $studentData=getAllProgramAdmin($db);
-                                    ?>
-                                    <tr>
-                                        <th scope="row"><?=$count?></th>
-                                        <td><?=$post['csrPr']?></td>
-                                        <td><?=$post['club']?></td>
-                                    </tr>
-
-
-
-
-
-                                    <?php
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Post</h5>
+              <!-- Table with stripped rows -->
+              <table class="table datatable">
+                <thead>
+                  <tr>
+                    <th>Sl</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col-8">Year of Program</th>
+                    <th scope="col">CSaR program</th>
+                    <th scope="col">Club</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">From Time</th>
+                    <th scope="col">End Time</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php
+                  echo $teacherData['campus'];
+                  echo $teacherData['Clubget'];
+                    $posts=getAllPostTeacher($db,$teacherData['campus'],$teacherData['Clubget']);
+                    $count=1;
+                    foreach($posts as $post){
+                    ?>
+                      <tr>
+                        <th scope="row"><?=$count?></th>
+                        <td><?=$post['NameOfStd']?></td>
+                        <td><?=$post['emailOfStd']?></td>
+                        <td><?=$post['yearOfPr']?></td>
+                        <td><?=$post['csrPr']?></td>
+                        <td><?=$post['club']?></td>
+                        <td><?=$post['date']?></td>
+                        <td><?=$post['fromTime']?></td>
+                        <td><?=$post['endTime']?></td>
+                        <td><?=(int)$post['totalTime']?></td>
+                        <td><?=$post['status']?></td>
+                      </tr>
+                    <?php
                     $count++;
                   }
                   ?>
+                  
+                  
+                  
+                </tbody>
+              </table>
+              <!-- End Table with stripped rows -->
 
-
-
-                                </tbody>
-                            </table>
-                            <!-- End Table with stripped rows -->
-
-                        </div>
-                    </div>
-
-                </div>
             </div>
-        </section>
+          </div>
 
-    </main><!-- End #main -->
+        </div>
+      </div>
+    </section>
 
-    <!-- ======= Footer ======= -->
-    <footer id="footer" class="footer">
+  </main><!-- End #main -->
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
         <div class="copyright">
             &copy; Copyright <strong><span>CSaR | CUTM</span></strong>. All Rights Reserved
         </div>
@@ -353,39 +350,42 @@ if(isset($_POST['addClub'])){
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
 
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+        integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        function getPr() {
-            document.getElementById('program').disabled =true
-            axios.get("./api/pr.php").then((response)=>{
-                console.log(response);
-                let options='<option value="">Select one option</option>';
-                for(let each of response.data.data){
-                    options+=`<option value="${each}">${each}</option>`;
-                }
-                document.getElementById('program').innerHTML=options;
-                document.getElementById('program').disabled =false;
-            })
-        }
-        function getClub() {
-            let selection=document.getElementById('program').value;
-            if(!selection)return;
-            document.getElementById('club').disabled =true
-            document.getElementById('club').innerHTML='<option value="">Loading</option>';
-            axios.get("./api/club.php?scrPr="+selection).then((response)=>{
-                console.log(response);
-                let options='';
-                for(let each of response.data.data){
-                    options+=`<option value="${each}">${each}</option>`;
-                }
-                document.getElementById('club').innerHTML=options;
-                document.getElementById('club').disabled =false;
-            })
-        }
-        getPr();
-        
+    function getPr() {
+        document.getElementById('program').disabled = true
+        axios.get("./api/pr.php").then((response) => {
+            console.log(response);
+            let options = '<option value="">Select one option</option>';
+            for (let each of response.data.data) {
+                options += `<option value="${each}">${each}</option>`;
+            }
+            document.getElementById('program').innerHTML = options;
+            document.getElementById('program').disabled = false;
+        })
+    }
+
+    function getClub() {
+        let selection = document.getElementById('program').value;
+        if (!selection) return;
+        document.getElementById('club').disabled = true
+        document.getElementById('club').innerHTML = '<option value="">Loading</option>';
+        axios.get("./api/club.php?scrPr=" + selection).then((response) => {
+            console.log(response);
+            let options = '';
+            for (let each of response.data.data) {
+                options += `<option value="${each}">${each}</option>`;
+            }
+            document.getElementById('club').innerHTML = options;
+            document.getElementById('club').disabled = false;
+        })
+    }
+    getPr();
     </script>
 
 </body>

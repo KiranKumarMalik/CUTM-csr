@@ -130,6 +130,12 @@
                             <h2 style="color:white; font-style:Baskerville">For Admin</h2>
                         </a></button>
                     </a>
+                    <br>
+                    <button class="login100-form-btn btn btn-primary"><a href="superdashboard.php"
+                            style="color:white; font-style:Baskerville">
+                            <h2 style="color:white; font-style:Baskerville">For SuperAdmin</h2>
+                        </a></button>
+                    </a>
                 </center>
 
 
