@@ -571,4 +571,24 @@
         }
         return $data;
     }
+
+    function getAllPostBySuperadmin($db,$campus,$sessionSelect){
+        $query="SELECT * FROM csrtimesheet WHERE campus='$campus' AND yearOfPr='$sessionSelect' ORDER BY id DESC";
+        $run=mysqli_query($db,$query);
+        $data=array();
+        while($d=mysqli_fetch_assoc($run)){
+            $data[]=$d;
+        }
+        return $data;
+    }
+
+    function getAllPostCampusBySuperadmin($db,$campus){
+        $query="SELECT * FROM csrtimesheet WHERE campus='$campus' ORDER BY id DESC";
+        $run=mysqli_query($db,$query);
+        $data=array();
+        while($d=mysqli_fetch_assoc($run)){
+            $data[]=$d;
+        }
+        return $data;
+    }
 ?>
