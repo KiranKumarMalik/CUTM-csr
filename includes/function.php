@@ -9,6 +9,16 @@
         return $data;
     }
 
+    function getAllCampus($db){
+        $query="SELECT * FROM campus";
+        $run=mysqli_query($db,$query);
+        $data=array();
+        while($d=mysqli_fetch_assoc($run)){
+            $data[]=$d;
+        }
+        return $data;
+    }
+
     function getSessionByYear($db,$year){
         $query="SELECT * FROM year WHERE admissionyear='$year'";
         $run=mysqli_query($db,$query);
@@ -544,6 +554,16 @@
 
     function getAllStudentdataprogramwiseBySuperAdmin($db,$program){
         $query="SELECT SUM(totalTime) as totalTime, club FROM csrtimesheet WHERE csrPr='$program' GROUP BY club;";
+        $run=mysqli_query($db,$query);
+        $data=array();
+        while($d=mysqli_fetch_assoc($run)){
+            $data[]=$d;
+        }
+        return $data;
+    }
+
+    function getAllRegisterStudentBySuperadmin($db){
+        $query="SELECT * FROM csrtimesheet ORDER BY id DESC";
         $run=mysqli_query($db,$query);
         $data=array();
         while($d=mysqli_fetch_assoc($run)){
