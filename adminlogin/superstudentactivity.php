@@ -226,6 +226,7 @@ else
                         <label class="col-sm-2 col-form-label">Select Year of program</label>
                         <div class="col-sm-10">
                             <select class="form-select" aria-label="Default select example" name="year">
+                            <option value="">Select Year</option>
                                 <?php
                                   $year=getAllYear($db);
                                   $thisyear=date("Y");
@@ -298,6 +299,7 @@ else
                                     <th>Sl</th>
                                     <th scope="col">Name</th>
                                     <th scope="col">Email</th>
+                                    <th scope="col">Campus</th>
                                     <th scope="col-8">Acadamic Year</th>
                                     <th scope="col">CSaR program</th>
                                     <th scope="col">Club</th>
@@ -314,7 +316,14 @@ else
                                         $campusFind=mysqli_real_escape_string($db,$_POST['campusFind']);
                                         $year=mysqli_real_escape_string($db,$_POST['year']);
                                         $clubname=mysqli_real_escape_string($db,$_POST['clubname']);
-                                        $posts=getAllPostTeacherSession($db,$campusFind,$clubname,$year);
+                                        
+                                        if ($campusFind && $year && $clubname) {
+                                            $posts=getAllPostTeacherSession($db,$campusFind,$clubname,$year);
+                                        }elseif ($campusFind && $year) {
+                                            $posts=getAllPostBySuperadmin($db,$campusFind,$year);
+                                        }elseif ($campusFind) {
+                                            $posts=getAllPostCampusBySuperadmin($db,$campusFind);
+                                        }
                                     }
                                     else {
                                         $posts=getAllRegisterStudentBySuperadmin($db);
@@ -326,6 +335,7 @@ else
                                     <th scope="row"><?=$count?></th>
                                     <td><?=$post['NameOfStd']?></td>
                                     <td><?=$post['emailOfStd']?></td>
+                                    <td><?=$post['campus']?></td>
                                     <td><?=$post['yearOfPr']?></td>
                                     <td><?=$post['csrPr']?></td>
                                     <td><?=$post['club']?></td>
@@ -350,7 +360,6 @@ else
                 </div>
 
             </div>
-            </div>
 
         </section>
 
@@ -373,11 +382,9 @@ else
     <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/chart.js/chart.min.js"></script>
-    <!-- <script src="assets/vendor/echarts/echarts.min.js"></script> -->
     <script src="assets/vendor/quill/quill.min.js"></script>
     <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
     <script src="assets/vendor/tinymce/tinymce.min.js"></script>
-    <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
