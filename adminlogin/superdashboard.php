@@ -136,7 +136,8 @@ else{
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
-                        <a href="adminprof.php"><img src="../images/profileimg/<?=$adminData['profileimg']?>" height="70px" style=border-radius:50%;></a>
+                            <a href="adminprof.php"><img src="../images/profileimg/<?=$adminData['profileimg']?>"
+                                    height="70px" style=border-radius:50%;></a>
                             <h6><?=$uemail?></h6>
                             <span>Super Admin</span>
                         </li>
@@ -164,73 +165,52 @@ else{
     <!-- ======= Sidebar ======= -->
     <aside id="sidebar" class="sidebar">
 
-    <ul class="sidebar-nav" id="sidebar-nav">
+        <ul class="sidebar-nav" id="sidebar-nav">
 
-    <li class="nav-item">
-            <a class="nav-link " href="./admin.php">
-                <i class="bi bi-grid"></i>
-                <span>Dashboard</span>
-            </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="./superstudentdatabse.php">
-              <i class="bi bi-file-check-fill"></i>
-              <span>Student Database</span>
-          </a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link " href="./superstudentactivity.php">
-              <i class="bi bi-file-check-fill"></i>
-              <span>Student Activity Data</span>
-          </a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link " href="./superadminfacultydata.php">
-              <i class="bi bi-person-badge-fill"></i>
-              <span>Admin & Faculty Database</span>
-          </a>
-      </li> 
+            <li class="nav-item">
+                <a class="nav-link " href="./superdashboard.php">
+                    <i class="bi bi-grid"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="./superstudentdatabse.php">
+                    <i class="bi bi-journal-text"></i>
+                    <span>Student Database Add</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="./superstudentactivity.php">
+                    <i class="bi bi-file-check-fill"></i>
+                    <span>Student Activity Data</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="./superadminfacultydata.php">
+                    <i class="bi bi-person-badge-fill"></i>
+                    <span>Admin & Faculty Database</span>
+                </a>
+            </li>
 
-    <li class="nav-item">
-          <a class="nav-link " href="./addfaculty.php">
-              <i class="bi bi-journal-text"></i>
-              <span>Data Manipulate</span>
-          </a>
-      </li>
+            <li class="nav-item">
+                <a class="nav-link " href="./superadminstudentdata.php">
+                    <i class="bi bi-people-fill"></i>
+                    <span>registred Student</span>
+                </a>
+            </li>
 
-      <li class="nav-item">
-              <a class="nav-link " href="./gallery_uploads.php">
-                  <i class="bi bi-images"></i>
-                  <span>Gallery</span>
-              </a>
-          </li>
-
-          <li class="nav-item">
-              <a class="nav-link " href="./coordinator_uploads.php">
-                  <i class="bi bi-people-fill"></i>
-                  <span>Co-ordinators</span>
-              </a>
-          </li>
-
-          <li class="nav-item">
-              <a class="nav-link " href="./achievement_uploads.php">
-                  <i class="bi bi-trophy-fill"></i>
-                  <span>Achievements</span>
-              </a>
-          </li>
-
-         <li class="nav-item">
-              <a class="nav-link " href="./adminprof.php">
-                  <i class="bi bi-person-fill"></i>
-                  <span>Profile</span>
-              </a>
-          </li>
-         <li class="nav-item">
-              <a class="nav-link " href="../includes/logout.php">
-                  <i class="bi bi-box-arrow-right"></i>
-                  <span>Log out</span>
-              </a>
-          </li>
+            <li class="nav-item">
+                <a class="nav-link " href="./adminprof.php">
+                    <i class="bi bi-person-fill"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="../includes/logout.php">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>Log out</span>
+                </a>
+            </li>
 
 
 
@@ -251,223 +231,267 @@ else{
         </div><!-- End Page Title -->
 
         <section class="section">
-      <div class="row">
+            <div class="row">
 
-        <div class="col-lg-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Participant Status in all Campus</h5>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Participant Status in all Campus</h5>
 
-              <!-- Line Chart -->
-              <canvas id="lineChart" style="max-height: 400px;"></canvas>
-              <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                  new Chart(document.querySelector('#lineChart'), {
-                    type: 'line',
-                    data: {
-                      labels: ['Balasore', 'Bhubaneswar', 'Balangir', 'Paralakhemundi', 'Rayagada', 'Chhatrapur'],
-                      datasets: [{
-                        label: 'Number of Students',
-                        data: [<?=$blsdata?>, <?=$bbsrdata?>, <?=$blrdata?>, <?=$pkddata?>, <?=$ryddata?>, <?=$chtdata?>],
-                        fill: false,
-                        borderColor: 'rgb(255, 0, 0)',
-                        tension: 0.1
-                      }]
-                    },
-                    options: {
-                      scales: {
-                        y: {
-                          beginAtZero: true
-                        }
-                      }
-                    }
-                  });
-                });
-              </script>
-              <!-- End Line CHart -->
+                            <!-- Line Chart -->
+                            <canvas id="lineChart" style="max-height: 400px;"></canvas>
+                            <script>
+                            document.addEventListener("DOMContentLoaded", () => {
+                                new Chart(document.querySelector('#lineChart'), {
+                                    type: 'line',
+                                    data: {
+                                        labels: ['Balasore', 'Bhubaneswar', 'Balangir',
+                                            'Paralakhemundi', 'Rayagada', 'Chhatrapur'
+                                        ],
+                                        datasets: [{
+                                            label: 'Number of Students',
+                                            data: [<?=$blsdata?>, <?=$bbsrdata?>, <?=$blrdata?>,
+                                                <?=$pkddata?>, <?=$ryddata?>, <?=$chtdata?>
+                                            ],
+                                            fill: false,
+                                            borderColor: 'rgb(255, 0, 0)',
+                                            tension: 0.1
+                                        }]
+                                    },
+                                    options: {
+                                        scales: {
+                                            y: {
+                                                beginAtZero: true
+                                            }
+                                        }
+                                    }
+                                });
+                            });
+                            </script>
+                            <!-- End Line CHart -->
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Academic Year</h5>
+
+                            <!-- Column Chart -->
+                            <div id="columnChart"></div>
+
+                            <script>
+                            document.addEventListener("DOMContentLoaded", () => {
+                                new ApexCharts(document.querySelector("#columnChart"), {
+                                    series: [{
+                                        name: 'Culture',
+                                        data: [<?=(int)$campuswiseculture[1]?>,
+                                            <?=(int)$campuswiseculture[2]?>,
+                                            <?=(int)$campuswiseculture[3]?>,
+                                            <?=(int)$campuswiseculture[4]?>,
+                                            <?=(int)$campuswiseculture[5]?>,
+                                            <?=(int)$campuswiseculture[6]?>,
+                                            <?=(int)$campuswiseculture[7]?>,
+                                            <?=(int)$campuswiseculture[8]?>,
+                                            <?=(int)$campuswiseculture[9]?>,
+                                            <?=(int)$campuswiseculture[10]?>,
+                                            <?=(int)$campuswiseculture[11]?>,
+                                            <?=(int)$campuswiseculture[12]?>
+                                        ]
+                                    }, {
+                                        name: 'Sports',
+                                        data: [<?=(int)$campuswisesports[1]?>,
+                                            <?=(int)$campuswisesports[2]?>,
+                                            <?=(int)$campuswisesports[3]?>,
+                                            <?=(int)$campuswisesports[4]?>,
+                                            <?=(int)$campuswisesports[5]?>,
+                                            <?=(int)$campuswisesports[6]?>,
+                                            <?=(int)$campuswisesports[7]?>,
+                                            <?=(int)$campuswisesports[8]?>,
+                                            <?=(int)$campuswisesports[9]?>,
+                                            <?=(int)$campuswisesports[10]?>,
+                                            <?=(int)$campuswisesports[11]?>,
+                                            <?=(int)$campuswisesports[12]?>
+                                        ]
+                                    }, {
+                                        name: 'Responsibility',
+                                        data: [<?=(int)$campuswiseresponsibility[1]?>,
+                                            <?=(int)$campuswiseresponsibility[2]?>,
+                                            <?=(int)$campuswiseresponsibility[3]?>,
+                                            <?=(int)$campuswiseresponsibility[4]?>,
+                                            <?=(int)$campuswiseresponsibility[5]?>,
+                                            <?=(int)$campuswiseresponsibility[6]?>,
+                                            <?=(int)$campuswiseresponsibility[7]?>,
+                                            <?=(int)$campuswiseresponsibility[8]?>,
+                                            <?=(int)$campuswiseresponsibility[9]?>,
+                                            <?=(int)$campuswiseresponsibility[10]?>,
+                                            <?=(int)$campuswiseresponsibility[11]?>,
+                                            <?=(int)$campuswiseresponsibility[12]?>
+                                        ]
+                                    }],
+                                    chart: {
+                                        type: 'bar',
+                                        height: 350
+                                    },
+                                    plotOptions: {
+                                        bar: {
+                                            horizontal: false,
+                                            columnWidth: '55%',
+                                            endingShape: 'rounded'
+                                        },
+                                    },
+                                    dataLabels: {
+                                        enabled: false
+                                    },
+                                    stroke: {
+                                        show: true,
+                                        width: 2,
+                                        colors: ['standard']
+                                    },
+                                    xaxis: {
+                                        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
+                                            'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
+                                        ],
+                                    },
+                                    yaxis: {
+                                        title: {
+                                            text: 'Hours (Hrs)'
+                                        }
+                                    },
+                                    fill: {
+                                        opacity: 1
+                                    },
+                                    tooltip: {
+                                        y: {
+                                            formatter: function(val) {
+                                                return val + " Hours"
+                                            }
+                                        }
+                                    }
+                                }).render();
+                            });
+                            </script>
+                            <!-- End Column Chart -->
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Program</h5>
+
+                            <!-- Pie Chart -->
+                            <div id="pieChart"></div>
+
+                            <script>
+                            document.addEventListener("DOMContentLoaded", () => {
+                                new ApexCharts(document.querySelector("#pieChart"), {
+                                    series: [<?=$totalCulture?>, <?=$totalSports?>,
+                                        <?=$totalResponsibility?>
+                                    ],
+                                    chart: {
+                                        height: 350,
+                                        type: 'pie',
+                                        toolbar: {
+                                            show: true
+                                        }
+                                    },
+                                    labels: ['Cultutre', 'Sports', 'Responsibility']
+                                }).render();
+                            });
+                            </script>
+                            <!-- End Pie Chart -->
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Club Status</h5>
+                            <h6>
+                                <a href="superdashboard.php?program=Culture" class="btn btn-dark">
+                                    Culture
+                                </a>
+                                <a href="superdashboard.php?program=Sports" class="btn btn-dark">
+                                    Sports
+                                </a>
+                                <a href="superdashboard.php?program=Responsibility" class="btn btn-dark">
+                                    Responsibility
+                                </a>
+                            </h6>
+
+                            <!-- Bar Chart -->
+                            <canvas id="barChart" style="max-height: 400px;"></canvas>
+                            <script>
+                            document.addEventListener("DOMContentLoaded", () => {
+                                new Chart(document.querySelector('#barChart'), {
+                                    type: 'bar',
+                                    data: {
+                                        labels: [<?=$allclubis?>],
+                                        datasets: [{
+                                            label: 'Bar Chart',
+                                            data: [<?=$allclubisCountDat?>],
+                                            backgroundColor: [
+                                                'rgba(255, 99, 132, 0.2)',
+                                                'rgba(255, 159, 64, 0.2)',
+                                                'rgba(255, 205, 86, 0.2)',
+                                                'rgba(75, 192, 192, 0.2)',
+                                                'rgba(54, 162, 235, 0.2)',
+                                                'rgba(153, 102, 255, 0.2)',
+                                                'rgba(201, 203, 207, 0.2)'
+                                            ],
+                                            borderColor: [
+                                                'rgb(255, 99, 132)',
+                                                'rgb(255, 159, 64)',
+                                                'rgb(255, 205, 86)',
+                                                'rgb(75, 192, 192)',
+                                                'rgb(54, 162, 235)',
+                                                'rgb(153, 102, 255)',
+                                                'rgb(201, 203, 207)'
+                                            ],
+                                            borderWidth: 1
+                                        }]
+                                    },
+                                    options: {
+                                        scales: {
+                                            y: {
+                                                beginAtZero: true
+                                            }
+                                        }
+                                    }
+                                });
+                            });
+                            </script>
+                            <!-- End Bar CHart -->
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
 
             </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Academic Year</h5>
-
-              <!-- Column Chart -->
-              <div id="columnChart"></div>
-
-              <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                  new ApexCharts(document.querySelector("#columnChart"), {
-                    series: [{
-                      name: 'Culture',
-                      data: [<?=(int)$campuswiseculture[1]?>, <?=(int)$campuswiseculture[2]?>, <?=(int)$campuswiseculture[3]?>, <?=(int)$campuswiseculture[4]?>, <?=(int)$campuswiseculture[5]?>, <?=(int)$campuswiseculture[6]?>, <?=(int)$campuswiseculture[7]?>, <?=(int)$campuswiseculture[8]?>, <?=(int)$campuswiseculture[9]?>, <?=(int)$campuswiseculture[10]?>, <?=(int)$campuswiseculture[11]?>, <?=(int)$campuswiseculture[12]?>]
-                    }, {
-                      name: 'Sports',
-                      data: [<?=(int)$campuswisesports[1]?>, <?=(int)$campuswisesports[2]?>, <?=(int)$campuswisesports[3]?>, <?=(int)$campuswisesports[4]?>, <?=(int)$campuswisesports[5]?>, <?=(int)$campuswisesports[6]?>, <?=(int)$campuswisesports[7]?>, <?=(int)$campuswisesports[8]?>, <?=(int)$campuswisesports[9]?>, <?=(int)$campuswisesports[10]?>, <?=(int)$campuswisesports[11]?>, <?=(int)$campuswisesports[12]?>]
-                    }, {
-                      name: 'Responsibility',
-                      data: [<?=(int)$campuswiseresponsibility[1]?>, <?=(int)$campuswiseresponsibility[2]?>, <?=(int)$campuswiseresponsibility[3]?>, <?=(int)$campuswiseresponsibility[4]?>, <?=(int)$campuswiseresponsibility[5]?>, <?=(int)$campuswiseresponsibility[6]?>, <?=(int)$campuswiseresponsibility[7]?>, <?=(int)$campuswiseresponsibility[8]?>, <?=(int)$campuswiseresponsibility[9]?>, <?=(int)$campuswiseresponsibility[10]?>, <?=(int)$campuswiseresponsibility[11]?>, <?=(int)$campuswiseresponsibility[12]?>]
-                    }],
-                    chart: {
-                      type: 'bar',
-                      height: 350
-                    },
-                    plotOptions: {
-                      bar: {
-                        horizontal: false,
-                        columnWidth: '55%',
-                        endingShape: 'rounded'
-                      },
-                    },
-                    dataLabels: {
-                      enabled: false
-                    },
-                    stroke: {
-                      show: true,
-                      width: 2,
-                      colors: ['standard']
-                    },
-                    xaxis: {
-                      categories: ['Jan','Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',],
-                    },
-                    yaxis: {
-                      title: {
-                        text: 'Hours (Hrs)'
-                      }
-                    },
-                    fill: {
-                      opacity: 1
-                    },
-                    tooltip: {
-                      y: {
-                        formatter: function(val) {
-                          return val + " Hours"
-                        }
-                      }
-                    }
-                  }).render();
-                });
-              </script>
-              <!-- End Column Chart -->
-
-            </div>
-          </div>
-        </div>
-
-       
-
-        <div class="col-lg-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Program</h5>
-
-              <!-- Pie Chart -->
-              <div id="pieChart"></div>
-
-              <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                  new ApexCharts(document.querySelector("#pieChart"), {
-                    series: [<?=$totalCulture?>, <?=$totalSports?>, <?=$totalResponsibility?>],
-                    chart: {
-                      height: 350,
-                      type: 'pie',
-                      toolbar: {
-                        show: true
-                      }
-                    },
-                    labels: ['Cultutre', 'Sports', 'Responsibility']
-                  }).render();
-                });
-              </script>
-              <!-- End Pie Chart -->
-
-            </div>
-          </div>
-        </div>
+        </section>
 
 
-        <div class="col-lg-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Club Status</h5>
-              <h6> 
-                <a href="superdashboard.php?program=Culture" class="btn btn-dark">
-                  Culture
-                </a>
-                <a href="superdashboard.php?program=Sports" class="btn btn-dark">
-                  Sports
-                </a>
-                <a href="superdashboard.php?program=Responsibility" class="btn btn-dark">
-                  Responsibility
-                </a>
-              </h6>
-
-              <!-- Bar Chart -->
-              <canvas id="barChart" style="max-height: 400px;"></canvas>
-              <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                  new Chart(document.querySelector('#barChart'), {
-                    type: 'bar',
-                    data: {
-                      labels: [<?=$allclubis?>],
-                      datasets: [{
-                        label: 'Bar Chart',
-                        data: [<?=$allclubisCountDat?>],
-                        backgroundColor: [
-                          'rgba(255, 99, 132, 0.2)',
-                          'rgba(255, 159, 64, 0.2)',
-                          'rgba(255, 205, 86, 0.2)',
-                          'rgba(75, 192, 192, 0.2)',
-                          'rgba(54, 162, 235, 0.2)',
-                          'rgba(153, 102, 255, 0.2)',
-                          'rgba(201, 203, 207, 0.2)'
-                        ],
-                        borderColor: [
-                          'rgb(255, 99, 132)',
-                          'rgb(255, 159, 64)',
-                          'rgb(255, 205, 86)',
-                          'rgb(75, 192, 192)',
-                          'rgb(54, 162, 235)',
-                          'rgb(153, 102, 255)',
-                          'rgb(201, 203, 207)'
-                        ],
-                        borderWidth: 1
-                      }]
-                    },
-                    options: {
-                      scales: {
-                        y: {
-                          beginAtZero: true
-                        }
-                      }
-                    }
-                  });
-                });
-              </script>
-              <!-- End Bar CHart -->
-
-            </div>
-          </div>
-        </div>
-
-
-        
-
-     
-
-       
-
-        
-
-       
-
-      </div>
-    </section>
-
-       
 
     </main><!-- End #main -->
 
@@ -505,8 +529,10 @@ else{
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+        integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
         integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="

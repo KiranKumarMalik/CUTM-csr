@@ -112,15 +112,15 @@ else
         <ul class="sidebar-nav" id="sidebar-nav">
 
             <li class="nav-item">
-                <a class="nav-link " href="./admin.php">
+                <a class="nav-link " href="./superdashboard.php">
                     <i class="bi bi-grid"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="./certificateapprove.php">
-                    <i class="bi bi-file-check-fill"></i>
-                    <span>Student Database</span>
+                <a class="nav-link " href="./superstudentdatabse.php">
+                    <i class="bi bi-journal-text"></i>
+                    <span>Student Database Add</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -137,30 +137,9 @@ else
             </li>
 
             <li class="nav-item">
-                <a class="nav-link " href="./addfaculty.php">
-                    <i class="bi bi-journal-text"></i>
-                    <span>Data Manipulate</span>
-                </a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link " href="./gallery_uploads.php">
-                    <i class="bi bi-images"></i>
-                    <span>Gallery</span>
-                </a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link " href="./coordinator_uploads.php">
+                <a class="nav-link " href="./superadminstudentdata.php">
                     <i class="bi bi-people-fill"></i>
-                    <span>Co-ordinators</span>
-                </a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link " href="./achievement_uploads.php">
-                    <i class="bi bi-trophy-fill"></i>
-                    <span>Achievements</span>
+                    <span>registred Student</span>
                 </a>
             </li>
 
