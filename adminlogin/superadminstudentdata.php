@@ -176,6 +176,63 @@ else
 
         <section class="section dashboard">
 
+
+            <form action="" method="post">
+
+
+                <div class="col-lg">
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label">Select Campus</label>
+                        <div class="col-sm-10">
+                            <select class="form-select" aria-label="Default select example" name="campusFind">
+                                <?php
+                                  $campus=getAllCampus($db);
+                                  foreach($campus as $allCampus){
+                                ?>
+                                <option value="<?=$allCampus['campusName']?>"><?=$allCampus['campusName']?></option>
+                                <?php
+                                    
+                                }
+                                ?>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg">
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label">Select Admission Year</label>
+                        <div class="col-sm-10">
+                            <select class="form-select" aria-label="Default select example" name="year">
+                            <option value="">Select Year</option>
+                                <?php
+                                  $year=getAllYear($db);
+                                  $thisyear=date("Y");
+                                  foreach($year as $ct){
+                                ?>
+                                <option value="<?=$ct['Year']?>"><?=$ct['Year']?></option>
+                                <?php
+                                    
+                                }
+                                ?>
+                            </select>
+                        </div>
+                    </div>
+                </div>  
+
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary" name="getAllActivity">Submit</button>
+
+                    </div>
+                </div>
+
+            </form>
+
+
+
             <div class="col-lg-12">
 
                 <div class="card">
@@ -195,17 +252,27 @@ else
                                     <th scope="col">Branch</th>
                                     <th scope="col">Course Duration</th>
                                     <th scope="col">Campus</th>
-                                    <th scope="col">Admission Type</th>
                                     <th scope="col">Admission Year</th>
                                     <th scope="col">Sex</th>
                                     <th scope="col">Religion</th>
                                     <th scope="col">DOB</th>
-                                    <th scope="col">Blood Group</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
-                                    $posts=getStudentREGDDetailsBySuperAdmin($db);
+                                    if (isset($_POST['getAllActivity'])) {
+                                        $campusFind=mysqli_real_escape_string($db,$_POST['campusFind']);
+                                        $year=mysqli_real_escape_string($db,$_POST['year']);
+                                        
+                                        if ($campusFind && $year) {
+                                            $posts=getAllStudentDetailsBySuperAdminYearWise($db,$campusFind,$year);
+                                        }elseif ($campusFind) {
+                                            $posts=getAllStudentDetailsByAdmin($db,$campusFind);
+                                        }
+                                    }
+                                    else {
+                                        $posts=getAllRegisterStudentBySuperadmin($db);
+                                    }
                                     $count=1;
                                     foreach($posts as $post){
                                 ?>
@@ -219,12 +286,10 @@ else
                                     <td><?=$post['branch']?></td>
                                     <td><?=$post['courseDuration']?></td>
                                     <td><?=$post['campus']?></td>
-                                    <td><?=$post['admissiontype']?></td>
                                     <td><?=$post['admissionyear']?></td>
                                     <td><?=$post['sex']?></td>
                                     <td><?=$post['religion']?></td>
                                     <td><?=$post['dob']?></td>
-                                    <td><?=$post['blood_group']?></td>
                                 </tr>
                                 <?php
                     $count++;
