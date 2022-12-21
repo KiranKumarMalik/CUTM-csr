@@ -271,7 +271,7 @@ else
                                         }
                                     }
                                     else {
-                                        $posts=getAllRegisterStudentBySuperadmin($db);
+                                        $posts=getAllStudentDetailsBySuperAdmin($db);
                                     }
                                     $count=1;
                                     foreach($posts as $post){
