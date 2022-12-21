@@ -591,4 +591,34 @@
         }
         return $data;
     }
+
+    function getTeacherDetailsBySuperAdmin($db){
+        $query="SELECT * FROM teacher ORDER BY id DESC";
+        $run=mysqli_query($db,$query);
+        $data=array();
+        while($d=mysqli_fetch_assoc($run)){
+            $data[]=$d;
+        }
+        return $data;
+    }
+
+    function getTeacherDetailsBySuperAdminCampusandClug($db,$campus,$club){
+        $query="SELECT * FROM teacher WHERE campus='$campus' && Clubget='$club' ORDER BY id DESC";
+        $run=mysqli_query($db,$query);
+        $data=array();
+        while($d=mysqli_fetch_assoc($run)){
+            $data[]=$d;
+        }
+        return $data;
+    }
+
+    function getTeacherDetailsBySuperAdminCampus($db,$campus){
+        $query="SELECT * FROM teacher WHERE campus='$campus' ORDER BY id DESC";
+        $run=mysqli_query($db,$query);
+        $data=array();
+        while($d=mysqli_fetch_assoc($run)){
+            $data[]=$d;
+        }
+        return $data;
+    }
 ?>

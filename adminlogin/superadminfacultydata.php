@@ -1,4 +1,19 @@
 <?php
+require('../includes/function.php');
+require('../includes/database.php');
+$uemail=$_SESSION['email'];
+$utype=$_SESSION['usertype'];
+
+
+if($_SESSION['email'] and $utype=="admin")
+{
+    $adminData=getAllAdminDetails($db,$uemail);
+    $getimage=getAllAdminDetails($db,$uemail);
+}
+else
+{
+  header('location:../includes/logout.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,7 +80,8 @@
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
-                        <a href="adminprof.php"><img src="../images/profileimg/<?=$adminData['profileimg']?>" height="70px" style=border-radius:50%;></a>
+                            <a href="adminprof.php"><img src="../images/profileimg/<?=$adminData['profileimg']?>"
+                                    height="70px" style=border-radius:50%;></a>
                             <h6><?=$uemail?></h6>
                             <span>Super Admin</span>
                         </li>
@@ -93,73 +109,73 @@
     <!-- ======= Sidebar ======= -->
     <aside id="sidebar" class="sidebar">
 
-    <ul class="sidebar-nav" id="sidebar-nav">
+        <ul class="sidebar-nav" id="sidebar-nav">
 
-    <li class="nav-item">
-            <a class="nav-link " href="./admin.php">
-                <i class="bi bi-grid"></i>
-                <span>Dashboard</span>
-            </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="./certificateapprove.php">
-              <i class="bi bi-file-check-fill"></i>
-              <span>Student Database</span>
-          </a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link " href="./superstudentactivity.php">
-              <i class="bi bi-file-check-fill"></i>
-              <span>Student Activity Data</span>
-          </a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link " href="./superadminfacultydata.php">
-              <i class="bi bi-person-badge-fill"></i>
-              <span>Admin & Faculty Database</span>
-          </a>
-      </li> 
+            <li class="nav-item">
+                <a class="nav-link " href="./admin.php">
+                    <i class="bi bi-grid"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="./certificateapprove.php">
+                    <i class="bi bi-file-check-fill"></i>
+                    <span>Student Database</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="./superstudentactivity.php">
+                    <i class="bi bi-file-check-fill"></i>
+                    <span>Student Activity Data</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="./superadminfacultydata.php">
+                    <i class="bi bi-person-badge-fill"></i>
+                    <span>Admin & Faculty Database</span>
+                </a>
+            </li>
 
-    <li class="nav-item">
-          <a class="nav-link " href="./addfaculty.php">
-              <i class="bi bi-journal-text"></i>
-              <span>Data Manipulate</span>
-          </a>
-      </li>
+            <li class="nav-item">
+                <a class="nav-link " href="./addfaculty.php">
+                    <i class="bi bi-journal-text"></i>
+                    <span>Data Manipulate</span>
+                </a>
+            </li>
 
-      <li class="nav-item">
-              <a class="nav-link " href="./gallery_uploads.php">
-                  <i class="bi bi-images"></i>
-                  <span>Gallery</span>
-              </a>
-          </li>
+            <li class="nav-item">
+                <a class="nav-link " href="./gallery_uploads.php">
+                    <i class="bi bi-images"></i>
+                    <span>Gallery</span>
+                </a>
+            </li>
 
-          <li class="nav-item">
-              <a class="nav-link " href="./coordinator_uploads.php">
-                  <i class="bi bi-people-fill"></i>
-                  <span>Co-ordinators</span>
-              </a>
-          </li>
+            <li class="nav-item">
+                <a class="nav-link " href="./coordinator_uploads.php">
+                    <i class="bi bi-people-fill"></i>
+                    <span>Co-ordinators</span>
+                </a>
+            </li>
 
-          <li class="nav-item">
-              <a class="nav-link " href="./achievement_uploads.php">
-                  <i class="bi bi-trophy-fill"></i>
-                  <span>Achievements</span>
-              </a>
-          </li>
+            <li class="nav-item">
+                <a class="nav-link " href="./achievement_uploads.php">
+                    <i class="bi bi-trophy-fill"></i>
+                    <span>Achievements</span>
+                </a>
+            </li>
 
-         <li class="nav-item">
-              <a class="nav-link " href="./adminprof.php">
-                  <i class="bi bi-person-fill"></i>
-                  <span>Profile</span>
-              </a>
-          </li>
-         <li class="nav-item">
-              <a class="nav-link " href="../includes/logout.php">
-                  <i class="bi bi-box-arrow-right"></i>
-                  <span>Log out</span>
-              </a>
-          </li>
+            <li class="nav-item">
+                <a class="nav-link " href="./adminprof.php">
+                    <i class="bi bi-person-fill"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="../includes/logout.php">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>Log out</span>
+                </a>
+            </li>
 
 
 
@@ -170,294 +186,152 @@
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Student Database</h1>
+            <h1>Dashboard</h1>
             <nav>
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="admin.php">Home</a></li>
-                    <li class="breadcrumb-item active">Student Database</li>
+                    <li class="breadcrumb-item"><a href="student.php">Home</a></li>
+                    <li class="breadcrumb-item active">View Activity</li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
-        <section class="section">
-      <div class="row">
 
-        
+        <section class="section dashboard">
 
-            </div>
-          </div>
-        </div>
-        <section class="section">
-          <form action="" method="post">
-            <div class="row">
-            <div class="col-md-4 bg-light text-right">
-                    <label>Campus</label>
-                    <select class="form-select" aria-label="Default select example" name="campus" >
-                        <option value="Culture">Culture</option>  
-                        <option value="Sports">Sports</option>  
-                        <option value="Responsibility">Responsibility</option>  
-                    </select>
-                </div>
-                <div class="col-md-4 bg-light text-right">
-                    <label>Academic Years</label>
-                    <select class="form-select" aria-label="Default select example" name="academicyears" >
-                        <option value="Culture">Culture</option>  
-                        <option value="Sports">Sports</option>  
-                        <option value="Responsibility">Responsibility</option>  
-                    </select>
-                </div>
-                <div class="col-md-4 bg-light text-right">
-                    <label>Employee type</label>
-                    <select class="form-select" aria-label="Default select example" name="program" >
-                        <option value="Culture">Admin</option>  
-                        <option value="Sports">Faculty</option>   
-                    </select>
-                </div>
-                <div class="col-md-4 bg-light text-right">
-                    <label>Program</label>
-                    <select class="form-select" aria-label="Default select example" name="program" >
-                        <option value="Culture">Culture</option>  
-                        <option value="Sports">Sports</option>  
-                        <option value="Responsibility">Responsibility</option>  
-                    </select>
-                </div>
-                <div class="col-md-4 bg-light text-right">
-                    <label>Club</label>
-                    <select class="form-select" aria-label="Default select example" name="program" >
-                        <option value="Culture">Culture</option>  
-                        <option value="Sports">Sports</option>  
-                        <option value="Responsibility">Responsibility</option>  
-                    </select>
-                </div>
-                
-        <!-- Modal -->
-        <div class="modal fade" id="confirmaddClub" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Do You Sure to Add Club</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-footer">
-                          <button class="btn btn-success" type="submit" name="addClub">Yes</button>
-                          <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
-                        </div>
+
+            <form action="" method="post">
+
+
+                <div class="col-lg">
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label">Select Campus</label>
+                        <div class="col-sm-10">
+                            <select class="form-select" aria-label="Default select example" name="campusFind">
+                                <?php
+                                  $campus=getAllCampus($db);
+                                  foreach($campus as $allCampus){
+                                ?>
+                                <option value="<?=$allCampus['campusName']?>"><?=$allCampus['campusName']?></option>
+                                <?php
+                                    
+                                }
+                                ?>
+                            </select>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 bg-light text-right"><br>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#confirmaddClub">Search</button>
-                </div>
-            
-            </div>
-          </form>
-<section class="section">
-            <div class="row">
-                <div class="col-lg-12">
 
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Requests</h5>
-                            
-                            <p align="right"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#confirmaddClub">Add +</button></p>
-                
-                            <!-- Table with stripped rows -->
-                            <form action="../includes/multipleselectadmin.php" method="POST">
-                            <table class="table datatable">
-                                <thead>
-                                    <tr>
-                                        <th>Sl</th>
-                                        <th scope="col">Name</th>
-                                        <th scope="col">Email</th>
-                                        <th scope="col">schoolname	</th>
-                                        <th scope="col">program</th>
-                                        <th scope="col">branch</th>
-                                        <th scope="col">campus</th>
-                                        <th scope="col">mobile</th>
-                                        <th scope="col">Profile</th>
-                                        <th scope="col">Status</th>
-                                        <th scope="col">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                        $statuschange="";
-                                        $changecolor="success";
-                                        $campus=$adminData['campus'];
-                                        $posts=getAllStudentDetailsByAdmin($db,$campus);
-                                        $count=1;
-                                        foreach($posts as $post){
-                                            if($post['status'] == "Approved"){
-                                                $statuschange="return false";
-                                                $changecolor="secondary";
-                                            }
+                <div class="col-lg">
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label">Select CSaR program</label>
+                        <div class="col-sm-10">
+                            <select class="form-select" aria-label="Default select example" name="program" id="program"
+                                onChange="getClub()">
+                                <option value="">Loading</option>
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg">
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label">Select CSaR Club</label>
+                        <div class="col-sm-10">
+                            <select class="form-select" aria-label="Default select example" name="clubname" id="club">
+                                <option value="">Please Select Program</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary" name="getAllActivity">Submit</button>
+
+                    </div>
+                </div>
+
+
+            </form>
+
+
+
+
+
+
+
+            <div class="col-lg-12">
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Post</h5>
+                        <button type="submit" class="btn btn-primary" onclick="printTable()" >Export Table</button>
+                        <!-- Table with stripped rows -->
+                        <table class="table datatable" id="tableData">
+                            <thead>
+                                <tr>
+                                    <th>Sl</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Mobile</th>
+                                    <th scope="col">Campus</th>
+                                    <th scope="col">Designation</th>
+                                    <th scope="col">School</th>
+                                    <th scope="col">Club Assigned</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                    if (isset($_POST['getAllActivity'])) {
+                                        $campusFind=mysqli_real_escape_string($db,$_POST['campusFind']);
+                                        $clubname=mysqli_real_escape_string($db,$_POST['clubname']);
                                         
-                                    ?>
-                                    <tr>
-                                    <input type="hidden" name="allName[]" value="<?=$post['name']?>">
-                                    <input type="hidden" name="allEmail[]" value="<?=$post['email']?>">
-                                        <th scope="row"><?=$count?></th>
-                                        <td><?=$post['name']?></td>
-                                        <td><?=$post['email']?></td>
-                                        <td><?=$post['schoolname']?></td>
-                                        <td><?=$post['program']?></td>
-                                        <td><?=$post['branch']?></td>
-                                        <td><?=$post['campus']?></td>
-                                        <td><?=$post['mobile']?></td>
-                                        <td><img src="../images/profileimg/<?=$post['profileimage']?>" height="30px"></td>
-                                        <td><?=$post['status']?></td>
-                                        <td>
-                                        <a href="#" class="btn btn-dark" target="_blank" data-toggle="modal" data-target=".<?=$post['id']?>">
-                            Details 
-                          </a>       
-                                        </td>
-                                    </tr>
-                                    <div class="modal fade <?=$post['id']?>" tabindex="-1" role="dialog"
-                                        aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg">
-                                            <div class="modal-content">
-
-                                                <br>
-
-                                                <div class="row">
-                                                    <div class="col-lg-4">
-                                                        <div class="card mb-4">
-                                                            <div class="card-body text-center">
-                                                                <img src="../images/profileimg/<?=$post['profileimage'] ?>"
-                                                                    alt="avatar" class="rounded-circle img-fluid"
-                                                                    style="width: 130px;">
-                                                                <h5 class="my-3"><?=$post['name']?></h5>
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-8">
-                                                        <div class="card mb-4">
-                                                            <div class="card-body">
-                                                                <div class="row">
-                                                                    <div class="col-sm-3">
-                                                                        <p class="mb-0">Full Name </p>
-                                                                    </div>
-                                                                    <div class="col-sm-9">
-                                                                        <p class="text-muted mb-0">
-                                                                            <?=$post['name']?></p>
-                                                                    </div>
-                                                                </div>
-                                                                <hr>
-                                                                <div class="row">
-                                                                    <div class="col-sm-3">
-                                                                        <p class="mb-0">Registration number </p>
-                                                                    </div>
-                                                                    <div class="col-sm-9">
-                                                                        <p class="text-muted mb-0">
-                                                                            <?=$post['regd']?></p>
-                                                                    </div>
-                                                                </div>
-                                                                <hr>
-                                                                <div class="row">
-                                                                    <div class="col-sm-3">
-                                                                        <p class="mb-0">Program </p>
-                                                                    </div>
-                                                                    <div class="col-sm-9">
-                                                                        <p class="text-muted mb-0">
-                                                                            <?=$post['program']?></p>
-                                                                    </div>
-                                                                </div>
-                                                                <hr>
-                                                                <div class="row">
-                                                                    <div class="col-sm-3">
-                                                                        <p class="mb-0">Branch </p>
-                                                                    </div>
-                                                                    <div class="col-sm-9">
-                                                                        <p class="text-muted mb-0">
-                                                                            <?=$post['branch']?></p>
-                                                                    </div>
-                                                                </div>
-                                                                <hr>
-                                                                <div class="row">
-                                                                    <div class="col-sm-3">
-                                                                        <p class="mb-0">Admission Year </p>
-                                                                    </div>
-                                                                    <div class="col-sm-9">
-                                                                        <p class="text-muted mb-0">
-                                                                            <?=$post['admissionyear']?></p>
-                                                                    </div>
-                                                                </div>
-                                                                <hr>
-                                                                <div class="row">
-                                                                    <div class="col-sm-3">
-                                                                        <p class="mb-0">Campus </p>
-                                                                    </div>
-                                                                    <div class="col-sm-9">
-                                                                        <p class="text-muted mb-0">
-                                                                            <?=$post['campus']?></p>
-                                                                    </div>
-                                                                </div>
-                                                                <hr>
-                                                                <div class="row">
-                                                                    <div class="col-sm-3">
-                                                                        <p class="mb-0">Email</p>
-                                                                    </div>
-                                                                    <div class="col-sm-9">
-                                                                        <p class="text-muted mb-0">
-                                                                            <?=$post['email']?></p>
-                                                                    </div>
-                                                                </div>
-                                                                <hr>
-                                                                <div class="row">
-                                                                    <div class="col-sm-3">
-                                                                        <p class="mb-0">Mobile</p>
-                                                                    </div>
-                                                                    <div class="col-sm-9">
-                                                                        <p class="text-muted mb-0">
-                                                                            <?=$post['mobile']?></p>
-                                                                    </div>
-                                                                </div>
-                                                                <hr>
-                                                            </div>
-
-                                                        </div>
-
-
-                                                        <div class="modal-footer"> 
-                                                            <a href="../includes/approvestudent.php?id=<?=$post['id']?>&email=<?=$post['email']?>&name=<?=$post['name']?>" class="btn btn-<?=$changecolor?>" onclick="<?=$statuschange?>;">Approve</a>
-                                                                <button type="button" class="btn btn-danger"
-                                                                    data-dismiss="modal">Close</button> 
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <?php
-                                        $count++;
+                                        if ($campusFind && $clubname) {
+                                            $posts=getTeacherDetailsBySuperAdminCampusandClug($db,$campusFind,$clubname);
+                                        }elseif ($campusFind) {
+                                            $posts=getTeacherDetailsBySuperAdminCampus($db,$campusFind);
                                         }
-                                    ?>
+                                    }
+                                    else {
+                                        $posts=getTeacherDetailsBySuperAdmin($db);
+                                    }
+                                    $count=1;
+                                    foreach($posts as $post){
+                                ?>
+                                <tr>
+                                    <th scope="row"><?=$count?></th>
+                                    <td><?=$post['name']?></td>
+                                    <td><?=$post['email']?></td>
+                                    <td><?=$post['mobile']?></td>
+                                    <td><?=$post['campus']?></td>
+                                    <td><?=$post['Designation']?></td>
+                                    <td><?=$post['SchoolName']?></td>
+                                    <td><?=$post['Clubget']?></td>
+                                </tr>
+                                <?php
+                    $count++;
+                  }
+                  ?>
 
 
 
-                                </tbody>
-                                
-                            </table>
-                            </from>
-                            <!-- End Table with stripped rows -->
+                            </tbody>
+                        </table>
+                        <!-- End Table with stripped rows -->
 
-                        </div>
                     </div>
-
                 </div>
+
             </div>
+
         </section>
 
-    </main><!-- End #main -->
 
+    </main><!-- End #main -->
     <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
+    <footer id="footer" class="footer">
         <div class="copyright">
             &copy; Copyright <strong><span>CSaR | CUTM</span></strong>. All Rights Reserved
         </div>
@@ -473,11 +347,9 @@
     <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/chart.js/chart.min.js"></script>
-    <script src="assets/vendor/echarts/echarts.min.js"></script>
     <script src="assets/vendor/quill/quill.min.js"></script>
     <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
     <script src="assets/vendor/tinymce/tinymce.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
@@ -490,12 +362,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+        integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
         integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" integrity="sha512-r22gChDnGvBylk90+2e/ycr3RVrDi8DIOkIGNhJlKfuyQM4tIRAI062MaV8sfjQKYVGjOBaZBOA87z+IhZE9DA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
     <script>
     function getPr() {
         document.getElementById('program').disabled = true
@@ -526,6 +403,19 @@
         })
     }
     getPr();
+    </script>
+
+    <script>
+        function printTable(){
+            let data=document.getElementById('tableData');
+            console.log(data);
+            var fp=XLSX.utils.table_to_book(data,{sheet:'cutm'});
+            XLSX.write(fp,{
+                bookType:'xlsx',
+                type:'base64'
+            });
+            XLSX.writeFile(fp,'qualificationData.xlsx')
+        }
     </script>
 
 </body>
