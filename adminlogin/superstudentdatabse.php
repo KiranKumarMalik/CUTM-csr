@@ -14,6 +14,51 @@ else
 {
   header('location:../includes/logout.php');
 }
+
+if(isset($_POST['importExcel'])){
+	$file=$_FILES['excelData']['tmp_name'];
+	// echo "<PRE>";
+    // echo $file;
+	$ext=pathinfo($_FILES['excelData']['name'],PATHINFO_EXTENSION);
+	if($ext=='xlsx'){
+		require('./PHPExcel/PHPExcel.php');
+		require('./PHPExcel/PHPExcel/IOFactory.php');
+		
+		
+		$obj=PHPExcel_IOFactory::load($file);
+		foreach($obj->getWorksheetIterator() as $sheet){
+			$getHighestRow=$sheet->getHighestRow();
+			for($i=2;$i<=$getHighestRow;$i++){
+				$name=$sheet->getCellByColumnAndRow(0,$i)->getValue();
+				$email=$sheet->getCellByColumnAndRow(1,$i)->getValue();
+                $regd=$sheet->getCellByColumnAndRow(2,$i)->getValue();
+                $schoolname=$sheet->getCellByColumnAndRow(3,$i)->getValue();
+                $program=$sheet->getCellByColumnAndRow(4,$i)->getValue();
+                $branch=$sheet->getCellByColumnAndRow(5,$i)->getValue();
+                $courseDuration=$sheet->getCellByColumnAndRow(6,$i)->getValue();
+                $campus=$sheet->getCellByColumnAndRow(7,$i)->getValue();
+                $admissiontype=$sheet->getCellByColumnAndRow(8,$i)->getValue();
+                $admissionyear=$sheet->getCellByColumnAndRow(9,$i)->getValue();
+                $sex=$sheet->getCellByColumnAndRow(10,$i)->getValue();
+                $religion=$sheet->getCellByColumnAndRow(11,$i)->getValue();
+                $dob=$sheet->getCellByColumnAndRow(12,$i)->getValue();
+                $blood_group=$sheet->getCellByColumnAndRow(13,$i)->getValue();
+                
+				if($name!=''){
+					// mysqli_query($db,"INSERT INTO studregd (name,email,regd,schoolname,program,branch,courseDuration,campus,admissiontype,admissionyear,sex,religion,dob,blood_group) VALUES('$name','$email','$regd','$schoolname','$program','$branch','$courseDuration','$campus','$admissiontype','$sex','$religion','$dob','$blood_group');");
+                    $query="INSERT INTO studregd (name,email,regd,schoolname,program,branch,courseDuration,campus,admissiontype,admissionyear,sex,religion,dob,blood_group) VALUES('$name','$email','$regd','$schoolname','$program','$branch','$courseDuration','$campus','$admissiontype','$admissionyear','$sex','$religion','$dob','$blood_group')";
+                    $run=mysqli_query($db,$query) or die(mysqli_error($db));
+                    
+				}
+                $totalIs=$totalIs+$run;
+			}
+            echo "<script>alert('Total data inserted is ".$totalIs."');</script>";
+		}
+	}else{
+		echo "<script>alert('Invalid format');</script>";
+	}
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,6 +96,55 @@ else
 </head>
 
 <body>
+<!-- import excel data modal-->
+    <div class="modal fade" id="importExcel" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Please upload your <a href="./PHPExcel/testing.xlsx">excel in this format</a></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form method="post" action="" enctype="multipart/form-data">
+                    <div class="row mb-3">
+                        <label for="inputText" class="col-sm-2 col-form-label">Excel</label>
+                        <div class="col-sm-10">
+                            <input type="file" class="form-control" name="excelData" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-success" type="submit" name="importExcel">Import Excel</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+
+
+<!-- insert single student data modal -->
+    <div class="modal fade" id="importStudentData" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Insert Student details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success" type="submit" name="approved">Yes</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <!-- ======= Header ======= -->
     <header id="header" class="header fixed-top d-flex align-items-center">
@@ -181,7 +275,8 @@ else
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Post</h5>
-                        <button type="submit" class="btn btn-primary" onclick="printTable()" >Export Table</button>
+                        <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#importExcel">Import Student Data</button>
+                        <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#importStudentData">Insert Indivisual Student Data</button>
                         <!-- Table with stripped rows -->
                         <table class="table datatable" id="tableData">
                             <thead>
@@ -287,52 +382,7 @@ else
         integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" integrity="sha512-r22gChDnGvBylk90+2e/ycr3RVrDi8DIOkIGNhJlKfuyQM4tIRAI062MaV8sfjQKYVGjOBaZBOA87z+IhZE9DA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
-    <script>
-    function getPr() {
-        document.getElementById('program').disabled = true
-        axios.get("./api/pr.php").then((response) => {
-            console.log(response);
-            let options = '<option value="">Select one option</option>';
-            for (let each of response.data.data) {
-                options += `<option value="${each}">${each}</option>`;
-            }
-            document.getElementById('program').innerHTML = options;
-            document.getElementById('program').disabled = false;
-        })
-    }
 
-    function getClub() {
-        let selection = document.getElementById('program').value;
-        if (!selection) return;
-        document.getElementById('club').disabled = true
-        document.getElementById('club').innerHTML = '<option value="">Loading</option>';
-        axios.get("./api/club.php?scrPr=" + selection).then((response) => {
-            console.log(response);
-            let options = '';
-            for (let each of response.data.data) {
-                options += `<option value="${each}">${each}</option>`;
-            }
-            document.getElementById('club').innerHTML = options;
-            document.getElementById('club').disabled = false;
-        })
-    }
-    getPr();
-    </script>
-
-    <script>
-        function printTable(){
-            let data=document.getElementById('tableData');
-            console.log(data);
-            var fp=XLSX.utils.table_to_book(data,{sheet:'cutm'});
-            XLSX.write(fp,{
-                bookType:'xlsx',
-                type:'base64'
-            });
-            XLSX.writeFile(fp,'qualificationData.xlsx')
-        }
-    </script>
 
 </body>
 
