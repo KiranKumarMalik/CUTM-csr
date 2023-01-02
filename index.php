@@ -67,7 +67,12 @@ foreach($getallAnnousement as $getallAnnousements){
                 <div class="col-lg-12">
                     <div class="text-center header-elements">
                         <h1 data-aos="fade-up" class="header-main-title" style="color: #f4eeee;font-size: 48px;letter-spacing: 2px;"><strong>WELCOME TO CSaR</strong><br></h1>
-                        <p class="lead d-inline" data-aos="fade-up" style="color: #f4eeee;width: 50%;"><strong>Culture Sports and Responsibility</strong><br></p><a href="login/login.php"><button class="btn btn-outline-info header-btn" data-aos="fade-right" type="button">CSaR LOGIN</button></a>
+                        <p class="lead d-inline" data-aos="fade-up" style="color: #f4eeee;width: 50%;"><strong>Culture Sports and Responsibility</strong><br></p>
+                        <a href="login/login.php">
+                            <div class="wrap">
+                                 <button class="button">Login<i class="fa fa-sign-in" aria-hidden="true"></i></button>
+                            </div>
+                        </a>
                         <div class="header-icon"
                             style="margin-top: 80px;"><a data-aos="fade-up" class="nav-link scrollto" href="#about-us"><i class="fa fa-angle-down hvr-hang" style="color: #f4eeee;font-size: 48px;"></i></a></div>
                     </div>
@@ -332,11 +337,21 @@ foreach($getallAnnousement as $getallAnnousements){
                                 <i class="fa fa-map-marker fa-5x" style="color:tomato"></i>
                                 <h4 class="card-title" style="margin-top: 20px;"><strong>Chatrapur</strong></h4>
                                 <ul class="list-group">
-                                    <p class="text-center" data-aos="fade-up">Chhatrapur, Ganjam, Odisha.</p>
+                                    <p class="text-center" data-aos="fade-up">Industrial Estate , Kaliabali Chhaka, CHATRAPUR Ganjam - 761045.</p>
                                 </ul>
                             </div>
                         </div>
                     </div>
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe width="1160" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Centurion%20University%20of%20Technology%20and%20Management&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                                <a href="https://www.whatismyip-address.com"></a>
+                                <br>
+                                <style>.mapouter{position:relative;text-align:right;height:500px;width:1160px;}</style>
+                                <a href="https://www.embedgooglemap.net">custom map for website</a>
+                                <style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:1160px;}</style>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
@@ -412,13 +427,13 @@ foreach($getallAnnousement as $getallAnnousements){
                             <li><a href="imagegallery.php">Image gallery</a></li>
                             <li><a href="announcements.php">Announcements</a></li>
                             <li><a href="events.php">Events</a></li>
-                            <li><a href="designer.php">Designer</a></li>
+                            <li><a href="assets/img/designer/index.html">Designer</a></li>
                         </ul>
                     </div>
                     <!-- End: About -->
                     <!-- Start: Footer Text -->
                     <div class="col-md-6 item text" data-aos="fade-up">
-                        <h4>Centurion University of Technology and Management</h4>
+                    <h4>Centurion University of Technology and Management</h4>
                         <h3><i class="fa fa-map-marker fa-1x" style="color:white"></i> Corporate Office</h3>
                         <p> HIG-4, Floor 1&2, Jaydev Vihar,Opp Pal Heights, Bhubaneswar, Dist: Khurda, Odisha, India.</p>
                         <h3 style="color:white"><i class="fa fa-globe fa-1x" style="color:white"></i> <a href="https://cutm.ac.in/">www.cutm.ac.in</h3></a>
