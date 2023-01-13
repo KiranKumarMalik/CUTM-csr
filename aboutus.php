@@ -62,119 +62,169 @@
                 </div>
                 <div class="col">      
                         <h1 data-aos="fade-up" style="color: #002654;"><strong>CSaR Program Details</strong></h1>
-                        <p class="lead" data-aos="fade-up" style="color: #9bc4e2;">Besides the clubs given below, students are welcomed to send their ideas on new clubs to <a href="mailto: csr.cit@cutm.ac.in">csr.cit@cutm.ac.in</a>(CIT), <a href="mailto: csr.pkd@cutm.ac.in">csr.pkd@cutm.ac.in</a> (JITM & CSREM) or submit the same to the professor In-Charge, CSR/Dean, Student Affairs.</p>
-                        <p data-aos="fade-up">It is part of our curriculum that all students of Centurion University of Technology and Management will now be required to participate in the Culture, Sports, and Responsibility (CSaR) program during their studies at CUTM w.e.f. 2011-12 academic year.</p>
-                        <p data-aos="fade-up">The program gives students an opportunity to learn from the experience of doing real tasks beyond the classroom, related to <b>Culture (Student life/creative pursuits), Sports (activities for Physical Fitness) and Responsibility (activities for the benifit of the community or the environment)</b></p>
+                        <p data-aos="fade-up" align="justify">Besides the clubs given below, students are welcomed to send their ideas on new clubs to <a href="mailto: csrcell.bbs@cutm.ac.in" style="color: #000000;">csrcell.bbs@cutm.ac.in</a> (Bhubaneswar), <a href="mailto: csr.bls@cutm.ac.in" style="color: #000000;">csr.bls@cutm.ac.in</a> (Balasore), <a href="mailto: csr.blr@cutm.ac.in" style="color: #000000;">csrcell.blr@cutm.ac.in</a> (Balangir), <a href="mailto: csr.ryd@cutm.ac.in" style="color: #000000;">csr.ryd@cutm.ac.in</a> (Ryagada), <a href="mailto: csr.chr@cutm.ac.in" style="color: #000000;">csr.chr@cutm.ac.in</a> (Chhatrapur), <a href="mailto: csr.pkd@cutm.ac.in" style="color: #000000;">csr.pkd@cutm.ac.in</a> (Paralakhemundi) or submit the same to the professor In-Charge, CSR/Dean, Dean Students' welfares. It is part of our curriculum that all students of Centurion University of Technology and Management will now be required to participate in the Culture, Sports, and Responsibility (CSaR) program during their studies at CUTM w.e.f. 2011-12 academic year.</p>
+                        <p data-aos="fade-up" align="justify">The program gives students an opportunity to learn from the experience of doing real tasks beyond the classroom, related to <b>Culture (Student life/creative pursuits), Sports (activities for Physical Fitness) and Responsibility (activities for the benifit of the community or the environment)</b></p>
                 </div>
             </div>
-            <p data-aos="fade-up">Each student is required to complete a total of <b>30 hours</b> of <b>CSaR</b> activities each academic year*. This should include <b>10 hours of Culture, 10 hours of Sports and 10 hours of Responsibility.</b> After completing of an activity, the faculty supervisor must sign this record booklet. <b>Only students who have completed the required hours (each activity will be minimum of 1 hour and maximum of 8 hours) of CSaR, are eligible to pass that academic year.</b></p>
-            <p data-aos="fade-up">At the end of the Centurion university degree, the <b>CSaR grade will be reflected in the final Grade Sheet and the student will receive the CSaR Booklet listing all of the CSaR activities</b> he has completed. This can be <b>used for his/her Resume.</b></p>
-            <p data-aos="fade-up">Information about student clubs, meetings, including details of Faculty-In-Charge, their contact and <b>CSaR updates are displayed on the CSaR Activity Information Board on campus.</b></p>
-            <p data-aos="fade-up">Student can ask any faculty member to supervise the activity and sign the CSaR Booklet indicating that the hours have been completed.</p>
+        <p data-aos="fade-up" align="justify">Each student is required to complete a total of <b>30 hours</b> of <b>CSaR</b> activities each academic year. This should include <b>10 hours of Culture, 10 hours of Sports and 10 hours of Responsibility.</b> After completing of an activity, the faculty supervisor must supervise and approve the timesheet of student. <b>Only students who have completed the required hours (each activity will be minimum of 1 hour and maximum of 8 hours) of CSaR, are eligible to get CSaR grade of that academic year.</b></p>
+            <p data-aos="fade-up" align="justify">At the end of the Centurion university degree, the <b>CSaR grade will be reflected in the final Grade Sheet and the student will receive the CSaR Credit complition Certificate listing all of the CSaR activities</b> he/she has completed. This can be <b>used for his/her Resume.</b></p>
+            <p data-aos="fade-up" align="justify">Information about student clubs, meetings, including details of Faculty-In-Charge, their contact and <b>CSaR updates are displayed on the CSaR Activity Information Board on campus.</b></p>
+            <p data-aos="fade-up" align="justify">Student can ask any faculty member to supervise the activity and filled the timesheet that the hours have been completed.</p>
             <h3 class="lead" data-aos="fade-up" style="color: #002654;"><b>CLUB DETAILS</b></h3>
             <p data-aos="fade-up"><b>Culture:</b></p>
-            <li data-aos="fade-up"> Music Club</li>
-            <li data-aos="fade-up"> Dance Club</li>
-            <li data-aos="fade-up"> Dramatic Club</li>
-            <li data-aos="fade-up"> Painting Club</li>
-            <li data-aos="fade-up"> Movie Club</li>
-            <li data-aos="fade-up"> Laughter Club</li>
-            <li data-aos="fade-up"> Literary Club</li>
-            <li data-aos="fade-up"> Designer Club</li>
-            <li data-aos="fade-up"> Handicraft Club and many more...</li><br>
+            <ul>
+                <li data-aos="fade-up"> Music Club</li>
+                <li data-aos="fade-up"> Dance Club</li>
+                <li data-aos="fade-up"> Dramatic Club</li>
+                <li data-aos="fade-up"> Painting Club</li>
+                <li data-aos="fade-up"> Movie Club</li>
+                <li data-aos="fade-up"> Laughter Club</li>
+                <li data-aos="fade-up"> Literary Club</li>
+                <li data-aos="fade-up"> Designer Club</li>
+                <li data-aos="fade-up"> Waste to Wealth Innovation Club</li>
+                <li data-aos="fade-up"> Language Club</li>
+                <li data-aos="fade-up"> Creativity Club</li>
+                <li data-aos="fade-up"> Fashion Club</li>
+                <li data-aos="fade-up"> CHEF Club</li>
+                <li data-aos="fade-up"> Handicraft Club</li><br>
+            </ul>
             <p data-aos="fade-up"><b>Sports:</b></p>
-            <li data-aos="fade-up"> Sports Club</li>
-            <li data-aos="fade-up"> PC Game Club</li>
-            <li data-aos="fade-up"> Health Club</li>
-            <li data-aos="fade-up"> Adventure Club</li>
-            <li data-aos="fade-up"> Yoga & Meditation Club</li>
-            <li data-aos="fade-up"> NCC Club</li>
-            <li data-aos="fade-up"> Bharat Scout & Guide Club</li>
-            <li data-aos="fade-up"> SEDA Club and many more...</li><br>
+            <ul>
+                <li data-aos="fade-up"> Futsal Club</li>
+                <li data-aos="fade-up"> PC Game Club</li>
+                <li data-aos="fade-up"> Athletics Club</li>
+                <li data-aos="fade-up"> Adventure Club</li>
+                <li data-aos="fade-up"> Yoga & Meditation Club</li>
+                <li data-aos="fade-up"> NCC Club</li>
+                <li data-aos="fade-up"> Throwball Club</li>
+                <li data-aos="fade-up"> Tennis Club</li>
+                <li data-aos="fade-up"> Badminton Club</li>
+                <li data-aos="fade-up"> T.T, Chess & Carrom Club</li>
+                <li data-aos="fade-up"> Volleyball Club</li>
+                <li data-aos="fade-up"> Basketball Club</li>
+                <li data-aos="fade-up"> Kabaddi Club</li>
+                <li data-aos="fade-up"> KHO-KHO Club</li>
+                <li data-aos="fade-up"> Swimming Club</li>
+                <li data-aos="fade-up"> Cricket Club</li>
+                <li data-aos="fade-up"> GYM & Fitness Club</li>
+                <li data-aos="fade-up"> Bharat Scout & Guide Club</li><br>
+            </ul>
             <p data-aos="fade-up"><b>Responsibility:</b></p>
-            <li data-aos="fade-up"> Youth Red Cross</li>
-            <li data-aos="fade-up"> Science Club</li>
-            <li data-aos="fade-up"> Robotics Club</li>
-            <li data-aos="fade-up"> Innovateur Club</li>
-            <li data-aos="fade-up"> P & P Club</li>
-            <li data-aos="fade-up"> Circuit Design & Simulation Club</li>
-            <li data-aos="fade-up"> NSS Club and many more...</li><br>
+            <ul>
+                <li data-aos="fade-up"> Youth Red Cross</li>
+                <li data-aos="fade-up"> Health Club</li>
+                <li data-aos="fade-up"> Animal Club</li>
+                <li data-aos="fade-up"> Internet of Things Club</li>
+                <li data-aos="fade-up"> Patho Club</li>
+                <li data-aos="fade-up"> Practice Club</li>
+                <li data-aos="fade-up"> Opto Club</li>
+                <li data-aos="fade-up"> Green Club</li>
+                <li data-aos="fade-up"> Aeromodelling Club</li>
+                <li data-aos="fade-up"> Video Gaming Club</li>
+                <li data-aos="fade-up"> Girl's NCC Club</li>
+                <li data-aos="fade-up"> Developers Club</li>
+                <li data-aos="fade-up"> Innovators & Enterpreneurs Club</li>
+                <li data-aos="fade-up"> P & P Club</li>
+                <li data-aos="fade-up"> Robotics Club</li>
+                <li data-aos="fade-up"> NSS Club</li>
+                <li data-aos="fade-up"> Science Club</li><br>
+            </ul>
             <h3 class="lead" data-aos="fade-up" style="color: #002654;"><b>TYPES OF ACTIVITIES</b></h3>
             <p data-aos="fade-up">Students are strongly encouraged to plan and initiate their own ideas and collaborate with other students to create projects they find intresting and worthwhile. The activities below are merely examples. Generally,projects should be pre-approved by the choosen supervisor.</p>
             <p data-aos="fade-up"><b>Examples of "Culture" activities:</b></p>
-            <li data-aos="fade-up"> Working on CUTM student Newsletter, Wall Magazine, and Annual Magazine.</li>
-            <li data-aos="fade-up"> Organising/participating in dance, music or drama events.</li>
-            <li data-aos="fade-up"> Preparing artistic works (e.g. murals) for beautification of CUTM.</li>
-            <li data-aos="fade-up"> Participating in any event organised by the clubs under cultural activities.</li>
-            <li data-aos="fade-up"> Painting and Photography, etc.</li><br>
+            <ul>
+                <li data-aos="fade-up"> Working on CUTM student Newsletter, Wall Magazine, and Annual Magazine.</li>
+                <li data-aos="fade-up"> Organising/participating in dance, music or drama events.</li>
+                <li data-aos="fade-up"> Preparing artistic works (e.g. murals) for beautification of CUTM.</li>
+                <li data-aos="fade-up"> Participating in any event organised by the clubs under cultural activities.</li>
+                <li data-aos="fade-up"> Painting and Photography, etc.</li><br>
+            </ul>
             <p data-aos="fade-up"><b>Examples of "Sports" activities:</b></p>
-            <li data-aos="fade-up"> Participating in indivisual and team sports of the institute</li>
-            <li data-aos="fade-up"> Taking part in sporting expeditions.</li>
-            <li data-aos="fade-up"> Participating in Health Club/Yoga Club.</li>
-            <li data-aos="fade-up"> Participating/Organising any adventurers activities.</li>
-            <li data-aos="fade-up"> Organosing a college marathon/other sporting event, etc.</li><br>
+            <ul>
+                <li data-aos="fade-up"> Participating in indivisual and team sports of the institute</li>
+                <li data-aos="fade-up"> Taking part in sporting expeditions.</li>
+                <li data-aos="fade-up"> Participating in Health Club/Yoga Club.</li>
+                <li data-aos="fade-up"> Participating/Organising any adventurers activities.</li>
+                <li data-aos="fade-up"> Organosing a college marathon/other sporting event, etc.</li><br>
+            </ul>
             <p data-aos="fade-up"><b>Examples of "Sports" activities:</b></p>
-            <li data-aos="fade-up"> Participating in indivisual and team sports of the institute</li>
-            <li data-aos="fade-up"> Taking part in sporting expeditions.</li>
-            <li data-aos="fade-up"> Participating in Health Club/Yoga Club.</li>
-            <li data-aos="fade-up"> Participating/Organising any adventurers activities.</li>
-            <li data-aos="fade-up"> Organising a college marathon/other sporting event, etc.</li><br>
+            <ul>
+                <li data-aos="fade-up"> Participating in indivisual and team sports of the institute</li>
+                <li data-aos="fade-up"> Taking part in sporting expeditions.</li>
+                <li data-aos="fade-up"> Participating in Health Club/Yoga Club.</li>
+                <li data-aos="fade-up"> Participating/Organising any adventurers activities.</li>
+                <li data-aos="fade-up"> Organising a college marathon/other sporting event, etc.</li><br>
+            </ul>
             <p data-aos="fade-up"><b>Examples of "Responsibility" activities:</b></p>
-            <li data-aos="fade-up"> Any activities which benefit the community or environment.</li>
-            <li data-aos="fade-up"> Plantation inside or outside CUTM.</li>
-            <li data-aos="fade-up"> Visiting and helping in hospitals or orphanages.</li>
-            <li data-aos="fade-up"> Blood donation camp.</li>
-            <li data-aos="fade-up"> Organising Health check up camp.</li>
-            <li data-aos="fade-up"> Save environment from pollution camp.</li>
-            <li data-aos="fade-up"> Educational camp for population control.</li>
-            <li data-aos="fade-up"> Organise disaster service camp.</li>
-            <li data-aos="fade-up"> Socio-economic survey.</li>
-            <li data-aos="fade-up"> Take emergency relief measures to the victims of natural disaster.</li>
-            <li data-aos="fade-up"> Development of the sense of integration and friendliness.</li>
-            <li data-aos="fade-up"> Volunteering with local NGOs or coming up with your own social/environmental project in a group of students and working on it.</li>
-            <li data-aos="fade-up"> Youth Red Cross activities.</li>
-            <li data-aos="fade-up"> Fund raising for social/environmental projects, etc.</li><br>
-            <p data-aos="fade-up">Students are welcomed to submit their new ideas, projects, proposals to <b><a href="mailto: csr.cit@cutm.ac.in">csr.cit@cutm.ac.in</a> (CIT), <a href="mailto: csr.pkd@cutm.ac.in">csr.pkd@cutm.ac.in</a> (JITM & CSREM).</b> Any queries, suggestions and clarifications regarding the program can be obtained from the Professor In-Charge, CSaR/Dean, Student Affairs.</p>
-            <p data-aos="fade-up">Most important, the CSR program provides a refreshing counterbalance to academic activities. It is an opportunity to have fun, get to know your fellow students and do something innovative and try new experiences.</p>
+            <ul>
+                <li data-aos="fade-up"> Any activities which benefit the community or environment.</li>
+                <li data-aos="fade-up"> Plantation inside or outside CUTM.</li>
+                <li data-aos="fade-up"> Visiting and helping in hospitals or orphanages.</li>
+                <li data-aos="fade-up"> Blood donation camp.</li>
+                <li data-aos="fade-up"> Organising Health check up camp.</li>
+                <li data-aos="fade-up"> Save environment from pollution camp.</li>
+                <li data-aos="fade-up"> Educational camp for population control.</li>
+                <li data-aos="fade-up"> Organise disaster service camp.</li>
+                <li data-aos="fade-up"> Socio-economic survey.</li>
+                <li data-aos="fade-up"> Take emergency relief measures to the victims of natural disaster.</li>
+                <li data-aos="fade-up"> Development of the sense of integration and friendliness.</li>
+                <li data-aos="fade-up"> Volunteering with local NGOs or coming up with your own social/environmental project in a group of students and working on it.</li>
+                <li data-aos="fade-up"> Youth Red Cross activities.</li>
+                <li data-aos="fade-up"> Fund raising for social/environmental projects, etc.</li><br>
+            </ul>
+            <p data-aos="fade-up" align="justify">Students are welcomed to submit their new ideas, projects, proposals to <b><a href="mailto: csrcell.bbs@cutm.ac.in" style="color: #000000;">csrcell.bbs@cutm.ac.in</a> (Bhubaneswar), <a href="mailto: csr.bls@cutm.ac.in" style="color: #000000;">csr.bls@cutm.ac.in</a> (Balasore), <a href="mailto: csr.blr@cutm.ac.in" style="color: #000000;">csrcell.blr@cutm.ac.in</a> (Balangir), <a href="mailto: csr.ryd@cutm.ac.in" style="color: #000000;">csr.ryd@cutm.ac.in</a> (Ryagada), <a href="mailto: csr.chr@cutm.ac.in" style="color: #000000;">csr.chr@cutm.ac.in</a> (Chhatrapur), <a href="mailto: csr.pkd@cutm.ac.in" style="color: #000000;">csr.pkd@cutm.ac.in</a> (Paralakhemundi)</b> Any queries, suggestions and clarifications regarding the program can be obtained from the Professor In-Charge, CSaR/Dean, Students' Affairs.</p>
+            <p data-aos="fade-up" align="justify">Most important, the CSR program provides a refreshing counterbalance to academic activities. It is an opportunity to have fun, get to know your fellow students and do something innovative and try new experiences.</p>
             <table style="width:100%">
-  <tr>
-    <th colspan="3"><center>CSaR Credit to Grade Conversion details</center></th>
-  </tr>
-  <tr>
-  <td><b>Credit</b></td>
-  <td style="padding-left: 50px"><b>Grade</b></td>
-  <th rowspan="6" style="padding-left: 70px"><li> Credit refers to the no of hours the student spared.</li>
-    <li> For more than 1 year programme the credit will be calculated by taking the average of the credit points of each year.</li>
-    <li> The final CSaR Grade will be reflected in the final degree Grade Sheet & Certificate.</li>
-</th>
-  </tr>
-  <tr>
-    <td >30-45</td>
-    <td style="padding-left: 65px">C</td>
-  </tr>
-  <tr>
-    <td>46-60</td>
-    <td style="padding-left: 65px">B</td>
-  </tr>
-  <tr>
-    <td>61-75</td>
-    <td style="padding-left: 65px">A</td>
-  </tr>
-  <tr>
-    <td>76-90</td>
-    <td style="padding-left: 65px">E</td>
-  </tr>
-  <tr>
-    <td>Above 90</td>
-    <td style="padding-left: 65px">O</td>
-  </tr>
-</table><br><br>
-        <h1 class="lead" data-aos="fade-up" style="color: #FF0000;">
-            <b style="font-family: Georgia, Helvetica, sans-serif;">
-                Centurion University will endeavour to support student ideas for CSaR
-                activities. Each academic year is from 1st July to 30th June.
-            </b>
-        </h1>
+                <tr>
+                    <th colspan="3">
+                        <center>CSaR Credit to Grade Conversion details</center>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Credit</b>
+                    </td>
+                    <td style="padding-left: 50px">
+                        <b>Grade</b>
+                    </td>
+                    <th rowspan="6" style="padding-left: 70px">
+                        <li>
+                            Credit refers to the no of hours the student spared.</li>
+                        <li>
+                            For more than 1 year programme the credit will be calculated by taking the
+                            average of the credit points of each year.</li>
+                        <li>
+                            The final CSaR Grade will be reflected in the final degree Grade Sheet &
+                            Certificate.</li>
+                    </th>
+                </tr>
+                <tr>
+                    <td >30-45</td>
+                    <td style="padding-left: 65px">C</td>
+                </tr>
+                <tr>
+                    <td>46-60</td>
+                    <td style="padding-left: 65px">B</td>
+                </tr>
+                <tr>
+                    <td>61-75</td>
+                    <td style="padding-left: 65px">A</td>
+                </tr>
+                <tr>
+                    <td>76-90</td>
+                    <td style="padding-left: 65px">E</td>
+                </tr>
+                <tr>
+                    <td>Above 90</td>
+                    <td style="padding-left: 65px">O</td>
+                </tr>
+            </table><br><br>
+            <h1 class="lead" data-aos="fade-up" style="color: #FF0000;">
+                <b style="font-family: Georgia, Helvetica, sans-serif;">
+                    Centurion University will endeavour to support student ideas for CSaR
+                    activities. *Each academic year is from 1st July to 30th June.
+                </b>
+            </h1>
         </div>
         
     </section>
@@ -215,7 +265,7 @@
                             <li><a href="imagegallery.php">Image gallery</a></li>
                             <li><a href="announcements.php">Announcements</a></li>
                             <li><a href="events.php">Events</a></li>
-                            <li><a href="designer.php">Designer</a></li>
+                            <li><a href="assets/img/designer/index.html">Designer</a></li>
                         </ul>
                     </div>
                     <!-- End: About -->
@@ -234,8 +284,9 @@
                     <!-- End: Social Icons -->
                 </div>
                 <!-- Start: Copyright -->
-                <p class="copyright" style="color: #ffffff;">© Copyright&nbsp;2022. All Rights Reserved.Designed by Centurion University of Technology and Management</p>
-                <!-- End: Copyright -->
+                <p class="copyright" style="color: #ffffff;">© Copyright&nbsp;<script>document.write(new Date().getFullYear())</script>. All Rights
+                        Reserved.Designed and Devloped by <a href="./assets/img/designer/index.html" style="color: #ffffff;" >Centurion University of Technology and Management </a></p>
+                    <!-- End: Copyright -->
             </div>
         </footer>
     </div>

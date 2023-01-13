@@ -63,6 +63,7 @@ else
 <head>
   <meta charset="UTF-8">
   <title>CSR Certificate</title>
+  <link rel="icon" href="image/cutm.png" type="image/icon type">
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
   <style>
   @font-face {

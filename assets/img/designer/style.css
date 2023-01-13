@@ -352,3 +352,8 @@ body {
     object-fit: contain;
 }
 
+@media (max-width: 870px) {
+  .row .col-1-of-3 {
+    width: 100vw;
+  }
+}

@@ -38,6 +38,7 @@ if(isset($_POST['approved'])){
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Events timesheet track</title>
+  <link rel="icon" href="image/cutm.png" type="image/icon type">
   <meta content="" name="description">
   <meta content="" name="keywords">
 

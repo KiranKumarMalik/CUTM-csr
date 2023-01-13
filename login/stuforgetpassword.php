@@ -8,9 +8,11 @@ if(isset($_POST['forgotstudent'])){
     $runQuery=mysqli_query($db,$query);
     if(mysqli_num_rows($runQuery)){
         $password=randPass();
+        $MailPassword=$password;
+        $password=md5($password);
         $query="UPDATE `student` SET `password`='$password' WHERE email='$email'";
         $test=mysqli_query($db,$query);
-        header('location:https://chinmayakumarbiswal.in/test/cutmCsrMail?name='.$studentData['name'].'&email='.$email.'&pass='.$password); 
+        header('location:../adminlogin/api/cutmCsrMail.php?name='.$studentData['name'].'&email='.$email.'&pass='.$MailPassword); 
         if ($test) {
             ?>
 			<script type="text/javascript" language="JavaScript">

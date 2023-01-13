@@ -56,23 +56,29 @@
         </div>
         <hr data-aos="fade-up" style="width: 120px;border-bottom-style: none;padding-bottom: 30px;">
         <div class="container">
-            <li data-aos="fade-up"> This CSaR Booklet holder is a bonafide student of Centurion University of Technology and Management (CUTM)</li>
-            <li data-aos="fade-up"> Students have to collect the booklet from office by showing their identity card along with a passport size photograph and get the booklet signed by the principal.</li>
-            <li data-aos="fade-up"> Students are advised to bring this booklet whenever they perform an activity and get it signed by the Faculty Supervisor.</li>
-            <li data-aos="fade-up"> There will be a minimum of 1 hour and maximum of 8 hours per an activity to be credited to the booklet, as decided by the Faculty supervisor.</li>
-            <li data-aos="fade-up"> This booklet is not transferable.</li>
-            <li data-aos="fade-up"> This booklet is only valid for the session mentioned.</li>
-            <li data-aos="fade-up"> Loss of this booklet must be reported in writing to the Principal.</li>
-            <li data-aos="fade-up"> The CSaR booklet will be reviewed after each and every year.</li>
-            <li data-aos="fade-up"> In case of loss/damage another booklet will be issued on payment of required fees along with passport size photograph.</li>
-            <li data-aos="fade-up"> If the booklet's page are filled up with completed activities, the student may purchase a second booklet.</li>
-            <li data-aos="fade-up"> Always check the CSaR activity information board on campus for CSaR activity updates.</li>
-            <li data-aos="fade-up"> Students are advised to submit their new ideas on CSaR activities to csr.cit@cutm.ac.in(CIT), csr.pkd@cutm.ac.in(JITM & CSREM) or to the Professor In-Charge, CSaR/Dean, Student Affairs.</li>
-            <li data-aos="fade-up"> Students are advised to keep a copy of the updated booklet for future use.</li>
-            <li data-aos="fade-up"> Any clarifications regarding the CSaR program can be obtained from the Professor In-Charge, Dean, Student Affairs.</li>
-            <li data-aos="fade-up"> The final CSaR Grade will be reflected in the final degree GradeSheet and Certificate.</li>
-            <li data-aos="fade-up"> This booklet is the property of CUTM, if found please return it to the address mentioned on the final page.</li>
-            <li data-aos="fade-up"> The information provided in this booklet andthe rules and policies relating to CSaR are subject to change at any time in the absolute discretion of CUTM.</li>
+            <ul>
+                <li data-aos="fade-up" align="justify"> This CSaR Credit automation system is the property of Centurion University of Technology and Management (CUTM)</li>
+                <li data-aos="fade-up" align="justify"> Students have to register for login credential from csr.cutm.ac.in by fillup the registration form and get their credentials after approved by the campus admin.</li>
+                <li data-aos="fade-up" align="justify"> Students are advised to fillup their timesheet in CSaR Credit autiomation System whenever they perform an activity and get it approved by the Faculty In-Charge.</li>
+                <li data-aos="fade-up" align="justify"> There will be a minimum of 1 hour and maximum of 8 hours per an activity to be credited to the CSaR Credit automation system, as decided by the Faculty In-Charge.</li>
+                <li data-aos="fade-up" align="justify"> This Credit of CSaR is not transferable.</li>
+                <li data-aos="fade-up" align="justify"> This CSaR Credit automation System is only valid for the session mentioned.</li>
+                <li data-aos="fade-up" align="justify"> The CSaR Credit automation System will be reviewed after each and every year.</li>
+                <li data-aos="fade-up" align="justify"> In case of loss credentials will be retrived by clicking on fogot password option and by providing mail id.</li>
+                <li data-aos="fade-up" align="justify"> Always check the CSaR activity information board on campus for CSaR activity updates.</li>
+                <li data-aos="fade-up" align="justify"> Students are advised to submit their new ideas on CSaR activities to 
+                    <a href="mailto: csrcell.bbs@cutm.ac.in" style="color: #000000;">csrcell.bbs@cutm.ac.in</a> (Bhubaneswar), 
+                    <a href="mailto: csr.bls@cutm.ac.in" style="color: #000000;">csr.bls@cutm.ac.in</a> (Balasore), 
+                    <a href="mailto: csr.blr@cutm.ac.in" style="color: #000000;">csr.blr@cutm.ac.in</a> (Balangir), 
+                    <a href="mailto: csr.ryd@cutm.ac.in" style="color: #000000;">csr.ryd@cutm.ac.in</a> (Ryagada), 
+                    <a href="mailto: csr.chr@cutm.ac.in" style="color: #000000;">csr.chr@cutm.ac.in</a> (Chhatrapur), 
+                    <a href="mailto: csr.pkd@cutm.ac.in" style="color: #000000;">csr.pkd@cutm.ac.in</a> (Paralakhemundi) 
+                    or to the Professor In-Charge, CSaR/Dean, Students' Affairs.</li>
+                <li data-aos="fade-up" align="justify"> Students are advised to keep on updated in CSaR Credit automation System (CCAS).</li>
+                <li data-aos="fade-up" align="justify"> Any clarifications regarding the CSaR program can be obtained from the Professor In-Charge, Dean, Student Affairs, Dean student Welfares.</li>
+                <li data-aos="fade-up" align="justify"> The final CSaR Grade will be reflected in the final degree GradeSheet and Certificate.</li>
+                <li data-aos="fade-up" align="justify"> The information provided in CSaR website and the rules and policies relating to CSaR are subject to change at any time in the absolute discretion of CUTM.</li>
+            </ul>
         </div>
     </section>
     <!-- End: #instruction -->
@@ -100,7 +106,7 @@
                             <li><a href="imagegallery.php">Image gallery</a></li>
                             <li><a href="announcements.php">Announcements</a></li>
                             <li><a href="events.php">Events</a></li>
-                            <li><a href="designer.php">Designer</a></li>
+                            <li><a href="assets/img/designer/index.html">Designer</a></li>
                         </ul>
                     </div>
                     <!-- End: About -->
@@ -119,8 +125,9 @@
                     <!-- End: Social Icons -->
                 </div>
                 <!-- Start: Copyright -->
-                <p class="copyright" style="color: #ffffff;">© Copyright&nbsp;2022. All Rights Reserved.Designed by Centurion University of Technology and Management</p>
-                <!-- End: Copyright -->
+                <p class="copyright" style="color: #ffffff;">© Copyright&nbsp;<script>document.write(new Date().getFullYear())</script>. All Rights
+                        Reserved.Designed and Devloped by <a href="./assets/img/designer/index.html" style="color: #ffffff;" >Centurion University of Technology and Management </a></p>
+                    <!-- End: Copyright -->
             </div>
         </footer>
     </div>

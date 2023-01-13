@@ -24,11 +24,13 @@ if(isset($_POST['passwordbtn'])){
   $oldpassword=mysqli_real_escape_string($db,$_POST['oldpassword']);
   $newpassword=mysqli_real_escape_string($db,$_POST['newpassword']);
   $renewpassword=mysqli_real_escape_string($db,$_POST['renewpassword']);
+  $oldpassword=md5($oldpassword);
 
 
 
   if($adminData['password'] == $oldpassword){
     if($newpassword == $renewpassword){
+      $newpassword=md5($newpassword);
       $adminemail=$adminData['email'];
       $query="UPDATE admin SET password='$newpassword' WHERE email='$adminemail'";
       $run=mysqli_query($db,$query) or die(mysqli_error($db));
@@ -78,6 +80,7 @@ if(isset($_POST['passwordbtn'])){
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Profile</title>
+  <link rel="icon" href="image/cutm.png" type="image/icon type">
   <meta content="" name="description">
   <meta content="" name="keywords">
 

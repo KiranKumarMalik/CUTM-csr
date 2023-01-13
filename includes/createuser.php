@@ -116,30 +116,7 @@
 	}
 
 	
-	if(isset($_POST['updatestudentpasswordinprofile'])){
-		$newpassword=mysqli_real_escape_string($db,$_POST['newpassword']);
-		$reenterpassword=mysqli_real_escape_string($db,$_POST['reenterpassword']);
-
-
-		echo $newpassword."<br><br>";
-		echo $reenterpassword."<br><br>";
-		
-
-		if(move_uploaded_file($image_tmp,"../images/profileimg/$image_name")){
-            $query="UPDATE  student SET name='$name', regd='$regd', campus='$campus', schoolname='$school', program='$program', admissionyear='$session', sex='$sex', religion='$religion', hobby='$hobby', present_address='$presentadd', permanent_address='$premantadd', mobile='$phone', profileimage='$image_name' WHERE email='$email'";
-            $run=mysqli_query($db,$query) or die(mysqli_error($db));
-            if ($run) {
-                header('location:../adminlogin/prof.php');
-				echo "inserted done";
-            }
-            else {
-                echo "inserted error";
-            }
-        }
-        else {
-            echo "File Size High";
-        }
-	}
+	
 
 
 	if(isset($_POST['editadminprofile'])){

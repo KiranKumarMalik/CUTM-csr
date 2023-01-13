@@ -119,7 +119,7 @@
                             <li><a href="imagegallery.php">Image gallery</a></li>
                             <li><a href="announcements.php">Announcements</a></li>
                             <li><a href="events.php">Events</a></li>
-                            <li><a href="designer.php">Designer</a></li>
+                            <li><a href="assets/img/designer/index.html">Designer</a></li>
                         </ul>
                     </div>
                     <!-- End: About -->
@@ -138,8 +138,9 @@
                     <!-- End: Social Icons -->
                 </div>
                 <!-- Start: Copyright -->
-                <p class="copyright" style="color: #ffffff;">© Copyright&nbsp;2022. All Rights Reserved.Designed by Centurion University of Technology and Management</p>
-                <!-- End: Copyright -->
+                <p class="copyright" style="color: #ffffff;">© Copyright&nbsp;<script>document.write(new Date().getFullYear())</script>. All Rights
+                        Reserved.Designed and Devloped by <a href="./assets/img/designer/index.html" style="color: #ffffff;" >Centurion University of Technology and Management </a></p>
+                    <!-- End: Copyright -->
             </div>
         </footer>
     </div>

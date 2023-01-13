@@ -168,7 +168,6 @@ require('./includes/database.php');
                 foreach($findpkd as $pkdcamp)
                 {
                     ?>
-
                     <a href="announcement details.php"><h6 style="text-align:left"><?=$pkdcamp['event_name']?></h6></a>
                     <p data-aos="fade-up"><li style="text-align:left"><?=$pkdcamp['details']?></li></p><br>
                     <a href="announcement details.php"><p data-aos="fade-up" style="text-align:right">Read more <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
@@ -262,7 +261,7 @@ require('./includes/database.php');
                             <li><a href="imagegallery.php">Image gallery</a></li>
                             <li><a href="announcements.php">Announcements</a></li>
                             <li><a href="events.php">Events</a></li>
-                            <li><a href="designer.php">Designer</a></li>
+                            <li><a href="assets/img/designer/index.html">Designer</a></li>
                         </ul>
                     </div>
                     <!-- End: About -->
@@ -281,8 +280,9 @@ require('./includes/database.php');
                     <!-- End: Social Icons -->
                 </div>
                 <!-- Start: Copyright -->
-                <p class="copyright" style="color: #ffffff;">© Copyright&nbsp;2022. All Rights Reserved.Designed by Centurion University of Technology and Management</p>
-                <!-- End: Copyright -->
+                <p class="copyright" style="color: #ffffff;">© Copyright&nbsp;<script>document.write(new Date().getFullYear())</script>. All Rights
+                        Reserved.Designed and Devloped by <a href="./assets/img/designer/index.html" style="color: #ffffff;" >Centurion University of Technology and Management </a></p>
+                    <!-- End: Copyright -->
             </div>
         </footer>
     </div>

@@ -27,9 +27,11 @@ if(isset($_POST['passwordbtn'])){
   echo "oldpassword";
   echo "newpassword";
   echo "renewpassword";
+  $oldpassword=md5($oldpassword);
 
   if($studentdata['password'] == $oldpassword){
     if($newpassword == $renewpassword){
+      $newpassword=md5($newpassword);
       $studentemail=$studentdata['email'];
       $query="UPDATE student SET password='$newpassword' WHERE email='$studentemail'";
       $run=mysqli_query($db,$query) or die(mysqli_error($db));
@@ -79,6 +81,7 @@ if(isset($_POST['passwordbtn'])){
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Profile</title>
+  <link rel="icon" href="image/cutm.png" type="image/icon type">
   <meta content="" name="description">
   <meta content="" name="keywords">
 

@@ -4,9 +4,6 @@ require('../includes/database.php');
 $uemail=$_SESSION['email'];
 $utype=$_SESSION['usertype'];
 
-
-
-
 if($_SESSION['email'] and $utype=="admin")
 {
     $adminData=getAllAdminDetails($db,$uemail);

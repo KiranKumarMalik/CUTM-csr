@@ -61,44 +61,44 @@
                 <div class="row">
                     <div class="col-sm-6 col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                         <div class="member">
-                            <div class="member-img"><a href="yearwise.php?campus=Balasore"><img class="img-fluid" src="https://csarimg.s3.ap-south-1.amazonaws.com/assets/img/campusimg/balasore.jpg"></div>
+                            <div class="member-img"><a href="yearwise.php?campus=Balasore"><img class="img-fluid" src="assets/img/campusimg/balasore.jpg"></div>
                             <div class="member-info">
                                 <h5><strong>Balasore</strong></h5><span>Paikasta, Gopalpur, Balasore, Pin-756044</span></a></div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
                         <div class="member">
-                            <div class="member-img"><a href="yearwise.php?campus=Bhubaneswar"><img class="img-fluid" src="https://csarimg.s3.ap-south-1.amazonaws.com/assets/img/campusimg/bhubaneswar.JPG"></div>
+                            <div class="member-img"><a href="yearwise.php?campus=Bhubaneswar"><img class="img-fluid" src="assets/img/campusimg/bhubaneswar.JPG"></div>
                             <div class="member-info">
                                 <h5><strong>Bhubaneswar</strong></h5><span>Ramchandrapur, Jatni, Bhubaneswar Dist, Khurda Odisha.</span></a></div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
                         <div class="member">
-                            <div class="member-img"><a href="yearwise.php?campus=Balangir"><img class="img-fluid" src="https://csarimg.s3.ap-south-1.amazonaws.com/assets/img/campusimg/balangir.jpg"></div>
+                            <div class="member-img"><a href="yearwise.php?campus=Balangir"><img class="img-fluid" src="assets/img/campusimg/balangir.jpg"></div>
                             <div class="member-info">
                                 <h5><strong>Balangir</strong></h5><span>Behind BSNL Office, IDCO Land, Rajib Nagar, Balangir, Odisha.</span></a></div>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
                         <div class="member">
-                            <div class="member-img"><a href="yearwise.php?campus=Paralakhemundi"><img class="img-fluid" src="https://csarimg.s3.ap-south-1.amazonaws.com/assets/img/campusimg/paralakhemundi.jpg"></div>
+                            <div class="member-img"><a href="yearwise.php?campus=Paralakhemundi"><img class="img-fluid" src="assets/img/campusimg/paralakhemundi.jpg"></div>
                             <div class="member-info">
                                 <h5><strong>Paralakhemundi</strong></h5><span>Village Alluri Nagar, R Sitapur, Via- Uppalada, Paralakhemundi.</span></a></div>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
                         <div class="member">
-                            <div class="member-img"><a href="yearwise.php?campus=Rayagada"><img class="img-fluid" src="https://csarimg.s3.ap-south-1.amazonaws.com/assets/img/campusimg/rayagada.JPG"></div>
+                            <div class="member-img"><a href="yearwise.php?campus=Rayagada"><img class="img-fluid" src="assets/img/campusimg/rayagada.JPG"></div>
                             <div class="member-info">
                                 <h5><strong>Rayagada</strong></h5><span>IDCO Industrial Area, Pitamahal, Rayagada, Odisha.</span></a></div>
                         </div>
                 </div>
                 <div class="col-sm-6 col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
                         <div class="member">
-                            <div class="member-img"><a href="yearwise.php?campus=Chhatrapur"><img class="img-fluid" src="https://csarimg.s3.ap-south-1.amazonaws.com/assets/img/campusimg/chhatrapur.JPG"></div>
+                            <div class="member-img"><a href="yearwise.php?campus=Chhatrapur"><img class="img-fluid" src="assets/img/campusimg/chhatrapur.JPG"></div>
                             <div class="member-info">
-                                <h5><strong>Chhatrapur</strong></h5><span>Chhatrapur, Ganjam, Odisha.</span></a></div>
+                                <h5><strong>Chhatrapur</strong></h5><span>Industrial Estate , Kaliabali Chhaka, CHATRAPUR Ganjam - 761045.</span></a></div>
                         </div>
                 </div>
             </div>
@@ -129,7 +129,7 @@
                             <li><a href="imagegallery.php">Image gallery</a></li>
                             <li><a href="announcements.php">Announcements</a></li>
                             <li><a href="events.php">Events</a></li>
-                            <li><a href="designer.php">Designer</a></li>
+                            <li><a href="assets/img/designer/index.html">Designer</a></li>
                         </ul>
                     </div>
                     <!-- End: About -->
@@ -148,8 +148,9 @@
                     <!-- End: Social Icons -->
                 </div>
                 <!-- Start: Copyright -->
-                <p class="copyright" style="color: #ffffff;">© Copyright&nbsp;2022. All Rights Reserved.Designed by Centurion University of Technology and Management</p>
-                <!-- End: Copyright -->
+                <p class="copyright" style="color: #ffffff;">© Copyright&nbsp;<script>document.write(new Date().getFullYear())</script>. All Rights
+                        Reserved.Designed and Devloped by <a href="./assets/img/designer/index.html" style="color: #ffffff;" >Centurion University of Technology and Management </a></p>
+                    <!-- End: Copyright -->
             </div>
         </footer>
     </div>

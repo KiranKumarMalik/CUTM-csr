@@ -4,6 +4,7 @@
     if(isset($_POST['loginstudent'])){
       $email=mysqli_real_escape_string($db,$_POST['email']);
       $password=mysqli_real_escape_string($db,$_POST['password']);
+      $password=md5($password);
 
         $query="SELECT * FROM student WHERE email='$email' AND password='$password' AND status='Approved'";
         $runQuery=mysqli_query($db,$query);
@@ -28,6 +29,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <title>Student Login</title>
+    <link rel="icon" href="cutm.png" type="image/icon type">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -64,7 +66,7 @@
 
     <div class="limiter">
 
-        <div class="container-login100" style="background-image: url('images/csr.jpg');">
+        <div class="container-login100" style="background-image: url('images/csrlogin.jpg');">
 
             <div class="wrap-login100 p-t-30 p-b-50">
 

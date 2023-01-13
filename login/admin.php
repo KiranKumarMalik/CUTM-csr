@@ -4,6 +4,8 @@
     if(isset($_POST['loginadmin'])){
       $email=mysqli_real_escape_string($db,$_POST['email']);
       $password=mysqli_real_escape_string($db,$_POST['password']);
+      $password=md5($password);
+      echo $password;
       echo $email;;
       $query="SELECT * FROM admin WHERE email='$email' AND password='$password'";
       $runQuery=mysqli_query($db,$query);

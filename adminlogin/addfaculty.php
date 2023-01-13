@@ -35,6 +35,8 @@ if(isset($_POST['addTeacher'])){
     $clubname=mysqli_real_escape_string($db,$_POST['clubname']);
     // $password=mysqli_real_escape_string($db,$_POST['password']);
     $password=randPass();
+    $mailPassword=$password;
+    $password=md5($password);
 
     $iamge="";
 
@@ -76,7 +78,7 @@ if(isset($_POST['addTeacher'])){
         $query="INSERT INTO teacher (name,email,mobile,empid,Designation,campus,Qualification,SchoolName,Clubget,Gender,password,profileimage) VALUES('$name','$email','$mobile','$facultyid','$Degination1','$Campus','$Qualification','$SchoolName','$clubname','$Gender','$password','$iamge')";
         $run=mysqli_query($db,$query) or die(mysqli_error($db));
         if ($run) {
-            header('location:https://chinmayakumarbiswal.in/test/cutmCsrMail?name='.$name.'&email='.$email.'&pass='.$password);
+            header('location:./api/cutmCsrMail.php?name='.$name.'&email='.$email.'&pass='.$mailPassword);
         }
         else {
             echo "inserted error";
@@ -95,6 +97,7 @@ if(isset($_POST['addTeacher'])){
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <title>Edit Profile</title>
+    <link rel="icon" href="image/cutm.png" type="image/icon type">
     <meta content="" name="description">
     <meta content="" name="keywords">
 

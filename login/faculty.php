@@ -4,6 +4,7 @@
     if(isset($_POST['loginteacher'])){
       $email=mysqli_real_escape_string($db,$_POST['email']);
       $password=mysqli_real_escape_string($db,$_POST['password']);
+      $password=md5($password);
       $query="SELECT * FROM teacher WHERE email='$email' AND password='$password'";
       $runQuery=mysqli_query($db,$query);
       if(mysqli_num_rows($runQuery)){
