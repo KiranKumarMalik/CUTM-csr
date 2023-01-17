@@ -128,10 +128,8 @@ foreach($getallAnnousement as $getallAnnousements){
                             <p class="lead d-inline" data-aos="fade-up" style="color: #f4eeee;width: 50%;">
                                 <strong>Culture Sports and Responsibility</strong><br></p>
                             <a href="login/login.php">
-                                <div class="wrap">
                                     <button class="button glow-button" target="_blank">Login<i class="fa fa-sign-in" aria-hidden="true"></i>
-                                    </button>
-                                </div>
+                                    </button> 
                             </a>
                             <div class="header-icon" style="margin-top: 80px;">
                                 <a data-aos="fade-up" class="nav-link scrollto" href="#about-us">
