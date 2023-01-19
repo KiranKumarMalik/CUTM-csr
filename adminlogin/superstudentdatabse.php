@@ -126,24 +126,6 @@ if(isset($_POST['importExcel'])){
     </div>
 
 
-<!-- insert single student data modal -->
-    <div class="modal fade" id="importStudentData" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Insert Student details</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-success" type="submit" name="approved">Yes</button>
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 
@@ -206,7 +188,7 @@ if(isset($_POST['importExcel'])){
 
         <ul class="sidebar-nav" id="sidebar-nav">
 
-            <li class="nav-item">
+        <li class="nav-item">
                 <a class="nav-link " href="./superdashboard.php">
                     <i class="bi bi-grid"></i>
                     <span>Dashboard</span>
@@ -239,7 +221,7 @@ if(isset($_POST['importExcel'])){
             </li>
 
             <li class="nav-item">
-                <a class="nav-link " href="./adminprof.php">
+                <a class="nav-link " href="./superprofile.php">
                     <i class="bi bi-person-fill"></i>
                     <span>Profile</span>
                 </a>
@@ -277,7 +259,7 @@ if(isset($_POST['importExcel'])){
                     <div class="card-body">
                         <h5 class="card-title">Post</h5>
                         <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#importExcel">Import Student Data</button>
-                        <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#importStudentData">Insert Indivisual Student Data</button>
+                        
                         <!-- Table with stripped rows -->
                         <table class="table datatable" id="tableData">
                             <thead>

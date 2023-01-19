@@ -112,7 +112,7 @@ else
 
         <ul class="sidebar-nav" id="sidebar-nav">
 
-            <li class="nav-item">
+        <li class="nav-item">
                 <a class="nav-link " href="./superdashboard.php">
                     <i class="bi bi-grid"></i>
                     <span>Dashboard</span>
@@ -145,7 +145,7 @@ else
             </li>
 
             <li class="nav-item">
-                <a class="nav-link " href="./adminprof.php">
+                <a class="nav-link " href="./superprofile.php">
                     <i class="bi bi-person-fill"></i>
                     <span>Profile</span>
                 </a>
@@ -166,7 +166,7 @@ else
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Dashboard</h1>
+            <h1>Student Activity</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="student.php">Home</a></li>
