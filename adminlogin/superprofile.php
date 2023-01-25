@@ -79,7 +79,7 @@ if(isset($_POST['passwordbtn'])){
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Profile</title>
+  <title>Super Admin || Profile</title>
   <link rel="icon" href="image/cutm.png" type="image/icon type">
   <meta content="" name="description">
   <meta content="" name="keywords">
@@ -175,7 +175,7 @@ if(isset($_POST['passwordbtn'])){
             <li class="nav-item">
                 <a class="nav-link " href="./superstudentdatabse.php">
                     <i class="bi bi-journal-text"></i>
-                    <span>Student Database Add</span>
+                    <span>Add Student Database</span>
                 </a>
             </li>
             <li class="nav-item">

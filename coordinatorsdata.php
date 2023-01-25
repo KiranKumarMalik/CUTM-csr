@@ -51,7 +51,7 @@ $pdf=$cordinator['pdf'];
                             <a class="dropdown-item" href="coordinators.php?campus=Balangir">Balangir</a>
                             <a class="dropdown-item" href="coordinators.php?campus=Paralakhemundi">Paralakhemundi</a>
                             <a class="dropdown-item" href="coordinators.php?campus=Rayagada">Rayagada</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Chhatrapur">Chhatrapur</a></div>
+                            <a class="dropdown-item" href="coordinators.php?campus=Chhatrapur">Chatrapur</a></div>
                         </li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="campusachievements.php">PREVIOUS ACHIEVEMENTS</a></li>
                     </ul>

@@ -121,7 +121,7 @@ else
             <li class="nav-item">
                 <a class="nav-link " href="./superstudentdatabse.php">
                     <i class="bi bi-journal-text"></i>
-                    <span>Student Database Add</span>
+                    <span>Add Student Database</span>
                 </a>
             </li>
             <li class="nav-item">

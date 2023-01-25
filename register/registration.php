@@ -16,7 +16,7 @@ require('../includes/function.php');
 		$studentData=getStudentDataByRegd($db,$regd);
         $addyear=$studentData['admissionyear'];
 
-        if($studentData['admissiontype'] == "LE"){
+        if($studentData['admissiontype'] == "Lateral"){
             $actualAddYear=$addyear-1;
             
         }
@@ -24,35 +24,104 @@ require('../includes/function.php');
             $actualAddYear=$addyear;
         }
 
-        if($studentData['program'] == "B.Tech"){
+        if($studentData['program'] == "Bachelor of Technology"){
             $batch=$actualAddYear."-".$actualAddYear+4;
         }
-        else if($studentData['program'] == "B.Pharm"){
+        else if($studentData['program'] == "Master of Technology"){
+            $batch=$actualAddYear."-".$actualAddYear+2;
+        }
+        else if($studentData['program'] == "Bachelor of Science"){
             $batch=$actualAddYear."-".$actualAddYear+4;
         }
-        else if($studentData['program'] == "M.Sc"){
-            $batch=$actualAddYear."-".$actualAddYear+2;
-        }
-        else if($studentData['program'] == "B.Sc"){
+        else if($studentData['program'] == "Bachelor of Science in Information Technology"){
             $batch=$actualAddYear."-".$actualAddYear+3;
         }
-        else if($studentData['program'] == "BBA"){
-            $batch=$actualAddYear."-".$actualAddYear+3;
-        }
-        else if($studentData['program'] == "MBA"){
+        else if($studentData['program'] == "Master of Science"){
             $batch=$actualAddYear."-".$actualAddYear+2;
         }
-        else if($studentData['program'] == "BCA"){
+        else if($studentData['program'] == "Bachelor of Operation Theatre Technology"){
             $batch=$actualAddYear."-".$actualAddYear+3;
         }
-        else if($studentData['program'] == "ITI"){
+        else if($studentData['program'] == "Bachelor of Physiotherapy"){
+            $batch=$actualAddYear."-".$actualAddYear+4;
+        }
+        else if($studentData['program'] == "Certified Opthalmic Assistant"){
             $batch=$actualAddYear."-".$actualAddYear+2;
+        }
+        else if($studentData['program'] == "Certified Blood Collection Assistant (Flabotomy Technician)"){
+            $batch=$actualAddYear."-".$actualAddYear+0.5;
+        }
+        else if($studentData['program'] == "Certified Opthalmic Assistant"){
+            $batch=$actualAddYear."-".$actualAddYear+2;
+        }
+        else if($studentData['program'] == "Certified Dialysis Technician"){
+            $batch=$actualAddYear."-".$actualAddYear+1;
+        }
+        else if($studentData['program' == "Certified EMG Technician"]){
+            $batch=$actualAddYear."-".$actualAddYear+0.5;
+        }
+        else if($studentData['program'] == "Certified OT Technician"){
+            $batch=$actualAddYear."-".$actualAddYear+1;
         }
         else if($studentData['program'] == "Diploma"){
+            $batch=$actualAddYear."-".$actualAddYear+0.5;
+        }
+        else if($studentData['program'] == "Master in Computer Applications"){
+            $batch=$actualAddYear."-".$actualAddYear+2;
+        }
+        else if($studentData['program'] == "Bachelor of Computer Application"){
             $batch=$actualAddYear."-".$actualAddYear+3;
         }
-        else if($studentData['program'] == "MCA"){
+        else if($studentData['program'] == "Degree of Doctorate of Philosophy in the faculty of Management"){
             $batch=$actualAddYear."-".$actualAddYear+1;
+        }
+        else if($studentData['program'] == "Bachelor of Commerce"){
+            $batch=$actualAddYear."-".$actualAddYear+3;
+        }
+        else if($studentData['program'] == "Bachelor of Business Administration"){
+            $batch=$actualAddYear."-".$actualAddYear+3;
+        }
+        else if($studentData['program'] == "Master of Business Administration"){
+            $batch=$actualAddYear."-".$actualAddYear+2;
+        }
+        else if($studentData['program'] == "Certified in Post Graduate Diploma in Financial Management"){
+            $batch=$actualAddYear."-".$actualAddYear+1;
+        }
+        else if($studentData['program'] == "Bachelor of Management Studies"){
+            $batch=$actualAddYear."-".$actualAddYear+3;
+        }
+        else if($studentData['program'] == "Bachelor of Media and Communication"){
+            $batch=$actualAddYear."-".$actualAddYear+1;
+        }
+        else if($studentData['program'] == "Bachelor of Pharmacy"){
+            $batch=$actualAddYear."-".$actualAddYear+4;
+        }
+        else if($studentData['program'] == "Master of Philosophy"){
+            $batch=$actualAddYear."-".$actualAddYear+2;
+        }
+        else if($studentData['program'] == "Master of Pharmacy"){
+            $batch=$actualAddYear."-".$actualAddYear+2;
+        }
+        else if($studentData['program'] == "Degree of Doctorate of Philosophy"){
+            $batch=$actualAddYear."-".$actualAddYear+1;
+        }
+        else if($studentData['program'] == "Masters by Research"){
+            $batch=$actualAddYear."-".$actualAddYear+2;
+        }
+        else if($studentData['program'] == "Bachelor of Agriculture Science"){
+            $batch=$actualAddYear."-".$actualAddYear+4;
+        }
+        else if($studentData['program'] == "Bachelor of Fishery Science"){
+            $batch=$actualAddYear."-".$actualAddYear+4;
+        }
+        else if($studentData['program'] == "Master in Agriculture Science"){
+            $batch=$actualAddYear."-".$actualAddYear+2;
+        }
+        else if($studentData['program'] == "Bachelor of Dairy Technology"){
+            $batch=$actualAddYear."-".$actualAddYear+4;
+        }
+        else if($studentData['program'] == "Masters by Research"){
+            $batch=$actualAddYear."-".$actualAddYear+2;
         }
         // echo $actualAddYear."<br>";
         // echo $batch;

@@ -22,7 +22,7 @@ else
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Dashboard</title>
+    <title>Admin & Faculty Data</title>
     <link rel="icon" href="image/cutm.png" type="image/icon type">
     <meta content="" name="description">
     <meta content="" name="keywords">
@@ -121,7 +121,7 @@ else
             <li class="nav-item">
                 <a class="nav-link " href="./superstudentdatabse.php">
                     <i class="bi bi-journal-text"></i>
-                    <span>Student Database Add</span>
+                    <span>Add Student Database</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -166,11 +166,11 @@ else
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Dashboard</h1>
+            <h1>Admin & Facult Data</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="student.php">Home</a></li>
-                    <li class="breadcrumb-item active">View Activity</li>
+                    <li class="breadcrumb-item active">Database</li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->

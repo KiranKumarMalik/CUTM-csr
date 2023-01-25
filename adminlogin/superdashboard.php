@@ -20,7 +20,7 @@ $bbsrdata=getAllRegisterStudent($db,'Bhubaneswar');
 $blrdata=getAllRegisterStudent($db,'Balangir');
 $pkddata=getAllRegisterStudent($db,'Paralakhemundi');
 $ryddata=getAllRegisterStudent($db,'Rayagada');
-$chtdata=getAllRegisterStudent($db,'Chhatrapur');
+$chtdata=getAllRegisterStudent($db,'Chatrapur');
 
 for ($month = 1; $month <= 12; $month++) {
   $campuswiseculture[$month]=getAllAcadamicYearStatusBySuperAdmin($db,'Culture',$month);
@@ -177,7 +177,7 @@ else{
             <li class="nav-item">
                 <a class="nav-link " href="./superstudentdatabse.php">
                     <i class="bi bi-journal-text"></i>
-                    <span>Student Database Add</span>
+                    <span>Add Student Database</span>
                 </a>
             </li>
             <li class="nav-item">

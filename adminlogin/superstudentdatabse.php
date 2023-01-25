@@ -60,6 +60,8 @@ if(isset($_POST['importExcel'])){
 }
 
 ?>
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -203,7 +205,7 @@ if(isset($_POST['importExcel'])){
             <li class="nav-item">
                 <a class="nav-link " href="./superstudentactivity.php">
                     <i class="bi bi-file-check-fill"></i>
-                    <span>Student Activity Data</span>
+                    <span>Add Student Database</span>
                 </a>
             </li>
             <li class="nav-item">

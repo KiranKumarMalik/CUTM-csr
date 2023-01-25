@@ -41,7 +41,7 @@
                             <a class="dropdown-item" href="coordinators.php?campus=Balangir">Balangir</a>
                             <a class="dropdown-item" href="coordinators.php?campus=Paralakhemundi">Paralakhemundi</a>
                             <a class="dropdown-item" href="coordinators.php?campus=Rayagada">Rayagada</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Chhatrapur">Chhatrapur</a></div>
+                            <a class="dropdown-item" href="coordinators.php?campus=Chhatrapur">Chatrapur</a></div>
                         </li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="campusachievements.php">PREVIOUS ACHIEVEMENTS</a></li>
                     </ul>
@@ -96,9 +96,9 @@
                 </div>
                 <div class="col-sm-6 col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
                         <div class="member">
-                            <div class="member-img"><a href="yearwise.php?campus=Chhatrapur"><img class="img-fluid" src="assets/img/campusimg/chhatrapur.JPG"></div>
+                            <div class="member-img"><a href="yearwise.php?campus=Chatrapur"><img class="img-fluid" src="assets/img/campusimg/chatrapur.JPG"></div>
                             <div class="member-info">
-                                <h5><strong>Chhatrapur</strong></h5><span>Industrial Estate , Kaliabali Chhaka, CHATRAPUR Ganjam - 761045.</span></a></div>
+                                <h5><strong>Chatrapur</strong></h5><span>Industrial Estate , Kaliabali Chhaka, CHATRAPUR Ganjam - 761045.</span></a></div>
                         </div>
                 </div>
             </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 19, 2023 at 02:28 PM
+-- Generation Time: Jan 19, 2023 at 09:10 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -54,7 +54,7 @@ INSERT INTO `admin` (`id`, `name`, `email`, `mobile`, `sex`, `campus`, `empid`, 
 (5, 'Chandan Kumar Das', 'chandankumar.das@gramtarang.org.in', '7873679676', 'Male', 'Balasore', 'CUTM259', 'Professor', '', 'India', '', 'c2a216e103154abc47fa01423ed27d7e', 'maleuser.jpg'),
 (6, 'Mrs.Binapani Barik', 'binapani.barik@cutm.ac.in', '7504915935', 'Male', 'Paralakhemundi', 'CUTM476', 'Professor', '', 'India', '', 'acab867cec4c4d520a8ea061767d156a', 'maleuser.jpg'),
 (7, 'Rati Ranjan Mishra', 'ratiranjan.mishra@cutm.ac.in', '8249196464', 'Male', 'Chhatrapur', 'EMP875', 'CSaR Co-ordinator', '', 'India', 'Chhatrapur, Ganjam, Odisha', '36b3be6ed1b0529738601bc18d4e9e5b', 'maleuser.jpg'),
-(8, 'Nrusinha Das', 'nrusinha@cutm.ac.in', '', 'Male', '', '', 'Server Administrator', '', 'India', '', 'd7ba1f808e8ca199cf947403dbb2441b', 'maleuser.jpg');
+(8, 'Nrusinha Das', 'nrusinha@cutm.ac.in', '', 'Male', '', '', 'Server Administrator', 'I am a system administrative', 'India', '', 'd7ba1f808e8ca199cf947403dbb2441b', 'maleuser.jpg');
 
 -- --------------------------------------------------------
 
@@ -72,6 +72,29 @@ CREATE TABLE `announcement` (
   `campus` varchar(255) NOT NULL,
   `publishtime` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `campus`
+--
+
+CREATE TABLE `campus` (
+  `id` int(11) NOT NULL,
+  `campusName` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `campus`
+--
+
+INSERT INTO `campus` (`id`, `campusName`) VALUES
+(1, 'Bhubaneswar'),
+(2, 'Bolangir'),
+(3, 'Rayagada'),
+(4, 'Balasore'),
+(5, 'Paralakhemundi'),
+(6, 'Chhatrapur');
 
 -- --------------------------------------------------------
 
@@ -476,6 +499,12 @@ ALTER TABLE `announcement`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `campus`
+--
+ALTER TABLE `campus`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `certificatelog`
 --
 ALTER TABLE `certificatelog`
@@ -564,6 +593,12 @@ ALTER TABLE `announcement`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
+-- AUTO_INCREMENT for table `campus`
+--
+ALTER TABLE `campus`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `certificatelog`
 --
 ALTER TABLE `certificatelog`
@@ -615,7 +650,7 @@ ALTER TABLE `preachievements`
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `studregd`

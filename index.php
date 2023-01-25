@@ -106,7 +106,7 @@ foreach($getallAnnousement as $getallAnnousements){
                                     <a class="dropdown-item" href="coordinators.php?campus=Balangir">Balangir</a>
                                     <a class="dropdown-item" href="coordinators.php?campus=Paralakhemundi">Paralakhemundi</a>
                                     <a class="dropdown-item" href="coordinators.php?campus=Rayagada">Rayagada</a>
-                                    <a class="dropdown-item" href="coordinators.php?campus=Chhatrapur">Chhatrapur</a>
+                                    <a class="dropdown-item" href="coordinators.php?campus=Chhatrapur">Chatrapur</a>
                                 </div>
                             </li>
                             <li class="nav-item">
