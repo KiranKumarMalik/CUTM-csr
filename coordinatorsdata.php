@@ -36,7 +36,7 @@ $pdf=$cordinator['pdf'];
 <body style="height: auto;">
     <header>
         <nav class="navbar navbar-dark navbar-expand-md fixed-top mobi">
-            <div class="container"><a class="navbar-brand" href="#"><img src="assets/img/logo/logo.png" alt="Logo" width="74" height="100"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="container"><a class="navbar-brand" href="#"><img src="assets/img/logo/cutmlogo.png" alt="Logo" width="74" height="100"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse"
                     id="navcol-1" style="font-size: 14px;">
                     <ul class="nav navbar-nav ml-auto">

@@ -73,7 +73,7 @@ foreach($getallAnnousement as $getallAnnousements){
             style="background: url(&quot;assets/img/csrbg.jpg?h=4b69291c09f7598206c94cbd642abc27&quot;) center / cover no-repeat;height: 690px;">
             <nav class="navbar navbar-dark navbar-expand-md fixed-top mobi">
                 <div class="container">
-                    <a class="navbar-brand" href="#"><img src="assets/img/logo/logo.png" alt="Logo" width="74" height="100"></a>
+                    <a class="navbar-brand" href="#"><img src="assets/img/logo/cutmlogo.png" alt="Logo" width="74" height="100"></a>
                     <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="navbar-toggler-icon"></span></button>

@@ -26,7 +26,7 @@
 <body style="height: auto;">
     <header>
         <nav class="navbar navbar-dark navbar-expand-md fixed-top mobi">
-            <div class="container"><a class="navbar-brand" href="#"><img src="assets/img/logo/logo.png" alt="Logo" width="74" height="100"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="container"><a class="navbar-brand" href="#"><img src="assets/img/logo/cutmlogo.png" alt="Logo" width="74" height="100"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse"
                     id="navcol-1" style="font-size: 14px;">
                     <ul class="nav navbar-nav ml-auto">
@@ -62,7 +62,7 @@
                 </div>
                 <div class="col">      
                         <h1 data-aos="fade-up" style="color: #002654;"><strong>CSaR Program Details</strong></h1>
-                        <p data-aos="fade-up" align="justify">Besides the clubs given below, students are welcomed to send their ideas on new clubs to <a href="mailto: csrcell.bbs@cutm.ac.in" style="color: #000000;">csrcell.bbs@cutm.ac.in</a> (Bhubaneswar), <a href="mailto: csr.bls@cutm.ac.in" style="color: #000000;">csr.bls@cutm.ac.in</a> (Balasore), <a href="mailto: csr.blr@cutm.ac.in" style="color: #000000;">csrcell.blr@cutm.ac.in</a> (Balangir), <a href="mailto: csr.ryd@cutm.ac.in" style="color: #000000;">csr.ryd@cutm.ac.in</a> (Ryagada), <a href="mailto: csr.chr@cutm.ac.in" style="color: #000000;">csr.chr@cutm.ac.in</a> (Chhatrapur), <a href="mailto: csr.pkd@cutm.ac.in" style="color: #000000;">csr.pkd@cutm.ac.in</a> (Paralakhemundi) or submit the same to the professor In-Charge, CSR/Dean, Dean Students' welfares. It is part of our curriculum that all students of Centurion University of Technology and Management will now be required to participate in the Culture, Sports, and Responsibility (CSaR) program during their studies at CUTM w.e.f. 2011-12 academic year.</p>
+                        <p data-aos="fade-up" align="justify">Besides the clubs given below, students are welcomed to send their ideas on new clubs to <a href="mailto: csrcell.bbs@cutm.ac.in" style="color: #000000;">csrcell.bbs@cutm.ac.in</a> (Bhubaneswar), <a href="mailto: csr.bls@cutm.ac.in" style="color: #000000;">csr.bls@cutm.ac.in</a> (Balasore), <a href="mailto: csr.blr@cutm.ac.in" style="color: #000000;">csrcell.blr@cutm.ac.in</a> (Balangir), <a href="mailto: csr.ryd@cutm.ac.in" style="color: #000000;">csr.ryd@cutm.ac.in</a> (Ryagada), <a href="mailto: csr.chr@cutm.ac.in" style="color: #000000;">csr.chr@cutm.ac.in</a> (Chatrapur), <a href="mailto: csr.pkd@cutm.ac.in" style="color: #000000;">csr.pkd@cutm.ac.in</a> (Paralakhemundi) or submit the same to the professor In-Charge, CSR/Dean, Dean Students' welfares. It is part of our curriculum that all students of Centurion University of Technology and Management will now be required to participate in the Culture, Sports, and Responsibility (CSaR) program during their studies at CUTM w.e.f. 2011-12 academic year.</p>
                         <p data-aos="fade-up" align="justify">The program gives students an opportunity to learn from the experience of doing real tasks beyond the classroom, related to <b>Culture (Student life/creative pursuits), Sports (activities for Physical Fitness) and Responsibility (activities for the benifit of the community or the environment)</b></p>
                 </div>
             </div>
@@ -138,14 +138,6 @@
                 <li data-aos="fade-up"> Preparing artistic works (e.g. murals) for beautification of CUTM.</li>
                 <li data-aos="fade-up"> Participating in any event organised by the clubs under cultural activities.</li>
                 <li data-aos="fade-up"> Painting and Photography, etc.</li><br>
-            </ul>
-            <p data-aos="fade-up"><b>Examples of "Sports" activities:</b></p>
-            <ul>
-                <li data-aos="fade-up"> Participating in indivisual and team sports of the institute</li>
-                <li data-aos="fade-up"> Taking part in sporting expeditions.</li>
-                <li data-aos="fade-up"> Participating in Health Club/Yoga Club.</li>
-                <li data-aos="fade-up"> Participating/Organising any adventurers activities.</li>
-                <li data-aos="fade-up"> Organosing a college marathon/other sporting event, etc.</li><br>
             </ul>
             <p data-aos="fade-up"><b>Examples of "Sports" activities:</b></p>
             <ul>
