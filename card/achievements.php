@@ -20,11 +20,12 @@ $campus=$_GET['campus'];
 </head>
 <body>
   <section>
+  <div class="cutm-logo"><img src="./cutm_logo.png" alt="logo" style="width:9%;"></div>
 </center><span><h1><?=$campus?> Campus</h1></span></center>
 <div><a href="../campusachievements.php"><p style="text-align:left"><i class="fa fa-arrow-left" aria-hidden="true"></i></p></a></div>
 <div class="u-center-text u-margin-top-huge">
       </div>
-  <div class="container" style="background-image: url('images/achievement.jpg');">
+  <div class="container" style="background-image: url('./achievement_bg.jpg');">
 
     
 

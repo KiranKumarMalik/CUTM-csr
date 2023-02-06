@@ -650,7 +650,7 @@
   .fbt-nav-skin {
     background-color: #fff;
     -webkit-box-shadow: 0 0 20px rgba(103, 151, 255, 0);
-            box-shadow: 0 0 20px rgba(103, 151, 255, 0);
+            box-shadow: 0 0 20px rgba(255, 169, 103, 0);
   }
   
   .navbar-brand img {
