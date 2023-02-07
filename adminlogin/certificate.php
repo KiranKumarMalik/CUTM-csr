@@ -215,7 +215,7 @@ else
                         <div class="col-md-4 bg-light text-right"><br>
                             <center>
                                 <button type="button" class="btn btn-success btn-lg float-right" name="addpost"
-                                    onclick="location.href='certificate2.php'" <?=$mybtmis?>>
+                                    onclick="location.href='csr_certificate.php'" <?=$mybtmis?>>
                                     View Certificate
                                 </button>
                             </center>
