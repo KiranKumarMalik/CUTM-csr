@@ -38,11 +38,12 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="announcements.php">ANNOUNCEMENTS</a></li>
                         <li class="nav-item dropdown"><a class="dropdown-toggle nav-link nav-link active scrollto" data-toggle="dropdown" aria-expanded="false" href="#">CO-ORDINATORS</a>
                         <div class="dropdown-menu"><a class="dropdown-item" href="coordinators.php?campus=Balasore">Balasore</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Bhubaneswar">Bhubaneswar</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Balangir">Balangir</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Paralakhemundi">Paralakhemundi</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Rayagada">Rayagada</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Chhatrapur">Chatrapur</a></div>
+                                    <a class="dropdown-item" href="coordinators.php?campus=Bhubaneswar">Bhubaneswar</a>
+                                    <a class="dropdown-item" href="coordinators.php?campus=Balangir">Balangir</a>
+                                    <a class="dropdown-item" href="coordinators.php?campus=Paralakhemundi">Paralakhemundi</a>
+                                    <a class="dropdown-item" href="coordinators.php?campus=Rayagada">Rayagada</a>
+                                    <a class="dropdown-item" href="coordinators.php?campus=Chhatrapur">Chatrapur</a>
+                                    <a class="dropdown-item" href="coordinators.php?campus=Vizianagaram">Vizianagaram</a></div>
                         </li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="campusachievements.php">PREVIOUS ACHIEVEMENTS</a></li>
                     </ul>

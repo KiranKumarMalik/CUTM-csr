@@ -107,6 +107,7 @@ foreach($getallAnnousement as $getallAnnousements){
                                     <a class="dropdown-item" href="coordinators.php?campus=Paralakhemundi">Paralakhemundi</a>
                                     <a class="dropdown-item" href="coordinators.php?campus=Rayagada">Rayagada</a>
                                     <a class="dropdown-item" href="coordinators.php?campus=Chhatrapur">Chatrapur</a>
+                                    <a class="dropdown-item" href="coordinators.php?campus=Vizianagaram">Vizianagaram</a>
                                 </div>
                             </li>
                             <li class="nav-item">
@@ -443,7 +444,7 @@ foreach($getallAnnousement as $getallAnnousements){
                             data-aos="fade-up"
                             data-aos-delay="100"><img
                             class="img-fluid"
-                            src="assets/img/event_images/MRC_2314.JPG">
+                            src="assets/img/event_images/bls.JPG">
                             <div class="portfolio-info">
                                 <h4>Balasore</h4>
                                 <p>Event images</p>
@@ -456,7 +457,7 @@ foreach($getallAnnousement as $getallAnnousements){
                             data-aos="fade-up"
                             data-aos-delay="200"><img
                             class="img-fluid"
-                            src="assets/img/event_images/DSC_0008.JPG">
+                            src="assets/img/event_images/bbsr.JPG">
                             <div class="portfolio-info">
                                 <h4>Bhubaneswar</h4>
                                 <p>Event images</p>
@@ -469,7 +470,7 @@ foreach($getallAnnousement as $getallAnnousements){
                             data-aos="fade-up"
                             data-aos-delay="300"><img
                             class="img-fluid"
-                            src="assets/img/event_images/IMG_6868.JPG">
+                            src="assets/img/event_images/blr.png">
                             <div class="portfolio-info">
                                 <h4>Balangir</h4>
                                 <p>Event images</p>
@@ -482,7 +483,7 @@ foreach($getallAnnousement as $getallAnnousements){
                             data-aos="fade-up"
                             data-aos-delay="400"><img
                             class="img-fluid"
-                            src="assets/img/event_images/IMG_20220117_131641.jpg">
+                            src="assets/img/event_images/pkd.jpg">
                             <div class="portfolio-info">
                                 <h4>Paralakhemundi</h4>
                                 <p>Event images</p>
@@ -495,7 +496,7 @@ foreach($getallAnnousement as $getallAnnousements){
                             data-aos="fade-up"
                             data-aos-delay="400"><img
                             class="img-fluid"
-                            src="assets/img/event_images/IMG_7514.JPG">
+                            src="assets/img/event_images/ryd.JPG">
                             <div class="portfolio-info">
                                 <h4>Rayagada</h4>
                                 <p>Event images</p>
@@ -511,6 +512,19 @@ foreach($getallAnnousement as $getallAnnousements){
                             src="assets/img/event_images/MRC_5418.JPG">
                             <div class="portfolio-info">
                                 <h4>Chatrapur</h4>
+                                <p>Event images</p>
+                            </div>
+                        </a>
+                    </div>
+                    <a href="yearwise.php?campus=Vizianagaram">
+                        <div
+                            class="col-12 col-lg-4 col-md-6 portfolio-item filter-app"
+                            data-aos="fade-up"
+                            data-aos-delay="400"><img
+                            class="img-fluid"
+                            src="assets/img/event_images/ryd.JPG">
+                            <div class="portfolio-info">
+                                <h4>Vizianagaram</h4>
                                 <p>Event images</p>
                             </div>
                         </a>
@@ -651,6 +665,25 @@ foreach($getallAnnousement as $getallAnnousements){
                                     </h4>
                                     <ul class="list-group">
                                         <p class="text-center" data-aos="fade-up">Industrial Estate , Kaliabali Chhaka, CHATRAPUR Ganjam - 761045.</p>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-lg-3 col-xl-3 col-md-6"
+                            data-aos="fade-up"
+                            data-aos-delay="400"
+                            style="margin-top: 15px;margin-bottom: 15px;">
+                            <div class="card shadow" style="width: 277.5;">
+                                <div
+                                    class="card-body"
+                                    style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
+                                    <i class="fa fa-map-marker fa-5x" style="color:tomato"></i>
+                                    <h4 class="card-title" style="margin-top: 20px;">
+                                        <strong>Vizianagaram</strong>
+                                    </h4>
+                                    <ul class="list-group">
+                                        <p class="text-center" data-aos="fade-up">Rollavaka Village Bondapalli, Mandal, Andhra Pradesh 535003</p>
                                     </ul>
                                 </div>
                             </div>

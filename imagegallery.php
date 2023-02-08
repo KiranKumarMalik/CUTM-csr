@@ -37,11 +37,12 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="announcements.php">ANNOUNCEMENTS</a></li>
                         <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">CO-ORDINATORS</a>
                         <div class="dropdown-menu"><a class="dropdown-item" href="coordinators.php?campus=Balasore">Balasore</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Bhubaneswar">Bhubaneswar</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Balangir">Balangir</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Paralakhemundi">Paralakhemundi</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Rayagada">Rayagada</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Chhatrapur">Chatrapur</a></div>
+                                    <a class="dropdown-item" href="coordinators.php?campus=Bhubaneswar">Bhubaneswar</a>
+                                    <a class="dropdown-item" href="coordinators.php?campus=Balangir">Balangir</a>
+                                    <a class="dropdown-item" href="coordinators.php?campus=Paralakhemundi">Paralakhemundi</a>
+                                    <a class="dropdown-item" href="coordinators.php?campus=Rayagada">Rayagada</a>
+                                    <a class="dropdown-item" href="coordinators.php?campus=Chhatrapur">Chatrapur</a>
+                                    <a class="dropdown-item" href="coordinators.php?campus=Vizianagaram">Vizianagaram</a></div>
                         </li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="campusachievements.php">PREVIOUS ACHIEVEMENTS</a></li>
                     </ul>
@@ -99,6 +100,13 @@
                             <div class="member-img"><a href="yearwise.php?campus=Chatrapur"><img class="img-fluid" src="assets/img/campusimg/chatrapur.JPG"></div>
                             <div class="member-info">
                                 <h5><strong>Chatrapur</strong></h5><span>Industrial Estate , Kaliabali Chhaka, CHATRAPUR Ganjam - 761045.</span></a></div>
+                        </div>
+                </div>
+                <div class="col-sm-6 col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+                        <div class="member">
+                            <div class="member-img"><a href="yearwise.php?campus=Vizianagaram"><img class="img-fluid" src="assets/img/campusimg/rayagada.JPG"></div>
+                            <div class="member-info">
+                                <h5><strong>Vizianagaram</strong></h5><span>Rollavaka Village Bondapalli, Mandal, Andhra Pradesh 535003</span></a></div>
                         </div>
                 </div>
             </div>

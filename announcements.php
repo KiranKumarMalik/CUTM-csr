@@ -41,11 +41,12 @@ require('./includes/database.php');
                         <li class="nav-item"><a class="nav-link active scrollto" href="announcements.php">ANNOUNCEMENTS</a></li>
                         <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">CO-ORDINATORS</a>
                         <div class="dropdown-menu"><a class="dropdown-item" href="coordinators.php?campus=Balasore">Balasore</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Bhubaneswar">Bhubaneswar</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Balangir">Balangir</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Paralakhemundi">Paralakhemundi</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Rayagada">Rayagada</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Chhatrapur">Chatrapur</a></div>
+                                    <a class="dropdown-item" href="coordinators.php?campus=Bhubaneswar">Bhubaneswar</a>
+                                    <a class="dropdown-item" href="coordinators.php?campus=Balangir">Balangir</a>
+                                    <a class="dropdown-item" href="coordinators.php?campus=Paralakhemundi">Paralakhemundi</a>
+                                    <a class="dropdown-item" href="coordinators.php?campus=Rayagada">Rayagada</a>
+                                    <a class="dropdown-item" href="coordinators.php?campus=Chhatrapur">Chatrapur</a>
+                                    <a class="dropdown-item" href="coordinators.php?campus=Vizianagaram">Vizianagaram</a></div>
                         </li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="campusachievements.php">PREVIOUS ACHIEVEMENTS</a></li>
                     </ul>
@@ -223,6 +224,32 @@ require('./includes/database.php');
 
                     <a href="announcement details.php"><h6 style="text-align:left"><?=$ctrcamp['event_name']?></h6></a>
                     <p data-aos="fade-up"><li style="text-align:left"><?=$ctrcamp['details']?></li></p><br>
+                    <a href="announcement details.php"><p data-aos="fade-up" style="text-align:right">Read more <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                    </svg></p></a>
+
+                    <?php
+            }
+                    ?>
+
+                </div>
+            </div>
+        </div><br>
+
+        <div class="col-md-8 mx-auto text-center">
+        <div class="card">
+            <div class="card-body">
+                    <h3 class="lead" data-aos="fade-up" style="color: #002654;">
+                        <b>Vizianagaram</b>
+                    </h3>
+                <?php
+                $findvgm=getinsertannouncementsforVGM($db);
+                foreach($findvgm as $vgmcamp)
+                {
+                    ?>
+
+                    <a href="announcement details.php"><h6 style="text-align:left"><?=$vgmcamp['event_name']?></h6></a>
+                    <p data-aos="fade-up"><li style="text-align:left"><?=$vgmcamp['details']?></li></p><br>
                     <a href="announcement details.php"><p data-aos="fade-up" style="text-align:right">Read more <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
                     <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
                     </svg></p></a>

@@ -7,8 +7,6 @@ $utype=$_SESSION['usertype'];
 
 
 
-
-
 if($_SESSION['email'] and $utype=="student")
 {
   $studentdata=getUserNmae($db,$uemail);

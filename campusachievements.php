@@ -40,11 +40,12 @@ require('./includes/database.php');
                         <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="announcements.php">ANNOUNCEMENTS</a></li>
                         <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">CO-ORDINATORS</a>
                         <div class="dropdown-menu"><a class="dropdown-item" href="coordinators.php?campus=Balasore">Balasore</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Bhubaneswar">Bhubaneswar</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Balangir">Balangir</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Paralakhemundi">Paralakhemundi</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Rayagada">Rayagada</a>
-                            <a class="dropdown-item" href="coordinators.php?campus=Chhatrapur">Chatrapur</a></div>
+                                    <a class="dropdown-item" href="coordinators.php?campus=Bhubaneswar">Bhubaneswar</a>
+                                    <a class="dropdown-item" href="coordinators.php?campus=Balangir">Balangir</a>
+                                    <a class="dropdown-item" href="coordinators.php?campus=Paralakhemundi">Paralakhemundi</a>
+                                    <a class="dropdown-item" href="coordinators.php?campus=Rayagada">Rayagada</a>
+                                    <a class="dropdown-item" href="coordinators.php?campus=Chhatrapur">Chatrapur</a>
+                                    <a class="dropdown-item" href="coordinators.php?campus=Vizianagaram">Vizianagaram</a></div>
                         </li>
                         <li class="nav-item"><a class="nav-link active scrollto" href="campusachievements.php">PREVIOUS ACHIEVEMENTS</a></li>
                     </ul>
@@ -110,6 +111,15 @@ require('./includes/database.php');
                             <i class="fa fa-trophy fa-5x" style="color:red"></i>
                                 <h4 class="card-title" style="margin-top: 20px;"><strong>Chhatrapur</strong></h4>
                                 <div><a href="./card/achievements.php?campus=Chhatrapur"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="400" style="margin-top: 15px;margin-bottom: 15px;">
+                        <div class="card shadow" style="width: 277.5;">
+                            <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
+                            <i class="fa fa-trophy fa-5x" style="color:red"></i>
+                                <h4 class="card-title" style="margin-top: 20px;"><strong>Vizianagaram</strong></h4>
+                                <div><a href="./card/achievements.php?campus=Vizianagaram"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
                             </div>
                         </div>
                     </div>
