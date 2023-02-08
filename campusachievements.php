@@ -109,8 +109,8 @@ require('./includes/database.php');
                         <div class="card shadow" style="width: 277.5;">
                             <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
                             <i class="fa fa-trophy fa-5x" style="color:red"></i>
-                                <h4 class="card-title" style="margin-top: 20px;"><strong>Chhatrapur</strong></h4>
-                                <div><a href="./card/achievements.php?campus=Chhatrapur"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
+                                <h4 class="card-title" style="margin-top: 20px;"><strong>Chatrapur</strong></h4>
+                                <div><a href="./card/achievements.php?campus=Chatrapur"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
                             </div>
                         </div>
                     </div>

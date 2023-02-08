@@ -357,3 +357,10 @@ body {
     width: 100vw;
   }
 }
+
+.cutm-logo {
+  position: absolute;
+  top: 13%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}

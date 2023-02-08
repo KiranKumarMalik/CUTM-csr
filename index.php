@@ -70,7 +70,7 @@ foreach($getallAnnousement as $getallAnnousements){
         <header
             id="header"
             class="main-header"
-            style="background: url(&quot;assets/img/csrbg.jpg?h=4b69291c09f7598206c94cbd642abc27&quot;) center / cover no-repeat;height: 690px;">
+            style="background: url(&quot;assets/img/csar_bg.jpg?h=4b69291c09f7598206c94cbd642abc27&quot;) center / cover no-repeat;height: 690px;">
             <nav class="navbar navbar-dark navbar-expand-md fixed-top mobi">
                 <div class="container">
                     <a class="navbar-brand" href="#"><img src="assets/img/logo/cutm_logo.png" alt="Logo" width="74" height="100"></a>
@@ -470,7 +470,7 @@ foreach($getallAnnousement as $getallAnnousements){
                             data-aos="fade-up"
                             data-aos-delay="300"><img
                             class="img-fluid"
-                            src="assets/img/event_images/blr.png">
+                            src="assets/img/event_images/blr.jpg">
                             <div class="portfolio-info">
                                 <h4>Balangir</h4>
                                 <p>Event images</p>
@@ -509,7 +509,7 @@ foreach($getallAnnousement as $getallAnnousements){
                             data-aos="fade-up"
                             data-aos-delay="400"><img
                             class="img-fluid"
-                            src="assets/img/event_images/MRC_5418.JPG">
+                            src="assets/img/event_images/ctr.JPG">
                             <div class="portfolio-info">
                                 <h4>Chatrapur</h4>
                                 <p>Event images</p>
@@ -522,7 +522,7 @@ foreach($getallAnnousement as $getallAnnousements){
                             data-aos="fade-up"
                             data-aos-delay="400"><img
                             class="img-fluid"
-                            src="assets/img/event_images/ryd.JPG">
+                            src="assets/img/event_images/vgm.JPG">
                             <div class="portfolio-info">
                                 <h4>Vizianagaram</h4>
                                 <p>Event images</p>

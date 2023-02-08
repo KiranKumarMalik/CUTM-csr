@@ -278,8 +278,7 @@ require('../includes/function.php');
                     </div>
                     <div class="alert alert-success successBox">
                         <button type="button" class="close" onclick="showMsg(1);">×</button>
-                        <!-- <strong style="font-size: 16px;">Congratulations!</strong><span class="alert-link"> You Have
-                            Successfully Registered.</span> -->
+                        <strong style="font-size: 16px;">Congratulations!</strong><span class="alert-link"> You Have Successfully Registered.</span>
                     </div>
 
                     <hr>
