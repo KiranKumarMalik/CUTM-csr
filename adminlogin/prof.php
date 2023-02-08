@@ -351,6 +351,7 @@ if(isset($_POST['passwordbtn'])){
                         <img src="../images/profileimg/<?=$post_images['profileimage'] ?>">
                         <div class="pt-2">
                         <input class="form-control" type="file" id="formFile" name="imageupload" accept="image/*" >
+                        <p style="color:red;">*Upload Photo Max. Size upto 50Kb.*</p>
                         </div>
                       </div>
                     </div>

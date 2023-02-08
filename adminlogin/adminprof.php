@@ -357,6 +357,7 @@ if(isset($_POST['passwordbtn'])){
                         <div class="pt-2">
                           
                           <input class="form-control" type="file" id="formFile" name="imageupload" accept="image/*">
+                          <p style="color:red;">*Upload Photo Max. Size upto 50Kb.*</p>
                         </div>
                       </div>
                     </div>

@@ -274,6 +274,7 @@ require('../includes/function.php');
                         <div class="col-sm-10">
                             <input class="form-control" type="file" id="formFile" name="imageupload" accept="image/* " required>
                         </div>
+                        <p style="color:red;">*Upload Photo Max. Size upto 50Kb.*</p>
                     </div>
                     <div class="alert alert-success successBox">
                         <button type="button" class="close" onclick="showMsg(1);">×</button>
