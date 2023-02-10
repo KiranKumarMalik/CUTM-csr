@@ -13,11 +13,11 @@
     $send=smtp_mailer($email,'CSaR Credential',$message);
     if ($send) {
         echo "send ok";
-        header('location:http://localhost/csr-project/adminlogin/admin.php');
+        header('location:http://localhost/csr-project/adminlogin/studentapproval.php');
     }
     else {
         echo "error in sending ";
-        header('location:http://localhost/csr-project/adminlogin/admin.php');
+        header('location:http://localhost/csr-project/adminlogin/studentapproval.php');
     }
 
 ?>

@@ -152,7 +152,8 @@ require('../includes/function.php');
 
     <!-- CSS Customization -->
     <link rel="stylesheet" href="assets/css/custom.css">
-
+    
+    
 </head>
 
 <body>
@@ -276,10 +277,7 @@ require('../includes/function.php');
                         </div>
                         <p style="color:red;">*Upload Photo Max. Size upto 50Kb.*</p>
                     </div>
-                    <div class="alert alert-success successBox">
-                        <button type="button" class="close" onclick="showMsg(1);">×</button>
-                        <strong style="font-size: 16px;">Congratulations!</strong><span class="alert-link"> You Have Successfully Registered.</span>
-                    </div>
+                    
 
                     <hr>
 
@@ -295,6 +293,7 @@ require('../includes/function.php');
                         </div>
                     </div>
                 </form>
+               
             </div>
         </div>
     </div>
@@ -308,7 +307,7 @@ require('../includes/function.php');
             <div class="row">
                 <div class="col-md-6">
                     <p>
-                        2022 &copy; Designed by
+                        2023 &copy; Designed by
                         <a href="https://cutm.ac.in/">Centurion University of Technology and Management</a>
                     </p>
                 </div>
@@ -325,6 +324,7 @@ require('../includes/function.php');
     <!-- Java scripts -->
     <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
     <script type="text/javascript">
+        
     function showMsg(flag) {
         if (flag == 0) {
             $('.successBox').css('display', 'block');
@@ -338,7 +338,9 @@ require('../includes/function.php');
           window.location.href = "../login/enterredg.php";
         }
     </script>
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>
