@@ -307,7 +307,7 @@ foreach($getallAnnousement as $getallAnnousements){
                             <div class="member">
                                 <div class="member-img"><img
                                     class="img-fluid"
-                                    src="assets/img/team/sangram1.png?h=63ff35667fd20fc8d734752b7311ed81"></div>
+                                    src="assets/img/team/sangram.jpg?h=63ff35667fd20fc8d734752b7311ed81"></div>
                                 <div class="social">
                                     <a href="https://www.facebook.com/drsangramkeshariswain?mibextid=ZbWKwL">
                                         <i class="fab fa-facebook"></i>

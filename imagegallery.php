@@ -104,7 +104,7 @@
                 </div>
                 <div class="col-sm-6 col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
                         <div class="member">
-                            <div class="member-img"><a href="yearwise.php?campus=Vizianagaram"><img class="img-fluid" src="assets/img/campusimg/rayagada.JPG"></div>
+                            <div class="member-img"><a href="yearwise.php?campus=Vizianagaram"><img class="img-fluid" src="assets/img/campusimg/vizianagaram.JPG"></div>
                             <div class="member-info">
                                 <h5><strong>Vizianagaram</strong></h5><span>Rollavaka Village Bondapalli, Mandal, Andhra Pradesh 535003</span></a></div>
                         </div>
