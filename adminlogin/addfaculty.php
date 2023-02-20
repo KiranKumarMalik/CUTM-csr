@@ -359,22 +359,18 @@ if(isset($_POST['addTeacher'])){
                     <label for="inputText" class="col-sm-2 col-form-label">School: </label>
                     <div class="col-sm-10">
                         <select class="form-select" aria-label="Default select example" name="school">
-                            <option value="School of Engineering and Technology">School of Engineering and Technology
-                            </option>
+                            <option value="School of Engineering and Technology">School of Engineering & Technology</option>
                             <option value="School of Management">School of Management</option>
-                            <option value="M.S. Swaminathan School of Agriculture">M.S. Swaminathan School of
-                                Agriculture</option>
-                            <option value="School of Media and Communication">School of Media and Communication</option>
-                            <option value="School Of Paramedics & Allied Health Science">School Of Paramedics & Allied
-                                Health Science</option>
+                            <option value="M.S. Swaminathan School of Agriculture">M.S.Swaminathan School of Agriculture</option>
+                            <option value="School of Media and Communication">School of Media & Communication</option>
+                            <option value="School Of Paramedics & Allied Health Science">School of Paramedics & Allied Health Sciences</option>
                             <option value="School of Applied Sciences">School of Applied Sciences</option>
                             <option value="School of Forensic Sciences">School of Forensic Sciences</option>
-                            <option value="School Of Pharmacy">School Of Pharmacy</option>
-                            <option value="School of Agriculture and Bio-Engineering">School of Agriculture and
-                                Bio-Engineering</option>
+                            <option value="School Of Pharmacy">School of Pharmacy and Life Sciences</option>
+                            <option value="School Of Pharmacy">School of Pharmacy</option>
+                            <option value="School of Agriculture and Bio-Engineering">School of Agriculture & Bio Engineering</option>
                             <option value="School of Fisheries">School of Fisheries</option>
-                            <option value="School Of Vocational Education and Training">School Of Vocational Education
-                                and Training</option>
+                            <option value="School Of Vocational Education and Training">School of Vocational Education & Training</option>
                             <option value="School of Maritime Studies">School of Maritime Studies</option>
                         </select>
                     </div>
@@ -385,7 +381,7 @@ if(isset($_POST['addTeacher'])){
                         <select class="form-select" aria-label="Default select example" name="sex">
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
-                            <option value="Transgender">Transgender</option>
+                            <option value="Transgender">Other</option>
                         </select>
                     </div>
                 </div>
