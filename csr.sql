@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 20, 2023 at 06:18 PM
+-- Generation Time: Feb 22, 2023 at 07:13 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -151,7 +151,7 @@ INSERT INTO `coordinatorstypeschool` (`id`, `type`, `school_branch`) VALUES
 (12, 'ClubInCharges', 'School of Media & Communication'),
 (13, 'ClubInCharges', 'School of Vocational Education & Training'),
 (14, 'ClubInCharges', 'School of Pharmacy and Life Sciences'),
-(15, 'ClubInCharges', 'School Of Pharmacy'),
+(15, 'ClubInCharges', 'School of Pharmacy'),
 (16, 'ClubInCharges', 'M.S.Swaminathan School of Agriculture'),
 (28, 'FacultyInCharges', 'School of Engineering & Technology'),
 (29, 'FacultyInCharges', 'School of Paramedics & Allied Health Sciences'),
@@ -252,7 +252,9 @@ INSERT INTO `coordinatorstypeschool` (`id`, `type`, `school_branch`) VALUES
 (127, 'FacultyInCharges', 'School of Engineering and Technology'),
 (128, 'FacultyInCharges', 'School of Pharmacy and Life Sciences'),
 (129, 'FacultyInCharges', 'School Of Pharmacy'),
-(130, 'FacultyInCharges', 'M.S.Swaminathan School of Agriculture');
+(130, 'FacultyInCharges', 'M.S.Swaminathan School of Agriculture'),
+(131, 'ClubInCharges', 'School of Agriculture & Bio Engineering'),
+(133, 'FacultyInCharges', 'School of Agriculture & Bio Engineering');
 
 -- --------------------------------------------------------
 
@@ -617,7 +619,7 @@ ALTER TABLE `coordinators`
 -- AUTO_INCREMENT for table `coordinatorstypeschool`
 --
 ALTER TABLE `coordinatorstypeschool`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=131;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
 
 --
 -- AUTO_INCREMENT for table `csrpr`
