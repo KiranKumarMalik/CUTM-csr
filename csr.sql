@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 22, 2023 at 07:13 AM
+-- Generation Time: Feb 22, 2023 at 07:20 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -48,13 +48,13 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `name`, `email`, `mobile`, `sex`, `campus`, `empid`, `designation`, `about`, `country`, `address`, `password`, `profileimg`) VALUES
-(2, 'Dr. Sangram Keshari Swain', 'sangramkeshariswain@cutm.ac.in', '9937093949', 'Male', 'Bhubaneswar', 'CUTM3245', 'Examination dean, professor', 'Ph.D. in Computer Science and Engineering having 12 years of teaching experience having a demonstrated history of working in the higher education industry. Skilled in Social Services, Teaching, Research, Data Analysis, and Higher Education. A strong education professional having multidimensional approaches like Engineering, Technology, Management, Social Service and Law. Social Responsibility activity has been my Passion always.', 'India', 'Ramchandrapur, Jatani, Bhubaneswar, Odisha, 752050', '5d0520025996b9b26cbdadc0176f1ee6', 'sangram1.png'),
-(3, 'Mrs. Prativa Satapathy', 'prativa.satpathy@cutm.ac.in', '7008158545', 'Female', 'Bolangir', 'CUTM478', 'Assistant Professor', '', 'India', '', '5d0520025996b9b26cbdadc0176f1ee6', 'femaleuser.jpg'),
-(4, 'Chandra Sekhar Patro', 'chandrasekhar.patro@cutm.ac.in', '8331887509', 'Male', 'Rayagada', 'CUTM356', 'Professor', '', 'India', '', '5d0520025996b9b26cbdadc0176f1ee6', 'maleuser.jpg'),
-(5, 'Chandan Kumar Das', 'chandankumar.das@gramtarang.org.in', '7873679676', 'Male', 'Balasore', 'CUTM259', 'Professor', '', 'India', '', '5d0520025996b9b26cbdadc0176f1ee6', 'maleuser.jpg'),
-(6, 'Mrs.Binapani Barik', 'binapani.barik@cutm.ac.in', '7504915935', 'Male', 'Paralakhemundi', 'CUTM476', 'Professor', '', 'India', '', '5d0520025996b9b26cbdadc0176f1ee6', 'maleuser.jpg'),
-(7, 'Rati Ranjan Mishra', 'ratiranjan.mishra@cutm.ac.in', '8249196464', 'Male', 'Chhatrapur', 'EMP875', 'CSaR Co-ordinator', '', 'India', 'Chhatrapur, Ganjam, Odisha', '5d0520025996b9b26cbdadc0176f1ee6', 'maleuser.jpg'),
-(8, 'Nrusinha Das', 'nrusinha@cutm.ac.in', '', 'Male', '', '', 'Server Administrator', 'I am a system administrative', 'India', '', 'd7ba1f808e8ca199cf947403dbb2441b', 'maleuser.jpg');
+(2, 'Dr. Sangram Keshari Swain', 'sangramkeshariswain@cutm.ac.in', '9937093949', 'Male', 'Bhubaneswar', 'CUTM3245', 'Examination dean, professor', 'Ph.D. in Computer Science and Engineering having 12 years of teaching experience having a demonstrated history of working in the higher education industry. Skilled in Social Services, Teaching, Research, Data Analysis, and Higher Education. A strong education professional having multidimensional approaches like Engineering, Technology, Management, Social Service and Law. Social Responsibility activity has been my Passion always.', 'India', 'Ramchandrapur, Jatani, Bhubaneswar, Odisha, 752050', 'ef619de1cb093518332ffa724bfd0dfc', 'sangram1.png'),
+(3, 'Mrs. Prativa Satapathy', 'prativa.satpathy@cutm.ac.in', '7008158545', 'Female', 'Bolangir', 'CUTM478', 'Assistant Professor', '', 'India', '', 'f5af845846d8f826d1f98a328e3863e0', 'femaleuser.jpg'),
+(4, 'Chandra Sekhar Patro', 'chandrasekhar.patro@cutm.ac.in', '8331887509', 'Male', 'Rayagada', 'CUTM356', 'Professor', '', 'India', '', 'a3739426d182e1c03f98c4fdb3201fb3', 'maleuser.jpg'),
+(5, 'Chandan Kumar Das', 'chandankumar.das@gramtarang.org.in', '7873679676', 'Male', 'Balasore', 'CUTM259', 'Professor', '', 'India', '', 'c2a216e103154abc47fa01423ed27d7e', 'maleuser.jpg'),
+(6, 'Mrs.Binapani Barik', 'binapani.barik@cutm.ac.in', '7504915935', 'Male', 'Paralakhemundi', 'CUTM476', 'Professor', '', 'India', '', '4e06c4d77372e59a60fa6dc16ded5140', 'maleuser.jpg'),
+(7, 'Rati Ranjan Mishra', 'ratiranjan.mishra@cutm.ac.in', '8249196464', 'Male', 'Chhatrapur', 'EMP875', 'CSaR Co-ordinator', '', 'India', 'Chhatrapur, Ganjam, Odisha', '9e84d8d5f776d22aee3ee66ed2ada78f', 'maleuser.jpg'),
+(8, 'Nrusinha Das', 'nrusinha@cutm.ac.in', '', 'Male', '', '', 'Server Administrator', 'I am a system administrative', 'India', '', '0de2df1faff53800e821acffc28f9f7c', 'maleuser.jpg');
 
 -- --------------------------------------------------------
 
