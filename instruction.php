@@ -73,7 +73,8 @@
                     <a href="mailto: csr.blr@cutm.ac.in" style="color: #000000;">csr.blr@cutm.ac.in</a> (Balangir), 
                     <a href="mailto: csr.ryd@cutm.ac.in" style="color: #000000;">csr.ryd@cutm.ac.in</a> (Ryagada), 
                     <a href="mailto: csr.chr@cutm.ac.in" style="color: #000000;">csr.chr@cutm.ac.in</a> (Chhatrapur), 
-                    <a href="mailto: csr.pkd@cutm.ac.in" style="color: #000000;">csr.pkd@cutm.ac.in</a> (Paralakhemundi) 
+                    <a href="mailto: csr.pkd@cutm.ac.in" style="color: #000000;">csr.pkd@cutm.ac.in</a> (Paralakhemundi),
+                    <a href="mailto: csr.vgm@cutm.ac.in" style="color: #000000;">csr.vgm@cutm.ac.in</a> (Vizianagaram)
                     or to the Professor In-Charge, CSaR/Dean, Students' Affairs.</li>
                 <li data-aos="fade-up" align="justify"> Students are advised to keep on updated in CSaR Credit automation System (CCAS).</li>
                 <li data-aos="fade-up" align="justify"> Any clarifications regarding the CSaR program can be obtained from the Professor In-Charge, Dean, Student Affairs, Dean student Welfares.</li>

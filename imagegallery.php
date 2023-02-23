@@ -69,7 +69,7 @@
                     </div>
                     <div class="col-12 col-sm-6 col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
                         <div class="member">
-                            <div class="member-img"><a href="yearwise.php?campus=Bhubaneswar"><img class="img-fluid" src="assets/img/campusimg/bhubaneswar.JPG"></div>
+                            <div class="member-img"><a href="yearwise.php?campus=Bhubaneswar"><img class="img-fluid" src="assets/img/campusimg/bhubaneswar.jpg"></div>
                             <div class="member-info">
                                 <h5><strong>Bhubaneswar</strong></h5><span>Ramchandrapur, Jatni, Bhubaneswar Dist, Khurda Odisha.</span></a></div>
                         </div>
@@ -90,21 +90,21 @@
                     </div>
                     <div class="col-sm-6 col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
                         <div class="member">
-                            <div class="member-img"><a href="yearwise.php?campus=Rayagada"><img class="img-fluid" src="assets/img/campusimg/rayagada.JPG"></div>
+                            <div class="member-img"><a href="yearwise.php?campus=Rayagada"><img class="img-fluid" src="assets/img/campusimg/rayagada.jpg"></div>
                             <div class="member-info">
                                 <h5><strong>Rayagada</strong></h5><span>IDCO Industrial Area, Pitamahal, Rayagada, Odisha.</span></a></div>
                         </div>
                 </div>
                 <div class="col-sm-6 col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
                         <div class="member">
-                            <div class="member-img"><a href="yearwise.php?campus=Chatrapur"><img class="img-fluid" src="assets/img/campusimg/chatrapur.JPG"></div>
+                            <div class="member-img"><a href="yearwise.php?campus=Chatrapur"><img class="img-fluid" src="assets/img/campusimg/chatrapur.JPjpgG"></div>
                             <div class="member-info">
                                 <h5><strong>Chatrapur</strong></h5><span>Industrial Estate , Kaliabali Chhaka, CHATRAPUR Ganjam - 761045.</span></a></div>
                         </div>
                 </div>
                 <div class="col-sm-6 col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
                         <div class="member">
-                            <div class="member-img"><a href="yearwise.php?campus=Vizianagaram"><img class="img-fluid" src="assets/img/campusimg/vizianagaram.JPG"></div>
+                            <div class="member-img"><a href="yearwise.php?campus=Vizianagaram"><img class="img-fluid" src="assets/img/campusimg/vizianagaram.jpg"></div>
                             <div class="member-info">
                                 <h5><strong>Vizianagaram</strong></h5><span>Rollavaka Village Bondapalli, Mandal, Andhra Pradesh 535003</span></a></div>
                         </div>

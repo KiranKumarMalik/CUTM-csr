@@ -444,7 +444,7 @@ foreach($getallAnnousement as $getallAnnousements){
                             data-aos="fade-up"
                             data-aos-delay="100"><img
                             class="img-fluid"
-                            src="assets/img/event_images/bls.JPG">
+                            src="assets/img/event_images/bls.jpg">
                             <div class="portfolio-info">
                                 <h4>Balasore</h4>
                                 <p>Event images</p>
@@ -457,7 +457,7 @@ foreach($getallAnnousement as $getallAnnousements){
                             data-aos="fade-up"
                             data-aos-delay="200"><img
                             class="img-fluid"
-                            src="assets/img/event_images/bbsr.JPG">
+                            src="assets/img/event_images/bbsr.jpg">
                             <div class="portfolio-info">
                                 <h4>Bhubaneswar</h4>
                                 <p>Event images</p>
@@ -496,7 +496,7 @@ foreach($getallAnnousement as $getallAnnousements){
                             data-aos="fade-up"
                             data-aos-delay="400"><img
                             class="img-fluid"
-                            src="assets/img/event_images/ryd.JPG">
+                            src="assets/img/event_images/ryd.jpg">
                             <div class="portfolio-info">
                                 <h4>Rayagada</h4>
                                 <p>Event images</p>
@@ -509,7 +509,7 @@ foreach($getallAnnousement as $getallAnnousements){
                             data-aos="fade-up"
                             data-aos-delay="400"><img
                             class="img-fluid"
-                            src="assets/img/event_images/ctr.JPG">
+                            src="assets/img/event_images/ctr.jpg">
                             <div class="portfolio-info">
                                 <h4>Chatrapur</h4>
                                 <p>Event images</p>
@@ -522,7 +522,7 @@ foreach($getallAnnousement as $getallAnnousements){
                             data-aos="fade-up"
                             data-aos-delay="400"><img
                             class="img-fluid"
-                            src="assets/img/event_images/vgm.JPG">
+                            src="assets/img/event_images/vgm.jpg">
                             <div class="portfolio-info">
                                 <h4>Vizianagaram</h4>
                                 <p>Event images</p>
