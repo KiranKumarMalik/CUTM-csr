@@ -509,17 +509,17 @@ else{
                     <label>Select School</label>
                     <select class="form-select" aria-label="Default select example" name="school">
                     <option value="School of Engineering and Technology">Select school</option>
-                    <option value="School of Engineering and Technology">School of Engineering and Technology</option>
+                    <option value="School of Engineering and Technology">School of Engineering & Technology</option>
                       <option value="School of Management">School of Management</option>
-                      <option value="M.S. Swaminathan School of Agriculture">M.S. Swaminathan School of Agriculture</option>
-                      <option value="School of Media and Communication">School of Media and Communication</option>
-                      <option value="School Of Paramedics & Allied Health Science">School Of Paramedics & Allied Health Science</option>
+                      <option value="M.S. Swaminathan School of Agriculture">M.S.Swaminathan School of Agriculture</option>
+                      <option value="School of Media and Communication">School of Media & Communication</option>
+                      <option value="School Of Paramedics & Allied Health Science">School of Paramedics & Allied Health Sciences</option>
                       <option value="School of Applied Science">School of Applied Sciences</option>
                       <option value="School of Forensic Science">School of Forensic Sciences</option>
-                      <option value="School Of Pharmacy">School Of Pharmacy</option>
-                      <option value="School of Agriculture and Bio-Engineering">School of Agriculture and Bio-Engineering</option>
+                      <option value="School Of Pharmacy">School of Pharmacy</option>
+                      <option value="School of Agriculture and Bio-Engineering">School of Agriculture & Bio Engineering</option>
                       <option value="School of Fisheries">School of Fisheries</option>
-                      <option value="School Of Vocational Education and Training">School Of Vocational Education and Training</option>
+                      <option value="School Of Vocational Education and Training">School of Vocational Education & Training</option>
                       <option value="School of Maritime Studies">School of Maritime Studies</option>
                     </select>
                 </div>
