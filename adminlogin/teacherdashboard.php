@@ -149,13 +149,13 @@ echo $mydatestrdata;
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link " href="teacher.php">
+      <a class="nav-link collapsed" href="teacher.php">
         <i class="bi bi-calendar3"></i>
         <span>Event timesheet approval</span>
       </a>
     </li>
         <li class="nav-item">
-              <a class="nav-link " href="facultyprof.php">
+              <a class="nav-link collapsed" href="facultyprof.php">
                   <i class="bi bi-person-fill"></i>
                   <span>Profile</span>
               </a>

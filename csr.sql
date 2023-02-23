@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 22, 2023 at 07:20 PM
+-- Generation Time: Feb 23, 2023 at 10:26 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -54,7 +54,8 @@ INSERT INTO `admin` (`id`, `name`, `email`, `mobile`, `sex`, `campus`, `empid`, 
 (5, 'Chandan Kumar Das', 'chandankumar.das@gramtarang.org.in', '7873679676', 'Male', 'Balasore', 'CUTM259', 'Professor', '', 'India', '', 'c2a216e103154abc47fa01423ed27d7e', 'maleuser.jpg'),
 (6, 'Mrs.Binapani Barik', 'binapani.barik@cutm.ac.in', '7504915935', 'Male', 'Paralakhemundi', 'CUTM476', 'Professor', '', 'India', '', '4e06c4d77372e59a60fa6dc16ded5140', 'maleuser.jpg'),
 (7, 'Rati Ranjan Mishra', 'ratiranjan.mishra@cutm.ac.in', '8249196464', 'Male', 'Chhatrapur', 'EMP875', 'CSaR Co-ordinator', '', 'India', 'Chhatrapur, Ganjam, Odisha', '9e84d8d5f776d22aee3ee66ed2ada78f', 'maleuser.jpg'),
-(8, 'Nrusinha Das', 'nrusinha@cutm.ac.in', '', 'Male', '', '', 'Server Administrator', 'I am a system administrative', 'India', '', '0de2df1faff53800e821acffc28f9f7c', 'maleuser.jpg');
+(8, 'Nrusinha Das', 'nrusinha@cutm.ac.in', '', 'Male', '', '', 'Server Administrator', 'I am a system administrative', 'India', '', '0de2df1faff53800e821acffc28f9f7c', 'maleuser.jpg'),
+(9, 'Dr Anthony Sunny Dayal Pendurthy', 'sunnydayal@cutmap.ac.in', '7093068888', 'Male', 'Vizianagaram', 'CUTMEMP5124', 'Admin', 'Admin of Vizianagaram Campus', 'India', 'Rollavaka Village Bondapalli, Mandal, Andhra Pradesh 535003', '4fa4097c87915e735dd9af5004fb3c94', 'maleuser.jpg');
 
 -- --------------------------------------------------------
 
@@ -254,7 +255,9 @@ INSERT INTO `coordinatorstypeschool` (`id`, `type`, `school_branch`) VALUES
 (129, 'FacultyInCharges', 'School Of Pharmacy'),
 (130, 'FacultyInCharges', 'M.S.Swaminathan School of Agriculture'),
 (131, 'ClubInCharges', 'School of Agriculture & Bio Engineering'),
-(133, 'FacultyInCharges', 'School of Agriculture & Bio Engineering');
+(133, 'FacultyInCharges', 'School of Agriculture & Bio Engineering'),
+(135, 'ClubInCharges', 'School of Fisheries'),
+(136, 'FacultyInCharges', 'School of Fisheries');
 
 -- --------------------------------------------------------
 
@@ -589,13 +592,13 @@ ALTER TABLE `year`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `announcement`
 --
 ALTER TABLE `announcement`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `campus`
@@ -613,13 +616,13 @@ ALTER TABLE `certificatelog`
 -- AUTO_INCREMENT for table `coordinators`
 --
 ALTER TABLE `coordinators`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `coordinatorstypeschool`
 --
 ALTER TABLE `coordinatorstypeschool`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
 
 --
 -- AUTO_INCREMENT for table `csrpr`

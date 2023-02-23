@@ -191,45 +191,45 @@ if(isset($_POST['importExcel'])){
         <ul class="sidebar-nav" id="sidebar-nav">
 
         <li class="nav-item">
-                <a class="nav-link " href="./superdashboard.php">
+                <a class="nav-link collapsed" href="./superdashboard.php">
                     <i class="bi bi-grid"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="./superstudentdatabse.php">
+                <a class="nav-link" href="./superstudentdatabse.php">
                     <i class="bi bi-journal-text"></i>
-                    <span>Student Database Add</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="./superstudentactivity.php">
-                    <i class="bi bi-file-check-fill"></i>
                     <span>Add Student Database</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="./superadminfacultydata.php">
+                <a class="nav-link collapsed" href="./superstudentactivity.php">
+                    <i class="bi bi-file-check-fill"></i>
+                    <span>Student Activity Data</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="./superadminfacultydata.php">
                     <i class="bi bi-person-badge-fill"></i>
                     <span>Admin & Faculty Database</span>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link " href="./superadminstudentdata.php">
+                <a class="nav-link collapsed" href="./superadminstudentdata.php">
                     <i class="bi bi-people-fill"></i>
-                    <span>registred Student</span>
+                    <span>Registred Student</span>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link " href="./superprofile.php">
+                <a class="nav-link collapsed" href="./superprofile.php">
                     <i class="bi bi-person-fill"></i>
                     <span>Profile</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="../includes/logout.php">
+                <a class="nav-link collapsed" href="../includes/logout.php">
                     <i class="bi bi-box-arrow-right"></i>
                     <span>Log out</span>
                 </a>

@@ -5,9 +5,11 @@ $campus=$_GET['campus'];
 $Coordinators=$_GET['coordinator'];
 $cordinator=getcoordinators($db,$Coordinators,$campus);
 
-$pdf=$cordinator['pdf'];
-// echo $pdf;
-// echo $Coordinators;
+if($cordinator != ""){
+    $pdf="<iframe src='./assets//pdf/cordinator/".$cordinator['pdf']."' width='100%' height='600px'></iframe>";
+}else{
+    $pdf="Sorry PDF NOT Found";
+}
 
 ?>
 <!DOCTYPE html>
@@ -75,7 +77,7 @@ $pdf=$cordinator['pdf'];
                     <div class="card">
                     <div class="card-body">
                     <form action="" method="post">
-                    <iframe src="./assets//pdf/cordinator/<?=$pdf?>" width="100%" height="600px"></iframe>
+                    <?=$pdf?>
                     </div>
                     </div>
                     </div>

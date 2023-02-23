@@ -293,7 +293,7 @@
 				$query="UPDATE `coordinators` SET `pdf`='$cordinatorpdf' WHERE type='$type' && campus='$campus'";
 				$run=mysqli_query($db,$query) or die(mysqli_error($db));
 				if ($run) {
-					header('location:../adminlogin/coordinator_uploads.php');
+					echo "<script>alert('You Successfully upload your pdf.');window.location.href = '../adminlogin/coordinator_uploads.php';</script>";
 					echo "pdf modified";
 				}
 				else {
@@ -303,8 +303,8 @@
 				$query="INSERT INTO coordinators (type,campus,pdf) VALUES('$type','$campus','$cordinatorpdf')";
 				$run=mysqli_query($db,$query) or die(mysqli_error($db));
 				if ($run) {
-					header('location:../adminlogin/coordinator_uploads.php');
-					echo "inserted done";
+					echo "<script>alert('You Successfully upload your pdf.');window.location.href = '../adminlogin/coordinator_uploads.php';</script>";
+					
 				}
 				else {
 					echo "inserted error";
