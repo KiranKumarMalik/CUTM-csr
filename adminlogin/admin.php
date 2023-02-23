@@ -41,6 +41,8 @@ $blrdata=getAllRegisterStudent($db,'Balangir');
 $pkddata=getAllRegisterStudent($db,'Paralakhemundi');
 $ryddata=getAllRegisterStudent($db,'Rayagada');
 $chtdata=getAllRegisterStudent($db,'Chhatrapur');
+$vgmdata=getAllRegisterStudent($db,'Vizianagaram');
+
 
 for ($month = 1; $month <= 12; $month++) {
   $campuswiseculture[$month]=getAllAcadamicYearStatus($db,$adminData['campus'],'Culture',$month);
@@ -293,10 +295,10 @@ else{
                   new Chart(document.querySelector('#lineChart'), {
                     type: 'line',
                     data: {
-                      labels: ['Balasore', 'Bhubaneswar', 'Balangir', 'Paralakhemundi', 'Rayagada', 'Chhatrapur'],
+                      labels: ['Balasore', 'Bhubaneswar', 'Balangir', 'Paralakhemundi', 'Rayagada', 'Chhatrapur', 'Vizianagaram'],
                       datasets: [{
                         label: 'Number of Students',
-                        data: [<?=$blsdata?>, <?=$bbsrdata?>, <?=$blrdata?>, <?=$pkddata?>, <?=$ryddata?>, <?=$chtdata?>],
+                        data: [<?=$blsdata?>, <?=$bbsrdata?>, <?=$blrdata?>, <?=$pkddata?>, <?=$ryddata?>, <?=$chtdata?>, <?=$vgmdata?>],
                         fill: false,
                         borderColor: 'rgb(255, 0, 0)',
                         tension: 0.1

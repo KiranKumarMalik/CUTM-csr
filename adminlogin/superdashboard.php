@@ -21,6 +21,7 @@ $blrdata=getAllRegisterStudent($db,'Balangir');
 $pkddata=getAllRegisterStudent($db,'Paralakhemundi');
 $ryddata=getAllRegisterStudent($db,'Rayagada');
 $chtdata=getAllRegisterStudent($db,'Chatrapur');
+$vgmdata=getAllRegisterStudent($db,'Vizianagaram');
 
 for ($month = 1; $month <= 12; $month++) {
   $campuswiseculture[$month]=getAllAcadamicYearStatusBySuperAdmin($db,'Culture',$month);
@@ -247,12 +248,12 @@ else{
                                     type: 'line',
                                     data: {
                                         labels: ['Balasore', 'Bhubaneswar', 'Balangir',
-                                            'Paralakhemundi', 'Rayagada', 'Chhatrapur'
+                                            'Paralakhemundi', 'Rayagada', 'Chhatrapur', 'Vizianagaram'
                                         ],
                                         datasets: [{
                                             label: 'Number of Students',
                                             data: [<?=$blsdata?>, <?=$bbsrdata?>, <?=$blrdata?>,
-                                                <?=$pkddata?>, <?=$ryddata?>, <?=$chtdata?>
+                                                <?=$pkddata?>, <?=$ryddata?>, <?=$chtdata?>, <?=$vgmdata?>
                                             ],
                                             fill: false,
                                             borderColor: 'rgb(255, 0, 0)',
