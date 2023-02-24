@@ -102,7 +102,7 @@ $achievement=getAllArchivementPdf($db,$campus,$year);
                             <li><a href="imagegallery.php">Image gallery</a></li>
                             <li><a href="announcements.php">Announcements</a></li>
                             <li><a href="events.php">Events</a></li>
-                            <li><a href="assets/img/designer/index.html">Designer</a></li>
+                            <li><a href="assets/img/designer/index.html">Web Designer</a></li>
                         </ul>
                     </div>
                     <!-- End: About -->

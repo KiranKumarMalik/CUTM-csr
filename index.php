@@ -790,7 +790,7 @@ foreach($getallAnnousement as $getallAnnousements){
                                     <a href="events.php">Events</a>
                                 </li>
                                 <li>
-                                    <a href="assets/img/designer/index.html">Designer</a>
+                                    <a href="assets/img/designer/index.html">Web Designer</a>
                                 </li>
                             </ul>
                         </div>

@@ -17,15 +17,22 @@ else
 
 if(isset($_POST['importExcel'])){
 	$file=$_FILES['excelData']['tmp_name'];
+    $fileName=$_FILES['excelData']['name'];
+
+    $new_file_name=$fileName;
 	// echo "<PRE>";
     // echo $file;
+
+    move_uploaded_file($_FILES["excelData"]["tmp_name"], "./upload/" .$new_file_name);
+    $upload_file = "./upload/" . $new_file_name;
+
 	$ext=pathinfo($_FILES['excelData']['name'],PATHINFO_EXTENSION);
 	if($ext=='xlsx'){
 		require('./PHPExcel/PHPExcel.php');
 		require('./PHPExcel/PHPExcel/IOFactory.php');
 		
 		
-		$obj=PHPExcel_IOFactory::load($file);
+		$obj=PHPExcel_IOFactory::load($upload_file);
 		foreach($obj->getWorksheetIterator() as $sheet){
 			$getHighestRow=$sheet->getHighestRow();
 			for($i=2;$i<=$getHighestRow;$i++){
@@ -187,16 +194,16 @@ if(isset($_POST['importExcel'])){
 
         <ul class="sidebar-nav" id="sidebar-nav">
 
-            <li class="nav-item">
+        <li class="nav-item">
                 <a class="nav-link collapsed" href="./superdashboard.php">
                     <i class="bi bi-grid"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="./superstudentdatabse.php">
+                <a class="nav-link" href="./superstudentdatabse.php">
                     <i class="bi bi-journal-text"></i>
-                    <span>Student Database Add</span>
+                    <span>Add Student Database</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -215,12 +222,12 @@ if(isset($_POST['importExcel'])){
             <li class="nav-item">
                 <a class="nav-link collapsed" href="./superadminstudentdata.php">
                     <i class="bi bi-people-fill"></i>
-                    <span>registred Student</span>
+                    <span>Registred Student</span>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="./adminprof.php">
+                <a class="nav-link collapsed" href="./superprofile.php">
                     <i class="bi bi-person-fill"></i>
                     <span>Profile</span>
                 </a>
