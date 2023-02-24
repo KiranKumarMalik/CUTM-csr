@@ -5,7 +5,7 @@ $uemail=$_SESSION['email'];
 $utype=$_SESSION['usertype'];
 
 
-if($_SESSION['email'] and $utype=="admin")
+if($_SESSION['email'] and $utype=="superadmin")
 {
     $adminData=getAllAdminDetails($db,$uemail);
     $getimage=getAllAdminDetails($db,$uemail);

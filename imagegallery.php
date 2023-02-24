@@ -97,7 +97,7 @@
                 </div>
                 <div class="col-sm-6 col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
                         <div class="member">
-                            <div class="member-img"><a href="yearwise.php?campus=Chatrapur"><img class="img-fluid" src="assets/img/campusimg/chatrapur.JPjpgG"></div>
+                            <div class="member-img"><a href="yearwise.php?campus=Chatrapur"><img class="img-fluid" src="assets/img/campusimg/chatrapur.jpg"></div>
                             <div class="member-info">
                                 <h5><strong>Chatrapur</strong></h5><span>Industrial Estate , Kaliabali Chhaka, CHATRAPUR Ganjam - 761045.</span></a></div>
                         </div>

@@ -13,10 +13,12 @@
       if(mysqli_num_rows($runQuery)){
           $_SESSION['isUserLoggedIn']=true;
           $_SESSION['email']=$email;
-          $_SESSION['usertype']="admin";
+          
           if ($email == "nrusinha@cutm.ac.in") {
+            $_SESSION['usertype']="superadmin";
             header('location:../adminlogin/superdashboard.php');
           }else {
+            $_SESSION['usertype']="admin";
             header('location:../adminlogin/admin.php');
           }
           

@@ -5,7 +5,7 @@ $uemail=$_SESSION['email'];
 $utype=$_SESSION['usertype'];
 
 
-if($_SESSION['email'] and $utype=="admin")
+if($_SESSION['email'] and $utype=="superadmin")
 {
     $adminData=getAllAdminDetails($db,$uemail);
     $getimage=getAllAdminDetails($db,$uemail);
@@ -60,8 +60,6 @@ if(isset($_POST['importExcel'])){
 }
 
 ?>
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,8 +67,7 @@ if(isset($_POST['importExcel'])){
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Superadmin | Student Database</title>
-    <link rel="icon" href="image/cutm.png" type="image/icon type">
+    <title>Dashboard</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -190,16 +187,16 @@ if(isset($_POST['importExcel'])){
 
         <ul class="sidebar-nav" id="sidebar-nav">
 
-        <li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="./superdashboard.php">
                     <i class="bi bi-grid"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./superstudentdatabse.php">
+                <a class="nav-link " href="./superstudentdatabse.php">
                     <i class="bi bi-journal-text"></i>
-                    <span>Add Student Database</span>
+                    <span>Student Database Add</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -218,12 +215,12 @@ if(isset($_POST['importExcel'])){
             <li class="nav-item">
                 <a class="nav-link collapsed" href="./superadminstudentdata.php">
                     <i class="bi bi-people-fill"></i>
-                    <span>Registred Student</span>
+                    <span>registred Student</span>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="./superprofile.php">
+                <a class="nav-link collapsed" href="./adminprof.php">
                     <i class="bi bi-person-fill"></i>
                     <span>Profile</span>
                 </a>
@@ -261,7 +258,6 @@ if(isset($_POST['importExcel'])){
                     <div class="card-body">
                         <h5 class="card-title">Post</h5>
                         <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#importExcel">Import Student Data</button>
-                        
                         <!-- Table with stripped rows -->
                         <table class="table datatable" id="tableData">
                             <thead>
