@@ -17,22 +17,15 @@ else
 
 if(isset($_POST['importExcel'])){
 	$file=$_FILES['excelData']['tmp_name'];
-    $fileName=$_FILES['excelData']['name'];
-
-    $new_file_name=$fileName;
 	// echo "<PRE>";
     // echo $file;
-
-    move_uploaded_file($_FILES["excelData"]["tmp_name"], "./upload/" .$new_file_name);
-    $upload_file = "./upload/" . $new_file_name;
-
 	$ext=pathinfo($_FILES['excelData']['name'],PATHINFO_EXTENSION);
 	if($ext=='xlsx'){
 		require('./PHPExcel/PHPExcel.php');
 		require('./PHPExcel/PHPExcel/IOFactory.php');
 		
 		
-		$obj=PHPExcel_IOFactory::load($upload_file);
+		$obj=PHPExcel_IOFactory::load($file);
 		foreach($obj->getWorksheetIterator() as $sheet){
 			$getHighestRow=$sheet->getHighestRow();
 			for($i=2;$i<=$getHighestRow;$i++){
@@ -361,6 +354,11 @@ if(isset($_POST['importExcel'])){
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+        integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
         integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>

@@ -22,6 +22,7 @@
 		$phone=mysqli_real_escape_string($db,$_POST['mob']);
 
 		$image_name=$_FILES['imageupload']['name'];
+		$image_type=$_FILES['imageupload']['type'];
         $image_tmp=$_FILES['imageupload']['tmp_name'];
 		$status="Not Approved";
 
@@ -53,17 +54,21 @@
         print_r($_FILES);
         print "</pre>";
 
-        if(move_uploaded_file($image_tmp,"../images/profileimg/$image_name")){
-            $query="INSERT INTO student (name,email,regd,schoolname,program,branch,admissionyear,campus,courseDuration,sex,religion,dob,hobby,present_address,permanent_address,mobile,profileimage,status) VALUES('$name','$email','$regdno','$school','$program','$branch','$addyr','$campus','$courseDuration','$sex','$religion','$dob','$hobby','$presentadd','$premantadd','$phone','$image_name','$status')";
-            $run=mysqli_query($db,$query) or die(mysqli_error($db));
-            if ($run) {
-                // header('location:../login/login.php');
-				echo "<script>alert('Registered successfully.');window.location.href = '../login/login.php'</script>";
-            }
-            else {
-                echo "inserted error";
-            }
-        }
+		if ($image_type=="image/jpeg" || $image_type=="image/jpg" || $image_type=="image/png") {
+			if(move_uploaded_file($image_tmp,"../images/profileimg/$image_name")){
+				$query="INSERT INTO student (name,email,regd,schoolname,program,branch,admissionyear,campus,courseDuration,sex,religion,dob,hobby,present_address,permanent_address,mobile,profileimage,status) VALUES('$name','$email','$regdno','$school','$program','$branch','$addyr','$campus','$courseDuration','$sex','$religion','$dob','$hobby','$presentadd','$premantadd','$phone','$image_name','$status')";
+				$run=mysqli_query($db,$query) or die(mysqli_error($db));
+				if ($run) {
+					// header('location:../login/login.php');
+					echo "<script>alert('Registered successfully.');window.location.href = '../login/login.php'</script>";
+				}
+				else {
+					echo "inserted error";
+				}
+			}
+		}else{
+			echo"<script>alert('Please upload PNG, JPG, JPEG fromat!');window.location.href = '../register/registration.php?regd=".$regdno."';</script>";
+		}
         
     }
 
