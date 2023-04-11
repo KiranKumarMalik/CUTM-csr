@@ -30,21 +30,51 @@
                 <div class="collapse navbar-collapse"
                     id="navcol-1" style="font-size: 14px;">
                     <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="index.php">HOME</a></li>
-                        <li class="nav-item"><a class="nav-link active scrollto" href="aboutus.php">ABOUT</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="instruction.php">INSTRUCTIONS</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="imagegallery.php">GALLERY</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="announcements.php">ANNOUNCEMENTS</a></li>
-                        <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">CO-ORDINATORS</a>
-                        <div class="dropdown-menu"><a class="dropdown-item" href="coordinators.php?campus=Balasore">Balasore</a>
+                    <li class="nav-item">
+                                <a class="nav-link scrollto" href="index.php">HOME</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a
+                                    class="dropdown-toggle active nav-link"
+                                    data-toggle="dropdown"
+                                    aria-expanded="false"
+                                    href="#">DETAILS</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="aboutus.php">About</a>
+                                    <a class="dropdown-item" href="instruction.php">Instructions</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger scrollto" href="imagegallery.php">GALLERY</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger scrollto" href="announcements.php">ANNOUNCEMENTS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger scrollto" href="campus_activities.php">ACTIVITIES</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a
+                                    class="dropdown-toggle nav-link"
+                                    data-toggle="dropdown"
+                                    aria-expanded="false"
+                                    href="#">TEAM CSaR</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="coordinators.php?campus=Balasore">Balasore</a>
                                     <a class="dropdown-item" href="coordinators.php?campus=Bhubaneswar">Bhubaneswar</a>
                                     <a class="dropdown-item" href="coordinators.php?campus=Balangir">Balangir</a>
                                     <a class="dropdown-item" href="coordinators.php?campus=Paralakhemundi">Paralakhemundi</a>
                                     <a class="dropdown-item" href="coordinators.php?campus=Rayagada">Rayagada</a>
                                     <a class="dropdown-item" href="coordinators.php?campus=Chhatrapur">Chatrapur</a>
-                                    <a class="dropdown-item" href="coordinators.php?campus=Vizianagaram">Vizianagaram</a></div>
-                        </li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="campusachievements.php">PREVIOUS ACHIEVEMENTS</a></li>
+                                    <a class="dropdown-item" href="coordinators.php?campus=Vizianagaram">Vizianagaram</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger scrollto" href="./annualreport_campus.php">ANNUAL REPORT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger scrollto" href="campusachievements.php">ACHIEVEMENTS</a>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -53,7 +83,7 @@
     <!-- Start: #about -->
     <section id="about-us" class="about-us" style="padding-bottom: 50px;">
         <div>
-            <h2 class="text-center section-title" data-aos="fade-up" style="padding-top: 100px;padding-bottom: 0px;"><strong>ABOUT US</strong></h2>
+            <h2 class="text-center section-title" data-aos="fade-up" style="padding-top: 100px;padding-bottom: 0px;"><strong>ABOUT</strong></h2>
         </div>
         <hr data-aos="fade-up" style="width: 120px;border-bottom-style: none;padding-bottom: 30px;">
         <div class="container">
@@ -63,12 +93,16 @@
                 </div>
                 <div class="col">      
                         <h1 data-aos="fade-up" style="color: #002654;"><strong>CSaR Program Details</strong></h1>
-                        <p data-aos="fade-up" align="justify">Besides the clubs given below, students are welcomed to send their ideas on new clubs to <a href="mailto: csrcell.bbs@cutm.ac.in" style="color: #000000;">csrcell.bbs@cutm.ac.in</a> (Bhubaneswar), <a href="mailto: csr.bls@cutm.ac.in" style="color: #000000;">csr.bls@cutm.ac.in</a> (Balasore), <a href="mailto: csr.blr@cutm.ac.in" style="color: #000000;">csrcell.blr@cutm.ac.in</a> (Balangir), <a href="mailto: csr.ryd@cutm.ac.in" style="color: #000000;">csr.ryd@cutm.ac.in</a> (Ryagada), <a href="mailto: csr.chr@cutm.ac.in" style="color: #000000;">csr.chr@cutm.ac.in</a> (Chatrapur), <a href="mailto: csr.pkd@cutm.ac.in" style="color: #000000;">csr.pkd@cutm.ac.in</a> (Paralakhemundi) or submit the same to the professor In-Charge, CSR/Dean, Dean Students' welfares. It is part of our curriculum that all students of Centurion University of Technology and Management will now be required to participate in the Culture, Sports, and Responsibility (CSaR) program during their studies at CUTM w.e.f. 2011-12 academic year.</p>
-                        <p data-aos="fade-up" align="justify">The program gives students an opportunity to learn from the experience of doing real tasks beyond the classroom, related to <b>Culture (Student life/creative pursuits), Sports (activities for Physical Fitness) and Responsibility (activities for the benifit of the community or the environment)</b></p>
+                        <p data-aos="fade-up" align="justify">It is part of our curriculum that all students of Centurion University of Technology and Management
+                           will now be required to participate in the Culture, Sports, 
+                           and Responsibility (CSaR) program during their studies at 
+                        CUTM w.e.f. 2011-12 academic year.</p>
+                        <p data-aos="fade-up" align="justify">The program gives students an opportunity to learn from the experience of doing real tasks beyond the 
+                       classroom, related to <b> Culture (student life/creative pursuits), Sports (activities for Physical Fitness) and Responsibility (activities for the benefit of the community or the environment).</b></p>
                 </div>
             </div>
         <p data-aos="fade-up" align="justify">Each student is required to complete a total of <b>30 hours</b> of <b>CSaR</b> activities each academic year. This should include <b>10 hours of Culture, 10 hours of Sports and 10 hours of Responsibility.</b> After completing of an activity, the faculty supervisor must supervise and approve the timesheet of student. <b>Only students who have completed the required hours (each activity will be minimum of 1 hour and maximum of 8 hours) of CSaR, are eligible to get CSaR grade of that academic year.</b></p>
-            <p data-aos="fade-up" align="justify">At the end of the Centurion university degree, the <b>CSaR grade will be reflected in the final Grade Sheet and the student will receive the CSaR Credit complition Certificate listing all of the CSaR activities</b> he/she has completed. This can be <b>used for his/her Resume.</b></p>
+            <p data-aos="fade-up" align="justify">At the end of the Centurion University degree, the <b>CSaR grade will be reflected in the final Grade Sheet and the student will receive the CSaR Credit completion  Certificate listing all of the CSaR activities</b> he/she has completed. This can be <b>used for his/her Resume.</b></p>
             <p data-aos="fade-up" align="justify">Information about student clubs, meetings, including details of Faculty-In-Charge, their contact and <b>CSaR updates are displayed on the CSaR Activity Information Board on campus.</b></p>
             <p data-aos="fade-up" align="justify">Student can ask any faculty member to supervise the activity and filled the timesheet that the hours have been completed.</p>
             <h3 class="lead" data-aos="fade-up" style="color: #002654;"><b>CLUB DETAILS</b></h3>
@@ -130,6 +164,7 @@
                 <li data-aos="fade-up"> NSS Club</li>
                 <li data-aos="fade-up"> Science Club</li><br>
             </ul>
+            <p data-aos="fade-up" align="justify">Besides the clubs given below, students are welcomed to send their ideas on new clubs to <a href="mailto: csrcell.bbs@cutm.ac.in" style="color: #000000;">csrcell.bbs@cutm.ac.in</a> (Bhubaneswar), <a href="mailto: csr.bls@cutm.ac.in" style="color: #000000;">csr.bls@cutm.ac.in</a> (Balasore), <a href="mailto: csr.blr@cutm.ac.in" style="color: #000000;">csrcell.blr@cutm.ac.in</a> (Balangir), <a href="mailto: csr.ryd@cutm.ac.in" style="color: #000000;">csr.ryd@cutm.ac.in</a> (Ryagada), <a href="mailto: csr.chr@cutm.ac.in" style="color: #000000;">csr.chr@cutm.ac.in</a> (Chatrapur), <a href="mailto: csr.pkd@cutm.ac.in" style="color: #000000;">csr.pkd@cutm.ac.in</a> (Paralakhemundi), <a href="mailto: csr.vgm@cutm.ac.in" style="color: #000000;">csr.vgm@cutm.ac.in</a> (Vizianagaram) or submit the same to the professor In-Charge, CSR/Dean, Dean Students' welfares. </p>
             <h3 class="lead" data-aos="fade-up" style="color: #002654;"><b>TYPES OF ACTIVITIES</b></h3>
             <p data-aos="fade-up">Students are strongly encouraged to plan and initiate their own ideas and collaborate with other students to create projects they find intresting and worthwhile. The activities below are merely examples. Generally,projects should be pre-approved by the choosen supervisor.</p>
             <p data-aos="fade-up"><b>Examples of "Culture" activities:</b></p>
@@ -166,7 +201,7 @@
                 <li data-aos="fade-up"> Fund raising for social/environmental projects, etc.</li><br>
             </ul>
             <p data-aos="fade-up" align="justify">Students are welcomed to submit their new ideas, projects, proposals to <b><a href="mailto: csrcell.bbs@cutm.ac.in" style="color: #000000;">csrcell.bbs@cutm.ac.in</a> (Bhubaneswar), <a href="mailto: csr.bls@cutm.ac.in" style="color: #000000;">csr.bls@cutm.ac.in</a> (Balasore), <a href="mailto: csr.blr@cutm.ac.in" style="color: #000000;">csrcell.blr@cutm.ac.in</a> (Balangir), <a href="mailto: csr.ryd@cutm.ac.in" style="color: #000000;">csr.ryd@cutm.ac.in</a> (Ryagada), <a href="mailto: csr.chr@cutm.ac.in" style="color: #000000;">csr.chr@cutm.ac.in</a> (Chhatrapur), <a href="mailto: csr.pkd@cutm.ac.in" style="color: #000000;">csr.pkd@cutm.ac.in</a> (Paralakhemundi), <a href="mailto: csr.vgm@cutm.ac.in" style="color: #000000;">csr.vgm@cutm.ac.in</a> (Vizianagaram)</b> Any queries, suggestions and clarifications regarding the program can be obtained from the Professor In-Charge, CSaR/Dean, Students' Affairs.</p>
-            <p data-aos="fade-up" align="justify">Most important, the CSR program provides a refreshing counterbalance to academic activities. It is an opportunity to have fun, get to know your fellow students and do something innovative and try new experiences.</p>
+            <p data-aos="fade-up" align="justify">Most important, the CSaR program provides a refreshing counterbalance to academic activities. It is an opportunity to have fun, get to know your fellow students and do something innovative and try new experiences.</p>
             <table style="width:100%">
                 <tr>
                     <th colspan="3">

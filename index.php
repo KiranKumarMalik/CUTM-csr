@@ -82,11 +82,16 @@ foreach($getallAnnousement as $getallAnnousements){
                             <li class="nav-item">
                                 <a class="nav-link active scrollto" href="index.php">HOME</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link scrollto" href="aboutus.php">ABOUT</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link js-scroll-trigger scrollto" href="instruction.php">INSTRUCTIONS</a>
+                            <li class="nav-item dropdown">
+                                <a
+                                    class="dropdown-toggle nav-link"
+                                    data-toggle="dropdown"
+                                    aria-expanded="false"
+                                    href="#">DETAILS</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="aboutus.php">About</a>
+                                    <a class="dropdown-item" href="instruction.php">Instructions</a>
+                                </div>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link js-scroll-trigger scrollto" href="imagegallery.php">GALLERY</a>
@@ -94,12 +99,15 @@ foreach($getallAnnousement as $getallAnnousements){
                             <li class="nav-item">
                                 <a class="nav-link js-scroll-trigger scrollto" href="announcements.php">ANNOUNCEMENTS</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger scrollto" href="campus_activities.php">ACTIVITIES</a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a
                                     class="dropdown-toggle nav-link"
                                     data-toggle="dropdown"
                                     aria-expanded="false"
-                                    href="#">CO-ORDINATORS</a>
+                                    href="#">TEAM CSaR</a>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="coordinators.php?campus=Balasore">Balasore</a>
                                     <a class="dropdown-item" href="coordinators.php?campus=Bhubaneswar">Bhubaneswar</a>
@@ -111,7 +119,10 @@ foreach($getallAnnousement as $getallAnnousements){
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link js-scroll-trigger scrollto" href="campusachievements.php">PREVIOUS ACHIEVEMENTS</a>
+                                <a class="nav-link js-scroll-trigger scrollto" href="./annualreport_campus.php">ANNUAL REPORT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger scrollto" href="campusachievements.php">ACHIEVEMENTS</a>
                             </li>
                         </ul>
                     </div>
@@ -200,12 +211,7 @@ foreach($getallAnnousement as $getallAnnousements){
                             <h1 data-aos="fade-up" style="color: #002654;">
                                 <strong>CULTURE SPORTS AND RESPONSIBILITY</strong>
                             </h1>
-                            <p data-aos="fade-up" align="justify">Besides the clubs
-                                given below, students are welcomed to send their ideas on new clubs to
-                                <a href="mailto: csr.cit@cutm.ac.in" style="color: #000000;">csr.cit@cutm.ac.in</a>(CIT),
-                                <a href="mailto: csr.pkd@cutm.ac.in" style="color: #000000;">csr.pkd@cutm.ac.in</a>
-                                (JITM & CSREM) or submit the same to the professor In-Charge, CSR/Dean, Students'
-                                Affairs. It is part of our curriculum that all students of
+                            <p data-aos="fade-up" align="justify">It is part of our curriculum that all students of
                                 centurion University of Technology and Management will now be required to
                                 participate in the Culture, Sports, and responsibility (CSR) program during
                                 their studies at CUTM w.e.f. 2011-12 academic year.</p>
@@ -292,7 +298,7 @@ foreach($getallAnnousement as $getallAnnousements){
                     class="text-center section-title"
                     data-aos="fade-up"
                     style="padding-top: 30px;padding-bottom: 0px;">
-                    <strong>Head of the CSaR</strong>
+                    <strong>Campus In-Charge CSaR</strong>
                 </h2>
                 <hr
                     data-aos="fade-up"
@@ -329,7 +335,103 @@ foreach($getallAnnousement as $getallAnnousements){
                                     <h5>
                                         <strong>Dr. Sangram Keshari Swain</strong>
                                     </h5>
-                                    <span>Head of the CSaR</span></div>
+                                    <span>Bhubaneswar</span></div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-sm-6 col-lg-3 col-md-6 d-flex align-items-stretch"
+                            data-aos="fade-up"
+                            data-aos-delay="100">
+                            <div class="member">
+                                <div class="member-img"><img
+                                    class="img-fluid"
+                                    src="assets/img/team/sangram.jpg?h=63ff35667fd20fc8d734752b7311ed81"></div>
+                                <div class="social">
+                                    <a href="https://www.facebook.com/drsangramkeshariswain?mibextid=ZbWKwL">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="https://twitter.com/SangramBapun?s=20&t=mXKVnL_-wiF5_RCwC017lg">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="https://api.whatsapp.com/send/?phone=919937093949&text&app_absent=Hi">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                    <a href="mailto: csrcell.bbs@cutm.ac.in">
+                                        <i class="fab fa-google-plus"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/dr-sangram-keshari-swain-856868142">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </div>
+                                <div class="member-info">
+                                    <h5>
+                                        <strong>Dr. Sangram Keshari Swain</strong>
+                                    </h5>
+                                    <span>Balasore</span></div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-sm-6 col-lg-3 col-md-6 d-flex align-items-stretch"
+                            data-aos="fade-up"
+                            data-aos-delay="100">
+                            <div class="member">
+                                <div class="member-img"><img
+                                    class="img-fluid"
+                                    src="assets/img/team/sangram.jpg?h=63ff35667fd20fc8d734752b7311ed81"></div>
+                                <div class="social">
+                                    <a href="https://www.facebook.com/drsangramkeshariswain?mibextid=ZbWKwL">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="https://twitter.com/SangramBapun?s=20&t=mXKVnL_-wiF5_RCwC017lg">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="https://api.whatsapp.com/send/?phone=919937093949&text&app_absent=Hi">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                    <a href="mailto: csrcell.bbs@cutm.ac.in">
+                                        <i class="fab fa-google-plus"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/dr-sangram-keshari-swain-856868142">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </div>
+                                <div class="member-info">
+                                    <h5>
+                                        <strong>Dr. Sangram Keshari Swain</strong>
+                                    </h5>
+                                    <span>Balangir</span></div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-sm-6 col-lg-3 col-md-6 d-flex align-items-stretch"
+                            data-aos="fade-up"
+                            data-aos-delay="100">
+                            <div class="member">
+                                <div class="member-img"><img
+                                    class="img-fluid"
+                                    src="assets/img/team/sangram.jpg?h=63ff35667fd20fc8d734752b7311ed81"></div>
+                                <div class="social">
+                                    <a href="https://www.facebook.com/drsangramkeshariswain?mibextid=ZbWKwL">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="https://twitter.com/SangramBapun?s=20&t=mXKVnL_-wiF5_RCwC017lg">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="https://api.whatsapp.com/send/?phone=919937093949&text&app_absent=Hi">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                    <a href="mailto: csrcell.bbs@cutm.ac.in">
+                                        <i class="fab fa-google-plus"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/dr-sangram-keshari-swain-856868142">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </div>
+                                <div class="member-info">
+                                    <h5>
+                                        <strong>Dr. Sangram Keshari Swain</strong>
+                                    </h5>
+                                    <span>Paralakhemundi</span></div>
                             </div>
                         </div>
                         <div
@@ -355,7 +457,7 @@ foreach($getallAnnousement as $getallAnnousements){
                                     <h5>
                                         <strong>Bikash Samantaray</strong>
                                     </h5>
-                                    <span>Head of the Culture Club</span></div>
+                                    <span>Rayagada</span></div>
                             </div>
                         </div>
                         <div
@@ -381,7 +483,7 @@ foreach($getallAnnousement as $getallAnnousements){
                                     <h5>
                                         <strong>Rabi Narayan Routray</strong>
                                     </h5>
-                                    <span>Head of the Sports Club</span></div>
+                                    <span>Chatrapur</span></div>
                             </div>
                         </div>
                         <div
@@ -410,7 +512,7 @@ foreach($getallAnnousement as $getallAnnousements){
                                     <h5>
                                         <strong>Kula Bhusan Pradhan</strong>
                                     </h5>
-                                    <span>Head of the Responsibility Club</span></div>
+                                    <span>Vizianagaram</span></div>
                             </div>
                         </div>
                     </div>

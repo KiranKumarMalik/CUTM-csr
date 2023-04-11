@@ -34,11 +34,21 @@ require('./includes/database.php');
                     id="navcol-1" style="font-size: 14px;">
                     <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="index.php">HOME</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="aboutus.php">ABOUT</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="instruction.php">INSTRUCTIONS</a></li>
+                    <li class="nav-item dropdown">
+                                <a
+                                    class="dropdown-toggle nav-link"
+                                    data-toggle="dropdown"
+                                    aria-expanded="false"
+                                    href="#">DETAILS</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="aboutus.php">About</a>
+                                    <a class="dropdown-item" href="instruction.php">Instructions</a>
+                                </div>
+                            </li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="imagegallery.php">GALLERY</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="announcements.php">ANNOUNCEMENTS</a></li>
-                        <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">CO-ORDINATORS</a>
+                        <li class="nav-item"><a class="nav-link scrollto" href="announcements.php">ANNOUNCEMENTS</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="campus_activities.php">ACTIVITIES</a></li>
+                        <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">TEAM CSaR</a>
                         <div class="dropdown-menu"><a class="dropdown-item" href="coordinators.php?campus=Balasore">Balasore</a>
                                     <a class="dropdown-item" href="coordinators.php?campus=Bhubaneswar">Bhubaneswar</a>
                                     <a class="dropdown-item" href="coordinators.php?campus=Balangir">Balangir</a>
@@ -47,7 +57,10 @@ require('./includes/database.php');
                                     <a class="dropdown-item" href="coordinators.php?campus=Chhatrapur">Chatrapur</a>
                                     <a class="dropdown-item" href="coordinators.php?campus=Vizianagaram">Vizianagaram</a></div>
                         </li>
-                        <li class="nav-item"><a class="nav-link active scrollto" href="campusachievements.php">PREVIOUS ACHIEVEMENTS</a></li>
+                        <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger scrollto" href="./annualreport_campus.php">ANNUAL REPORT</a>
+                            </li>
+                        <li class="nav-item"><a class="nav-link active js-scroll-trigger scrollto" href="campusachievements.php">ACHIEVEMENTS</a></li>
                     </ul>
                 </div>
             </div>
@@ -65,7 +78,7 @@ require('./includes/database.php');
                             <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
                                 <i class="fa fa-trophy fa-5x" style="color:red"></i>
                                 <h4 class="card-title" style="margin-top: 20px;"><strong>Balasore</strong></h4>
-                                <div><a href="./card/achievements.php?campus=Balasore"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
+                                <div><a href="./yearwise_achievements.php?campus=Balasore"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
                             </div>
                         </div>
                     </div>
@@ -74,7 +87,7 @@ require('./includes/database.php');
                             <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
                             <i class="fa fa-trophy fa-5x" style="color:red"></i>
                                 <h4 class="card-title" style="margin-top: 20px;"><strong>Bhubaneswar</strong></h4>
-                                <div><a href="./card/achievements.php?campus=Bhubaneswar"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
+                                <div><a href="./yearwise_achievements.php?campus=Bhubaneswar"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
                             </div>
                         </div>
                     </div>
@@ -83,7 +96,7 @@ require('./includes/database.php');
                             <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
                             <i class="fa fa-trophy fa-5x" style="color:red"></i>
                                 <h4 class="card-title" style="margin-top: 20px;"><strong>Balangir</strong></h4>
-                                <div><a href="./card/achievements.php?campus=Balangir"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
+                                <div><a href="./yearwise_achievements.php?campus=Balangir"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
                             </div>
                         </div>
                     </div>
@@ -92,7 +105,7 @@ require('./includes/database.php');
                             <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
                             <i class="fa fa-trophy fa-5x" style="color:red"></i>
                                 <h4 class="card-title" style="margin-top: 20px;"><strong>Paralakhemundi</strong></h4>
-                                <div><a href="./card/achievements.php?campus=Paralakhemundi"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
+                                <div><a href="./yearwise_achievements.php?campus=Paralakhemundi"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
                             </div>
                         </div>
                     </div>
@@ -101,7 +114,7 @@ require('./includes/database.php');
                             <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
                             <i class="fa fa-trophy fa-5x" style="color:red"></i>
                                 <h4 class="card-title" style="margin-top: 20px;"><strong>Rayagada</strong></h4>
-                                <div><a href="./card/achievements.php?campus=Rayagada"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
+                                <div><a href="./yearwise_achievements.php?campus=Rayagada"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
                             </div>
                         </div>
                     </div>
@@ -110,7 +123,7 @@ require('./includes/database.php');
                             <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
                             <i class="fa fa-trophy fa-5x" style="color:red"></i>
                                 <h4 class="card-title" style="margin-top: 20px;"><strong>Chatrapur</strong></h4>
-                                <div><a href="./card/achievements.php?campus=Chatrapur"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
+                                <div><a href="./yearwise_achievements.php?campus=Chatrapur"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
                             </div>
                         </div>
                     </div>
@@ -119,7 +132,7 @@ require('./includes/database.php');
                             <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
                             <i class="fa fa-trophy fa-5x" style="color:red"></i>
                                 <h4 class="card-title" style="margin-top: 20px;"><strong>Vizianagaram</strong></h4>
-                                <div><a href="./card/achievements.php?campus=Vizianagaram"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
+                                <div><a href="./yearwise_achievements.php?campus=Vizianagaram"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
                             </div>
                         </div>
                     </div>

@@ -1,9 +1,6 @@
 <?php
 require('./includes/function.php');
 require('./includes/database.php');
-$campus=$_GET['campus'];
-$getYear=$_GET['year'];
-
 
 ?>
 <!DOCTYPE html>
@@ -12,7 +9,7 @@ $getYear=$_GET['year'];
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>CUTM | CSaR | Image Gallery | Balasore | Years</title>
+    <title>CUTM | CSaR | Previous Achievements </title>
     <link rel="icon" href="assets/img/logo/cutm.png" type="image/icon type">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -48,7 +45,7 @@ $getYear=$_GET['year'];
                                     <a class="dropdown-item" href="instruction.php">Instructions</a>
                                 </div>
                             </li>
-                        <li class="nav-item"><a class="nav-link active js-scroll-trigger scrollto" href="imagegallery.php">GALLERY</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="imagegallery.php">GALLERY</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" href="announcements.php">ANNOUNCEMENTS</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" href="campus_activities.php">ACTIVITIES</a></li>
                         <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">TEAM CSaR</a>
@@ -61,7 +58,7 @@ $getYear=$_GET['year'];
                                     <a class="dropdown-item" href="coordinators.php?campus=Vizianagaram">Vizianagaram</a></div>
                         </li>
                         <li class="nav-item">
-                                <a class="nav-link js-scroll-trigger scrollto" href="./annualreport_campus.php">ANNUAL REPORT</a>
+                                <a class="nav-link active js-scroll-trigger scrollto" href="campusachievements.php">ANNUAL REPORT</a>
                             </li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="campusachievements.php">ACHIEVEMENTS</a></li>
                     </ul>
@@ -69,54 +66,85 @@ $getYear=$_GET['year'];
             </div>
         </nav>
     </header>
-      
-   
-    <!-- Start: year -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="text-center section-title" style="padding-bottom: 0px;">
-                <h3 class="text-uppercase" data-aos="fade-up" style="padding-top: 150px;">Events in&nbsp;<span style="color: #f96302;"><strong><?=$campus=$_GET['campus']?></strong></span></h3>
-            </div>
+    <!-- Campus -->
+    <section id="pricing" class="pricing" style="margin-top: 20px;margin-bottom: 20px;">
+        <div class="text-center">
+            <h2 class="text-center section-title" data-aos="fade-up" style="padding-top: 125px;padding-bottom: 0px;"><strong>Campus Annual Reports</strong><br></h2>
             <hr data-aos="fade-up" style="width: 120px;border-bottom-style: none;padding-bottom: 30px;">
-            <div class="row">
-                <div class="col col-lg-12 d-flex justify-content-center">
-                    <ul id="portfolio-flters">
-                        <li class="filter-active" data-filter="*">Events&nbsp;</li>
-                        </ul>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100" style="margin-top: 15px;margin-bottom: 15px;">
+                        <div class="card shadow" style="width: 277.5;">
+                            <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
+                                <i class="fa fa-trophy fa-5x" style="color:red"></i>
+                                <h4 class="card-title" style="margin-top: 20px;"><strong>Balasore</strong></h4>
+                                <div><a href="./annualreport_yearwise.php?campus=Balasore"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100" style="margin-top: 15px;margin-bottom: 15px;">
+                        <div class="card shadow" style="width: 277.5;">
+                            <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
+                            <i class="fa fa-trophy fa-5x" style="color:red"></i>
+                                <h4 class="card-title" style="margin-top: 20px;"><strong>Bhubaneswar</strong></h4>
+                                <div><a href="./annualreport_yearwise.php?campus=Bhubaneswar"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200" style="margin-top: 15px;margin-bottom: 15px;">
+                        <div class="card shadow" style="width: 277.5;">
+                            <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
+                            <i class="fa fa-trophy fa-5x" style="color:red"></i>
+                                <h4 class="card-title" style="margin-top: 20px;"><strong>Balangir</strong></h4>
+                                <div><a href="./annualreport_yearwise.php?campus=Balangir"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300" style="margin-top: 15px;margin-bottom: 15px;">
+                        <div class="card shadow" style="width: 277.5;">
+                            <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
+                            <i class="fa fa-trophy fa-5x" style="color:red"></i>
+                                <h4 class="card-title" style="margin-top: 20px;"><strong>Paralakhemundi</strong></h4>
+                                <div><a href="./annualreport_yearwise.php?campus=Paralakhemundi"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="400" style="margin-top: 15px;margin-bottom: 15px;">
+                        <div class="card shadow" style="width: 277.5;">
+                            <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
+                            <i class="fa fa-trophy fa-5x" style="color:red"></i>
+                                <h4 class="card-title" style="margin-top: 20px;"><strong>Rayagada</strong></h4>
+                                <div><a href="./annualreport_yearwise.php?campus=Rayagada"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300" style="margin-top: 15px;margin-bottom: 15px;">
+                        <div class="card shadow" style="width: 277.5;">
+                            <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
+                            <i class="fa fa-trophy fa-5x" style="color:red"></i>
+                                <h4 class="card-title" style="margin-top: 20px;"><strong>Chatrapur</strong></h4>
+                                <div><a href="./annualreport_yearwise.php?campus=Chatrapur"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="400" style="margin-top: 15px;margin-bottom: 15px;">
+                        <div class="card shadow" style="width: 277.5;">
+                            <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
+                            <i class="fa fa-trophy fa-5x" style="color:red"></i>
+                                <h4 class="card-title" style="margin-top: 20px;"><strong>Vizianagaram</strong></h4>
+                                <div><a href="./annualreport_yearwise.php?campus=Vizianagaram"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row portfolio-container">
-
-<?php
-$getImage=getgalleryyear($db,$campus,$getYear);
-foreach($getImage as $getImages){
-?>
-
-                <a href="campuswiseimg.php?year=<?=$getImages['years']?>&campus=<?=$campus?>&eventid=<?=$getImages['id']?>">
-                    <div class="col-12 col-lg-4 col-md-6 portfolio-item filter-app" data-aos="fade-up" data-aos-delay="100">
-                        <img class="img-fluid" src="./assets/img/event_images/<?=$getImages['images']?>">
-                        <div class="portfolio-info">
-                            <h4><?=$getImages['name']?></h4>
-                        </div>
-                    </div>
-                </a>
-                
-                <?php
-}
-                ?>
-                
-               
-                
-            </div>
-        </div>
     </section>
-    <!-- End: year -->
+    <!-- End: pricing -->
+   
     
-    
-    <!-- Start: Footer Dark -->
-    <div class="footer-dark" style="background: url(&quot;assets/img/17-aoua1-night1.png?h=4b69291c09f7598206c94cbd642abc27&quot;) center / cover no-repeat, #03142c;">
+<!-- Start: Footer Dark -->
+<div class="footer-dark" style="background: url(&quot;assets/img/17-aoua1-night1.png?h=4b69291c09f7598206c94cbd642abc27&quot;) center / cover no-repeat, #03142c;">
         <footer>
             <div class="container">
                 <div class="row">

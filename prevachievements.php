@@ -1,7 +1,7 @@
 <?php
 require('./includes/function.php');
 require('./includes/database.php');
-$campus=$_GET['campus'];
+// $campus=$_GET['campus'];
 // $achievement=getpreachievements($db,$campus,$years);
 
 
@@ -37,11 +37,22 @@ $campus=$_GET['campus'];
                     id="navcol-1" style="font-size: 14px;">
                     <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="index.php">HOME</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="aboutus.php">ABOUT</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="instruction.php">INSTRUCTIONS</a></li>
+                    <li class="nav-item dropdown">
+                                <a
+                                    class="dropdown-toggle nav-link"
+                                    data-toggle="dropdown"
+                                    aria-expanded="false"
+                                    href="#">DETAILS</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="aboutus.php">About</a>
+                                    <a class="dropdown-item" href="instruction.php">Instructions</a>
+                                </div>
+                            </li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="imagegallery.php">GALLERY</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="announcements.php">ANNOUNCEMENTS</a></li>
-                        <li class="nav-item dropdown"><a class="dropdown-item" href="coordinators.php?campus=Balasore">Balasore</a>
+                        <li class="nav-item"><a class="nav-link scrollto" href="announcements.php">ANNOUNCEMENTS</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="campus_activities.php">ACTIVITIES</a></li>
+                        <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">TEAM CSaR</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="coordinators.php?campus=Balasore">Balasore</a>
                                     <a class="dropdown-item" href="coordinators.php?campus=Bhubaneswar">Bhubaneswar</a>
                                     <a class="dropdown-item" href="coordinators.php?campus=Balangir">Balangir</a>
                                     <a class="dropdown-item" href="coordinators.php?campus=Paralakhemundi">Paralakhemundi</a>
@@ -49,7 +60,10 @@ $campus=$_GET['campus'];
                                     <a class="dropdown-item" href="coordinators.php?campus=Chhatrapur">Chatrapur</a>
                                     <a class="dropdown-item" href="coordinators.php?campus=Vizianagaram">Vizianagaram</a></div>
                         </li>
-                        <li class="nav-item"><a class="nav-link active scrollto" href="campusachievements.php">PREVIOUS ACHIEVEMENTS</a></li>
+                        <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger scrollto" href="./annualreport_campus.php">ANNUAL REPORT</a>
+                            </li>
+                        <li class="nav-item"><a class="nav-link active js-scroll-trigger scrollto" href="campusachievements.php">ACHIEVEMENTS</a></li>
                     </ul>
                 </div>
             </div>
@@ -68,7 +82,7 @@ $campus=$_GET['campus'];
             class="text-center section-title"
             data-aos="fade-up"
             style="padding-top: 145px;padding-bottom: 0px;">
-            <strong>Previous Achievements</strong>
+            <strong>Achievements</strong>
             <br></h2>
             <hr
                 data-aos="fade-up"
@@ -76,26 +90,50 @@ $campus=$_GET['campus'];
             <div class="col-md-8 mx-auto text-left">
                 <div class="card">
                     <div class="card-body">
-                        <form action="" method="post">
-                            <h3 class="lead" data-aos="fade-up" style="color: #002654;">
-                                <b>Academic Years</b>
-                            </h3>
-                            <?php
-                                $Archivement=getAllArchivement($db,$campus);          
-                                foreach($Archivement as $Archivements){
+                    <div class="container-xxl py-5">
+            <div class="container">
+            <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s"><?=$campus=$_GET['campus']?> Campus</h1>
+                <div class="table-responsive">
+                    <table class="table table-hover thead-dark table-bordered table-striped" border="6" cellspacing="0" width="100%">
+                            <thead>
+                                <th>Sl No</th>
+                                <th>Year</th>
+                                <th>Name of the award / medal</th>
+                                <th>Team / Individual</th>
+                                <th>Inter-University / State / National / International</th>
+                                <th>Name of the event</th>
+                                <th>Name of the student</th>
+                              </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>2015</td>
+                                <td>Winner</td>
+                                <td>Team</td>
+                                <td>National</td>
+                                <td>Cricket</td>
+                                <td>Kiran Kumar Malik</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2</td>
+                                <td>2016</td>
+                                <td>Winner</td>
+                                <td>Team</td>
+                                <td>National</td>
+                                <td>Volley</td>
+                                <td>Sagar Kumar Ojha</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                      </div>
+            </div>
+        </div>
+        <!-- Category End -->
+                        
 
-                            ?>
 
-                                <li data-aos="fade-up">
-                                    <a href="prevachievedata.php?campus=<?=$Archivements['campus']?>&year=<?=$Archivements['year']?>">
-                                        <?=$Archivements['year']?></a>
-                                </li>
-                            <?php
-                                }
-                            ?>
-
-
-                            <br></div>
+                            </div>
                         </div>
                     </section>
     <!-- End: #co-ordinators -->

@@ -1,4 +1,10 @@
-<php
+<?php
+require('./includes/function.php');
+require('./includes/database.php');
+$campus=$_GET['campus'];
+// $achievement=getpreachievements($db,$campus,$years);
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -6,7 +12,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>CUTM | CSaR | Instruction </title>
+    <title>CUTM | CSaR | Previous Achievements</title>
     <link rel="icon" href="assets/img/logo/cutm.png" type="image/icon type">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -30,12 +36,10 @@
                 <div class="collapse navbar-collapse"
                     id="navcol-1" style="font-size: 14px;">
                     <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item">
-                                <a class="nav-link scrollto" href="index.php">HOME</a>
-                            </li>
-                            <li class="nav-item dropdown">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="index.php">HOME</a></li>
+                    <li class="nav-item dropdown">
                                 <a
-                                    class="dropdown-toggle active nav-link"
+                                    class="dropdown-toggle nav-link"
                                     data-toggle="dropdown"
                                     aria-expanded="false"
                                     href="#">DETAILS</a>
@@ -44,79 +48,81 @@
                                     <a class="dropdown-item" href="instruction.php">Instructions</a>
                                 </div>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link js-scroll-trigger scrollto" href="imagegallery.php">GALLERY</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link js-scroll-trigger scrollto" href="announcements.php">ANNOUNCEMENTS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link js-scroll-trigger scrollto" href="campus_activities.php">ACTIVITIES</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a
-                                    class="dropdown-toggle nav-link"
-                                    data-toggle="dropdown"
-                                    aria-expanded="false"
-                                    href="#">TEAM CSaR</a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="coordinators.php?campus=Balasore">Balasore</a>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="imagegallery.php">GALLERY</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="announcements.php">ANNOUNCEMENTS</a></li>
+                        <li class="nav-item"><a class="nav-link active scrollto" href="campus_activities.php">ACTIVITIES</a></li>
+                        <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">TEAM CSaR</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="coordinators.php?campus=Balasore">Balasore</a>
                                     <a class="dropdown-item" href="coordinators.php?campus=Bhubaneswar">Bhubaneswar</a>
                                     <a class="dropdown-item" href="coordinators.php?campus=Balangir">Balangir</a>
                                     <a class="dropdown-item" href="coordinators.php?campus=Paralakhemundi">Paralakhemundi</a>
                                     <a class="dropdown-item" href="coordinators.php?campus=Rayagada">Rayagada</a>
                                     <a class="dropdown-item" href="coordinators.php?campus=Chhatrapur">Chatrapur</a>
-                                    <a class="dropdown-item" href="coordinators.php?campus=Vizianagaram">Vizianagaram</a>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link js-scroll-trigger scrollto" href="./annualreport_campus.php">ANNUAL REPORT</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link js-scroll-trigger scrollto" href="campusachievements.php">ACHIEVEMENTS</a>
-                            </li>
+                                    <a class="dropdown-item" href="coordinators.php?campus=Vizianagaram">Vizianagaram</a></div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="campusachievements.php">ACHIEVEMENTS</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <!-- Start: #instruction -->
-    <section id="about-us" class="about-us" style="padding-bottom: 50px;">
-        <div>
-            <h2 class="text-center section-title" data-aos="fade-up" style="padding-top: 100px;padding-bottom: 0px;"><strong>INSTRUCTIONS</strong></h2>
-        </div>
-        <hr data-aos="fade-up" style="width: 120px;border-bottom-style: none;padding-bottom: 30px;">
-        <div class="container">
-            <ul>
-                <li data-aos="fade-up" align="justify"> This CSaR Credit automation system is the property of Centurion University of Technology and Management (CUTM).</li>
-                <li data-aos="fade-up" align="justify"> Students have to register on the portal <a href="https://csar.cutm.ac.in/">csr.cutm.ac.in</a> to get the login credentials by filling the registration form.</li>
-                    <li data-aos="fade-up" align="justify">After being approved by the campus admin the login credentials will be shared to concerned students.</li>
-                    <li data-aos="fade-up" align="justify">The CSaR credit will be reviewed </li>
-                <li data-aos="fade-up" align="justify"> Students are advised to fillup their timesheet in CSaR Credit autiomation System whenever they perform an activity and get it approved by the Faculty In-Charge.</li>
-                <li data-aos="fade-up" align="justify"> There will be a minimum of 1 hour and maximum of 8 hours per an activity to be credited to the CSaR Credit automation system, as decided by the Faculty In-Charge.</li>
-                <li data-aos="fade-up" align="justify"> This Credit of CSaR is not transferable.</li>
-                <li data-aos="fade-up" align="justify"> This CSaR Credit automation System is only valid for the session mentioned.</li>
-                <li data-aos="fade-up" align="justify"> The CSaR Credit automation System will be reviewed after each and every year.</li>
-                <li data-aos="fade-up" align="justify"> In case of loss credentials will be retrived by clicking on fogot password option and by providing mail id.</li>
-                <li data-aos="fade-up" align="justify"> Always check the CSaR activity information board on campus for CSaR activity updates.</li>
-                <li data-aos="fade-up" align="justify"> Students are advised to submit their new ideas on CSaR activities to 
-                    <a href="mailto: csrcell.bbs@cutm.ac.in" style="color: #000000;">csrcell.bbs@cutm.ac.in</a> (Bhubaneswar), 
-                    <a href="mailto: csr.bls@cutm.ac.in" style="color: #000000;">csr.bls@cutm.ac.in</a> (Balasore), 
-                    <a href="mailto: csr.blr@cutm.ac.in" style="color: #000000;">csr.blr@cutm.ac.in</a> (Balangir), 
-                    <a href="mailto: csr.ryd@cutm.ac.in" style="color: #000000;">csr.ryd@cutm.ac.in</a> (Ryagada), 
-                    <a href="mailto: csr.chr@cutm.ac.in" style="color: #000000;">csr.chr@cutm.ac.in</a> (Chhatrapur), 
-                    <a href="mailto: csr.pkd@cutm.ac.in" style="color: #000000;">csr.pkd@cutm.ac.in</a> (Paralakhemundi),
-                    <a href="mailto: csr.vgm@cutm.ac.in" style="color: #000000;">csr.vgm@cutm.ac.in</a> (Vizianagaram)
-                    or to the Professor In-Charge, CSaR/Dean, Students' Affairs.</li>
-                <li data-aos="fade-up" align="justify"> Students are advised to keep on updated in CSaR Credit automation System (CCAS).</li>
-                <li data-aos="fade-up" align="justify"> Any clarifications regarding the CSaR program can be obtained from the Professor In-Charge, Dean, Student Affairs, Dean student Welfares.</li>
-                <li data-aos="fade-up" align="justify"> The final CSaR Grade will be reflected in the final degree GradeSheet and Certificate.</li>
-                <li data-aos="fade-up" align="justify"> The information provided in CSaR website and the rules and policies relating to CSaR are subject to change at any time in the absolute discretion of CUTM.</li>
-            </ul>
-        </div>
-    </section>
-    <!-- End: #instruction -->
+      
    
+        <!-- Start: #Campus wise image gallery -->
+        <!-- co-ordinators -->
+        <section
+    id="pricing"
+    class="pricing"
+    style="margin-top: 20px;margin-bottom: 20px;">
+    <div class="text-center">
+        <h2
+            class="text-center section-title"
+            data-aos="fade-up"
+            style="padding-top: 145px;padding-bottom: 0px;">
+            <strong>Activities</strong>
+            <br></h2>
+            <hr
+                data-aos="fade-up"
+                style="width: 120px;border-bottom-style: none;padding-bottom: 30px;"></div>
+            <div class="col-md-8 mx-auto text-left">
+                <div class="card">
+                    <div class="card-body">
+                    <div class="container-xxl py-5">
+            <div class="container">
+            <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s"><?=$campus=$_GET['campus']?> Campus</h1>
+                <div class="table-responsive">
+                    <table class="table table-hover thead-dark table-bordered table-striped" border="6" cellspacing="0" width="100%">
+                            <thead>
+                                <th>Sl.No.</th>
+                                <th>Date of event/competition(DD-MM-YYYY)</th>
+                                <th>Name  of the event/competition</th>
+                              </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>13/02/2022</td>
+                                <td>Cricket</td>
+                            </tr>
+                            
+                            <tr>
+                            <td>1</td>
+                                <td>13/02/2022</td>
+                                <td>Cricket</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                      </div>
+            </div>
+        </div>
+        <!-- Category End -->
+                        
+
+
+                            </div>
+                        </div>
+                    </section>
+    <!-- End: #co-ordinators -->
+    
     
     <!-- Start: Footer Dark -->
     <div class="footer-dark" style="background: url(&quot;assets/img/17-aoua1-night1.png?h=4b69291c09f7598206c94cbd642abc27&quot;) center / cover no-repeat, #03142c;">
