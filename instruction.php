@@ -94,21 +94,20 @@
                     <li data-aos="fade-up" align="justify">The CSaR credit will be reviewed </li>
                 <li data-aos="fade-up" align="justify"> Students are advised to fillup their timesheet in CSaR Credit autiomation System whenever they perform an activity and get it approved by the Faculty In-Charge.</li>
                 <li data-aos="fade-up" align="justify"> There will be a minimum of 1 hour and maximum of 8 hours per an activity to be credited to the CSaR Credit automation system, as decided by the Faculty In-Charge.</li>
-                <li data-aos="fade-up" align="justify"> This Credit of CSaR is not transferable.</li>
+                <li data-aos="fade-up" align="justify"> The CSaR credit will be reviewed after every academic year.</li>
                 <li data-aos="fade-up" align="justify"> This CSaR Credit automation System is only valid for the session mentioned.</li>
                 <li data-aos="fade-up" align="justify"> The CSaR Credit automation System will be reviewed after each and every year.</li>
-                <li data-aos="fade-up" align="justify"> In case of loss credentials will be retrived by clicking on fogot password option and by providing mail id.</li>
+                <li data-aos="fade-up" align="justify"> In case of loss credentials will be retrived by clicking on fogot password option and following the suggested steps.</li>
                 <li data-aos="fade-up" align="justify"> Always check the CSaR activity information board on campus for CSaR activity updates.</li>
-                <li data-aos="fade-up" align="justify"> Students are advised to submit their new ideas on CSaR activities to 
+                <li data-aos="fade-up" align="justify"> Students are advised to keep update in CSaR Credit on CSaR Credit Automation System 
                     <a href="mailto: csrcell.bbs@cutm.ac.in" style="color: #000000;">csrcell.bbs@cutm.ac.in</a> (Bhubaneswar), 
                     <a href="mailto: csr.bls@cutm.ac.in" style="color: #000000;">csr.bls@cutm.ac.in</a> (Balasore), 
                     <a href="mailto: csr.blr@cutm.ac.in" style="color: #000000;">csr.blr@cutm.ac.in</a> (Balangir), 
-                    <a href="mailto: csr.ryd@cutm.ac.in" style="color: #000000;">csr.ryd@cutm.ac.in</a> (Ryagada), 
+                    <a href="mailto: csr.ryd@cutm.ac.in" style="color: #000000;">csr.rgd@cutm.ac.in</a> (Ryagada), 
                     <a href="mailto: csr.chr@cutm.ac.in" style="color: #000000;">csr.chr@cutm.ac.in</a> (Chhatrapur), 
                     <a href="mailto: csr.pkd@cutm.ac.in" style="color: #000000;">csr.pkd@cutm.ac.in</a> (Paralakhemundi),
                     <a href="mailto: csr.vgm@cutm.ac.in" style="color: #000000;">csr.vgm@cutm.ac.in</a> (Vizianagaram)
-                    or to the Professor In-Charge, CSaR/Dean, Students' Affairs.</li>
-                <li data-aos="fade-up" align="justify"> Students are advised to keep on updated in CSaR Credit automation System (CCAS).</li>
+                    or to the Professor In-Charge, CSaR/Dean, Dean Students affairs, Students' Welfare.</li>
                 <li data-aos="fade-up" align="justify"> Any clarifications regarding the CSaR program can be obtained from the Professor In-Charge, Dean, Student Affairs, Dean student Welfares.</li>
                 <li data-aos="fade-up" align="justify"> The final CSaR Grade will be reflected in the final degree GradeSheet and Certificate.</li>
                 <li data-aos="fade-up" align="justify"> The information provided in CSaR website and the rules and policies relating to CSaR are subject to change at any time in the absolute discretion of CUTM.</li>
@@ -127,9 +126,18 @@
                     <div class="col-sm-6 col-md-3 item" data-aos="fade-up">
                         <h3>About</h3>
                         <ul>
-                            <li><a href="aboutus.php">CSaR</a></li>
-                            <li><a href="instruction.php">Instructions</a></li>
-                            <li><a href="campusachievements.php">Previous Achievements</a></li>
+                            <li>
+                                <a href="aboutus.php">CSaR</a>
+                            </li>
+                            <li>
+                                    <a href="annualreport_campus.php">Annual Report</a>
+                                </li>
+                            <li>
+                                <a href="instruction.php">Instructions</a>
+                            </li>
+                            <li>
+                                <a href="campusachievements.php">Previous Achievements</a>
+                            </li>
                         </ul>
                     </div>
                     <!-- End: Services -->
@@ -137,10 +145,18 @@
                     <div class="col-sm-6 col-md-3 item" data-aos="fade-up">
                         <h3>Clubs</h3>
                         <ul>
-                            <li><a href="imagegallery.php">Image gallery</a></li>
-                            <li><a href="announcements.php">Announcements</a></li>
-                            <li><a href="events.php">Events</a></li>
-                            <li><a href="assets/img/designer/index.html">Web Designer</a></li>
+                            <li>
+                                <a href="imagegallery.php">Image gallery</a>
+                            </li>
+                            <li>
+                                <a href="announcements.php">Announcements</a>
+                            </li>
+                            <li>
+                                <a href="events.php">Events</a>
+                            </li>
+                            <li>
+                                <a href="assets/img/designer/index.html">Web Designer</a>
+                            </li>
                         </ul>
                     </div>
                     <!-- End: About -->

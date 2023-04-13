@@ -870,6 +870,9 @@ foreach($getallAnnousement as $getallAnnousements){
                                     <a href="aboutus.php">CSaR</a>
                                 </li>
                                 <li>
+                                    <a href="annualreport_campus.php">Annual Report</a>
+                                </li>
+                                <li>
                                     <a href="instruction.php">Instructions</a>
                                 </li>
                                 <li>

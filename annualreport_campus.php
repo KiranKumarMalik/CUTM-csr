@@ -76,7 +76,7 @@ require('./includes/database.php');
                     <div class="col-lg-3 col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100" style="margin-top: 15px;margin-bottom: 15px;">
                         <div class="card shadow" style="width: 277.5;">
                             <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
-                                <i class="fa fa-trophy fa-5x" style="color:red"></i>
+                                <i class="fa fa-files-o fa-5x" style="color:red"></i>
                                 <h4 class="card-title" style="margin-top: 20px;"><strong>Balasore</strong></h4>
                                 <div><a href="./annualreport_yearwise.php?campus=Balasore"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
                             </div>
@@ -85,7 +85,7 @@ require('./includes/database.php');
                     <div class="col-lg-3 col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100" style="margin-top: 15px;margin-bottom: 15px;">
                         <div class="card shadow" style="width: 277.5;">
                             <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
-                            <i class="fa fa-trophy fa-5x" style="color:red"></i>
+                            <i class="fa fa-files-o fa-5x" style="color:red"></i>
                                 <h4 class="card-title" style="margin-top: 20px;"><strong>Bhubaneswar</strong></h4>
                                 <div><a href="./annualreport_yearwise.php?campus=Bhubaneswar"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
                             </div>
@@ -94,7 +94,7 @@ require('./includes/database.php');
                     <div class="col-lg-3 col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200" style="margin-top: 15px;margin-bottom: 15px;">
                         <div class="card shadow" style="width: 277.5;">
                             <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
-                            <i class="fa fa-trophy fa-5x" style="color:red"></i>
+                            <i class="fa fa-files-o fa-5x" style="color:red"></i>
                                 <h4 class="card-title" style="margin-top: 20px;"><strong>Balangir</strong></h4>
                                 <div><a href="./annualreport_yearwise.php?campus=Balangir"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
                             </div>
@@ -103,7 +103,7 @@ require('./includes/database.php');
                     <div class="col-lg-3 col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300" style="margin-top: 15px;margin-bottom: 15px;">
                         <div class="card shadow" style="width: 277.5;">
                             <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
-                            <i class="fa fa-trophy fa-5x" style="color:red"></i>
+                            <i class="fa fa-files-o fa-5x" style="color:red"></i>
                                 <h4 class="card-title" style="margin-top: 20px;"><strong>Paralakhemundi</strong></h4>
                                 <div><a href="./annualreport_yearwise.php?campus=Paralakhemundi"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
                             </div>
@@ -112,7 +112,7 @@ require('./includes/database.php');
                     <div class="col-lg-3 col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="400" style="margin-top: 15px;margin-bottom: 15px;">
                         <div class="card shadow" style="width: 277.5;">
                             <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
-                            <i class="fa fa-trophy fa-5x" style="color:red"></i>
+                            <i class="fa fa-files-o fa-5x" style="color:red"></i>
                                 <h4 class="card-title" style="margin-top: 20px;"><strong>Rayagada</strong></h4>
                                 <div><a href="./annualreport_yearwise.php?campus=Rayagada"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
                             </div>
@@ -121,7 +121,7 @@ require('./includes/database.php');
                     <div class="col-lg-3 col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300" style="margin-top: 15px;margin-bottom: 15px;">
                         <div class="card shadow" style="width: 277.5;">
                             <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
-                            <i class="fa fa-trophy fa-5x" style="color:red"></i>
+                            <i class="fa fa-files-o fa-5x" style="color:red"></i>
                                 <h4 class="card-title" style="margin-top: 20px;"><strong>Chatrapur</strong></h4>
                                 <div><a href="./annualreport_yearwise.php?campus=Chatrapur"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
                             </div>
@@ -130,7 +130,7 @@ require('./includes/database.php');
                     <div class="col-lg-3 col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="400" style="margin-top: 15px;margin-bottom: 15px;">
                         <div class="card shadow" style="width: 277.5;">
                             <div class="card-body" style="padding: 0px;padding-right: 0px;padding-left: 0px10px;width: 100%;background: #fff1dc;">
-                            <i class="fa fa-trophy fa-5x" style="color:red"></i>
+                            <i class="fa fa-files-o fa-5x" style="color:red"></i>
                                 <h4 class="card-title" style="margin-top: 20px;"><strong>Vizianagaram</strong></h4>
                                 <div><a href="./annualreport_yearwise.php?campus=Vizianagaram"><button class="btn btn-warning text-white pricing-btn" type="button">More details</button></a></div>
                             </div>
@@ -148,13 +148,22 @@ require('./includes/database.php');
         <footer>
             <div class="container">
                 <div class="row">
-                    <!-- Start: Services -->
-                    <div class="col-sm-6 col-md-3 item" data-aos="fade-up">
+                   <!-- Start: Services -->
+                   <div class="col-sm-6 col-md-3 item" data-aos="fade-up">
                         <h3>About</h3>
                         <ul>
-                            <li><a href="aboutus.php">CSaR</a></li>
-                            <li><a href="instruction.php">Instructions</a></li>
-                            <li><a href="campusachievements.php">Previous Achievements</a></li>
+                            <li>
+                                <a href="aboutus.php">CSaR</a>
+                            </li>
+                            <li>
+                                    <a href="annualreport_campus.php">Annual Report</a>
+                                </li>
+                            <li>
+                                <a href="instruction.php">Instructions</a>
+                            </li>
+                            <li>
+                                <a href="campusachievements.php">Previous Achievements</a>
+                            </li>
                         </ul>
                     </div>
                     <!-- End: Services -->
@@ -162,10 +171,18 @@ require('./includes/database.php');
                     <div class="col-sm-6 col-md-3 item" data-aos="fade-up">
                         <h3>Clubs</h3>
                         <ul>
-                            <li><a href="imagegallery.php">Image gallery</a></li>
-                            <li><a href="announcements.php">Announcements</a></li>
-                            <li><a href="events.php">Events</a></li>
-                            <li><a href="assets/img/designer/index.html">Web Designer</a></li>
+                            <li>
+                                <a href="imagegallery.php">Image gallery</a>
+                            </li>
+                            <li>
+                                <a href="announcements.php">Announcements</a>
+                            </li>
+                            <li>
+                                <a href="events.php">Events</a>
+                            </li>
+                            <li>
+                                <a href="assets/img/designer/index.html">Web Designer</a>
+                            </li>
                         </ul>
                     </div>
                     <!-- End: About -->

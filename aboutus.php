@@ -164,7 +164,7 @@
                 <li data-aos="fade-up"> NSS Club</li>
                 <li data-aos="fade-up"> Science Club</li><br>
             </ul>
-            <p data-aos="fade-up" align="justify">Besides the clubs given below, students are welcomed to send their ideas on new clubs to <a href="mailto: csrcell.bbs@cutm.ac.in" style="color: #000000;">csrcell.bbs@cutm.ac.in</a> (Bhubaneswar), <a href="mailto: csr.bls@cutm.ac.in" style="color: #000000;">csr.bls@cutm.ac.in</a> (Balasore), <a href="mailto: csr.blr@cutm.ac.in" style="color: #000000;">csrcell.blr@cutm.ac.in</a> (Balangir), <a href="mailto: csr.ryd@cutm.ac.in" style="color: #000000;">csr.ryd@cutm.ac.in</a> (Ryagada), <a href="mailto: csr.chr@cutm.ac.in" style="color: #000000;">csr.chr@cutm.ac.in</a> (Chatrapur), <a href="mailto: csr.pkd@cutm.ac.in" style="color: #000000;">csr.pkd@cutm.ac.in</a> (Paralakhemundi), <a href="mailto: csr.vgm@cutm.ac.in" style="color: #000000;">csr.vgm@cutm.ac.in</a> (Vizianagaram) or submit the same to the professor In-Charge, CSR/Dean, Dean Students' welfares. </p>
+            <p data-aos="fade-up" align="justify">Besides the clubs given below, students are welcomed to send their ideas on new clubs to <a href="mailto: csrcell.bbs@cutm.ac.in" style="color: #000000;">csrcell.bbs@cutm.ac.in</a> (Bhubaneswar), <a href="mailto: csr.bls@cutm.ac.in" style="color: #000000;">csr.bls@cutm.ac.in</a> (Balasore), <a href="mailto: csr.blr@cutm.ac.in" style="color: #000000;">csrcell.blr@cutm.ac.in</a> (Balangir), <a href="mailto: csr.rgd@cutm.ac.in" style="color: #000000;">csr.rgd@cutm.ac.in</a> (Ryagada), <a href="mailto: csr.chr@cutm.ac.in" style="color: #000000;">csr.chr@cutm.ac.in</a> (Chatrapur), <a href="mailto: csr.pkd@cutm.ac.in" style="color: #000000;">csr.pkd@cutm.ac.in</a> (Paralakhemundi), <a href="mailto: csr.vgm@cutm.ac.in" style="color: #000000;">csr.vgm@cutm.ac.in</a> (Vizianagaram) or submit the same to the professor In-Charge, CSR/Dean, Dean Students affairs, Students' Welfare. </p>
             <h3 class="lead" data-aos="fade-up" style="color: #002654;"><b>TYPES OF ACTIVITIES</b></h3>
             <p data-aos="fade-up">Students are strongly encouraged to plan and initiate their own ideas and collaborate with other students to create projects they find intresting and worthwhile. The activities below are merely examples. Generally,projects should be pre-approved by the choosen supervisor.</p>
             <p data-aos="fade-up"><b>Examples of "Culture" activities:</b></p>
@@ -200,7 +200,7 @@
                 <li data-aos="fade-up"> Youth Red Cross activities.</li>
                 <li data-aos="fade-up"> Fund raising for social/environmental projects, etc.</li><br>
             </ul>
-            <p data-aos="fade-up" align="justify">Students are welcomed to submit their new ideas, projects, proposals to <b><a href="mailto: csrcell.bbs@cutm.ac.in" style="color: #000000;">csrcell.bbs@cutm.ac.in</a> (Bhubaneswar), <a href="mailto: csr.bls@cutm.ac.in" style="color: #000000;">csr.bls@cutm.ac.in</a> (Balasore), <a href="mailto: csr.blr@cutm.ac.in" style="color: #000000;">csrcell.blr@cutm.ac.in</a> (Balangir), <a href="mailto: csr.ryd@cutm.ac.in" style="color: #000000;">csr.ryd@cutm.ac.in</a> (Ryagada), <a href="mailto: csr.chr@cutm.ac.in" style="color: #000000;">csr.chr@cutm.ac.in</a> (Chhatrapur), <a href="mailto: csr.pkd@cutm.ac.in" style="color: #000000;">csr.pkd@cutm.ac.in</a> (Paralakhemundi), <a href="mailto: csr.vgm@cutm.ac.in" style="color: #000000;">csr.vgm@cutm.ac.in</a> (Vizianagaram)</b> Any queries, suggestions and clarifications regarding the program can be obtained from the Professor In-Charge, CSaR/Dean, Students' Affairs.</p>
+            <p data-aos="fade-up" align="justify">Students are welcomed to submit their new ideas, projects, proposals to <b><a href="mailto: csrcell.bbs@cutm.ac.in" style="color: #000000;">csrcell.bbs@cutm.ac.in</a> (Bhubaneswar), <a href="mailto: csr.bls@cutm.ac.in" style="color: #000000;">csr.bls@cutm.ac.in</a> (Balasore), <a href="mailto: csr.blr@cutm.ac.in" style="color: #000000;">csrcell.blr@cutm.ac.in</a> (Balangir), <a href="mailto: csr.rgd@cutm.ac.in" style="color: #000000;">csr.rgd@cutm.ac.in</a> (Ryagada), <a href="mailto: csr.chr@cutm.ac.in" style="color: #000000;">csr.chr@cutm.ac.in</a> (Chatrapur), <a href="mailto: csr.pkd@cutm.ac.in" style="color: #000000;">csr.pkd@cutm.ac.in</a> (Paralakhemundi), <a href="mailto: csr.vgm@cutm.ac.in" style="color: #000000;">csr.vgm@cutm.ac.in</a> (Vizianagaram)</b> Any queries, suggestions and clarifications regarding the program can be obtained from the Professor In-Charge, CSaR/Dean, Students' Affairs.</p>
             <p data-aos="fade-up" align="justify">Most important, the CSaR program provides a refreshing counterbalance to academic activities. It is an opportunity to have fun, get to know your fellow students and do something innovative and try new experiences.</p>
             <table style="width:100%">
                 <tr>
@@ -280,9 +280,18 @@
                     <div class="col-sm-6 col-md-3 item" data-aos="fade-up">
                         <h3>About</h3>
                         <ul>
-                            <li><a href="aboutus.php">CSaR</a></li>
-                            <li><a href="instruction.php">Instructions</a></li>
-                            <li><a href="campusachievements.php">Previous Achievements</a></li>
+                            <li>
+                                <a href="aboutus.php">CSaR</a>
+                            </li>
+                            <li>
+                                    <a href="annualreport_campus.php">Annual Report</a>
+                                </li>
+                            <li>
+                                <a href="instruction.php">Instructions</a>
+                            </li>
+                            <li>
+                                <a href="campusachievements.php">Previous Achievements</a>
+                            </li>
                         </ul>
                     </div>
                     <!-- End: Services -->
@@ -290,10 +299,18 @@
                     <div class="col-sm-6 col-md-3 item" data-aos="fade-up">
                         <h3>Clubs</h3>
                         <ul>
-                            <li><a href="imagegallery.php">Image gallery</a></li>
-                            <li><a href="announcements.php">Announcements</a></li>
-                            <li><a href="events.php">Events</a></li>
-                            <li><a href="assets/img/designer/index.html">Web Designer</a></li>
+                            <li>
+                                <a href="imagegallery.php">Image gallery</a>
+                            </li>
+                            <li>
+                                <a href="announcements.php">Announcements</a>
+                            </li>
+                            <li>
+                                <a href="events.php">Events</a>
+                            </li>
+                            <li>
+                                <a href="assets/img/designer/index.html">Web Designer</a>
+                            </li>
                         </ul>
                     </div>
                     <!-- End: About -->

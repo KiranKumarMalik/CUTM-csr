@@ -126,9 +126,18 @@ if($cordinator != ""){
                     <div class="col-sm-6 col-md-3 item" data-aos="fade-up">
                         <h3>About</h3>
                         <ul>
-                            <li><a href="aboutus.php">CSaR</a></li>
-                            <li><a href="instruction.php">Instructions</a></li>
-                            <li><a href="campusachievements.php">Previous Achievements</a></li>
+                            <li>
+                                <a href="aboutus.php">CSaR</a>
+                            </li>
+                            <li>
+                                    <a href="annualreport_campus.php">Annual Report</a>
+                                </li>
+                            <li>
+                                <a href="instruction.php">Instructions</a>
+                            </li>
+                            <li>
+                                <a href="campusachievements.php">Previous Achievements</a>
+                            </li>
                         </ul>
                     </div>
                     <!-- End: Services -->
@@ -136,10 +145,18 @@ if($cordinator != ""){
                     <div class="col-sm-6 col-md-3 item" data-aos="fade-up">
                         <h3>Clubs</h3>
                         <ul>
-                            <li><a href="imagegallery.php">Image gallery</a></li>
-                            <li><a href="announcements.php">Announcements</a></li>
-                            <li><a href="events.php">Events</a></li>
-                            <li><a href="assets/img/designer/index.html">Web Designer</a></li>
+                            <li>
+                                <a href="imagegallery.php">Image gallery</a>
+                            </li>
+                            <li>
+                                <a href="announcements.php">Announcements</a>
+                            </li>
+                            <li>
+                                <a href="events.php">Events</a>
+                            </li>
+                            <li>
+                                <a href="assets/img/designer/index.html">Web Designer</a>
+                            </li>
                         </ul>
                     </div>
                     <!-- End: About -->
