@@ -264,7 +264,7 @@ else
     function TestD() {
         var divContents = document.getElementById("main").innerHTML;
         var a = window.open('', '', 'height=500, width=500');
-        a.document.write(`
+        a.document.write(
             <html lang="en">
 
               <head>

@@ -186,6 +186,13 @@ if(isset($_POST['approved'])){
               </a>
           </li>
 
+          <li class="nav-item">
+              <a class="nav-link collapsed" href="./activities_upload.php">
+                  <i class="bi bi-trophy-fill"></i>
+                  <span>Activities</span>
+              </a>
+          </li>
+
          <li class="nav-item">
               <a class="nav-link collapsed" href="./adminprof.php">
                   <i class="bi bi-person-fill"></i>

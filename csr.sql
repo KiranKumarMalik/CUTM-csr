@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 24, 2023 at 02:10 PM
+-- Generation Time: Apr 23, 2023 at 11:39 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -20,6 +20,19 @@ SET time_zone = "+00:00";
 --
 -- Database: `csr`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `activitydata`
+--
+
+CREATE TABLE `activitydata` (
+  `id` int(11) NOT NULL,
+  `academicYear` varchar(255) NOT NULL,
+  `dateOfEvent` varchar(255) NOT NULL,
+  `nameOfEvent` varchar(2000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -49,11 +62,11 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`id`, `name`, `email`, `mobile`, `sex`, `campus`, `empid`, `designation`, `about`, `country`, `address`, `password`, `profileimg`) VALUES
 (2, 'Dr. Sangram Keshari Swain', 'sangramkeshariswain@cutm.ac.in', '9937093949', 'Male', 'Bhubaneswar', 'CUTM3245', 'Examination dean, professor', 'Ph.D. in Computer Science and Engineering having 12 years of teaching experience having a demonstrated history of working in the higher education industry. Skilled in Social Services, Teaching, Research, Data Analysis, and Higher Education. A strong education professional having multidimensional approaches like Engineering, Technology, Management, Social Service and Law. Social Responsibility activity has been my Passion always.', 'India', 'Ramchandrapur, Jatani, Bhubaneswar, Odisha, 752050', 'ef619de1cb093518332ffa724bfd0dfc', 'sangram1.png'),
-(3, 'Mrs. Prativa Satapathy', 'prativa.satpathy@cutm.ac.in', '7008158545', 'Female', 'Bolangir', 'CUTM478', 'Assistant Professor', '', 'India', '', 'f5af845846d8f826d1f98a328e3863e0', 'femaleuser.jpg'),
+(3, 'Mrs. Prativa Satapathy', 'prativa.satpathy@cutm.ac.in', '7008158545', 'Female', 'Balangir', 'CUTM478', 'Assistant Professor', '', 'India', '', 'f5af845846d8f826d1f98a328e3863e0', 'femaleuser.jpg'),
 (4, 'Chandra Sekhar Patro', 'chandrasekhar.patro@cutm.ac.in', '8331887509', 'Male', 'Rayagada', 'CUTM356', 'Professor', '', 'India', '', 'a3739426d182e1c03f98c4fdb3201fb3', 'maleuser.jpg'),
 (5, 'Chandan Kumar Das', 'chandankumar.das@gramtarang.org.in', '7873679676', 'Male', 'Balasore', 'CUTM259', 'Professor', '', 'India', '', 'c2a216e103154abc47fa01423ed27d7e', 'maleuser.jpg'),
 (6, 'Mrs.Binapani Barik', 'binapani.barik@cutm.ac.in', '7504915935', 'Male', 'Paralakhemundi', 'CUTM476', 'Professor', '', 'India', '', '4e06c4d77372e59a60fa6dc16ded5140', 'maleuser.jpg'),
-(7, 'Rati Ranjan Mishra', 'ratiranjan.mishra@cutm.ac.in', '8249196464', 'Male', 'Chhatrapur', 'EMP875', 'CSaR Co-ordinator', '', 'India', 'Chhatrapur, Ganjam, Odisha', '9e84d8d5f776d22aee3ee66ed2ada78f', 'maleuser.jpg'),
+(7, 'Rati Ranjan Mishra', 'ratiranjan.mishra@cutm.ac.in', '8249196464', 'Male', 'Chatrapur', 'EMP875', 'CSaR Co-ordinator', '', 'India', 'Chhatrapur, Ganjam, Odisha', '9e84d8d5f776d22aee3ee66ed2ada78f', 'maleuser.jpg'),
 (8, 'Nrusinha Das', 'nrusinha@cutm.ac.in', '', 'Male', '', '', 'Server Administrator', 'I am a system administrative', 'India', '', '0de2df1faff53800e821acffc28f9f7c', 'maleuser.jpg'),
 (9, 'Dr Anthony Sunny Dayal Pendurthy', 'sunnydayal@cutmap.ac.in', '7093068888', 'Male', 'Vizianagaram', 'CUTMEMP5124', 'Admin', 'Admin of Vizianagaram Campus', 'India', 'Rollavaka Village Bondapalli, Mandal, Andhra Pradesh 535003', '4fa4097c87915e735dd9af5004fb3c94', 'maleuser.jpg');
 
@@ -362,6 +375,14 @@ CREATE TABLE `gallery1` (
   `years` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `gallery1`
+--
+
+INSERT INTO `gallery1` (`id`, `name`, `details`, `images`, `campus`, `years`) VALUES
+(4, 'No drugs addiction awareness program', 'Awareness program', '20220812_114129AMByGPSMapCamera.jpg', 'Bolangir', '2021-2022'),
+(5, 'Ganesh Puja', 'Gandhi & Shastri Jayanti', 'Awarded winner prize in District Level Parade on Independence Day 1.jpeg', 'Bolangir', '2019-2020');
+
 -- --------------------------------------------------------
 
 --
@@ -374,6 +395,18 @@ CREATE TABLE `gallery2` (
   `images` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `gallery2`
+--
+
+INSERT INTO `gallery2` (`id`, `connect_id`, `images`) VALUES
+(12, '4', '20220812_114129AMByGPSMapCamera.jpg'),
+(13, '4', '20220812_114139AMByGPSMapCamera.jpg'),
+(14, '5', 'Awarded winner prize in District Level Parade on Independence Day 1.jpeg'),
+(15, '5', 'Awarded winner prize in District Level Parade on Independence Day.jpeg'),
+(16, '5', 'Freshers Day.jpeg'),
+(17, '5', 'Independence Day Observation.jpeg');
+
 -- --------------------------------------------------------
 
 --
@@ -382,13 +415,12 @@ CREATE TABLE `gallery2` (
 
 CREATE TABLE `preachievements` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `regd` varchar(255) NOT NULL,
-  `branch` varchar(255) NOT NULL,
-  `achievementdetails` varchar(255) NOT NULL,
-  `academicyear` varchar(255) NOT NULL,
-  `profile_img` varchar(255) NOT NULL,
-  `campus` varchar(255) NOT NULL
+  `year` varchar(255) NOT NULL,
+  `nameOfAward` varchar(255) NOT NULL,
+  `team` varchar(255) NOT NULL,
+  `interUniversity_State` varchar(255) NOT NULL,
+  `nameOfEvent` varchar(255) NOT NULL,
+  `nameOfStudent` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -444,6 +476,13 @@ CREATE TABLE `studregd` (
   `blood_group` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `studregd`
+--
+
+INSERT INTO `studregd` (`id`, `name`, `email`, `regd`, `schoolname`, `program`, `branch`, `courseDuration`, `campus`, `admissiontype`, `admissionyear`, `sex`, `religion`, `dob`, `blood_group`) VALUES
+(236, 'kiran', '200301120128@cutm.ac.in', '200301120128', 'School of Engineering & Technology', 'Bachelor of Technology', 'Computer science & Engineering', '4', 'Bhuabaneswar', 'Regural', '2020', '', '', '', '');
+
 -- --------------------------------------------------------
 
 --
@@ -493,6 +532,12 @@ INSERT INTO `year` (`id`, `admissionyear`, `Year`) VALUES
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `activitydata`
+--
+ALTER TABLE `activitydata`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `admin`
@@ -589,6 +634,12 @@ ALTER TABLE `year`
 --
 
 --
+-- AUTO_INCREMENT for table `activitydata`
+--
+ALTER TABLE `activitydata`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
@@ -640,19 +691,19 @@ ALTER TABLE `csrtimesheet`
 -- AUTO_INCREMENT for table `gallery1`
 --
 ALTER TABLE `gallery1`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `gallery2`
 --
 ALTER TABLE `gallery2`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `preachievements`
 --
 ALTER TABLE `preachievements`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `student`
@@ -664,7 +715,7 @@ ALTER TABLE `student`
 -- AUTO_INCREMENT for table `studregd`
 --
 ALTER TABLE `studregd`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=236;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=237;
 
 --
 -- AUTO_INCREMENT for table `teacher`

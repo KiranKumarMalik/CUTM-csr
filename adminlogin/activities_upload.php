@@ -4,6 +4,9 @@ require('../includes/database.php');
 $uemail=$_SESSION['email'];
 $utype=$_SESSION['usertype'];
 
+
+
+
 if($_SESSION['email'] and $utype=="admin")
 {
     $adminData=getAllAdminDetails($db,$uemail);
@@ -11,9 +14,45 @@ if($_SESSION['email'] and $utype=="admin")
 else
 {
   echo "working";
-  header('location:../includes/logout.php');
+  header('location:../includes/logout.php'); 
+}
+
+
+
+if(isset($_POST['uploadactivity'])){
+	$file=$_FILES['excelData']['tmp_name'];
+    $yearofprogram=mysqli_real_escape_string($db,$_POST['yearofprogram']);
+	// echo "<PRE>";
+    // echo $file;
+	$ext=pathinfo($_FILES['excelData']['name'],PATHINFO_EXTENSION);
+	if($ext=='xlsx'){
+		require('./PHPExcel/PHPExcel.php');
+		require('./PHPExcel/PHPExcel/IOFactory.php');
+		
+		
+		$obj=PHPExcel_IOFactory::load($file);
+		foreach($obj->getWorksheetIterator() as $sheet){
+			$getHighestRow=$sheet->getHighestRow();
+			for($i=2;$i<=$getHighestRow;$i++){
+				$dateOfEvent=$sheet->getCellByColumnAndRow(1,$i)->getValue();
+				$nameOfEvent=$sheet->getCellByColumnAndRow(2,$i)->getValue();
+                
+				if($name!=''){
+					 $query="INSERT INTO activitydata (academicYear,dateOfEvent,nameOfEvent) VALUES('$yearofprogram','$dateOfEvent','$nameOfEvent')";
+                    $run=mysqli_query($db,$query) or die(mysqli_error($db));
+                    
+				}
+                $totalIs=$totalIs+$run;
+			}
+            echo "<script>alert('Total data inserted is ".$totalIs."');</script>";
+		}
+	}else{
+		echo "<script>alert('Invalid format');</script>";
+	}
 }
 ?>
+
+
 
 
 <!DOCTYPE html>
@@ -23,7 +62,8 @@ else
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Previous Achievement Uploads</title>
+    <title>Document Uploads</title>
+    <link rel="icon" href="image/cutm.png" type="image/icon type">
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -81,7 +121,8 @@ else
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
-                        <a href="adminprof.php"><img src="../images/profileimg/<?=$adminData['profileimg']?>" height="70px" style=border-radius:50%;></a>
+                            <a href="adminprof.php"><img src="../images/profileimg/<?=$adminData['profileimg']?>"
+                                    height="70px" style=border-radius:50%;></a>
                             <h6><?=$uemail?></h6>
                             <span>Admin</span>
                         </li>
@@ -109,9 +150,9 @@ else
     <!-- ======= Sidebar ======= -->
     <aside id="sidebar" class="sidebar">
 
-    <ul class="sidebar-nav" id="sidebar-nav">
+        <ul class="sidebar-nav" id="sidebar-nav">
 
-    <li class="nav-item">
+        <li class="nav-item">
             <a class="nav-link collapsed" href="./admin.php">
                 <i class="bi bi-grid"></i>
                 <span>Dashboard</span>
@@ -167,14 +208,14 @@ else
           </li>
 
           <li class="nav-item">
-              <a class="nav-link" href="./achievement_uploads.php">
+              <a class="nav-link collapsed" href="./achievement_uploads.php">
                   <i class="bi bi-trophy-fill"></i>
                   <span>Achievements</span>
               </a>
           </li>
 
           <li class="nav-item">
-              <a class="nav-link collapsed" href="./activities_upload.php">
+              <a class="nav-link" href="./activities_upload.php">
                   <i class="bi bi-trophy-fill"></i>
                   <span>Activities</span>
               </a>
@@ -205,21 +246,19 @@ else
             <div class="container-xxl bd-gutter">
                 <div class="col-md-8 mx-auto text-center">
 
-                    <h1 class="mb-3 fw-bold">Previous Achievements Uploads</h1>
-
-
+                    <h1 class="mb-3 fw-bold">Activities Data</h1>
                 </div>
             </div>
         </div>
 
-        
-                <section class="section dashboard">
+
+        <section class="section dashboard">
 
 
-                <form action="../includes/createuser.php" method="post" enctype="multipart/form-data">
+            <form action="" method="post" enctype="multipart/form-data">
                 <div class="col-lg">
                     <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label">Academic Year</label>
+                        <label class="col-sm-2 col-form-label">Academic Year</label>
                         <div class="col-sm-10">
                         <select class="form-select" aria-label="Default select example" name="yearofprogram">
                                 <?php
@@ -239,47 +278,40 @@ else
                 <div class="row mb-3">
                     <label for="inputNumber" class="col-sm-2 col-form-label">Update Documents</label>
                     <div class="col-sm-10">
-                        <input class="form-control" type="file" id="formFile" name="achievementsexcel" accept=".xls,.xlsx" required>
+                        <input class="form-control" type="file" id="formFile" name="excelData" accept=".xls,.xlsx" required>
                     </div>
                 </div>
                 <input type="hidden" value="<?=$adminData['campus']?>" name="campus">
                 <div class="row mb-3">
                     <label class="col-sm-2 col-form-label"></label>
                     <div class="col-sm-10">
-                        <button type="submit" class="btn btn-primary" name="uploadachievemets">Submit</button>
+                        <button type="submit" class="btn btn-primary" name="uploadactivity">Submit</button>
                     </div>
                 </div>
             </form>
 
-                </section>
+        </section>
     </main><!-- End #main -->
 
 
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
-    <div class="copyright">
-      &copy; Copyright <strong><span>CSaR | CUTM</span></strong>. All Rights Reserved
-    </div>
-    <div class="credits">
-      Designed by <a href="https://cutm.ac.in/">Centurion University of Technology and Management</a>
-    </div>
-  </footer><!-- End Footer -->
-
+        <div class="copyright">
+            &copy; Copyright <strong><span>CSaR | CUTM</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+            Designed by <a href="https://cutm.ac.in/">Centurion University of Technology and Management</a>
+        </div>
+    </footer>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
-    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/chart.js/chart.min.js"></script>
-    <script src="assets/vendor/echarts/echarts.min.js"></script>
     <script src="assets/vendor/quill/quill.min.js"></script>
     <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
-    <script src="assets/vendor/tinymce/tinymce.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
 
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>
@@ -290,19 +322,14 @@ else
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
 
-    <script>
-    function printDiv() {
-        var divContents = document.getElementById("main").innerHTML;
-        // var a = window.open('', '', 'height=500, width=500');
-        // a.document.write('<html>');
-        // a.document.write('<body > <h1>Div contents are <br>');
-        // a.document.write(divContents);
-        // a.document.write('</body></html>');
-        // a.document.close();
-        // a.print();
-        window.print();
-    }
-    </script>
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+        integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
 
 </body>
 
