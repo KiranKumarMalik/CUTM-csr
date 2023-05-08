@@ -79,9 +79,9 @@ $campus=$_GET['campus'];
                     <div class="card">
                     <div class="card-body">
                     <form action="" method="post">
-                    <li data-aos="fade-up"><a href="annual_reports_data.php?coordinator=ClubInCharges&campus=<?=$campus?>"> 2015-16</a></li>
-                    <li data-aos="fade-up"><a href="annual_reports_data.php?coordinator=FacultyInCharges&campus=<?=$campus?>"> 2016-17</a></li>
-                    <li data-aos="fade-up"><a href="annual_reports_data.php?coordinator=StudentInCharges&campus=<?=$campus?>"> 2017-18</a></li><br>
+                    <li data-aos="fade-up"><a href="annual_reports_data.php?academicyr=2015-16&campus=<?=$campus?>"> 2015-16</a></li>
+                    <li data-aos="fade-up"><a href="annual_reports_data.php?academicyr=2015-16&campus=<?=$campus?>"> 2016-17</a></li>
+                    <li data-aos="fade-up"><a href="annual_reports_data.php?academicyr=2015-16&campus=<?=$campus?>"> 2017-18</a></li><br>
                     </div>
                     </div>
     </section>

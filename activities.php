@@ -36,8 +36,10 @@ $campus=$_GET['campus'];
                 <div class="collapse navbar-collapse"
                     id="navcol-1" style="font-size: 14px;">
                     <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="index.php">HOME</a></li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item">
+                                <a class="nav-link scrollto" href="index.php">HOME</a>
+                            </li>
+                            <li class="nav-item dropdown">
                                 <a
                                     class="dropdown-toggle nav-link"
                                     data-toggle="dropdown"
@@ -48,19 +50,37 @@ $campus=$_GET['campus'];
                                     <a class="dropdown-item" href="instruction.php">Instructions</a>
                                 </div>
                             </li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="imagegallery.php">GALLERY</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" href="announcements.php">ANNOUNCEMENTS</a></li>
-                        <li class="nav-item"><a class="nav-link active scrollto" href="campus_activities.php">ACTIVITIES</a></li>
-                        <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">TEAM CSaR</a>
-                        <div class="dropdown-menu"><a class="dropdown-item" href="coordinators.php?campus=Balasore">Balasore</a>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger scrollto" href="imagegallery.php">GALLERY</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger scrollto" href="announcements.php">ANNOUNCEMENTS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active js-scroll-trigger scrollto" href="campus_activities.php">ACTIVITIES</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a
+                                    class="dropdown-toggle nav-link"
+                                    data-toggle="dropdown"
+                                    aria-expanded="false"
+                                    href="#">TEAM CSaR</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="coordinators.php?campus=Balasore">Balasore</a>
                                     <a class="dropdown-item" href="coordinators.php?campus=Bhubaneswar">Bhubaneswar</a>
                                     <a class="dropdown-item" href="coordinators.php?campus=Balangir">Balangir</a>
                                     <a class="dropdown-item" href="coordinators.php?campus=Paralakhemundi">Paralakhemundi</a>
                                     <a class="dropdown-item" href="coordinators.php?campus=Rayagada">Rayagada</a>
                                     <a class="dropdown-item" href="coordinators.php?campus=Chhatrapur">Chatrapur</a>
-                                    <a class="dropdown-item" href="coordinators.php?campus=Vizianagaram">Vizianagaram</a></div>
-                        </li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger scrollto" href="campusachievements.php">ACHIEVEMENTS</a></li>
+                                    <a class="dropdown-item" href="coordinators.php?campus=Vizianagaram">Vizianagaram</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger scrollto" href="./annualreport_campus.php">ANNUAL REPORT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger scrollto" href="campusachievements.php">ACHIEVEMENTS</a>
+                            </li>
                     </ul>
                 </div>
             </div>

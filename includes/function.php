@@ -663,4 +663,11 @@
         }
         return $data;
     }
+
+    function getAcademicyr($db,$academicyr,$campus){
+        $query="SELECT * FROM annualreport WHERE campus='$campus' AND academicyr='$academicyr'";
+        $run=mysqli_query($db,$query);
+        $data=mysqli_fetch_assoc($run);
+        return $data;
+    }
 ?>

@@ -2,15 +2,15 @@
 require('./includes/function.php');
 require('./includes/database.php');
 $campus=$_GET['campus'];
-$Coordinators=$_GET['coordinator'];
-$cordinator=getcoordinators($db,$Coordinators,$campus);
+$academicyr=$_GET['academicyr'];
+$academicyrdta=getAcademicyr($db,$academicyr,$campus);
 
-if($cordinator != ""){
-    $pdf="<iframe src='./assets//pdf/cordinator/".$cordinator['pdf']."' width='100%' height='600px'></iframe>";
+if($academicyrdta != ""){
+    $pdf="./assets/pdf/anualreport/".$academicyrdta['pdf'];
+    
 }else{
     $pdf="Sorry PDF NOT Found";
 }
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -100,7 +100,7 @@ if($cordinator != ""){
             <div class="container">
             <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s"><?=$campus=$_GET['campus']?> Campus</h1>
                 <div class="table-responsive">
-                <object data="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210101201653/PDF.pdf" 
+                <object data="<?=$pdf?>" 
                 width="1000" 
                 height="800"> 
         </object>

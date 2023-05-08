@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 23, 2023 at 11:39 AM
+-- Generation Time: May 08, 2023 at 07:00 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -86,6 +86,26 @@ CREATE TABLE `announcement` (
   `campus` varchar(255) NOT NULL,
   `publishtime` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `annualreport`
+--
+
+CREATE TABLE `annualreport` (
+  `id` int(11) NOT NULL,
+  `academicyr` varchar(255) NOT NULL,
+  `campus` varchar(255) NOT NULL,
+  `pdf` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `annualreport`
+--
+
+INSERT INTO `annualreport` (`id`, `academicyr`, `campus`, `pdf`) VALUES
+(1, '2015-16', 'Bhubaneswar', 'demo.pdf');
 
 -- --------------------------------------------------------
 
@@ -552,6 +572,12 @@ ALTER TABLE `announcement`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `annualreport`
+--
+ALTER TABLE `annualreport`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `campus`
 --
 ALTER TABLE `campus`
@@ -650,6 +676,12 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `announcement`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `annualreport`
+--
+ALTER TABLE `annualreport`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `campus`
