@@ -174,7 +174,7 @@ if(isset($_POST['addannouncement'])){
       </li>
 
       <li class="nav-item">
-              <a class="nav-link" href="./addannouncement.php">
+              <a class="nav-link collapsed" href="./addannouncement.php">
                   <i class="bi bi-megaphone-fill"></i>
                   <span>Announcements</span>
               </a>
@@ -195,7 +195,7 @@ if(isset($_POST['addannouncement'])){
           </li>
 
           <li class="nav-item">
-              <a class="nav-link collapsed" href="./achievement_uploads.php">
+              <a class="nav-link" href="./achievement_uploads.php">
                   <i class="bi bi-trophy-fill"></i>
                   <span>Achievements</span>
               </a>
@@ -203,8 +203,15 @@ if(isset($_POST['addannouncement'])){
 
           <li class="nav-item">
               <a class="nav-link collapsed" href="./activities_upload.php">
-                  <i class="bi bi-trophy-fill"></i>
+                  <i class="bi bi-activity"></i>
                   <span>Activities</span>
+              </a>
+          </li>
+
+          <li class="nav-item">
+              <a class="nav-link collapsed" href="./annual_reports.php">
+                  <i class="bi bi-journals"></i>
+                  <span>Annual Reports</span>
               </a>
           </li>
 

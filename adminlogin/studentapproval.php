@@ -176,6 +176,20 @@ else
               </a>
           </li>
 
+          <li class="nav-item">
+              <a class="nav-link collapsed" href="./activities_upload.php">
+                  <i class="bi bi-activity"></i>
+                  <span>Activities</span>
+              </a>
+          </li>
+
+          <li class="nav-item">
+              <a class="nav-link collapsed" href="./annual_reports.php">
+                  <i class="bi bi-journals"></i>
+                  <span>Annual Reports</span>
+              </a>
+          </li>
+
          <li class="nav-item">
               <a class="nav-link collapsed" href="./adminprof.php">
                   <i class="bi bi-person-fill"></i>

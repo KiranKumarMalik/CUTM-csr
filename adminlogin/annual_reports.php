@@ -3,40 +3,18 @@ require('../includes/function.php');
 require('../includes/database.php');
 $uemail=$_SESSION['email'];
 $utype=$_SESSION['usertype'];
+
 if($_SESSION['email'] and $utype=="admin")
 {
-  $adminData=getAllAdminDetails($db,$uemail);
-  ?>
-<!-- <script>
-      alert("welcome ");
-    </script> -->
-<?php
+    $adminData=getAllAdminDetails($db,$uemail);
 }
 else
 {
+  echo "working";
   header('location:../includes/logout.php');
 }
-
-
-if(isset($_POST['addClub'])){
-    $program=mysqli_real_escape_string($db,$_POST['program']);
-    $club=mysqli_real_escape_string($db,$_POST['club']);
-
-    $query="INSERT INTO csrpr (csrPr,club) VALUES('$program','$club')";
-    $run=mysqli_query($db,$query) or die(mysqli_error($db));
-    if ($run) {
-        header('location:addClub.php');
-    }
-    else {
-        ?>
-        <script>
-            alert("Sorry dueto some issue your data not update ! ");
-            </script>
-        <?php
-    }
-
-  }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -45,8 +23,7 @@ if(isset($_POST['addClub'])){
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Dashboard</title>
-    <link rel="icon" href="image/cutm.png" type="image/icon type">
+    <title>Annual Report Uploads</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -80,7 +57,7 @@ if(isset($_POST['addClub'])){
     <header id="header" class="header fixed-top d-flex align-items-center">
 
         <div class="d-flex align-items-center justify-content-between">
-            <a href="admin.php" class="logo d-flex align-items-center">
+            <a href="student.php" class="logo d-flex align-items-center">
                 <img src="../images/cutm.png" alt="">
                 <span class="d-none d-lg-block"> | CSaR CUTM</span>
             </a>
@@ -132,9 +109,9 @@ if(isset($_POST['addClub'])){
     <!-- ======= Sidebar ======= -->
     <aside id="sidebar" class="sidebar">
 
-        <ul class="sidebar-nav" id="sidebar-nav">
+    <ul class="sidebar-nav" id="sidebar-nav">
 
-        <li class="nav-item">
+    <li class="nav-item">
             <a class="nav-link collapsed" href="./admin.php">
                 <i class="bi bi-grid"></i>
                 <span>Dashboard</span>
@@ -162,7 +139,7 @@ if(isset($_POST['addClub'])){
       </li>
 
       <li class="nav-item">
-          <a class="nav-link" href="./addClub.php">
+          <a class="nav-link collapsed" href="./addClub.php">
               <i class="bi bi-file-earmark-plus"></i>
               <span>Add New Club</span>
           </a>
@@ -204,7 +181,7 @@ if(isset($_POST['addClub'])){
           </li>
 
           <li class="nav-item">
-              <a class="nav-link collapsed" href="./annual_reports.php">
+              <a class="nav-link" href="./annual_reports.php">
                   <i class="bi bi-journals"></i>
                   <span>Annual Reports</span>
               </a>
@@ -231,118 +208,69 @@ if(isset($_POST['addClub'])){
 
     <main id="main" class="main">
 
-        <div class="pagetitle">
-            <h1>Add new club</h1>
-            <nav>
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="admin.php">Home</a></li>
-                    <li class="breadcrumb-item active">Add new club</li>
-                </ol>
-            </nav>
-        </div><!-- End Page Title -->
+        <div class="bd-masthead mb-3" id="content">
+            <div class="container-xxl bd-gutter">
+                <div class="col-md-8 mx-auto text-center">
 
-        <section class="section">
-          <form action="" method="post">
-            <div class="row">
-                <div class="col-md-4 bg-light text-right">
-                    <label>Program</label>
-                    <select class="form-select" aria-label="Default select example" name="program" >
-                        <option value="Culture">Culture</option>  
-                        <option value="Sports">Sports</option>  
-                        <option value="Responsibility">Responsibility</option>  
-                    </select>
+                    <h1 class="mb-3 fw-bold">Annual Report Uploads</h1>
+
+
                 </div>
-                <div class="col-md-4 bg-light text-right">
-                    <label>Club</label>
+            </div>
+        </div>
+
+        
+                <section class="section dashboard">
+
+
+                <form action="../includes/createuser.php" method="post" enctype="multipart/form-data">
+                <div class="col-lg">
+                    <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label">Academic Year</label>
+                        <div class="col-sm-10">
+                        <select class="form-select" aria-label="Default select example" name="yearofprogram">
+                                <?php
+                                  $year=getAllYear($db);
+                                  $thisyear=date("Y");
+                                  foreach($year as $ct){
+                                ?>
+                                        <option value="<?=$ct['Year']?>"><?=$ct['Year']?></option>
+                                <?php
+                                }
+                            ?>
+                            </select>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="inputNumber" class="col-sm-2 col-form-label">Update Documents</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="club" value="" required>
+                        <input class="form-control" type="file" id="formFile" name="achievementsexcel" accept=".xls,.xlsx" required>
                     </div>
                 </div>
-                <!-- Modal -->
-                <div class="modal fade" id="confirmaddClub" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Do You Sure to Add Club</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-footer">
-                          <button class="btn btn-success" type="submit" name="addClub">Yes</button>
-                          <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
-                        </div>
-                        </div>
+                <input type="hidden" value="<?=$adminData['campus']?>" name="campus">
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary" name="uploadachievemets">Submit</button>
                     </div>
                 </div>
-                <div class="col-md-4 bg-light text-right"><br>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#confirmaddClub">Insert</button>
-                </div>
-            
-            </div>
-          </form>
+            </form>
 
-                <div class="col-lg-12">
-
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Post</h5>
-                            <!-- Table with stripped rows -->
-                            <table class="table datatable">
-                                <thead>
-                                    <tr>
-                                        <th>Sl</th>
-                                        <th scope="col">Program </th>
-                                        <th scope="col">Club </th>
-                                        
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                        $posts=getAllProgramAdmin($db);
-                                        $count=1;
-                                        foreach($posts as $post){
-                                            $studentData=getAllProgramAdmin($db);
-                                    ?>
-                                    <tr>
-                                        <th scope="row"><?=$count?></th>
-                                        <td><?=$post['csrPr']?></td>
-                                        <td><?=$post['club']?></td>
-                                    </tr>
-
-
-
-
-
-                                    <?php
-                    $count++;
-                  }
-                  ?>
-
-
-
-                                </tbody>
-                            </table>
-                            <!-- End Table with stripped rows -->
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
+                </section>
     </main><!-- End #main -->
+
 
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
-        <div class="copyright">
-            &copy; Copyright <strong><span>CSaR | CUTM</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-            Designed by <a href="https://cutm.ac.in/">Centurion University of Technology and Management</a>
-        </div>
-    </footer><!-- End Footer -->
+    <div class="copyright">
+      &copy; Copyright <strong><span>CSaR | CUTM</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      Designed by <a href="https://cutm.ac.in/">Centurion University of Technology and Management</a>
+    </div>
+  </footer><!-- End Footer -->
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
@@ -369,38 +297,18 @@ if(isset($_POST['addClub'])){
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
 
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        function getPr() {
-            document.getElementById('program').disabled =true
-            axios.get("./api/pr.php").then((response)=>{
-                console.log(response);
-                let options='<option value="">Select one option</option>';
-                for(let each of response.data.data){
-                    options+=`<option value="${each}">${each}</option>`;
-                }
-                document.getElementById('program').innerHTML=options;
-                document.getElementById('program').disabled =false;
-            })
-        }
-        function getClub() {
-            let selection=document.getElementById('program').value;
-            if(!selection)return;
-            document.getElementById('club').disabled =true
-            document.getElementById('club').innerHTML='<option value="">Loading</option>';
-            axios.get("./api/club.php?scrPr="+selection).then((response)=>{
-                console.log(response);
-                let options='';
-                for(let each of response.data.data){
-                    options+=`<option value="${each}">${each}</option>`;
-                }
-                document.getElementById('club').innerHTML=options;
-                document.getElementById('club').disabled =false;
-            })
-        }
-        getPr();
-        
+    function printDiv() {
+        var divContents = document.getElementById("main").innerHTML;
+        // var a = window.open('', '', 'height=500, width=500');
+        // a.document.write('<html>');
+        // a.document.write('<body > <h1>Div contents are <br>');
+        // a.document.write(divContents);
+        // a.document.write('</body></html>');
+        // a.document.close();
+        // a.print();
+        window.print();
+    }
     </script>
 
 </body>
