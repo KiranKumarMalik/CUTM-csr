@@ -365,7 +365,7 @@ foreach($getallAnnousement as $getallAnnousements){
                                 </div>
                                 <div class="member-info">
                                     <h5>
-                                        <strong>Dr. Sangram Keshari Swain</strong>
+                                        <strong>Mr. Chandan Kumar Das</strong>
                                     </h5>
                                     <span>Balasore</span></div>
                             </div>
@@ -397,7 +397,7 @@ foreach($getallAnnousement as $getallAnnousements){
                                 </div>
                                 <div class="member-info">
                                     <h5>
-                                        <strong>Dr. Sangram Keshari Swain</strong>
+                                        <strong>Prativa Satpathy</strong>
                                     </h5>
                                     <span>Balangir</span></div>
                             </div>
@@ -429,7 +429,7 @@ foreach($getallAnnousement as $getallAnnousements){
                                 </div>
                                 <div class="member-info">
                                     <h5>
-                                        <strong>Dr. Sangram Keshari Swain</strong>
+                                        <strong>Binapani Barik</strong>
                                     </h5>
                                     <span>Paralakhemundi</span></div>
                             </div>
@@ -455,7 +455,7 @@ foreach($getallAnnousement as $getallAnnousements){
                                 </div>
                                 <div class="member-info">
                                     <h5>
-                                        <strong>Bikash Samantaray</strong>
+                                        <strong>Chandrasekhar Patra</strong>
                                     </h5>
                                     <span>Rayagada</span></div>
                             </div>
@@ -481,7 +481,7 @@ foreach($getallAnnousement as $getallAnnousements){
                                 </div>
                                 <div class="member-info">
                                     <h5>
-                                        <strong>Rabi Narayan Routray</strong>
+                                        <strong>Ratiranjan Mishra</strong>
                                     </h5>
                                     <span>Chatrapur</span></div>
                             </div>
@@ -510,7 +510,7 @@ foreach($getallAnnousement as $getallAnnousements){
                                 </div>
                                 <div class="member-info">
                                     <h5>
-                                        <strong>Kula Bhusan Pradhan</strong>
+                                        <strong>Sunny Dayal</strong>
                                     </h5>
                                     <span>Vizianagaram</span></div>
                             </div>
